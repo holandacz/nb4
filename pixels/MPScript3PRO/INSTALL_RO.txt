@@ -1,0 +1,146 @@
+ISTRUCTIUNI PENTRU INSTALAREA PAGINILOR PHP PIXEL SCRIPT VERSIUNEA 3
+*******************************************************************
+
+Multumim ca ati cumparat Million Pixel Script (R)!
+Cititi cu atentie instructiunile pentru a putea instala cu succes PHP Pixel Script
+in spatiul web/server.
+
+Pentru orice intrebare, sau actualizari intrati la:
+http://millionhelp.texmedia.de
+
+
+Cereri de sistem pentru corecta functionare a Million Pixel Script (R):
+----------------------------------------------------------------------------
+
+- Un dominiu cun un Webhost care garanteaza:
+  > PHP 4.3 sau superior cu libreriile GD instalate (acesta este un standard normal)
+  > MySQL
+
+
+Procedura de instalare:
+--------------------------------------------------------
+
+1. UNZIP (despacheteaza):
+   Despacheteaza "MPScript3PRO.zip" si salveaza fisierele in computer.
+
+2. DATABASE (archva):
+   Creati un database MYSQL (ex: cu numele: milliondata) in webserver,
+   cun un software de gestiune ca si PHPMyAdmin sau contactand webmasterul
+   hostingului (cauta cuvinte ca si 'mysql' sau 'database').
+
+3. UPLOAD (incarca):
+   Incarca toate fisierele si directorii din directorul "public_html" in webserver.
+
+
+4. WRITE PERMISSIONS (permise de scriere):
+   Daca sistemul tau foloseste server Unix este nevoie sa dati permisul de scriere
+   la anumite fisiere a scriptului, in asa fel incat scriptul poate sa
+   modifice si sa salveze anumite fisiere.
+   Puteti schimba acesti parametri de scriere (numiti "chmod 777" in limbajul Unix)
+   di ciascun file o cartella con il tuo client FTP che userai per caricare lo script sul server.
+   Selectionati fisierele de mai jos si modificati atributul 777 (cautati in clientu FTP
+   de unde puteti schimba acesti parametri.)
+
+   Este foarte necesar ca sa aveti permisul de scriere (chmod 777) pentru aceste fisiere si directori
+
+
+
+
+    DIRECTORI:      - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/it    (numai daca folositi limba italiana) ...
+                    - lang/en    (numai daca folositi limba engleza) ...
+                    - lang/...
+                    - mydir
+
+
+    FISIERE:        - grids/    -> Toate fisierele in acest director
+                    - lang/it/  -> Toate fisierele in acest director, daca folositi limba italiana
+                    - lang/en/  -> Toate fisierele in acest director, daca folositi limba engleza
+                    - lang/../
+
+5. MYSQL:
+   Deschide situl web si veti fi directionati la adresa de instalare MySql
+   Introduceti datele necesare. Care vor fi:
+   nume user  MYSQL        --> Numele pentru conecsiunea la MySql
+   password  MYSQL         --> Parola pentru conecsiunea MySql
+   numele database MYSQL   --> Numele de la database creat pentru script(ex:'milliondata')
+   nume host MYSQL         --> Numele host de la serverul Mysql (de obice 'localhost' sau 'mysql')
+
+   daca ati introdus datele corecte, tabelele vor fi create in database (care a fost creat in precedenta la pasul 2).
+   daca nu va amintiti parametri MySql intrebati webmasterul care va ofera serviciile.
+
+6. STERGE DIRECTORUL INSTALL:
+   Daca instalarea a avut succes, situl vostru este gata.
+   Sterge directorul install din server acum !
+
+
+Sfarsit.
+
+DACA AI PROBLEME
+--------------------------------------------
+Intrati in situl http://www.yourdomain.com si vedeti daca functioneaza
+
+-> Daca nu vedeti situl incercati http://www.yourdomain.com/index.php
+   si daca functioneaza asa, trbuie sa setati parametri in webserver, care de obicei incarca prima pagina 'index.php' cand vine chemat dominiul.
+   Puteti face acest lucru, creind un simplu fisier de text numit ".htaccess" (point htaccess) cu urmatoarele instructiuni:
+
+   DirectoryIndex index.php
+
+   Salvati acest fisier in directorul principal a scriptului din server.
+   Acest fisier ii zice serverului sa incarce ca si pagina principala  "index.php"
+
+
+   dar normal procedura standard este sa eliminati fisierele "index.htm" sau "index.html"
+   din directorul principal al webserverului, pentru ca acestea sant fisierele incarcade prima data
+
+   Controlati tot incarcand anumiti pixeli .
+
+--> daca primiti eroare (permission error), va trebui sa controlati daca ati dat permisul de scriere (chmod 777) si nu ati uitat nici un fisier
+    Controlati la pasul 4 daca ati setat corect permisul de scriere la fisierele si directorii dati mai sus.
+    Nu dat ipermis de scriere la toate fisierele, NUMAI LA CELE DESCRISE MAI SUS.
+    Este foarte riscant pentru anumiti server, poate cauza probleme. Numai fisierele si directorii de mai sus.
+
+
+Probleme cu trimisul de email la tell a friend?
+
+--> Poate in serverul vostru nu este permis sa trimiteti email la alte adrese, dar numai de la adresa webmaster
+    Daca este asa, puneti in campul 'email webmaster' si 'email contact form' in area control a scriptului, (CONFIG) adresa email al webmasterului de la dominiu (webmaster@domain.com)
+
+    Dupa aceea schimbati cele doua randuri cu un text editor (ex: notepad
+->  deschideti fisierul din notepad, nu deschideti cu dublu clic pentru a il
+edita):
+
+
+
+    feedback.php
+    recommend.php
+
+    si stergeti de la linia 33 caracterul # de la inceputul randului, sa fie in asa fel:
+    $from = $CONFIG['email_feedback'];
+
+    (in loc de #$from = $CONFIG['email_feedback'];)
+
+    Salvati si schimbati fisierul in webserver.
+    Acest lucru ar trebui sa rezolve problema.
+
+
+
+FREQUENTLY ASKED QUESTIONS:
+---------------------------
+Veti gasi raspunsuri la problemele voastre la
+http://www.texmedia.de/help/million
+
+Controlati tot timpul faq online inainte de a cere suport via email.
+Va fi nevoie de un anumit numer de zile inainte de a avea un raspuns.
+
+
+
+ADMIN-AREA:
+-----------
+Pentru a intra in admin-area, pentru a activa sau a sterge intrarile de pixels din sistem,
+trebuie sa digitati http://www.yourdomain.com/control/index.php cu parola de ordine "admin" (fara virgule).
+VA RACOMANDAM SA SCHIMBATI IMEDIAT PAROLA DE ORDINE INAINTE DE A FACE ALTCEVA.
+SE POATE SCHIMBA DIN MENIUL CONFIG"

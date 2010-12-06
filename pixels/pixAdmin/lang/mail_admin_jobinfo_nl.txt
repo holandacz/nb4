@@ -1,0 +1,11 @@
+<Onderwerp: %[DOMAINNAME]% - Admininfo: Automatische taak >
+
+Hallo,
+
+Op uw website %[DOMAINNAME]% was de volgende taak automatisch gestart:
+
+%[JOBINFO]%
+
+
+------------------------------------------------------------
+Million Pixel Script

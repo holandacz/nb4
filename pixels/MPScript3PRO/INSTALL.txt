@@ -1,0 +1,173 @@
+/******************************************************************************************
+*   Million Pixel Script (R)
+*   Copyright (C) 2005-2006 by texmedia.de
+*   All Rights Reserved.
+*
+*   This program is not for free, you have to buy a copy-license for your domain.
+*   This copyright notice and the header above have to remain intact.
+*   You do not have the permission to sell the code or parts of this code or chanced
+*   parts of this code for this program.
+*   This program is distributed "as is" and without warranty of any
+*   kind, either express or implied.
+*
+*   Please check
+*   http://www.texmedia.de
+*   for Bugfixes, Updates and Support.
+******************************************************************************************/
+
+INSTALLATION INSTRUCTIONS FOR THE MILLION PIXEL SCRIPT (R) VERSION 3
+
+Thank you for buying the Million Pixel Script (R)!
+Please read these instructions carefully in order to successfully install your PHP Pixel Script
+on your server/webspace.
+
+For questions, bug fixes, and updates go to:
+http://millionhelp.texmedia.de
+
+
+Requirements for the successful installation of the Million Pixel Script:
+----------------------------------------------------------------------------
+
+- A domain with a Webhost that provides:
+  > PHP 4.3 or higher with an installed GD library (this normally standard)
+  > MySQL database
+  > min. 20 MB Webspace
+
+
+Installation procedure
+--------------------------------------------------------
+
+1. UNZIP:
+   Unzip "MPScript3PRO.zip" and save the files to your local computer.
+
+2. DATABASE:
+   Create a MYSQL-database (i.e. with the name: milliondata) on your webserver,
+   either with a database management software like PHPMyAdmin or via your
+   hosting management account (look for menu items like 'mysql' or 'database').
+   Create a MYSQL-user and add this user to your database with all rights.
+
+3. UPLOAD:
+   Upload all files AND folders FROM the unzipped folder "public_html" TO YOUR hosting webservers public html
+   directory. This is mostly also a directory called "public_html" or sometimes "html" or "web".
+
+4. WRITE PERMISSIONS:
+   If you are using a unix server you need to give write permission to some files and
+   folders of the script, so that the script itself can save and change with these files.
+   You can set these writeable attributes (which is called "chmod 777" in unix language)
+   with your FTP client software you used for uploading the script files before.
+   Just select the listed files and folders, and set the attributes to 777 (please search
+   in your FTP client software where you find this option).
+   It is strongly necessary to give all of the following files and folders write permission:
+
+    DIRECTORIES:    - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/en
+                    - lang/..   (other languages if you want)
+                    - mydir
+
+
+    FILES:          - grids/...     -> ALL files in directory "grids"
+                    - lang/en/      -> all files here in this directory
+                    - lang/../      -> other language directory files, if you'd like to use them
+
+   If you own a windows hosting/server you need to make sure that the listed files and directories
+   have also write permissions set. Please contact your provider if you get problems with this step,
+   he should help you or do this step for you.
+
+5. MYSQL:
+   Start your website now and you will forwarded automatically to the MYSQL-Installation process.
+   Type in the necessary data, which will be:
+
+        MYSQL username      --> Username of your mysql-server connection
+        MYSQL password      --> Password of your mysql-server connection
+        MYSQL database name --> Name of your created database for the script (i.e. 'milliondata')
+        MYSQL hosting name  --> Hostname of the mysql-server (normally 'localhost' or 'mysql')
+
+   If you insert the right data, the tables will be created into the database (which you created
+   in step 2). If you don't know the MYSQL data you have to insert, please ask your provider for
+   this.
+
+6. DELETE INSTALL:
+   If the MYSQL-Installation process was successfull, your site is ready now.
+   Please delete the folder "install" now from your server!
+
+
+Finished.
+
+
+CHECK AND TROUBLE SHOOTING:
+--------------------------------------------
+See your pixel site working under http://www.yourdomain.com
+(Substitute "yourdomain.com" with your domain name).
+
+-> If no site will be shown, try http://www.yourdomain.com/index.php
+   If this helps, you have to configure your webserver, that he
+   takes first the file 'index.php' if the domain is called. You can do this by
+   creating a simple text file with the name ".htaccess" (point htaccess) with
+   the following line it it:
+
+   DirectoryIndex index.php
+
+   Save this file in the main directory of your script on your server. It says the
+   server, that he has to take the file "index.php" first.
+
+   But normally it is standard and may be you only have to delete the "index.htm" or "index.html" file
+   in the main directory of your webserver, cause such files will be taken first.
+
+
+Check your system by uploading some pixels.
+
+--> If you get a permission error, you will have to recheck, if you did set all permissions
+    correct (chmod to 777) and did not forget a file. Please see step 4 and check if you
+    really set the permission to all files AND folders listed in this step. Do not set write
+    permissions to all files and folders of the whole script package on your server, that
+    might be a security risk and some servers will cause an error message instead. Only
+    the listed files and folders please.
+
+
+Problems with sending mails from feedback or Tell-a-friend form?
+
+--> May be your server is very restricted and won't send out messages with other "from" addresses
+    than your webmaster address from your server/domain. If so, please put in the fields
+    'eMail webmaster' and 'eMail contact form' in the control area of the script (CONFIG)
+    your webmaster address of your domain (webmaster@yourdomain.com).
+
+    After this, edit the two following files of the script with a simple texteditor
+    (i.e. with notepad -> open the file from notepad, do not double click it to edit):
+
+    feedb.php
+    recommend.php
+
+    and delete in line 33 the char # from the beginning of the line, so that there
+    will be
+
+    $from = $CONFIG['email_feedback'];
+
+    (instead of #$from = $CONFIG['email_feedback'];)
+
+    Save the files and replace it on your server.
+    This could fix your mail send problem.
+
+
+
+FREQUENTLY ASKED QUESTIONS:
+---------------------------
+We are currently building a knowledge base for the script. While this is needing
+some time, you will find a FAQ with some of the mostly asked questions and answers
+to that on:
+http://www.texmedia.de/help/million
+
+Please do always take a look to this site before contacting the support via email,
+which will need some responds time depending on the daily requests. Thanks.
+
+
+ADMIN-AREA:
+-----------
+In order to access the admin-area, to activate or delete entries and modify the complete system,
+you have to go to http://www.yourdomain.com/control/index.php with the default password "admin" (without quotes).
+(Substitute "yourdomain.com" with your domain name).
+
+WE STRONGLY RECOMMEND YOU TO CHANGE THIS PASSWORD FIRST BEFORE ANY OTHER STEPS.
+YOU CAN CHANGE THIS IN THE ADMIN AREA BY CLICKING ON THE 'CONFIG' TAB.

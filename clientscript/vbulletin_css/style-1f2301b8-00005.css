@@ -1,0 +1,14 @@
+/* vBulletin 3 CSS For Style 'Mobile' (styleid: 5) */
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+.alt1, .alt1Active
+{
+	background: #FFFFFF;
+}
+.alt2, .alt2Active
+{
+	background: #999999;
+}

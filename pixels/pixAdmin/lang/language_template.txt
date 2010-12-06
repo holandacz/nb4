@@ -1,0 +1,60 @@
+<?php
+    /*
+    PHP MillionPixel (C) 2005 by texmedia.de
+    All Rights Reserved.
+
+    This program is not for free, you have to buy a copy-license for your domain.
+    This copyright notice and the header above have to remain intact.
+    You do not have the permission to sell the code or parts of this code or chanced
+    parts of this code for this program.
+    This program is distributed "as is" and without warranty of any
+    kind, either express or implied.
+
+    Please check
+    http://www.texmedia.de
+    for Bugfixes, Updates and Support.
+    */
+
+    /******************************************************************************************
+    *  ATTENTION: Please do not translate the names of the variables, only the text
+    *             between the " ". Make sure that you don't forget the semicolon at
+    *             the end of each line after the ".
+    *             If you see an %s within the text, this is a placeholder which will
+    *             be filled out with text from the script automatically. Do not delete
+    *             the %s but integrate it at the right place in your text.
+    *             i.e.
+    *                   $_SP[0] = "You can choose %s blocks for free!";
+    *
+    *             ...will shown on the website like
+    *
+    *                   You can choose 4 blocks for free!
+    *
+    *             Furthermore make sure, that you do not use " within your text, because
+    *             it is interpreted as code. Use &quot; or \" instead.
+    *
+    *             If you will get an error on your webpage (white site) you likely made this
+    *             error within this language file (missing semicolon or using of ").
+    ******************************************************************************************/
+
+
+%[LANGUAGE_ARRAY]%
+
+/* IF YOU ADD LOGO-DIRECTORIES, YOU CAN DEFINE THE NAME OF THE FOLDER,
+   WHICH SHOULD BE SHOWN ON SELECTING PIXEL PROCESS. JUST FILL IN THE
+   NAME OF THE ORIGINAL LOGO-DIRECTORY BETWEEN THE SINGLE QUOTES AND
+   THE NAME TO BE SHOWN AS VALUE BETWEEN THE DOUBLE QUOTES.
+
+   $_SP['NAME OF LOGO DIRECTORY'] = "SHOWN NAME";
+
+
+   YOU CAN ALSO DEFINE PAGE SLOGANS AND NAME OF THE GRID PAGES PER LANGUAGE
+   BY ADD ANOTHER VALUE AS FOLLOWED:
+
+   $_SP['pagesloganX'] = "Slogan of the page with the number X";
+   $_SP['pagenameX']   = "Name of the page with the number X";
+
+   Substitute the X with the number of the page.
+   Example: For the page nr. 3 the key must be $_SP['pagename3'] or $_SP['pageslogan3']
+*/
+
+?>

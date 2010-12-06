@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]

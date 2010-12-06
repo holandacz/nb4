@@ -1,0 +1,26 @@
+<Subject: %[DOMAINNAME]% - Ihr Eintrag >
+
+Hallo,
+
+Sie haben bei %[DOMAINNAME]%
+Ihre Webseite (%[URL]%) eingetragen, vielen Dank!
+
+Ihr Eintrag wird von uns aktiviert, sobald der entsprechende
+Betrag von %[B]% auf unserem Konto eingegangen ist.
+
+Falls Sie nicht gleich im Anschluss an die Bestellung
+bezahlt haben, können Sie dies innerhalb der nächsten %[DELETE_DAYS]% Tage
+über folgenden Link nachholen:
+
+%[PAYLINK]%
+
+Falls Sie den Betrag nicht innerhalb dieser Zeit begleichen,
+werden Ihre reservierte Pixel wieder freigegeben.
+
+Wir wünschen Ihnen viele Besucher und würden uns freuen,
+wenn Sie uns weiterempfehlen.
+
+Vielen Dank und viele Grüße,
+Ihr Team von %[DOMAINNAME]%
+
+%[DOMAIN]%

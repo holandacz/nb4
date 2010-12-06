@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>
+<vars>
+	<bullet><![CDATA[<span style="color: rgb(240, 147, 27); font-weight: bold; font-size: 10pt;">&#8226;&nbsp;</span>]]></bullet>
+	<item_header_pre><![CDATA[
+		<tr><td colspan="2" class="item_header" align="left" valign="top" width="406">
+	]]></item_header_pre>
+	<item_header_suf><![CDATA[
+		</td></tr>
+	]]></item_header_suf>
+	<bullet_txt>*</bullet_txt>
+	<paragraph_indent_txt>  </paragraph_indent_txt>
+</vars>
+<Zine_Items>
+
+<!-- Publisher's Message-->
+<Item class="Zine_Item" name="PUB" view="feature">
+	<itm_title>PUBLISHER'S MESSAGE: Still Number One On the Web</itm_title>
+	<feature_author>
+		<author_name>Larry Eitel</author_name>
+		<author_title>President / Publisher</author_title>
+		<url>http://www.noblood.org/members/larryeitel.html</url>
+		<twitter_label>On Twitter</twitter_label>
+		<twitter_name>larryeitel</twitter_name>
+	</feature_author>
+	<feature_company>
+		<company_name>NoBlood, Inc.</company_name>
+		<url>http://www.noblood.org/about/</url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://www.noblood.org/nbZines/090715/imgs/larryeitel-100x122.png</src>
+		<thumb_title>Larry Eitel</thumb_title>
+		<height>122</height>
+		<width>100</width>
+	</feature_thumb>
+	<feature_url></feature_url>
+	<feature_teaser><![CDATA[<br />
+<p>Yes, it has been 13 years and we are happy to say that we are still number one on the web. A major portion of the over 1,100 average daily visitors find NoBlood on the first page of major search engines when searching for common terms related to bloodless medicine and surgery. And when they arrive they find an active community of medical professionals and members of the public who are sharing their expertise and experience in the form of thousands of comments, questions and answers.</p>
+<span style="font-size: 14px;"><p>As the information highway becomes increasingly congested and complicated, a new website called Twitter is taking the world by storm. Twitter has grown into a real-time short messaging service that works over multiple networks and devices. In countries all around the world, people follow sources most relevant to them and access information via Twitter as it happens &mdash; from breaking world news to updates from friends. Register your twitter account and start <a href="http://twitter.com/noblood" target="_blank">following NoBlood</a> today. If you have already discovered Twitter, please be sure to <a href="http://twitter.com/home/?status=RT%20@noblood%20Nice%20site%20to%20stay%20up-to-date%20with%20the%20latest%20regarding%20bloodless%20healthcare." title="Post to Twitter"><img title="[Post to Twitter]" class="nothumb" src="http://www.noblood.org/nbZines/imgs/tweet-this.png" alt="[Post to Twitter]" border="0"></a>.</p>
+
+<p>Does your company provide products or services that would be of interest to medical professionals and members of the public who are concerned about the efficacy, cost and availability of donor blood? If so, there is no more cost effective way to reach this important audience. Global Blood Resources, manufacturer of the Hemobag, recently increased their advertising budget, according to Keith A. Samolyk CEO, "Advertising on NoBlood has been the most cost-effect catalyst for reaching such a focused market". If you are affiliated with a company that would like to reach this audience please see our <a href="http://wiki.noblood.org/Advertising" target="_blank">Advertisers Page</a> and <a href="http://www.noblood.org/sendemail/" target="_blank">Contact Us</a> today. See also our <a href="http://www.noblood.org/pixels/healthcare" target="_blank">Healthcare Pixels Page</a>.</p>
+
+<p>From the beginning our commitment has been to provide this resource without charge. As with any tax-exempt charitable organization, we rely upon your generous donations to make this resource possible. It cannot be overstated &mdash; providing this resource requires a substantial commitment of time and money. <a href="http://www.noblood.org/donate">Please take a couple of minutes now</a> to help us share in defraying the growing expenses necessary to make this site possible. Your support is genuinely needed and is greatly appreciated. For the price of a cup of coffee, you can help NoBlood in its mission to advance knowledge and awareness of transfusion alternatives and advanced blood management. Corporate sponsors are also welcome. See our <a href="http://www.noblood.org/pixels/corporate" target="_blank">Corporate Pixels Page</a>.</p>
+<p>Thank you &mdash; all of you who are making this site possible.</p>
+
+</span>
+]]></feature_teaser>
+	<read_more></read_more>
+</Item>
+
+<!-- ASD feature-->
+<Item class="Zine_Item" name="ASD" view="feature">
+	<itm_title>ATTENTION HEALTH PROFESSIONALS: We Know You Are Out There</itm_title>
+	<feature_author>
+		<author_name>Joseph Malak, MD</author_name>
+		<author_title>Pediatrician</author_title>
+		<url>http://www.noblood.org/members/jmalak.html</url>
+
+		<twitter_label>On Twitter</twitter_label>
+		<twitter_name>jmalak</twitter_name>
+
+	</feature_author>
+	<feature_company>
+		<company_name>Vassar Brothers Medical Center</company_name>
+		<url></url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://www.noblood.org/nbZines/090715/imgs/JoeMalak-100-141.jpg</src>
+		<thumb_title>Joseph Malak, MD... "We know you are out there"</thumb_title>
+		<height>141</height>
+		<width>100</width>
+	</feature_thumb>
+	<feature_url></feature_url>
+	<feature_teaser><![CDATA[<br /><p><b>And we have ways of making you talk...</b></p>
+<p>Without a doubt, the Ask a Professional Forum, now with over 2,600 topics under discussion, is the most active area on NoBlood.  Members of the public, who perhaps have just become members in the face of a family emergency and have posted a question for the first time, no doubt appreciate any and all timely responses to their questions by concerned healthcare professionals. We may have heard the expression, "There is wisdom in a multitude of counselors." And how true that can be when someone, for instance, that is facing major surgery writes in asking for advice -- and not only several physicians from various specialties share their thoughts, but also a surgical nurse, a bloodless program manager, and perhaps a member who has gone through that problem in the past. Such a collaborative effort, at times involving professional members from all parts of the globe, all contributing their part to the development of a bloodless management strategy – can truly be a satisfying experience for all involved.</p>
+
+<p>Occasionally, though, a thoughtful question gets posted, but some bit of time goes by before replies start showing up. What might be holding some of the health pros that are NoBlood members and regular visitors back from posting an answer Let's address three likely reasons:  </p>
+
+
+<p><b>1. Fear of Litigation</b></p>
+<span style="font-size: 14px;"><p>Most of us in health care have all heard stories about doctors who played the role of a good Samaritan only to get sued by some thankless, perhaps shameless person who was not their actual patient, but they were trying to help. This certainly crossed my mind when I started writing responses in the forum. Fortunately, the <a href="http://www.noblood.org/library-records/296-terms-service.html">Terms of Service</a>, which all new members are required to read, clearly disclaim any potential concerns in this regard. In fact, this is the very first issue addressed. Moreover, the <a href="http://www.noblood.org/about/">Mission Statement</a> reinforces the point that NoBlood is all about discussion and education, not diagnosis and treatment.</p></span>
+
+<p><b>2. Overflowing Cup</b></p>
+<span style="font-size: 14px;"><p>The pace of life in the 21st century has put the squeeze on all of us. Healthcare professionals, faced with not only generic pressures but also the struggle to keep up with the literature in their field, which likely is growing exponentially, can have a panic attack when anyone starts talking about adding something to their schedule.
+But come on. Reading the last half dozen posted questions, picking one that you have some interest or even better, expertise in, and then typing out a short paragraph can take ten minutes, maybe less. And that would do it for the week.</p></span>
+
+<p><b>3. Just Too Complicated</b></p>
+<span style="font-size: 14px;"><p>Yes, first time or infrequent visitors to NoBlood may feel the site was designed by someone that was drinking a little too much coffee. Lots of bells and whistles. But when you actually get down to the forum level, and do that a few times, the process goes pretty quick.
+If there is something special you would like to do, such as uploading a PDF, but aren't sure quite how to do that, do not hesitate to <a href="http://www.noblood.org/pm/new/to-1481/">Private Message</a> me or submit a question using the <a href="http://www.noblood.org/sendemail/">Contact Us</a> form. We will try to help.</p>
+
+</span>
+]]></feature_teaser>
+	<read_more></read_more>
+</Item>
+
+<!-- Sponsors sponsor-->
+<Item class="Zine_Item" name="Sponsors" view="sponsor">
+	<itm_title>COMPANY SPONSOR: Biblize</itm_title>
+	<intro><![CDATA[]]></intro>
+	<heading></heading>
+	<url>http://biblize.com/</url>
+	<itm_name>Biblize - Enhancing Bible Research</itm_name>
+	<itm_location></itm_location>
+	<thumb>
+		<src>http://www.noblood.org/pixels/grids/u94.png</src>
+		<height>40</height>
+		<width>160</width>
+	</thumb>
+	<body><![CDATA[<b>Biblize</b> is a set of free online Bible research tools built around a Google-like search engine specially designed for searching, comparing and analyzing scriptures from popular Bibles that are published in various languages on the Internet.<br /><br />The <b>Biblize Searchalizer</b> is a 'smart' online concordance which makes it a snap to search and compare verses containing difficult to find words or phrases from a growing list of popular Bibles such as <b>King James Version</b> (KJV), <b>New International Version</b>&reg; (NIV) and <b>New World Translation</b> (NWT) from various languages.<br /><br /><br />
+	]]></body>
+</Item>
+
+
+<!-- Map feature-->
+<Item class="Zine_Item" name="Map" view="feature_2">
+	<itm_title>NEW FEATURE: The World of Bloodless</itm_title>
+	<feature_author>
+		<author_name></author_name>
+		<author_title></author_title>
+		<url></url>
+	</feature_author>
+	<feature_company>
+		<company_name></company_name>
+		<url>/</url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://noblood.org/nbZines/090415/imgs/world_map.png</src>
+		<thumb_title>See the world of bloodless medicine and surgery.</thumb_title>
+		<height>211</height>
+		<width>400</width>
+	</feature_thumb>
+	<feature_url>http://www.noblood.org/bloodless-medicine-surgery-map</feature_url>
+	<feature_teaser><![CDATA[<b>We are happy to announce a new feature!</b> One of our hard working volunteers, Dana Ward, has been working hard to add map coordinates to each hospital in our Bloodless Medicine and Surgery Hospital Directory. Take a moment now to zoom into your part of the world to locate bloodless healthcare resources nearest you. At this time our focus is on hospitals offering transfusion alternatives and advance blood management. As this is a community-built resource, if you find that we have overlooked a particular hospital, please let us know though our <a href="http://www.noblood.org/sendemail/" target="_blank"><strong>Contact Form</strong></a>.]]></feature_teaser>
+	<read_more>Visit live map</read_more>
+</Item>
+
+
+<!-- Sponsors sponsor-->
+<Item class="Zine_Item" name="Sponsors" view="sponsor">
+	<itm_title>HEALTHCARE SPONSOR: Global Blood Resources LLC</itm_title>
+	<intro></intro>
+	<heading></heading>
+	<url>http://www.mybloodfirst.com/</url>
+	<itm_name>Global Blood Resources LLC</itm_name>
+	<itm_location></itm_location>
+	<thumb>
+		<src>http://www.noblood.org/pixels/grids/u95.png</src>
+		<height>60</height>
+		<width>60</width>
+	</thumb>
+	<body><![CDATA[The <b>Hemobag<sup>&reg;</sup></b> is the <u>only</u> autotransfusion product on the market that salvages and concentrates the entire lost blood volume, all autologous whole blood fractions and constituents for Cardiac, Thoracic and Vascular Surgery are saved, thus helping to avoid unnecessary allogeneic blood transfusions. This technique puts the patient first and optimizes coagulation and homeostasis at the conclusion of surgery.<br /><br />
+
+<b>The <b>Hemobag<sup>&reg;</sup> - Saving More Blood, Reducing Costs, and Improving Patient Outcomes.</b]]></body>
+</Item>
+
+<!-- PeopleAreTalking threads-->
+<Item class="Zine_Threads" name="PeopleAreTalking" view="threads">
+	<itm_title>PEOPLE ARE TALKING: Popular Discussions</itm_title>
+	<intro><![CDATA[<p>There is a LOT of information here! If you are not sure where to start. A good place to look is in the <a href="http://www.noblood.org/forums/">Forums</a>! This is a part of the site in which users, including healthcare providers and the public, post questions, comments, interesting information and articles on varying topics related to transfusion alternatives and advance blood management. Information seekers get answers and make connections with other NoBlood users to exchange information, resources, and support.</p>
+	<p>Each topic is usually posted as a separate <strong>thread.</strong> The <strong>threads</strong> are posted in one of our many <strong>forums </strong>most relevant to that topic.</p>
+<p>A sample of the most active <strong>threads</strong> (topics) are listed with links below. The <strong>forum</strong> in which each thread is located is followed by the number of views.</p>]]></intro>
+	<see_more_url>http://www.noblood.org/forums/</see_more_url>
+	<see_more_title>More discussions</see_more_title>
+	<thread_ids>3117,345,1105,2703,4953,2823,3591,490</thread_ids>
+	<show_forums>1</show_forums>
+	<show_views>1</show_views>
+	<closing><![CDATA[
+<p>Whether you are a casual passer-by looking in for the first time, a new registered user who hasn't looked around much, a professional seeking information to assist you in your practice, a student looking for research resources, or someone with a health problem needing answers to help you make the best health decisions for you or a loved one. We hope you will make good use of our many resources.</p>]]></closing>
+</Item>
+
+
+	<!-- Press -->
+<Item class="Zine_Item" name="Press" view="teaser">
+	<itm_title>PRESS RELEASE: New Manager, Northeast Baptist Hospital</itm_title>
+	<url>http://www.noblood.org/press-releases/5770-new-manager-northeast-baptist-hospital-san-antonio-tx.html</url>
+	<thumb>
+		<src></src>
+		<thumb_title></thumb_title>
+		<height></height>
+		<width></width>
+	</thumb>
+	<teaser><![CDATA[
+<p><b>Bloodless Medicine and Blood Conservation<br />
+Baptist Health System<br />
+San Antonio, TX</b></p>
+<p><b>Mary Anne Rouch has joined the team at Northeast as our new Bloodless Medicine Manager.</b> She comes to us from Texas Health System and brings with her 15 years of experience coordinating and managing Bloodless Medicine. Mary Anne is replacing Alex Miller, RN. President Matt Stone says, "We are happy to have Ms. Rouch on board to continue developing this exciting line of business. She has our full support."</p>
+
+<p>Ms. Rouch has successfully developed and operated numerous bloodless and blood conservation programs in Texas and has assisted many others. During her tenure with Texas Health System she reduced blood utilization by 10% in the first year and 20% in the 3rd year of operations. This reduction saved the hospital and system millions of dollars in blood acquisition costs and improved the quality of care for many patients.</p>
+
+<p><b>The Mission Statement</b></p>
+<p>The <a href="http://www.noblood.org/bloodless-medicine-surgery-hospital/San-Antonio-Northeast-Baptist-Hospital-209">Baptist Health System</a> exists to provide the highest quality in health care delivery, education and community service through a dedicated team of health care professionals working together in a compassionate Christian environment. <a href="http://www.noblood.org/press-releases/5770-new-manager-northeast-baptist-hospital-san-antonio-tx.html">More...</a></p>
+	]]></teaser>
+</Item>
+
+<!-- WhatWouldYouSay threads-->
+<Item class="Zine_Threads" name="WhatWouldYouSay" view="threads">
+	<itm_title>WHAT WOULD YOU SAY?: Questions In Search Of Answers</itm_title>
+	<intro><![CDATA[<p>The power and value of an online forum like <strong><em>NoBlood</em></strong> depend on the participation of those with knowledge to share. Are you a health professional, a program coordinator, or have you had personal experience with bloodless care? We invite you, then, to go to the home page of <a href="http://www.noblood.org/" target="_blank"> <em>NoBlood</em></a>, and examine the box labeled &quot;<em>Welcome to Our Community.</em>&quot; Notice the fifth item on the list: &quot;<em><a href="http://www.noblood.org/search.php?do=process&replyless=1&replylimit=0&exclude=41&nocache=0" target="_blank">Answer a Question</a>.</em>&quot; Go ahead and click on that. You will be brought to a list of forum entries (that have had 0 replies) in reverse chronological order. On the far right hand side, you will note categories. Go ahead and start exploring. Here are a few questions that, as <em>nbZine</em> was going to press, had not yet received a reply:</p>]]></intro>
+	<see_more_url>http://www.noblood.org/search.php?do=process&amp;replyless=1&amp;replylimit=0&amp;exclude=41&amp;nocache=0</see_more_url>
+	<see_more_title>Latest unanswered questions</see_more_title>
+	<thread_ids>5775,5743,5577,5313</thread_ids>
+	<show_forums>1</show_forums>
+	<show_views></show_views>
+	<closing><![CDATA[]]></closing>
+</Item>
+
+<!-- Twitter teaser-->
+<Item class="Zine_Item" name="Twitter" view="teaser">
+	<itm_title>EDUCATION: Stay Current Using Twitter</itm_title>
+	<url>http://twitter.com/noblood</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/twitter.jpg</src>
+		<thumb_title>NoBlood Twitter</thumb_title>
+		<height>28</height>
+		<width>80</width>
+	</thumb>
+	<teaser><![CDATA[Using Twitter on your phone or computer, it is now easier than ever to <b>keep your finger on the pulse of Bloodless Medicine and Surgery</b>. Twitter has become a convenient way to 'follow' people, products and events. <b>"It's one of the fastest growing phenomena on the Internet"</b>, wrote the New York Times. Register an account or login at Twitter to <b>start <a href="http://twitter.com/noblood">following NoBlood</a> today!</b>
+	A current favorite Twitter client here at NoBlood is <a href="http://www.twhirl.org/">Twirl</a>. For an extensive list of clients, visit <a href="http://tweeterland.com/twitter-applications/">tweeterland</a>. See also an 'open-source' description of <a href="http://en.wikipedia.org/wiki/Twitter">Twitter on Wikipedia</a>.<br />
+	Please be sure to <a class="tt" href="http://twitter.com/home/?status=Check%20out%20a%20site%20which%20is%20devoted%20to%20Transfusion%20Alternatives%20and%20Blood%20Management%20at%20noblood.org.%20http://is.gd/1sFAi" title="Post to Twitter"><img class="nothumb" src="http://www.noblood.org/nbZines/imgs/tweet-this.png" alt="[Post to Twitter]" border="0"></a>.
+	]]></teaser>
+</Item>
+
+<!-- HelpWanted bullets-->
+<Item class="Zine_Item" name="HelpWanted" view="bullets">
+	<itm_title>HELP WANTED</itm_title>
+	<bullet_itm>
+		<heading>Freelance Writer</heading>
+		<body><![CDATA[We are seeking a freelance writer with an intimate knowledge of transfusion alternatives and blood management to participate in various editorial activities.]]></body>
+	</bullet_itm>
+	<bullet_itm>
+		<heading>Website Design, Development and Administration</heading>
+		<body><![CDATA[We are seeking freelance professional expertise in all aspects of website design, development and administration.]]></body>
+	</bullet_itm>
+	<bullet_itm>
+		<heading>Volunteers make this resource possible</heading>
+		<body><![CDATA[If you appreciate the service this website is providing and may be interested in participating in some way, please <a href="http://www.noblood.org/sendemail/" target="_blank"><strong>Contact Us</strong></a>. See also <a href="http://wiki.noblood.org/index.php/Get_Involved" target="_blank"><b>Get Involved</b></a>. <strong>Thank you!</strong>]]></body>
+	</bullet_itm>
+</Item>
+
+<!-- Coffee teaser-->
+<Item class="Zine_Item" name="Coffee" view="teaser">
+	<itm_title>PLEASE HELP: Can you spare a cup of coffee?</itm_title>
+	<url>http://www.noblood.org/donate</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/donate.jpg</src>
+		<thumb_title>Can You Spare A Cup Of Coffee?</thumb_title>
+		<height>99</height>
+		<width>80</width>
+	</thumb>
+	<teaser><![CDATA[Providing this online resource for the benefit of the tens of thousands that visit noblood.org each month is a<strong> very substantial undertaking</strong>, both in terms of time and of expense. And yet there is <strong>SO MUCH MORE</strong> that can be accomplished.
+Monthly, annual or one-time donations provide an important contribution toward covering ongoing operating expenses. If you appreciate the hard work going on here at NoBlood and would like to help us to continue to grow and improve, <strong>please take a couple of minutes now</strong> to help us share in defraying the growing expenses necessary to make this site possible. <a href="http://www.noblood.org/donate" target="_blank"><strong>Your assistance is genuinely needed and is greatly appreciated*</strong></a>.]]></teaser>
+</Item>
+
+<!-- Corp corp-->
+<Item class="Zine_Item" name="Corp" view="corp">
+	<body><![CDATA[NoBlood, a California non-profit corporation, is registered as a charitable organization with the State of California and may lawfully solicit donations under California law. NoBlood has been granted official tax exempt status (section 501(c)3 of the Internal Revenue Code) from the United States Internal Revenue Service. You may deduct donations from your federally-taxable income. Please contact a tax professional for the details of deducting such a donation. Our tax ID# is: 33-0858519.Copy of 501(c)3 status letter ]]></body>
+
+	<url><![CDATA[<a href="http://noblood.org/wiki/images/b/b2/BHI501c3p1.gif" class="extiw" title="n:wiki/images/b/b2/BHI501c3p1.gif">page 1</a> and <a href="http://noblood.org/wiki/images/5/52/BHI501c3p2.gif" class="extiw" title="n:wiki/images/5/52/BHI501c3p2.gif">page 2</a>.</font>]]></url>
+
+	<url_txt><![CDATA[page 1: [http://noblood.org/wiki/images/b/b2/BHI501c3p1.gif]<br />
+page 2: [http://noblood.org/wiki/images/5/52/BHI501c3p2.gif]]]>.</url_txt>
+</Item>
+
+</Zine_Items>
+</document>

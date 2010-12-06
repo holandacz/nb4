@@ -1,0 +1,14 @@
+<Onderwerp: Weet u dat %[DOMAINNAME]%? >
+
+Hallo,
+
+%[EMAIL]% raadt je aan om eens te kijken op:
+
+%[DOMAIN]%
+
+Hier is het mogelijk om uw website te linken
+en zo nieuwe en meer bezoekers te trekken.
+
+-----------------------------------------------------
+Deze aanbeveling is u toegezonden door %[EMAIL]% .
+%[DOMAIN]%

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bitfields product="dl2_thread">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="dl2_threadpermissions">
+				<bitfield name="cancreatethreads" group="dl2_threadpermissions" phrase="downloadsii_create_threads">1</bitfield>
+			</group>
+		</group>
+	</bitfielddefs>
+</bitfields>

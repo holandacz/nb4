@@ -1,0 +1,10 @@
+$HTTP["host"] == "yourdomain.com" {
+server.document-root = "/path/to/your/public_html/"
+url.rewrite-once = (
+"^/forums/(sitemap.*\.(xml|txt)(\.gz)?)$" => "/forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1",
+"^(/forums/(admincp|modcp|clientscript|cpstyles|images|customavatars)/.*)$" => "$1",
+"^(/favicon\.ico|/robots\.txt|.*clear\.gif)$" => "$1",
+"^/forums/(.+)\?(.*)$" => "/forums/vbseo.php?$2",
+"^/forums/(.+)$" => "/forums/vbseo.php"
+)
+}

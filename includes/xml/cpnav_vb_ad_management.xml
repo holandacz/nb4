@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="adintegrate_rt">
+	<navgroup text="vB Ad Management" hr="true" displayorder="20">
+		<navoption>
+			<phrase>setting_adintegrate_global</phrase>
+			<link>vb_ad_management.php?do=adintegrate_global</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_ad_sharing</phrase>
+			<link>vb_ad_management.php?do=adintegrate_sharing</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_headernavbar</phrase>
+			<link>vb_ad_management.php?do=adintegrate_headernavbar</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_leftright</phrase>
+			<link>vb_ad_management.php?do=adintegrate_leftright</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_postbit</phrase>
+			<link>vb_ad_management.php?do=adintegrate_postbit</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_forumbitthreadbit</phrase>
+			<link>vb_ad_management.php?do=adintegrate_forumbitthreadbit</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_footersponsors</phrase>
+			<link>vb_ad_management.php?do=adintegrate_footersponsors</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_fullpage</phrase>
+			<link>vb_ad_management.php?do=adintegrate_fullpage</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_archive</phrase>
+			<link>vb_ad_management.php?do=adintegrate_archive</link>
+		</navoption>
+		<navoption>
+			<phrase>setting_adintegrate_custom</phrase>
+			<link>vb_ad_management.php?do=adintegrate_custom</link>
+		</navoption>		
+	</navgroup>
+</navgroups>
+

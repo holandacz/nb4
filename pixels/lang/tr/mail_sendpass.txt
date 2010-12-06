@@ -1,0 +1,12 @@
+<Subject: %[DOMAINNAME]% - Hesap bilgisi >
+
+Merhaba,
+
+%[DOMAINNAME]% sitesindeki bilgilerinizi aþaðýdaki alanlarý doldurarak deðiþtirebilirsiniz:
+
+Kullanýcý ID: %[USERID]%
+Þifre: %[LOGINCODE]%
+
+
+%[DOMAINNAME]% takýmý
+%[DOMAIN]%

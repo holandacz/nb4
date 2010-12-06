@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="extra_threadfields">
+	<navgroup phrase="extra_threadfields" displayorder="20">
+		<navoption displayorder="1">
+			<text>Extra Fields Options</text>
+			<link>options.php?dogroup=extra_threadfields</link>
+		</navoption>
+		<navoption displayorder="2">
+			<text>Extra Fields Manager</text>
+			<link>threadfields_admin.php?</link>
+		</navoption>
+		<navoption displayorder="3">
+			<text>Add An Extra Field</text>
+			<link>threadfields_admin.php?do=add</link>
+		</navoption>
+	</navgroup>
+</navgroups>

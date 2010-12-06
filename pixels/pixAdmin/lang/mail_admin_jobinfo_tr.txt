@@ -1,0 +1,11 @@
+<Subject: %[DOMAINNAME]% - Yönetici Bilgilendirme: Otomatik Ýþ >
+
+Merhaba,
+
+%[DOMAINNAME]% isimli sitenizde aþaðýdaki iþlemler otomatik olarak baþlatýlmýþtýr:
+
+%[JOBINFO]%
+
+
+------------------------------------------------------------
+Million Pixel Script

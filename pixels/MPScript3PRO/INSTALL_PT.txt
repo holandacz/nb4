@@ -1,0 +1,148 @@
+INSTRUÇÕES DE INSTALAÇÃO PARA O MILLION PIXEL SCRIPT VERSÃO 3
+*******************************************************************
+
+Obrigado por ter adquirido o Million Pixel Script!
+Leia por favor atentamente as seguintes instruções, para que consiga instalar com sucesso o seu Million Pixel Script
+no seu servidor/provedor de alojamento.
+
+Para mais questões, resolução de problemas, e updates visite:
+http://millionhelp.texmedia.de
+
+
+Requisitos para a instalação do Million Pixel Script:
+----------------------------------------------------------------------------
+
+- Um domínio com um alojamento que providencie:
+  > PHP 4.3 ou superior com uma libraria GD instalada (que normalmente é o padrão)
+  > MySQL
+
+
+Procedimento de instalação do Million Pixel Script:
+--------------------------------------------------------
+
+1. UNZIP:
+   Faça Unzip de "MPScript3PRO.zip" e grave os ficheiros no seu computador.
+
+2. BASE DE DADOS:
+   Crie uma base de dados-MYSQL (por ex. com o nome: milliondata) no seu servidor web,
+   utilizando ou um software gerenciador de base de dados como o PHPMyAdmin ou via a sua
+   conta de gestão de alojamento (procure por items nos menus como 'mysql' ou 'database').
+
+3. UPLOAD:
+   Faça Upload de todos os ficheiros e pastas presentes na pasta "script" para o seu servidor web.
+   (Não faça o upload da pasta "script" em si, apenas do conteúdo nela presente!)
+
+4. PERMISSÕES DE ESCRITA:
+   Se esta a usar um servidor unix, vai precisar de conceder permissões de escrita a alguns ficheiros e
+   pastas do script, para que o script possa ser gravado e alterado através destes ficheiros.
+   Pode definir estes atributos de escrita (que são chamados de "chmod 777" em linguagem unix)
+   com o seu software de cliente FTP, o mesmo que utilizou para fazer o upload do script.
+   Para isso basta que seleccione os ficheiros e pastas listados em baixo, e defina os atributos para 777 (procure
+   por favor no seu software de cliente FTP onde encontrar esta opção).
+   É crucial que os seguintes ficheiros e pastas possuam permissão de escrita:
+
+    PASTAS:         - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/de    (apenas se desejar usar a lingua alemã)
+                    - lang/en    (apenas se desejar usar a lingua inglesa)
+                    - mydir
+
+
+    FICHEIROS:      - grids/    -> todos os ficheiros presentes neste directório
+                    - lang/de/  -> todos os ficheiros presentes neste directório, se desejar usar a lingua alemã
+                    - lang/en/  -> todos os ficheiros presentes neste directório, se desejar usar a lingua inglesa
+
+5. MYSQL:
+   Comece o seu website agora e será direccionado automaticamente para o processo de instalação-MYSQL.
+   Escreva os dados necessários, que serão:
+
+        MYSQL username      --> O Username da sua ligação de servidor-mysql
+        MYSQL password      --> A Password da sua ligação de servidor-mysql
+        MYSQL database name --> O nome da base de dados criada por si para o script (por ex. 'milliondata')
+        MYSQL hosting name  --> Hostname do servidor-mysql (normalmente 'localhost' ou 'mysql')
+
+   Se inserir os dados correctos, as tabelas serão criadas na base de dados (que criou
+   no passo nº2 da instalação). Se não souber qual a informação MYSQL que tem de inserir, por favor pergunte ao seu
+   fornecedor.
+
+6. APAGAR A PASTA INSTALL:
+   Se o processo de instalação-MYSQL foi concluido com sucesso, o seu site estará pronto.
+   Agora, por favor apague a pasta "install" do seu servidor!
+
+
+Terminado.
+
+
+VERIFICAÇÃO E RESOLUÇÃO DE PROBLEMAS:
+--------------------------------------------
+Veja o seu pixel site a trabalhar em http://www.yourdomain.com
+
+-> Se não aparecer nenhum site, tente http://www.yourdomain.com/index.php
+   Se isto funcionar, tem de configurar o seu servidor web para que ele
+   "pegue" primeiro no ficheiro 'index.php' quando o domínio for chamado. Para fazer isto,
+   crie um simples ficheiro de texto com o nome ".htaccess" (ponto htaccess) com
+   a seguinte linha:
+
+   DirectoryIndex index.php
+
+   Grave este ficheiro no seu servidor, no directório principal do seu script. Este diz ao
+   servidor, que ele tem de "pegar" primeiro no ficheiro "index.php".
+
+   Mas como normalmente isto é a medida padrão, pode ser que apenas tenha de apagar os ficheiros "index.htm" ou "index.html"
+   no directório principal do seu servidor web, porque esses são os ficheiros que são escolhidos primeiro.
+
+
+Verifique o seu sistema fazendo uploads de alguns pixels.
+
+--> Se receber um erro de permissão, terá de fazer uma nova verificação. Se tiver concedido todas as permissões
+    correctamente (chmod to 777) e não tiver esquecido nenhum ficheiro, veja por favor o passo nº4 da instalação e verifique
+    se realmente concedeu as permissões de escrita a todos os ficheiros e pastas indicadas nesse passo. Não conceda permissões
+    de escrita para todos os ficheiros e pastas do script no seu servidor, isso poderá
+    vir a tornar-se num risco de segurança e alguns servidores irão mostrar uma mensagen de erro. Conceda permissões de escrita
+    apenas aos ficheiros e pastas listados no passo nº4 da instalação.
+
+
+Problemas ao enviar emails sob forma de "feedback" ou "avise um amigo"?
+
+--> Talvez o seu servidor seja muito limitado e não envie mensagens com "formas" de endereço diferentes
+    da utilizada pelo webmaster do seu servidor/domínio. Se assim for, por favor coloque nos campos
+    'eMail webmaster' e 'eMail contact form' na area de controlo do script (CONFIG)
+    o endereço de email do webmaster do seu domínio (webmaster@yourdomain.com).
+
+    Depois disto, edite os dois ficheiros seguintes do script com um simples editor de texto,
+    (por ex. com o bloco de notas -> abra o ficheiro apartir do bloco de notas, não faça duplo-clique no ficheiro):
+
+    feedback.php
+    recommend.php
+
+    e apague na linha 33 o caractere # do início da linha, para que esta
+    fique da seguinte forma:
+
+    $from = $CONFIG['email_feedback'];
+
+    (em vez de #$from = $CONFIG['email_feedback'];)
+
+    Grave os ficheiros alterados e substitua-os no seu servidor.
+    Isto deve resolver o seu problema ao enviar emails.
+
+
+
+PERGUNTAS FREQUENTES:
+---------------------------
+Estamos de momento a construir uma base de instruções informativas para o script. Enquanto isso não esta concluido,
+poderá encontrar uma lista de respostas a algumas das perguntas mais frequentes
+em:
+http://www.texmedia.de/help/million
+
+Por favor, lembre-se de verificar sempre este site antes de contactar o nosso apoio via email,
+apoio esse que necessitará de algum tempo para responder ás suas dúvidas, dependendo do número de pedidos diários. Obrigado.
+
+
+ÁREA DE ADMINISTRADOR:
+-----------
+Para aceder á área de administrador, onde pode activar ou apagar registos e modificar todo o sistema,
+terá de ir a http://www.yourdomain.com/control/index.php com a password padrão "admin" (sem aspas).
+È ALTAMENTE RECOMENDADO QUE ALTERE ESTA PASSWORD ANTES DE PASSAR A QUALQUER OUTRO PASSO.
+PODERÀ ALTERÁ-LA NA ÁREA DE ADMINISTRADOR CLICANDO NO BOTÃO 'CONFIG'.

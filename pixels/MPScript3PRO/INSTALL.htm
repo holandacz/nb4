@@ -1,0 +1,149 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Million Pixel Script</title>
+</head>
+
+<body>
+<div style="background-color:#6275D6;padding:5">
+<pre><font color="#808080"> </font><b><font face="Arial" color="#808080">  <img border="0" src="public_html/install/ilo_pro.gif">
+ </font><font face="Arial" color="#FFFFFF">  (C) 2005-2006 by texmedia.de, all rights reserved.
+   &quot;Million Pixel Script&quot; and &quot;Pixel Script&quot; is a registered Trademark of texmedia.</font></b></pre>
+<pre><b><font face="Arial" color="#FFFFFF">   This script code is protected by international Copyright Law.
+   Any violations of copyright will be dealt with seriously,
+   and offenders will be prosecuted to the fullest extent of the law.</font></b></pre>
+<pre><b><font face="Arial" color="#FFFFFF">   This program is not for free, you have to buy a copy-license for your domain.
+   This copyright notice and the header above have to remain intact.
+   You do not have the permission to sell the code or parts of this code or chanced
+   parts of this code for this program.
+   This program is distributed &quot;as is&quot; and without warranty of any
+   kind, either express or implied.</font></b></pre>
+<pre><b><font face="Arial" color="#FFFFFF">   Please check
+   </font><font face="Arial" color="#808080"><a href="http://www.texmedia.de"><font color="#FFFFFF">http://www.texmedia.de</font></a></font><font face="Arial" color="#FFFFFF">
+   for Bugfixes, Updates and Support.</font></b></pre>
+   </div>
+<pre><b><font size="4" face="Arial">INSTALLATION INSTRUCTIONS FOR THE MILLION PIXEL SCRIPT </font><font face="Times New Roman" size="4">®</font><font face="Arial" size="4"> PRO VERSION 3</font></b></pre>
+<pre><font face="Arial">Thank you for buying the Million Pixel Script PRO!
+Please read these instructions carefully in order to successfully install your Million Pixel Script on your server/webspace.</font></pre>
+<pre><font face="Arial">For questions, bug fixes, and updates go to: <a href="http://millionhelp.texmedia.de">http://millionhelp.texmedia.de</a>
+</font></pre>
+<pre><font face="Arial"><b><font size="4">Requirements for the successful installation of the Million Pixel Script PRO:</font>
+
+</b>- A domain with a Webhost that provides:
+  &gt; PHP 4.3 or higher with an installed GD library (this normally standard)
+  &gt; MySQL
+</font></pre>
+<pre><u><b><font face="Arial" size="4">INSTALLATION</font></b></u><b><font face="Arial" size="4"><u>:</u>
+</font></b><font face="Arial"><b><font size="4">
+</font><font size="3">1. UNZIP:</font></b><font size="3">
+</font>   Unzip &quot;MPScript3PRO.zip&quot; and save the files to your local computer.</font></pre>
+<pre><font face="Arial"><b><font size="3">2. DATABASE:</font></b>
+   Create a MYSQL-database (i.e. with the name: milliondata) on your webserver,
+   either with a database management software like PHPMyAdmin or via your
+   hosting management account (look for menu items like 'mysql' or 'database').
+   Create a MYSQL-user and add this user to your database with all rights.</font></pre>
+<pre><font face="Arial"><b><font size="3">3. UPLOAD:</font></b>
+   Upload all files AND folders FROM the folder &quot;public_html&quot; TO YOUR hosting webservers public html
+   directory. This is mostly also a directory called &quot;public_html&quot; or sometimes &quot;html&quot; or &quot;web&quot;.</font></pre>
+<pre><font face="Arial"><b><font size="3">4. WRITE PERMISSIONS:</font></b>
+   If you are using a unix server you need to give write permission to some files and
+   folders of the script, so that the script itself can save and change with these files.
+   You can set these writeable attributes (which is called &quot;chmod 777&quot; in unix language)
+   with your FTP client software you used for upload the script.
+   Just select the listed files and folders, and set the attributes to 777 (please search
+   in your FTP client software where you find this option).
+   It is strongly necessary to give all of the following files and folders write permission:</font></pre>
+<pre><b><font color="#0000FF"><font face="Arial">    FOLDERS:	- control/mailtemp
+		- grids
+		- incs
+		- lang
+		- lang/de	(only if you'd like to use german language)
+		- lang/en	(only if you'd like to use english language)
+		- lang/...	(other languages)
+		- mydir
+
+    FILES:		- grids/...	-&gt; all files in directory &quot;grids&quot;
+</font>		<font face="Arial">- lang/de/	-&gt; all files here in this directory, if you'd like to use german language
+		- lang/en/	-&gt; all files here in this directory, if you'd like to use english language
+		- lang/../	-&gt; other language directory files</font></font></b></pre>
+<pre><font face="Arial">   If you own a windows hosting/server you need to make sure that the listed files and directories
+   have also write permissions set. Please contact your provider if you get problems with this step,
+   he should help you or do this step for you.</font></pre>
+<pre><font face="Arial"><b><font size="3">5. MYSQL:</font></b>
+   Start your website now and you will forwarded automatically to the MYSQL-Installation process.
+   Type in the necessary data, which will be:</font></pre>
+<pre><font face="Arial">        MYSQL username      --&gt; Username of your mysql-server connection
+        MYSQL password      --&gt; Password of your mysql-server connection
+        MYSQL database name --&gt; Name of your created database for the script (i.e. 'milliondata')
+        MYSQL hosting name  --&gt; Hostname of the mysql-server (normally 'localhost' or 'mysql')</font></pre>
+<pre><font face="Arial">   If you insert the right data, the tables will be created into the database (which you created
+   in step 2). If you don't know the MYSQL data you have to insert, please ask your provider for
+   this.</font></pre>
+<pre><font face="Arial"><b><font size="3">6. DELETE INSTALL:</font></b>
+   If the MYSQL-Installation process was successfull, your site is ready now.
+   Please delete the folder &quot;install&quot; now from your server!
+</font></pre>
+<pre><font face="Arial">Finished.
+</font></pre>
+<pre><font face="Arial"><u><b><font size="4">ADMIN-AREA:</font></b></u>
+
+In order to access the admin-area, to activate or delete entries and modify the complete system,
+you have to go to <i><font color="#0000FF"><b>h</b>ttp://www.yourdomain.com<b>/control/</b></font></i> with the default password &quot;admin&quot; (without quotes).
+(<b><i>Substitute &quot;yourdomain.com&quot; with your domain name</i></b>).</font></pre>
+<pre><b><font face="Arial" color="#FF0000">WE STRONGLY RECOMMEND YOU TO CHANGE THIS PASSWORD FIRST BEFORE ANY OTHER STEPS.
+YOU CAN CHANGE THIS IN THE ADMIN AREA BY CLICKING ON THE 'CONFIG' TAB.</font></b></pre>
+<pre>&nbsp;</pre>
+<pre><font face="Arial"><b><font size="4"><u>CHECK AND TROUBLE SHOOTING:</u>
+</font></b>
+See your pixel site working under http://www.yourdomain.com
+(<i><b>Substitute &quot;yourdomain.com&quot; with your domain name</b></i>).</font></pre>
+<pre><font face="Arial">-&gt; If no site will be shown, try http://www.yourdomain.com/index.php
+   If this helps, you have to configure your webserver, that he
+   takes first the file 'index.php' if the domain is called. You can do this by
+   creating a simple text file with the name &quot;.htaccess&quot; (point htaccess) with
+   the following line it it:</font></pre>
+<pre><font face="Arial">   DirectoryIndex index.php</font></pre>
+<pre><font face="Arial">   Save this file in the main directory of your script on your server. It says the
+   server, that he has to take the file &quot;index.php&quot; first.</font></pre>
+<pre><font face="Arial">   But normally it is standard and may be you only have to delete the &quot;index.htm&quot; or &quot;index.html&quot; file
+   in the main directory of your webserver, cause such files will be taken first.
+</font></pre>
+<pre><font face="Arial">Check your system by uploading some pixels.</font></pre>
+<pre><font face="Arial">--&gt; If you get a permission error, you will have to recheck, if you did set all permissions
+    correct (chmod to 777) and did not forget a file. Please see step 4 and check if you
+    really set the permission to all files AND folders listed in this step. Do not set write
+    permissions to all files and folders of the whole script package on your server, that
+    might be a security risk and some servers will cause an error message instead. Only
+    the listed files and folders please.
+</font></pre>
+<pre><b><font face="Arial">Problems with sending mails from feedback or Tell-a-friend form?</font></b></pre>
+<pre><font face="Arial">--&gt; May be your server is very restricted and won't send out messages with other &quot;from&quot; addresses
+    than your webmaster address from your server/domain. If so, please put in the fields
+    'eMail webmaster' and 'eMail contact form' in the control area of the script (CONFIG)
+    your webmaster address of your domain (webmaster@yourdomain.com).</font></pre>
+<pre><font face="Arial">    After this, edit the two following files of the script with a simple texteditor
+    (i.e. with notepad -&gt; open the file from notepad, do not double click it to edit):</font></pre>
+<pre><font face="Arial">    feedb.php
+    recommend.php</font></pre>
+<pre><font face="Arial">    and delete in line 33 the char # from the beginning of the line, so that there
+    will be</font></pre>
+<pre><font face="Arial">    $from = $CONFIG['email_feedback'];</font></pre>
+<pre><font face="Arial">    (instead of #$from = $CONFIG['email_feedback'];)</font></pre>
+<pre><font face="Arial">    Save the files and replace it on your server.
+    This could fix your mail send problem.
+
+<b><font size="4">
+<u>FREQUENTLY ASKED QUESTIONS:</u></font></b>
+
+We are currently building a knowledge base for the script. While this is needing
+some time, you will find a FAQ with some of the mostly asked questions and answers
+to that on: <a href="http://million.texmedia.de">http://million.texmedia.de</a> </font></pre>
+<pre><font face="Arial">Please do always take a look to this site before contacting the support via email,
+which will need some responds time depending on the daily requests. Thanks.
+</font></pre>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<Subject: %[DOMAINNAME]% - Activez votre site >
+
+Bonjour,
+
+Vous venez de soumettre votre site web (%[URL]%) à
+%[DOMAINNAME]% et nous vous avons réservé des Pixels à cet effet!
+
+Pour activer votre site sur %[DOMAINNAME]%,
+merci de cliquer sur le lien suivant dans les %[DELETE_DAYS]% jours à venir :
+
+%[ALINK]%
+
+Votre site deviendra visible
+sur %[DOMAINNAME]% immédiatement après avoir cliqué surle lien !
+
+%[DOMAINNAME]% annulera la réservation de vos Pixels
+si vous n'activez pas votre site avec le lien dans le temps imparti.
+
+Vous pouvez supprimer votre entrée en cliquant sur le lien suivant:
+%[KLINK]%
+
+Nous vous souhaitons de nombreuses visites sur votre site
+et espérons que vous nous recommenderez à vos amis !
+
+Merci d'avoir utilisé %[DOMAINNAME]% !
+L'équipe de %[DOMAINNAME]%
+%[DOMAIN]%

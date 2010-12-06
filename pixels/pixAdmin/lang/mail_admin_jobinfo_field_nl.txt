@@ -1,0 +1,19 @@
+<Onderwerp: %[DOMAINNAME]% - Admininfo: Willekeurig gekozen veld >
+
+Hallo,
+
+Op uw website %[DOMAINNAME]% was taak %[JOBNAME]% gestart
+en het volgende willekeurige veld was gekozen:
+
+Veld %[FIELD]% op grid %[GRIDID]%.
+
+Positie x/y:  %[POS_X]% / %[POS_Y]%
+
+Dit veld behoort tot de volgende gebruiker:
+
+Gebruikersnaam: %[USERID]%
+Url   : %[URL]%
+email : %[EMAIL]%
+
+------------------------------------------------------------
+Admin Million Pixel Script

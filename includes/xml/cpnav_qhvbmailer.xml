@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<navgroups product="qhvbmailer" master="false">
+	<navgroup phrase="qhvbmailer" text="QH vbMailer" permissions="canadminsettings" hr="true" displayorder="11">
+		<navoption displayorder="10">
+			<text>Manage Attachments</text>
+			<link>qhvbmailer.php?do=manage_attachments</link>
+		</navoption>
+		
+		<navoption displayorder="20">
+			<text>Add Template</text>
+			<link>qhvbmailer.php?do=manage_templates&amp;act=2</link>
+		</navoption>
+		
+		<navoption displayorder="30">
+			<text>Manage Templates</text>
+			<link>qhvbmailer.php?do=manage_templates</link>
+		</navoption>
+		
+		<navoption displayorder="40">
+			<text>Add Autosender</text>
+			<link>qhvbmailer.php?do=manage_autosenders&amp;act=2</link>
+		</navoption>
+		
+		<navoption displayorder="50">
+			<text>Manage Autosenders</text>
+			<link>qhvbmailer.php?do=manage_autosenders</link>
+		</navoption>
+		
+		<navoption displayorder="60">
+			<text>Add Newsletter</text>
+			<link>qhvbmailer.php?do=manage_newsletters&amp;act=2</link>
+		</navoption>
+		
+		<navoption displayorder="70">
+			<text>Manage Newsletters</text>
+			<link>qhvbmailer.php?do=manage_newsletters</link>
+		</navoption>
+		
+		<navoption displayorder="80">
+			<text>Compose Email</text>
+			<link>qhvbmailer.php?do=compose_email</link>
+		</navoption>
+		
+		<navoption displayorder="90">
+			<text>Review Campaigns</text>
+			<link>qhvbmailer.php?do=manage_campaigns</link>
+		</navoption>
+	
+		<navoption displayorder="100">
+			<text>Settings</text>
+			<link>options.php?do=options&amp;dogroup=qhvbmailer</link>
+		</navoption>
+	</navgroup>
+</navgroups>

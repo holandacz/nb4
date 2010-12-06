@@ -1,0 +1,9 @@
+<Onderwerp: U heeft gewonnen op %[DOMAINNAME]%>
+
+Hallo,
+
+Gefeliceerd, u heeft gewonnen op %[DOMAINNAME]%,
+uw pixels waren geselecteerd!
+
+-----------------------------------------------------
+%[DOMAIN]%

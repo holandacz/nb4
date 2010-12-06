@@ -1,0 +1,25 @@
+<Subject: %[DOMAINNAME]% - Activate your site >
+
+Olá,
+
+O seu site (%[URL]%) foi submetido com sucesso para
+%[DOMAINNAME]% e os pixels foram reservados!
+
+De forma a poder activar o seu site em %[DOMAINNAME]%,
+por favor clique no link apresentado em baixo dentro dos próximos %[DELETE_DAYS]% dias:
+
+%[ALINK]%
+
+O seu site irá ficar imediatamente visível no %[DOMAINNAME]% assim que activar o link!
+
+%[DOMAINNAME]% cancelará a sua reserva de pixels se não activar o link.
+
+Pode remover a sua inscrição utilizando o seguinte link:
+%[KLINK]%
+
+Desejamos-lhe muitos hits e gostariamos que
+nos recomendasse aos seu amigos!
+
+Obrigado por usar %[DOMAINNAME]%!
+A Equipa de %[DOMAINNAME]%
+%[DOMAIN]%

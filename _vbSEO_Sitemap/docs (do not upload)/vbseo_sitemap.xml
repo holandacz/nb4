@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<product productid="crawlability_sitemap" active="1">
+	<title>vBSEO :: Sitemap Generator</title>
+	<description><![CDATA[Generate a Google & Yahoo Sitemap for your Forums]]></description>
+	<version>2.2</version>
+	<url>http://www.vbseo.com</url>
+	<versioncheckurl />
+	<dependencies>
+	</dependencies>
+	<codes>
+	</codes>
+	<templates>
+	</templates>
+	<plugins>
+	</plugins>
+	<phrases>
+		<phrasetype name="Control Panel Global" fieldname="cpglobal">
+			<phrase name="vbseo_sitemaps" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Sitemaps]]></phrase>
+			<phrase name="vbseo_sm_reports" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Sitemap Reports]]></phrase>
+			<phrase name="vbseo_sm_settings" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Sitemap Settings]]></phrase>
+			<phrase name="vbseo_vbseo" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO]]></phrase>
+		</phrasetype>
+		<phrasetype name="Scheduled Tasks" fieldname="cron">
+			<phrase name="task_vbseo_sitemap_desc" date="1151544207" username="Crawlability" version="2.1"><![CDATA[Execute vBSEO Sitemap Generator]]></phrase>
+			<phrase name="task_vbseo_sitemap_log" date="1151544207" username="Crawlability" version="2.1" />
+			<phrase name="task_vbseo_sitemap_task_desc" date="1192044352" username="Crawlability" version="2.1"><![CDATA[Generate sitemaps]]></phrase>
+			<phrase name="task_vbseo_sitemap_task_log" date="1192044352" username="Crawlability" version="2.1" />
+			<phrase name="task_vbseo_sitemap_task_title" date="1192044352" username="Crawlability" version="2.1"><![CDATA[vBSEO Sitemap Generator]]></phrase>
+			<phrase name="task_vbseo_sitemap_title" date="1151544207" username="Crawlability" version="2.1"><![CDATA[vBSEO Sitemap Generator]]></phrase>
+		</phrasetype>
+		<phrasetype name="vBulletin Settings" fieldname="vbsettings">
+			<phrase name="settinggroup_vbseo_sitemap" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Google/Yahoo Sitemap Generator]]></phrase>
+			<phrase name="setting_vbseo_sm_addons_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Set the addon module names here, one name per line. The modules files are located in vbseo_sitemap/addons/ folder.]]></phrase>
+			<phrase name="setting_vbseo_sm_addons_title" date="0" username="Crawlability" version="2.2"><![CDATA[Addon Generator Modules]]></phrase>
+			<phrase name="setting_vbseo_sm_album_desc" date="1209067297" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your member profile album pages in your sitemaps (album.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_album_title" date="1209067297" username="Crawlability" version="2.2"><![CDATA[Include Member Profile Album Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_archive_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your show archive pages in your sitemaps (archive/index.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_archive_title" date="0" username="Crawlability" version="2.2"><![CDATA[Include Archive Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_blog_desc" date="1209061756" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your blog pages in your sitemaps (blog.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_blog_title" date="1209061756" username="Crawlability" version="2.2"><![CDATA[Include Blog Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_delay_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Use this option to let sitemap generator "sleep"  for specified number of seconds after each sitemap is generated. Use it if you experience forums slowdown during sitemap generation.]]></phrase>
+			<phrase name="setting_vbseo_sm_delay_title" date="0" username="Crawlability" version="2.2"><![CDATA[Delay Execution After Each Sitemap File]]></phrase>
+			<phrase name="setting_vbseo_sm_email_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Enter an email address where a summary report of the sitemap generation will be sent each time it is created.
+<br /><br />
+<strong>NOTE:</strong> Leave this field blank to disable email notifications.]]></phrase>
+			<phrase name="setting_vbseo_sm_email_title" date="0" username="Crawlability" version="2.2"><![CDATA[Receive Email Notifications]]></phrase>
+			<phrase name="setting_vbseo_sm_exclude_forums_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Specify the forum ID for all forums that you do NOT wish to be included in your sitemaps. Note that private forums are NOT included within the default generated sitemaps.<br /><br /><strong>NOTE:</strong> Separate multiple forum IDs with spaces.]]></phrase>
+			<phrase name="setting_vbseo_sm_exclude_forums_title" date="0" username="Crawlability" version="2.2"><![CDATA[Excluded Forums List]]></phrase>
+			<phrase name="setting_vbseo_sm_forumdisplay_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your forum display pages in your sitemaps (forumdisplay.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_forumdisplay_title" date="0" username="Crawlability" version="2.2"><![CDATA[Include Forum Display Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_a_desc" date="1209067489" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your album pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_a_title" date="1209067489" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Album]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_b_desc" date="1209067435" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your blog entry pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_b_title" date="1209067435" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Blog Entries]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_f_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your forum display pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_f_title" date="0" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Forum Display]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_gi_desc" date="1209067536" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your social group picture pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_gi_title" date="1209067536" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Group Picture]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_g_desc" date="1209067519" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your social group pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_g_title" date="1209067519" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Social Groups]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_m_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your member profile pages will be updated.<br /><br /><strong>NOTE:</strong> Member Profile pages are only updated when users update their profile information. The default of 'Monthly' or 'Yearly' is recommended.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_m_title" date="0" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Member Profile]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_poll_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your poll results pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_poll_title" date="0" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Poll Results]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_p_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your show post pages will be updated.<br /><br /><strong>NOTE:</strong> Show post pages are only updated when the post is edited. The default of 'Never' or 'Yearly' is recommended to avoid unnecessary recrawling of your pages.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_p_title" date="0" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Show Post]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_tag_desc" date="1209067555" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your tag pages will be updated.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_tag_title" date="1209067555" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency - Tags]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_tsmart_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select 'Yes' to activate automated page update frequency calculations for each show thread page.<br /><br /><strong>NOTE:</strong> Frequency is calculated based on the last modification time.]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_tsmart_title" date="0" username="Crawlability" version="2.2"><![CDATA[Smart Frequency for Show Thread Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_t_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Indicate how frequently your show thread pages will be updated.<br /><br /><strong>NOTE:</strong> This default is only applied if you do NOT used the "Smart Frequency for Show Thread Pages" feature (see below).]]></phrase>
+			<phrase name="setting_vbseo_sm_freq_t_title" date="0" username="Crawlability" version="2.2"><![CDATA[Page Update Frequency (Default) - Show Thread]]></phrase>
+			<phrase name="setting_vbseo_sm_group_desc" date="1209067335" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your social group pages in your sitemaps (group.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_group_img_desc" date="1210334446" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your social group picture pages in your sitemaps (group.php).
+<br /><br />
+<strong>NOTE:</strong> This content is a duplicate of the <i>Member Profile Album Pages</i>, as such, we suggest *not* submitting it as part of your sitemap. Alternatively, you may want to submit this content and set the <i>Include Member Profile Album Pages</i> option to 'OFF'.]]></phrase>
+			<phrase name="setting_vbseo_sm_group_img_title" date="1210334446" username="Crawlability" version="2.2"><![CDATA[Include Social Groups Picture Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_group_title" date="1209067335" username="Crawlability" version="2.2"><![CDATA[Include Social Groups Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_maxurls_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Specify the maximum number of URLs to be included in each sitemap file.<br /><br /><strong>NOTE:</strong> Google allows no more than 50,000 URLs per file.]]></phrase>
+			<phrase name="setting_vbseo_sm_maxurls_title" date="0" username="Crawlability" version="2.2"><![CDATA[Max URLs in Sitemap Files]]></phrase>
+			<phrase name="setting_vbseo_sm_member_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your member profile pages in your sitemaps (member.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_member_title" date="0" username="Crawlability" version="2.2"><![CDATA[Include Member Profile Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_oldurls_desc" date="0" username="Crawlability" version="2.2"><![CDATA[While vBSEO will automatically 301-redirect old (dynamic) URLs to the newly formatted static URLs, some users may opt to include the old URLs in the sitemap to ensure Google finds the redirect headers for each page. Include this option until you note that most old URLs have been purged from Google.]]></phrase>
+			<phrase name="setting_vbseo_sm_oldurls_title" date="0" username="Crawlability" version="2.2"><![CDATA[If you have vBSEO, include old urls?]]></phrase>
+			<phrase name="setting_vbseo_sm_ping_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to automatically notify Search Engines (Google, Yahoo, Ask, Moreover) of your updated sitemap each time it is generated.<br /><br /><strong>NOTE:</strong> Notification is sent via a HTTP request to the SE servers.]]></phrase>
+			<phrase name="setting_vbseo_sm_ping_title" date="0" username="Crawlability" version="2.2"><![CDATA[Auto-Notify Search Engines]]></phrase>
+			<phrase name="setting_vbseo_sm_poll_desc" date="1209061747" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your poll results  pages in your sitemaps (poll.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_poll_title" date="1209061747" username="Crawlability" version="2.2"><![CDATA[Include Poll Results Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_a_desc" date="1209067656" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_a_title" date="1209067656" username="Crawlability" version="2.2"><![CDATA[Priority - Member Profile Albums]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_b_desc" date="1209067612" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_b_title" date="1209067612" username="Crawlability" version="2.2"><![CDATA[Priority - Blog Entries]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_f_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_f_title" date="0" username="Crawlability" version="2.2"><![CDATA[Priority - Forum Display]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_gi_desc" date="1209067683" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_gi_title" date="1209067683" username="Crawlability" version="2.2"><![CDATA[Priority - Social Group Pictures]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_g_desc" date="1209067671" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_g_title" date="1209067671" username="Crawlability" version="2.2"><![CDATA[Priority - Social Groups]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_m_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_m_title" date="0" username="Crawlability" version="2.2"><![CDATA[Priority - Member Profiles]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_poll_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_poll_title" date="0" username="Crawlability" version="2.2"><![CDATA[Priority - Poll Results]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_p_desc" date="0" username="Crawlability" version="2.2"><![CDATA[The priority is a value between 0.0 and 1.0 that indicates the priority that should be given to the crawling and indexing of the page relative to other pages.]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_p_title" date="0" username="Crawlability" version="2.2"><![CDATA[Priority - Show Post]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_smart_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to activate smart priority setting for show thread pages. Priority will be automatically calculated for each thread based on (a) views, (b) replies, (c) rating, and (d) number of Linkbacks.<br/><br/><strong>NOTE:</strong> If your forum does not have <a href="http://www.vbseo.com/linkbacks/" target="_blank">Linkback</a> capability, the smart priority will be calculated based on elements (a) to (c) above.]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_smart_title" date="0" username="Crawlability" version="2.2"><![CDATA[Smart Priority for Show Thread Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_tag_desc" date="1209067696" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_tag_title" date="1209067696" username="Crawlability" version="2.2"><![CDATA[Priority - Tags]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_t_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Priority value between 0.0 and 1.0 (see above). <br /><br /><strong>NOTE:</strong> This default is only applied if you do NOT used the "Smart Priority for Show Thread Pages" feature (see below).]]></phrase>
+			<phrase name="setting_vbseo_sm_priority_t_title" date="0" username="Crawlability" version="2.2"><![CDATA[Priority (Default) - Show Thread]]></phrase>
+			<phrase name="setting_vbseo_sm_runcode_desc" date="0" username="Crawlability" version="2.2"><![CDATA[This values is used as your password when logging into your reports area:  "vbroot/vbseo_sitemap/" ]]></phrase>
+			<phrase name="setting_vbseo_sm_runcode_title" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Sitemap Interface Access Password]]></phrase>
+			<phrase name="setting_vbseo_sm_showpost_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your show post pages in your sitemaps (showpost.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_showpost_title" date="0" username="Crawlability" version="2.2"><![CDATA[Include Show Post Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_showthread_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your show thread pages in your sitemaps (showthread.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_showthread_title" date="0" username="Crawlability" version="2.2"><![CDATA[Include Show Thread Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_tag_desc" date="1210334469" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to include your tag pages in your sitemaps (tags.php).]]></phrase>
+			<phrase name="setting_vbseo_sm_tag_title" date="1210334469" username="Crawlability" version="2.2"><![CDATA[Include Tag Pages]]></phrase>
+			<phrase name="setting_vbseo_sm_toppath_desc" date="0" username="Crawlability" version="2.2"><![CDATA[By default the vBSEO Sitemap files will be located in your forum root. Use this field to specify a different location, for example, your site root: <em>http://www.yourdomain.com</em>
+<br /><br />
+<strong>NOTE:</strong> You must edit the .htaccess file of the folder in which you want to locate your sitemap files. More information <a href="http://www.vbseo.com/wiki/Sitemap:FAQ" target="_new">here</a>. Leave this setting empty to use default vB url.]]></phrase>
+			<phrase name="setting_vbseo_sm_toppath_title" date="0" username="Crawlability" version="2.2"><![CDATA[Sitemap Files URL]]></phrase>
+			<phrase name="setting_vbseo_sm_txt_desc" date="0" username="Crawlability" version="2.2"><![CDATA[Select "Yes" to automatically generate a text format sitemap with 1 URL per line. <br /><br />This text sitemap must be manually submitted to Yahoo at http://submit.search.yahoo.com/free/request/.]]></phrase>
+			<phrase name="setting_vbseo_sm_txt_title" date="0" username="Crawlability" version="2.2"><![CDATA[Generate Yahoo-Compatible Text Sitemap]]></phrase>
+			<phrase name="setting_vbseo_sm_vbseo_desc" date="0" username="Crawlability" version="2.2"><![CDATA[The sitemap generator is fully compatible with the vBSEO search engine optimization plugin.<br /><br />Select "Yes" if you have vBSEO installed - as a result your sitemap will contain vBSEO's static CRUs (Content Relevant URLs).<br /><br />Example:<br /> http://www.vbseo.com/f84/my-personal-success-story-605/. For more information, visit <a href="http://www.vbseo.com" target="_new">http://www.vbseo.com</a>]]></phrase>
+			<phrase name="setting_vbseo_sm_vbseo_title" date="0" username="Crawlability" version="2.2"><![CDATA[vBSEO Installed?]]></phrase>
+		</phrasetype>
+	</phrases>
+	<options>
+		<settinggroup name="vbseo_sitemap" displayorder="7904">
+			<setting varname="vbseo_sm_vbseo" displayorder="10">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_oldurls" displayorder="11">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>0</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_maxurls" displayorder="20">
+				<datatype>number</datatype>
+				<defaultvalue>20000</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_showpost" displayorder="50">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_member" displayorder="60">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_archive" displayorder="70">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_showthread" displayorder="80">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_forumdisplay" displayorder="90">
+				<datatype>number</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_poll" displayorder="91">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_blog" displayorder="93">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_album" displayorder="94">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_group" displayorder="95">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_group_img" displayorder="96">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>0</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_tag" displayorder="97">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_exclude_forums" displayorder="100">
+				<datatype>free</datatype>
+			</setting>
+			<setting varname="vbseo_sm_freq_p" displayorder="110">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>yearly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_m" displayorder="120">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>monthly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_f" displayorder="130">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>daily</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_poll" displayorder="135">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>daily</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_t" displayorder="140">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>daily</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_b" displayorder="143">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>weekly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_a" displayorder="144">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>weekly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_g" displayorder="145">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>weekly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_gi" displayorder="146">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>weekly</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_tag" displayorder="147">
+				<datatype>free</datatype>
+				<optioncode><![CDATA[<select name=\"setting[$setting[varname]]\" tabindex=\"1\" class=\"bginput\">
+
+<option value=\"always\" " . iif($setting['value']=='always','selected="selected"') . ">Always</option>
+<option value=\"hourly\" " . iif($setting['value']=='hourly','selected="selected"') . ">Hourly</option>
+<option value=\"daily\" " . iif($setting['value']=='daily','selected="selected"') . ">Daily</option>
+<option value=\"weekly\" " . iif($setting['value']=='weekly','selected="selected"') . ">Weekly</option>
+<option value=\"monthly\" " . iif($setting['value']=='monthly','selected="selected"') . ">Monthly</option>
+<option value=\"yearly\" " . iif($setting['value']=='yearly','selected="selected"') . ">Yearly</option>
+<option value=\"never\" " . iif($setting['value']=='never','selected="selected"') . ">Never</option>
+
+ </select>]]></optioncode>
+				<defaultvalue>daily</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_freq_tsmart" displayorder="150">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_p" displayorder="160">
+				<datatype>free</datatype>
+				<defaultvalue>0.3</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_m" displayorder="170">
+				<datatype>free</datatype>
+				<defaultvalue>0.2</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_f" displayorder="180">
+				<datatype>free</datatype>
+				<defaultvalue>0.8</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_poll" displayorder="185">
+				<datatype>free</datatype>
+				<defaultvalue>0.6</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_t" displayorder="190">
+				<datatype>free</datatype>
+				<defaultvalue>0.4</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_b" displayorder="193">
+				<datatype>free</datatype>
+				<defaultvalue>0.5</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_a" displayorder="194">
+				<datatype>free</datatype>
+				<defaultvalue>0.2</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_g" displayorder="195">
+				<datatype>free</datatype>
+				<defaultvalue>0.3</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_gi" displayorder="195">
+				<datatype>free</datatype>
+				<defaultvalue>0.2</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_tag" displayorder="196">
+				<datatype>free</datatype>
+				<defaultvalue>0.8</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_priority_smart" displayorder="200">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_ping" displayorder="210">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_txt" displayorder="220">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>1</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_runcode" displayorder="225">
+				<datatype>free</datatype>
+			</setting>
+			<setting varname="vbseo_sm_delay" displayorder="227">
+				<datatype>number</datatype>
+				<defaultvalue>0</defaultvalue>
+			</setting>
+			<setting varname="vbseo_sm_toppath" displayorder="228">
+				<datatype>free</datatype>
+			</setting>
+			<setting varname="vbseo_sm_email" displayorder="230">
+				<datatype>free</datatype>
+			</setting>
+			<setting varname="vbseo_sm_addons" displayorder="240">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+		</settinggroup>
+	</options>
+	<helptopics>
+	</helptopics>
+	<cronentries>
+		<cron varname="vbseo_sitemap_task" active="1" loglevel="1">
+			<filename>./vbseo_sitemap/vbseo_sitemap.php</filename>
+			<scheduling weekday="-1" day="-1" hour="2" minute="0" />
+		</cron>
+	</cronentries>
+	<faqentries>
+	</faqentries>
+</product>

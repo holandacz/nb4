@@ -1,0 +1,165 @@
+/* Highslide JS CSS */
+
+#hsjsscreen
+{
+	background-color: #000000;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
+}
+
+.highslide
+{
+	cursor: url(http://www.noblood.org/gallery/highslide/graphics/zoomin.cur), pointer;
+	outline: none;
+}
+.highslide img
+{
+	border: 2px solid #CCCCCC;
+}
+.highslide:hover img
+{
+	border: 2px solid #6699FF;
+}
+.highslide-image
+{
+	background-color: #FFFFFF;
+	border: 5px solid white;
+}
+.highslide-image-blur
+{
+}
+.highslide-caption
+{
+	display: none;
+	border: 2px solid white;
+	border-top: none;
+	font-family: Verdana, Helvetica;
+	font-size: 11px;
+	padding: 5px;
+	background-color: white;
+	text-align: center;
+}
+.highslide-loading
+{
+	display: block;
+	color: black;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 3px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #CCCCCC;
+	padding-left: 22px;
+	background-image: url(http://www.noblood.org/gallery/highslide/graphics/loader.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 1px;
+}
+a.highslide-credits, a.highslide-credits i
+{
+	padding: 2px;
+	color: silver;
+	text-decoration: none;
+	font-size: 10px;
+}
+a.highslide-credits:hover, a.highslide-credits:hover i
+{
+	color: white;
+	background-color: #CCCCCC;
+}
+.highslide-move
+{
+	cursor: move;
+}
+.highslide-overlay
+{
+	display: none;
+}
+
+/* Controlbar example */
+
+.hscontrolbar
+{
+	background: url(http://www.noblood.org/gallery/highslide/graphics/controlbar4.gif);
+	width: 167px;
+	height: 34px;
+}
+.hscontrolbar a
+{
+	display: block;
+	float: left;
+	/*margin: 0px 0 0 4px;*/
+	height: 27px;
+}
+.hscontrolbar a:hover
+{
+	background-image: url(http://www.noblood.org/gallery/highslide/graphics/controlbar4-hover.gif);
+}
+.hscontrolbar .previous
+{
+	width: 50px;
+}
+.hscontrolbar .next
+{
+	width: 40px;
+	background-position: -50px 0;
+}
+.hscontrolbar .highslide-move
+{
+	width: 40px;
+	background-position: -90px 0;
+}
+.hscontrolbar .close
+{
+	width: 36px;
+	background-position: -130px 0;
+}
+
+/* HTML pop-up example*/
+
+.highslide-html
+{
+	background-color: white;
+}
+.highslide-html-blur
+{
+}
+.highslide-html-content
+{
+	position: absolute;
+	display: none;
+}
+.hscontrol
+{
+	float: right;
+	display: block;
+	/*position: relative;*/
+	margin: 0 5px;
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #999999;
+}
+.hscontrol:hover
+{
+	color: black !important;
+}
+
+/* Necessary for functionality */
+
+.highslide-display-block
+{
+	display: block;
+}
+.highslide-display-none
+{
+	display: none;
+}

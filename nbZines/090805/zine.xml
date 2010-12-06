@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>
+<vars>
+	<bullet><![CDATA[<span style="color: rgb(240, 147, 27); font-weight: bold; font-size: 10pt;">&#8226;&nbsp;</span>]]></bullet>
+	<item_header_pre><![CDATA[
+		<tr><td colspan="2" class="item_header" align="left" valign="top" width="406">
+	]]></item_header_pre>
+	<item_header_suf><![CDATA[
+		</td></tr>
+	]]></item_header_suf>
+	<bullet_txt>*</bullet_txt>
+	<paragraph_indent_txt>  </paragraph_indent_txt>
+</vars>
+<Zine_Items>
+
+<!-- Publisher's Message-->
+<Item class="Zine_Item" name="PUB" view="feature">
+	<itm_title>PUBLISHER'S MESSAGE: An important message regarding NoBlood</itm_title>
+	<feature_author>
+		<author_name>Larry Eitel</author_name>
+		<author_title>President / Publisher</author_title>
+		<url>http://www.noblood.org/members/larryeitel.html</url>
+		<twitter_label>On Twitter</twitter_label>
+		<twitter_name>larryeitel</twitter_name>
+	</feature_author>
+	<feature_company>
+		<company_name>NoBlood, Inc.</company_name>
+		<url>http://www.noblood.org/about/</url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://www.noblood.org/nbZines/090715/imgs/larryeitel-100x122.png</src>
+		<thumb_title>Larry Eitel</thumb_title>
+		<height>122</height>
+		<width>100</width>
+	</feature_thumb>
+	<feature_url></feature_url>
+	<feature_teaser><![CDATA[<br />
+<p>Now that we have successfully moved <a href="http://noblood.org">noblood.org</a> to a more capable server we must ask for your financial assistance to cover this expense. We have something to say to our individual users and to our corporate partners. First allow us to speak to our <strong>corporate friends</strong>.</p>
+
+<p>Our server upgrade creates an opportunity for you. We are offering a special sponsor relationship to any organization willing to cover our server expenses for one or more years. The cost is $10/day or $3,650 for the year. As our server sponsor your company will receive high visibility on noblood.org. Please&nbsp;<a href="http://www.noblood.org/sendemail/">Contact Us</a>&nbsp;to discuss the details or to discuss other available <a href="http://wiki.noblood.org/Advertising">sponsor opportunities</a>.</p>
+
+<p>Are you an <strong>individual</strong> who understands the value of NoBlood? Have you assumed that our corporate sponsors are providing all the financial assistance we need to operate? This is not the case. If you have ever watched a Public Television fund drive you know that MOST of the funding needed to operate a non-profit organization &quot;<b>Comes from People like YOU!</b>&quot; Our corporate sponsors are providing only a fraction of what it takes to keep NoBlood alive. For that reason, <b>we simply MUST ask you to express your appreciation for our efforts through ongoing donations</b>.</p>
+
+<p>Why are we confident you will help us? Because of the many heartfelt messages of appreciation you send us. Why do we find it necessary to ask you to help us? Last month we received only $35 in Premium User donations from five individuals.</p>
+
+<p>Remember, we have committed ourselves to produce this website for YOU. Bear in mind that presently NoBlood operates using NON SALARIED STAFF.</p>
+
+<p>Nonetheless, in order to continue, maintain and improve this growing site we must raise funds. Although there are no plans to shut down the site the fact remains: <b>Your individual support plays an important role is determining the quality and content of NoBlood</b>. We know that you along with tens of thousands of other visitors appreciate the role NoBlood is playing to promote quality transfusion alternatives and advance blood management. We are not comfortable in being so direct, but there is no other way to inform you of our predicament.</p>
+
+<p>If we are reaching your heart here please help us care for this very important website. That being said, here is what you can do to help.</p>
+
+<p><strong>Please</strong> become a <a href="http://www.noblood.org/donate/">Premium User</a> for $3, $5 or $10 recurring monthly subscription or any one-time donation in the amount of your choice. <strong>Recurring premium subscriptions from individuals must form the supportive backbone of NoBlood</strong>. To thrive we need the assistance from a greater percentage of registered users. <strong>Please take a moment now to become a </strong><a href="http://www.noblood.org/donate/">Premium User</a>.</p>
+
+<p>Checks can also be mailed to:<br />
+<span style="font-size: 14px;">NoBlood, Inc.<br />
+3727 Christine Street, San Diego, CA 92117<br />
+NoBlood, formally know as Bloodless Healthcare International, Inc., a California non-profit corporation, is registered as a charitable organization with the State of California and may lawfully solicit donations under California law. NoBlood has been granted official tax exempt status (section 501(c)3 of the Internal Revenue Code) from the United States Internal Revenue Service. <b>You may deduct donations from your federally-taxable income.</b> Please contact a tax professional for the details of deducting such a donation.<br />
+Fed tax ID is: 33-0858519</scan></p>
+
+<p>Please help us to make <a href="http://noblood.org">noblood.org</a> the quality healthcare resource that the subject deserves.</p>
+<p>Thank you for your kind attention to this urgent matter.</p>
+<p>Larry Eitel<br />
+ President<br />
+ NoBlood, Inc.<br />
+ <a href="http://www.noblood.org">www.noblood.org</a> <br />
+ skype: larryeitel<br />
+ (858) 866-9311  </p>
+
+ <p><a href="http://www.noblood.org/sendemail/">Contact Us</a></span>
+]]></feature_teaser>
+	<read_more></read_more>
+</Item>
+
+</Zine_Items>
+</document>

@@ -1,0 +1,27 @@
+<Subject: %[DOMAINNAME]% - Activate your site >
+
+Salve,
+
+Ha inserito con successo la sua webpage (%[URL]%) a
+%[DOMAINNAME]% e i pixels sono stati a lei riservati!
+
+Per attivare il suo sito su %[DOMAINNAME]%,
+Clicchi sul link seguente entro i prossimi %[DELETE_DAYS]% giorni:
+
+%[ALINK]%
+
+Il suo sito sarà immediatamente visibile
+su %[DOMAINNAME]%non appena cliccherà sul link!
+
+%[DOMAINNAME]% cancellerà la Sua prenotazione
+se il link non sarà attivato.
+
+Potrà rimuovere la sua entrata cliccando sul link seguente:
+%[KLINK]%
+
+Le auguriamo molti contatti e la
+invitiamo a raccomandarci agli amici!
+
+Grazie per aver scelto %[DOMAINNAME]%!
+La squadra di %[DOMAINNAME]%
+%[DOMAIN]%

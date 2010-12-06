@@ -1,0 +1,840 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="navbody" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+	<title>NoBlood - vBulletin Admin Control Panel</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="index_data/controlpanel.css">
+	<!-- base -->
+	<style type="text/css">
+		.page { background-color:white; color:black; }
+		.time { color:silver; }
+	</style>
+	<script type="text/javascript">
+	<!--
+	var SESSIONHASH = "";
+	var IMGDIR_MISC = "../cpstyles/vBulletin_3_Default";
+	var CLEARGIFURL = "./clear.gif";
+	function set_cp_title()
+	{
+		if (typeof(parent.document) != 'undefined' && typeof(parent.document) != 'unknown' && typeof(parent.document.title) == 'string')
+		{
+			parent.document.title = (document.title != '' ? document.title : 'vBulletin');
+		}
+	}
+	//-->
+	</script>
+	<script type="text/javascript" src="index_data/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="index_data/connection-min.js"></script>
+	<script type="text/javascript" src="index_data/vbulletin_global.js"></script>
+
+</head><body linkifymax="0" linkifycurrent="0" linkifying="true" style="margin: 0px;" onload="set_cp_title();" class="navbody">
+<!-- END CONTROL PANEL HEADER -->
+
+
+<div><img src="index_data/cp_logo.gif" title="Admin Control Panel" alt="" vspace="4" border="0" hspace="4"></div>
+
+<div style="padding: 4px; width: 168px;">
+	<script type="text/javascript">
+	<!--
+	var expanded = false;
+	var autosave = false;
+	var navdl2thread = new Array(1);
+	navdl2thread[0] = 0;
+	var navecdownloads = new Array(1);
+	navecdownloads[0] = 0;
+	var navserverinfo = new Array(1);
+	navserverinfo[0] = 0;
+	var navvbseo = new Array(0,0);
+	var navvbulletin = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+	var navqhvbmailer = new Array(1);
+	navqhvbmailer[0] = 0;
+	var navzointstags = new Array(1);
+	navzointstags[0] = 0;
+	var navautomediaembed = new Array(1);
+	navautomediaembed[0] = 0;
+	var navvbadmanagement = new Array(1);
+	navvbadmanagement[0] = 0;
+	var navpostthanks = new Array(1);
+	navpostthanks[0] = 0;
+	var files = new Array('dl2thread','ecdownloads','serverinfo','vbseo','vbulletin','qhvbmailer','zointstags','automediaembed','vbadmanagement','postthanks');
+
+	function nobub()
+	{
+		window.event.cancelBubble = true;
+	}
+
+	function nav_goto(targeturl)
+	{
+		parent.frames.main.location = targeturl;
+	}
+
+	function open_close_group(group, doOpen)
+	{
+		var curdiv = fetch_object("group_" + group);
+		var curbtn = fetch_object("button_" + group);
+
+		if (doOpen)
+		{
+			curdiv.style.display = "";
+			curbtn.src = "../cpstyles/vBulletin_3_Default/cp_collapse.gif";
+			curbtn.title = "";
+		}
+		else
+		{
+			curdiv.style.display = "none";
+			curbtn.src = "../cpstyles/vBulletin_3_Default/cp_expand.gif";
+			curbtn.title = "";
+		}
+
+	}
+
+	function toggle_group(group)
+	{
+		var curdiv = fetch_object("group_" + group);
+
+		if (curdiv.style.display == "none")
+		{
+			open_close_group(group, true);
+		}
+		else
+		{
+			open_close_group(group, false);
+		}
+
+		if (autosave)
+		{
+			save_group_prefs(group);
+		}
+	}
+
+	function expand_all_groups(doOpen)
+	{
+		var navobj = null;
+		for (nav_file in files)
+		{
+			navobj = eval('nav' + files[nav_file]);
+			for (var i = 0; i < navobj.length; i++)
+			{
+				open_close_group(files[nav_file] + '_' + i, doOpen);
+			}
+		}
+
+		if (autosave)
+		{
+			save_group_prefs(-1);
+		}
+	}
+
+	function save_group_prefs(groupid)
+	{
+		var opengroups = new Array();
+		var counter = 0;
+		var navobj = null;
+
+		for (nav_file in files)
+		{
+			navobj = eval('nav' + files[nav_file]);
+			for (var i = 0; i < navobj.length; i++)
+			{
+				if (fetch_object("group_" + files[nav_file] + '_' + i).style.display != "none")
+				{
+					opengroups[counter] = files[nav_file] + '_' + i;
+					counter++;
+				}
+			}
+		}
+
+		window.location = "index.php?do=savenavprefs&nojs=0&navprefs=" + opengroups.join(",") + "#grp" + groupid;
+	}
+
+	function read_group_prefs()
+	{
+		var navobj = null;
+		for (nav_file in files)
+		{
+			navobj = eval('nav' + files[nav_file]);
+			for (var i = 0; i < navobj.length; i++)
+			{
+				open_close_group(files[nav_file] + '_' + i, navobj[i]);
+			}
+		}
+	}
+	//-->
+	</script>
+	<div align="center"><a href="http://nobloodtest.org/admincp/index.php?do=home">Control Panel Home</a></div><div align="center">
+			<a href="http://nobloodtest.org/admincp/index.php?do=navprefs&amp;nojs=0&amp;groups=dl2thread,ecdownloads,serverinfo,vbseo,vbulletin,qhvbmailer,zointstags,automediaembed,vbadmanagement,postthanks&amp;expand=1&amp;numdl2thread=1&amp;numecdownloads=1&amp;numserverinfo=1&amp;numvbseo=2&amp;numvbulletin=30&amp;numqhvbmailer=1&amp;numzointstags=1&amp;numautomediaembed=1&amp;numvbadmanagement=1&amp;numpostthanks=1" onclick="expand_all_groups(1); return false;" target="_self">Expand All</a>
+			|
+			<a href="http://nobloodtest.org/admincp/index.php?do=navprefs&amp;nojs=0&amp;groups=dl2thread,ecdownloads,serverinfo,vbseo,vbulletin,qhvbmailer,zointstags,automediaembed,vbadmanagement,postthanks&amp;expand=0&amp;numdl2thread=1&amp;numecdownloads=1&amp;numserverinfo=1&amp;numvbseo=2&amp;numvbulletin=30&amp;numqhvbmailer=1&amp;numzointstags=1&amp;numautomediaembed=1&amp;numvbadmanagement=1&amp;numpostthanks=1" onclick="expand_all_groups(0); return false;" target="_self">Collapse All</a>
+			<br>
+			<a href="#" onclick="save_group_prefs(-1); return false">Save Prefs</a>
+			|
+			<a href="#" onclick="read_group_prefs(); return false">Revert Prefs</a>
+		</div><div style="margin-bottom: 12px;"></div>
+	<a name="grpdl2thread_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('dl2thread_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Downloads - Create Threads</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=dl2thread_0#grpdl2thread_0" target="_self" onclick="toggle_group('dl2thread_0'); return false;" oncontextmenu="toggle_group('dl2thread_0'); save_group_prefs('dl2thread_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_dl2thread_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_dl2thread_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=options&amp;dogroup=downloadsii_createthread');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=downloadsii_createthread">Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('download2newthreadadmin.php?do=settings');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/download2newthreadadmin.php?do=settings">Set Global Forum</a></div>
+		<div class="navlink-normal" onclick="nav_goto('download2newthreadadmin.php?do=category');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/download2newthreadadmin.php?do=category">Set Categories</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpecdownloads_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('ecdownloads_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Downloads</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=ecdownloads_0#grpecdownloads_0" target="_self" onclick="toggle_group('ecdownloads_0'); return false;" oncontextmenu="toggle_group('ecdownloads_0'); save_group_prefs('ecdownloads_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_ecdownloads_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_ecdownloads_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=options&amp;dogroup=ecdownloads');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=ecdownloads">Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('downloadadmin.php?do=category');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/downloadadmin.php?do=category">Categories</a></div>
+		<div class="navlink-normal" onclick="nav_goto('downloadadmin.php?do=import');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/downloadadmin.php?do=import">Import</a></div>
+		<div class="navlink-normal" onclick="nav_goto('downloadadmin.php?do=downloads');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/downloadadmin.php?do=downloads">Downloads</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpserverinfo_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('serverinfo_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Server Info</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=serverinfo_0#grpserverinfo_0" target="_self" onclick="toggle_group('serverinfo_0'); return false;" oncontextmenu="toggle_group('serverinfo_0'); save_group_prefs('serverinfo_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_serverinfo_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_serverinfo_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=time');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=time">Server Time</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=uptime');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=uptime">Uptime</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=serverload');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=serverload">Server Load</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=memoryusage');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=memoryusage">Memory Usage</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=freediskspace');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=freediskspace">Free Disk Space</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?do=phpinfo');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?do=phpinfo">PHP Info</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=mysqlstats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=mysqlstats">MySQL Stats</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=mysqlstatus');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=mysqlstatus">MySQL Status</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php?show=mysqlvars');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php?show=mysqlvars">MySQL Vars</a></div>
+		<div class="navlink-normal" onclick="nav_goto('server_info.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/server_info.php">All</a></div>
+		</div>
+
+	<a name="grpvbseo_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbseo_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>vBSEO</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbseo_0#grpvbseo_0" target="_self" onclick="toggle_group('vbseo_0'); return false;" oncontextmenu="toggle_group('vbseo_0'); save_group_prefs('vbseo_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbseo_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbseo_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('../vbseocp.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/vbseocp.php">Control Panel</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../admincp/options.php?do=options&amp;dogroup=vbseo_sitemap');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=vbseo_sitemap">vBSEO Sitemap Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../vbseo_sitemap/index.php?rlist=true');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/vbseo_sitemap/index.php?rlist=true">vBSEO Sitemap Reports</a></div>
+		</div>
+
+	<a name="grpvbulletin_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>vBulletin Options</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_0#grpvbulletin_0" target="_self" onclick="toggle_group('vbulletin_0'); return false;" oncontextmenu="toggle_group('vbulletin_0'); save_group_prefs('vbulletin_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('options.php?null=0');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?null=0">vBulletin Options</a></div>
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=searchtype');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=searchtype">Search Type</a></div>
+		<div class="navlink-normal" onclick="nav_goto('verify.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/verify.php">Human Verification Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('bookmarksite.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/bookmarksite.php?do=modify">Social Bookmarking Manager</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpqhvbmailer_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('qhvbmailer_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>QH vbMailer</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=qhvbmailer_0#grpqhvbmailer_0" target="_self" onclick="toggle_group('qhvbmailer_0'); return false;" oncontextmenu="toggle_group('qhvbmailer_0'); save_group_prefs('qhvbmailer_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_qhvbmailer_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_qhvbmailer_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_attachments');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_attachments">Manage Attachments</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_templates&amp;act=2');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_templates&amp;act=2">Add Template</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_templates');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_templates">Manage Templates</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_autosenders&amp;act=2');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_autosenders&amp;act=2">Add Autosender</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_autosenders');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_autosenders">Manage Autosenders</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_newsletters&amp;act=2');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_newsletters&amp;act=2">Add Newsletter</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_newsletters');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_newsletters">Manage Newsletters</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=compose_email');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=compose_email">Compose Email</a></div>
+		<div class="navlink-normal" onclick="nav_goto('qhvbmailer.php?do=manage_campaigns');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/qhvbmailer.php?do=manage_campaigns">Review Campaigns</a></div>
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=options&amp;dogroup=qhvbmailer');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=qhvbmailer">Settings</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpzointstags_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('zointstags_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Zoints Thread Tags</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=zointstags_0#grpzointstags_0" target="_self" onclick="toggle_group('zointstags_0'); return false;" oncontextmenu="toggle_group('zointstags_0'); save_group_prefs('zointstags_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_zointstags_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_zointstags_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=options&amp;dogroup=zointstags');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=zointstags">Options</a></div>
+		<div class="navlink-normal" onclick="nav_goto('zointstags.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/zointstags.php">Zoints Tags Manager</a></div>
+		</div>
+
+	<a name="grpautomediaembed_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('automediaembed_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>AME CP</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=automediaembed_0#grpautomediaembed_0" target="_self" onclick="toggle_group('automediaembed_0'); return false;" oncontextmenu="toggle_group('automediaembed_0'); save_group_prefs('automediaembed_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_automediaembed_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_automediaembed_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('automediaembed_admin.php?do=settings');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/automediaembed_admin.php?do=settings">Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('automediaembed_admin.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/automediaembed_admin.php">Display</a></div>
+		<div class="navlink-normal" onclick="nav_goto('automediaembed_admin.php?do=import');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/automediaembed_admin.php?do=import">Import</a></div>
+		<div class="navlink-normal" onclick="nav_goto('automediaembed_admin.php?do=export');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/automediaembed_admin.php?do=export">Export</a></div>
+		<div class="navlink-normal" onclick="nav_goto('automediaembed_admin.php?do=tools');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/automediaembed_admin.php?do=tools">Tools</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_1"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_1'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Styles &amp; Templates</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_1#grpvbulletin_1" target="_self" onclick="toggle_group('vbulletin_1'); return false;" oncontextmenu="toggle_group('vbulletin_1'); save_group_prefs('vbulletin_1'); return false"><img src="index_data/cp_collapse.gif" title="" id="button_vbulletin_1" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_1" class="navgroup" style="">
+		<div class="navlink-normal" onclick="nav_goto('template.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/template.php?do=modify">Style Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('template.php?do=search');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/template.php?do=search">Search in Templates</a></div>
+		<div class="navlink-normal" onclick="nav_goto('replacement.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/replacement.php?do=modify">Replacement Variable Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('template.php?do=files');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/template.php?do=files">Download / Upload Styles</a></div>
+		<div class="navlink-normal" onclick="nav_goto('template.php?do=findupdates');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/template.php?do=findupdates">Find Updated Templates</a></div>
+		</div>
+
+	<a name="grpvbadmanagement_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbadmanagement_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>vB Ad Management</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbadmanagement_0#grpvbadmanagement_0" target="_self" onclick="toggle_group('vbadmanagement_0'); return false;" oncontextmenu="toggle_group('vbadmanagement_0'); save_group_prefs('vbadmanagement_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbadmanagement_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbadmanagement_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_global');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_global">Global Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_sharing');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_sharing">Ad Sharing</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_headernavbar');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_headernavbar">Header &amp; Navbar</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_leftright');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_leftright">Left &amp; Right columns</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_postbit');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_postbit">Postbit</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_forumbitthreadbit');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_forumbitthreadbit">Forumbit &amp; Threadbit</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_footersponsors');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_footersponsors">Footer &amp; Sponsors</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_fullpage');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_fullpage">Full page</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_archive');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_archive">Archive</a></div>
+		<div class="navlink-normal" onclick="nav_goto('vb_ad_management.php?do=adintegrate_custom');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/vb_ad_management.php?do=adintegrate_custom">Custom</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_2"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_2'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Languages &amp; Phrases</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_2#grpvbulletin_2" target="_self" onclick="toggle_group('vbulletin_2'); return false;" oncontextmenu="toggle_group('vbulletin_2'); save_group_prefs('vbulletin_2'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_2" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_2" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('language.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/language.php?do=modify">Language Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('phrase.php?do=modify&amp;fieldname=global');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/phrase.php?do=modify&amp;fieldname=global">Phrase Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('phrase.php?do=search');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/phrase.php?do=search">Search in Phrases</a></div>
+		<div class="navlink-normal" onclick="nav_goto('language.php?do=files');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/language.php?do=files">Download / Upload Languages</a></div>
+		<div class="navlink-normal" onclick="nav_goto('phrase.php?do=findupdates');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/phrase.php?do=findupdates">Find Updated Phrases</a></div>
+		</div>
+
+	<a name="grpvbulletin_3"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_3'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>FAQ</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_3#grpvbulletin_3" target="_self" onclick="toggle_group('vbulletin_3'); return false;" oncontextmenu="toggle_group('vbulletin_3'); save_group_prefs('vbulletin_3'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_3" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_3" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('faq.php?null=0');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/faq.php?null=0">FAQ Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('faq.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/faq.php?do=add">Add New FAQ Item</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_4"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_4'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Notices</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_4#grpvbulletin_4" target="_self" onclick="toggle_group('vbulletin_4'); return false;" oncontextmenu="toggle_group('vbulletin_4'); save_group_prefs('vbulletin_4'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_4" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_4" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('notice.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/notice.php?do=modify">Notices Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('notice.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/notice.php?do=add">Add New Notice</a></div>
+		</div>
+
+	<a name="grpvbulletin_5"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_5'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Announcements</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_5#grpvbulletin_5" target="_self" onclick="toggle_group('vbulletin_5'); return false;" oncontextmenu="toggle_group('vbulletin_5'); save_group_prefs('vbulletin_5'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_5" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_5" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('announcement.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/announcement.php?do=modify">Announcement Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('announcement.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/announcement.php?do=add">Post New Announcement</a></div>
+		</div>
+
+	<a name="grpvbulletin_6"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_6'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Forums &amp; Moderators</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_6#grpvbulletin_6" target="_self" onclick="toggle_group('vbulletin_6'); return false;" oncontextmenu="toggle_group('vbulletin_6'); save_group_prefs('vbulletin_6'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_6" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_6" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('forum.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/forum.php?do=modify">Forum Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('forum.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/forum.php?do=add">Add New Forum</a></div>
+		<div class="navlink-normal" onclick="nav_goto('forumpermission.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/forumpermission.php?do=modify">Forum Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('moderator.php?do=showlist');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/moderator.php?do=showlist">Show All Moderators</a></div>
+		<div class="navlink-normal" onclick="nav_goto('resources.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/resources.php">View Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('prefix.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/prefix.php">Thread Prefixes</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_7"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_7'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Calendars</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_7#grpvbulletin_7" target="_self" onclick="toggle_group('vbulletin_7'); return false;" oncontextmenu="toggle_group('vbulletin_7'); save_group_prefs('vbulletin_7'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_7" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_7" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('admincalendar.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admincalendar.php?do=modify">Calendar Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admincalendar.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admincalendar.php?do=add">Add New Calendar</a></div>
+		<div class="navlink-normal" onclick="nav_goto('calendarpermission.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/calendarpermission.php?do=modify">Calendar Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admincalendar.php?do=modifyholiday');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admincalendar.php?do=modifyholiday">Holiday Manager</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_8"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_8'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Threads &amp; Posts</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_8#grpvbulletin_8" target="_self" onclick="toggle_group('vbulletin_8'); return false;" oncontextmenu="toggle_group('vbulletin_8'); save_group_prefs('vbulletin_8'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_8" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_8" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=prune');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=prune">Prune</a></div>
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=move');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=move">Move</a></div>
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=unsubscribe');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=unsubscribe">Unsubscribe</a></div>
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=killpoll');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=killpoll">Strip Poll</a></div>
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=votes');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=votes">Who Voted</a></div>
+		<div class="navlink-normal" onclick="nav_goto('thread.php?do=tags');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/thread.php?do=tags">Tags</a></div>
+		</div>
+
+	<a name="grppostthanks_0"></a>
+		<table class="navtitle" ondblclick="toggle_group('postthanks_0'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Post Thanks</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=postthanks_0#grppostthanks_0" target="_self" onclick="toggle_group('postthanks_0'); return false;" oncontextmenu="toggle_group('postthanks_0'); save_group_prefs('postthanks_0'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_postthanks_0" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_postthanks_0" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('options.php?do=options&amp;dogroup=post_thanks');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/options.php?do=options&amp;dogroup=post_thanks">Post Thanks Settings</a></div>
+		<div class="navlink-normal" onclick="nav_goto('post_thanks_admin.php?do=recounters');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/post_thanks_admin.php?do=recounters">Recounters</a></div>
+		<div class="navlink-normal" onclick="nav_goto('post_thanks_admin.php?do=special_actions');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/post_thanks_admin.php?do=special_actions">Special Actions</a></div>
+		</div>
+
+	<a name="grpvbseo_1"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbseo_1'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>LinkBacks</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbseo_1#grpvbseo_1" target="_self" onclick="toggle_group('vbseo_1'); return false;" oncontextmenu="toggle_group('vbseo_1'); save_group_prefs('vbseo_1'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbseo_1" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbseo_1" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('../modcp/vbseo_moderate.php?do=linkbacks');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/vbseo_moderate.php?do=linkbacks">Moderate LinkBacks</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/vbseo_moderate.php?do=linkbackslist');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/vbseo_moderate.php?do=linkbackslist">Incoming LinkBacks</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/vbseo_moderate.php?do=linkbacksout');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/vbseo_moderate.php?do=linkbacksout">Outgoing LinkBacks</a></div>
+		</div>
+
+	<a name="grpvbulletin_9"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_9'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Thread Prefixes</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_9#grpvbulletin_9" target="_self" onclick="toggle_group('vbulletin_9'); return false;" oncontextmenu="toggle_group('vbulletin_9'); save_group_prefs('vbulletin_9'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_9" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_9" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('prefix.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/prefix.php">Thread Prefix Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('prefix.php?do=addset');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/prefix.php?do=addset">Add New Prefix Set</a></div>
+		</div>
+
+	<a name="grpvbulletin_10"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_10'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Moderation</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_10#grpvbulletin_10" target="_self" onclick="toggle_group('vbulletin_10'); return false;" oncontextmenu="toggle_group('vbulletin_10'); save_group_prefs('vbulletin_10'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_10" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_10" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=posts');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=posts">Moderate Threads</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=posts#posts');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=posts#posts">Moderate Posts</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=attachments');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=attachments">Moderate Attachments</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=events');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=events">Moderate Events</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=messages');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=messages">Moderate Visitor Messages</a></div>
+		<div class="navlink-normal" onclick="nav_goto('user.php?do=moderate');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/user.php?do=moderate">Moderate Users</a></div>
+		</div>
+
+	<a name="grpvbulletin_11"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_11'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Attachments</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_11#grpvbulletin_11" target="_self" onclick="toggle_group('vbulletin_11'); return false;" oncontextmenu="toggle_group('vbulletin_11'); save_group_prefs('vbulletin_11'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_11" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_11" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('attachment.php?do=types');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/attachment.php?do=types">Attachment Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('attachmentpermission.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/attachmentpermission.php">Attachment Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('attachment.php?do=intro');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/attachment.php?do=intro">Search</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/moderate.php?do=attachments');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/moderate.php?do=attachments">Moderate Attachments</a></div>
+		<div class="navlink-normal" onclick="nav_goto('attachment.php?do=stats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/attachment.php?do=stats">Attachment Statistics</a></div>
+		<div class="navlink-normal" onclick="nav_goto('attachment.php?do=storage');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/attachment.php?do=storage">Attachment Storage Type</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_12"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_12'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Users</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_12#grpvbulletin_12" target="_self" onclick="toggle_group('vbulletin_12'); return false;" oncontextmenu="toggle_group('vbulletin_12'); save_group_prefs('vbulletin_12'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_12" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_12" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('user.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/user.php?do=add">Add New User</a></div>
+		<div class="navlink-normal" onclick="nav_goto('user.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/user.php?do=modify">Search for Users</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usertools.php?do=merge');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertools.php?do=merge">Merge Users</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/banning.php?do=banuser');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/banning.php?do=banuser">Ban User</a></div>
+		<div class="navlink-normal" onclick="nav_goto('user.php?do=prune');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/user.php?do=prune">Prune / Move Users</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usertools.php?do=pmstats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertools.php?do=pmstats">Private Message Statistics</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usertools.php?do=referrers');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertools.php?do=referrers">Referrals</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usertools.php?do=doips');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertools.php?do=doips">Search IP Addresses</a></div>
+		<div class="navlink-normal" onclick="nav_goto('../modcp/banning.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/modcp/banning.php?do=modify">View Banned Users</a></div>
+		<div class="navlink-normal" onclick="nav_goto('email.php?do=start');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/email.php?do=start">Send Email to Users</a></div>
+		<div class="navlink-normal" onclick="nav_goto('email.php?do=genlist');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/email.php?do=genlist">Generate Mailing List</a></div>
+		<div class="navlink-normal" onclick="nav_goto('passwordcheck.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/passwordcheck.php">Check Vulnerable Passwords</a></div>
+		<div class="navlink-normal" onclick="nav_goto('accessmask.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/accessmask.php?do=modify">Access Masks</a></div>
+		<div class="navlink-normal" onclick="nav_goto('read_pms.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/read_pms.php">Read PMs</a></div>
+		</div>
+
+	<a name="grpvbulletin_13"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_13'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Usergroups</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_13#grpvbulletin_13" target="_self" onclick="toggle_group('vbulletin_13'); return false;" oncontextmenu="toggle_group('vbulletin_13'); save_group_prefs('vbulletin_13'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_13" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_13" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('usergroup.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usergroup.php?do=modify">Usergroup Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usergroup.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usergroup.php?do=add">Add New Usergroup</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usergroup.php?do=viewjoinrequests');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usergroup.php?do=viewjoinrequests">Join Requests</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usergroup.php?do=modifypromotion');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usergroup.php?do=modifypromotion">Promotions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('forumpermission.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/forumpermission.php?do=modify">Forum Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('adminpermissions.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminpermissions.php?do=modify">Administrator Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('socialgroups.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/socialgroups.php">Prune Social Groups</a></div>
+		</div>
+
+	<a name="grpvbulletin_14"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_14'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Infractions</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_14#grpvbulletin_14" target="_self" onclick="toggle_group('vbulletin_14'); return false;" oncontextmenu="toggle_group('vbulletin_14'); save_group_prefs('vbulletin_14'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_14" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_14" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('admininfraction.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admininfraction.php?do=modify">User Infraction Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admininfraction.php?do=editlevel');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admininfraction.php?do=editlevel">Add New User Infraction Level</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admininfraction.php?do=editgroup');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admininfraction.php?do=editgroup">Add New User Infraction Group</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admininfraction.php?do=editbangroup');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admininfraction.php?do=editbangroup">Add New Automatic Ban</a></div>
+		<div class="navlink-normal" onclick="nav_goto('admininfraction.php?do=list');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/admininfraction.php?do=list">View Infractions</a></div>
+		</div>
+
+	<a name="grpvbulletin_15"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_15'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Profile Fields</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_15#grpvbulletin_15" target="_self" onclick="toggle_group('vbulletin_15'); return false;" oncontextmenu="toggle_group('vbulletin_15'); save_group_prefs('vbulletin_15'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_15" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_15" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('profilefield.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/profilefield.php?do=modify">User Profile Field Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('profilefield.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/profilefield.php?do=add">Add New User Profile Field</a></div>
+		<div class="navlink-normal" onclick="nav_goto('profilefield.php?do=modifycats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/profilefield.php?do=modifycats">User Profile Field Categories</a></div>
+		</div>
+
+	<a name="grpvbulletin_16"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_16'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Ranks</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_16#grpvbulletin_16" target="_self" onclick="toggle_group('vbulletin_16'); return false;" oncontextmenu="toggle_group('vbulletin_16'); save_group_prefs('vbulletin_16'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_16" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_16" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('ranks.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/ranks.php?do=modify">User Rank Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('ranks.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/ranks.php?do=add">Add New User Rank</a></div>
+		</div>
+
+	<a name="grpvbulletin_17"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_17'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Reputations</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_17#grpvbulletin_17" target="_self" onclick="toggle_group('vbulletin_17'); return false;" oncontextmenu="toggle_group('vbulletin_17'); save_group_prefs('vbulletin_17'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_17" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_17" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('adminreputation.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminreputation.php?do=modify">User Reputation Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('adminreputation.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminreputation.php?do=add">Add New User Reputation</a></div>
+		<div class="navlink-normal" onclick="nav_goto('adminreputation.php?do=list');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminreputation.php?do=list">View Reputation Comments</a></div>
+		</div>
+
+	<a name="grpvbulletin_18"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_18'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Albums</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_18#grpvbulletin_18" target="_self" onclick="toggle_group('vbulletin_18'); return false;" oncontextmenu="toggle_group('vbulletin_18'); save_group_prefs('vbulletin_18'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_18" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_18" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('album.php?do=storage');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/album.php?do=storage">Album Picture Storage Type</a></div>
+		<div class="navlink-normal" onclick="nav_goto('album.php?do=thumb');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/album.php?do=thumb">Rebuild Thumbnails</a></div>
+		</div>
+
+	<a name="grpvbulletin_19"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_19'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>User Titles</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_19#grpvbulletin_19" target="_self" onclick="toggle_group('vbulletin_19'); return false;" oncontextmenu="toggle_group('vbulletin_19'); save_group_prefs('vbulletin_19'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_19" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_19" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('usertitle.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertitle.php?do=modify">User Title Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('usertitle.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/usertitle.php?do=add">Add New User Title</a></div>
+		</div>
+
+	<a name="grpvbulletin_20"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_20'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Paid Subscriptions</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_20#grpvbulletin_20" target="_self" onclick="toggle_group('vbulletin_20'); return false;" oncontextmenu="toggle_group('vbulletin_20'); save_group_prefs('vbulletin_20'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_20" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_20" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=modify">Subscription Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=add">Add New Subscription</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=transactions&amp;type=log');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=transactions&amp;type=log">Transaction Log</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=transactions&amp;type=stats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=transactions&amp;type=stats">Transaction Stats</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptionpermission.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptionpermission.php?do=modify">Subscription Permissions</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=api');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=api">Payment API Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('diagnostic.php?do=payments');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/diagnostic.php?do=payments">Test Communication</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_21"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_21'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Avatars</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_21#grpvbulletin_21" target="_self" onclick="toggle_group('vbulletin_21'); return false;" oncontextmenu="toggle_group('vbulletin_21'); save_group_prefs('vbulletin_21'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_21" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_21" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=modify&amp;table=avatar');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=modify&amp;table=avatar">Avatar Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=add&amp;table=avatar');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=add&amp;table=avatar">Add New Avatars</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=upload&amp;table=avatar');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=upload&amp;table=avatar">Upload Avatar</a></div>
+		<div class="navlink-normal" onclick="nav_goto('avatar.php?do=storage');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/avatar.php?do=storage">User Picture Storage Type</a></div>
+		</div>
+
+	<a name="grpvbulletin_22"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_22'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Post Icons</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_22#grpvbulletin_22" target="_self" onclick="toggle_group('vbulletin_22'); return false;" oncontextmenu="toggle_group('vbulletin_22'); save_group_prefs('vbulletin_22'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_22" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_22" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=modify&amp;table=icon');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=modify&amp;table=icon">Post Icon Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=add&amp;table=icon');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=add&amp;table=icon">Add New Post Icon</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=upload&amp;table=icon');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=upload&amp;table=icon">Upload Post Icon</a></div>
+		</div>
+
+	<a name="grpvbulletin_23"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_23'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Smilies</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_23#grpvbulletin_23" target="_self" onclick="toggle_group('vbulletin_23'); return false;" oncontextmenu="toggle_group('vbulletin_23'); save_group_prefs('vbulletin_23'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_23" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_23" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=modify&amp;table=smilie');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=modify&amp;table=smilie">Smilie Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=add&amp;table=smilie');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=add&amp;table=smilie">Add New Smilie</a></div>
+		<div class="navlink-normal" onclick="nav_goto('image.php?do=upload&amp;table=smilie');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/image.php?do=upload&amp;table=smilie">Upload Smilie</a></div>
+		</div>
+
+	<a name="grpvbulletin_24"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_24'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Custom BB Codes</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_24#grpvbulletin_24" target="_self" onclick="toggle_group('vbulletin_24'); return false;" oncontextmenu="toggle_group('vbulletin_24'); save_group_prefs('vbulletin_24'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_24" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_24" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('bbcode.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/bbcode.php?do=modify">BB Code Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('bbcode.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/bbcode.php?do=add">Add New BB Code</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div>
+	<a name="grpvbulletin_25"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_25'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>RSS Feeds</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_25#grpvbulletin_25" target="_self" onclick="toggle_group('vbulletin_25'); return false;" oncontextmenu="toggle_group('vbulletin_25'); save_group_prefs('vbulletin_25'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_25" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_25" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('rssposter.php');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/rssposter.php">RSS Feed Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('rssposter.php?do=edit');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/rssposter.php?do=edit">Add New RSS Feed</a></div>
+		</div>
+
+	<a name="grpvbulletin_26"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_26'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Scheduled Tasks</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_26#grpvbulletin_26" target="_self" onclick="toggle_group('vbulletin_26'); return false;" oncontextmenu="toggle_group('vbulletin_26'); save_group_prefs('vbulletin_26'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_26" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_26" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('cronadmin.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/cronadmin.php?do=modify">Scheduled Task Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('cronadmin.php?do=edit');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/cronadmin.php?do=edit">Add New Scheduled Task</a></div>
+		<div class="navlink-normal" onclick="nav_goto('cronlog.php?do=choose');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/cronlog.php?do=choose">Scheduled Task Log</a></div>
+		</div>
+
+	<a name="grpvbulletin_27"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_27'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Plugins &amp; Products</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_27#grpvbulletin_27" target="_self" onclick="toggle_group('vbulletin_27'); return false;" oncontextmenu="toggle_group('vbulletin_27'); save_group_prefs('vbulletin_27'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_27" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_27" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('plugin.php?do=product');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/plugin.php?do=product">Manage Products</a></div>
+		<div class="navlink-normal" onclick="nav_goto('plugin.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/plugin.php?do=modify">Plugin Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('plugin.php?do=add');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/plugin.php?do=add">Add New Plugin</a></div>
+		<div class="navlink-normal" onclick="nav_goto('plugin.php?do=files');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/plugin.php?do=files">Download / Upload Plugins</a></div>
+		</div>
+
+	<a name="grpvbulletin_28"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_28'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Statistics &amp; Logs</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_28#grpvbulletin_28" target="_self" onclick="toggle_group('vbulletin_28'); return false;" oncontextmenu="toggle_group('vbulletin_28'); save_group_prefs('vbulletin_28'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_28" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_28" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('stats.php?do=index');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/stats.php?do=index">Statistics</a></div>
+		<div class="navlink-normal" onclick="nav_goto('adminlog.php?do=choose');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminlog.php?do=choose">Control Panel Log</a></div>
+		<div class="navlink-normal" onclick="nav_goto('modlog.php?do=choose');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/modlog.php?do=choose">Moderator Log</a></div>
+		<div class="navlink-normal" onclick="nav_goto('cronlog.php?do=choose');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/cronlog.php?do=choose">Scheduled Task Log</a></div>
+		<div class="navlink-normal" onclick="nav_goto('adminlog.php?do=logfiles');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/adminlog.php?do=logfiles">Log Manager</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=transactions&amp;type=log');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=transactions&amp;type=log">Transaction Log</a></div>
+		<div class="navlink-normal" onclick="nav_goto('subscriptions.php?do=transactions&amp;type=stats');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/subscriptions.php?do=transactions&amp;type=stats">Transaction Stats</a></div>
+		</div>
+
+	<a name="grpvbulletin_29"></a>
+		<table class="navtitle" ondblclick="toggle_group('vbulletin_29'); return false;" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><strong>Maintenance</strong></td>
+			<td align="right">
+				<a href="http://nobloodtest.org/admincp/index.php?do=buildnavprefs&amp;nojs=0&amp;prefs=2,5,11&amp;dowhat=expand&amp;id=vbulletin_29#grpvbulletin_29" target="_self" onclick="toggle_group('vbulletin_29'); return false;" oncontextmenu="toggle_group('vbulletin_29'); save_group_prefs('vbulletin_29'); return false"><img src="index_data/cp_expand.gif" title="Expand Group" id="button_vbulletin_29" alt="" border="0"></a>
+			</td>
+		</tr>
+		</tbody></table>
+		<div id="group_vbulletin_29" class="navgroup" style="display: none;">
+		<div class="navlink-normal" onclick="nav_goto('backup.php?do=choose');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/backup.php?do=choose">Database Backup</a></div>
+		<div class="navlink-normal" onclick="nav_goto('repair.php?do=list');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/repair.php?do=list">Repair / Optimize Tables</a></div>
+		<div class="navlink-normal" onclick="nav_goto('misc.php?do=chooser');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/misc.php?do=chooser">Update Counters</a></div>
+		<div class="navlink-normal" onclick="nav_goto('diagnostic.php?do=list');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/diagnostic.php?do=list">Diagnostics</a></div>
+		<div class="navlink-normal" onclick="nav_goto('queries.php?do=modify');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/queries.php?do=modify">Execute SQL Query</a></div>
+		<div class="navlink-normal" onclick="nav_goto('index.php?do=phpinfo');" onmouseover="this.className='navlink-hover';" onmouseout="this.className='navlink-normal'"><a href="http://nobloodtest.org/admincp/index.php?do=phpinfo">View PHP Info</a></div>
+		</div>
+<div style="margin-bottom: 12px;"></div></div>
+
+
+<!-- START CONTROL PANEL FOOTER -->
+
+</body></html>

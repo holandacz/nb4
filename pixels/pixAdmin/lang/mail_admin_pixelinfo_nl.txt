@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Admininfo >
+
+Hallo,
+
+Op uw site %[DOMAINNAME]% zijn gelinked met de volgende pixels:
+
+Grid: %[GRID]%
+
+Domein:    %[URL]%
+Titel:     %[TITLE]%
+eMail:     %[EMAIL]%
+Blokjes:    %[BLOCKS]%
+Aantal:    %[B]%
+Taal:  %[LANGUAGE]%
+GebruikesId:    %[USERID]%
+
+Status:    %[STATUS]%
+
+Naar admin gedeelte:
+%[ADMINDIR]%

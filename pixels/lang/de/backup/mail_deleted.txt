@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Ihre Pixel wurden gelöscht >
+
+Hallo,
+
+Sie haben bei %[DOMAINNAME]% Ihre Webseite (%[URL]%) eingetragen.
+Die entsprechende Verweildauer Ihrer Pixel auf unserer Seite
+ist nun abgelaufen und Ihr Eintrag wurde gelöscht.
+
+Über Ihre Pixel kamen %[VISITORS]% Besucher auf Ihre Webpage.
+
+Gerne können Sie erneut Ihre Webseite bei uns verpixeln.
+
+Viele Grüße,
+Ihr Team von %[DOMAINNAME]%
+
+%[DOMAIN]%

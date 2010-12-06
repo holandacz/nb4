@@ -1,0 +1,14 @@
+<Subject: Do you know %[DOMAINNAME]%? >
+
+Olá,
+
+%[EMAIL]% recomenda-o a dar uma olhadela a:
+
+%[DOMAIN]%
+
+Poderá ligar ali o seu website
+e conseguir novos visitantes.
+
+-----------------------------------------------------
+Esta recomendação foi-lhe enviada por %[EMAIL]% .
+%[DOMAIN]%

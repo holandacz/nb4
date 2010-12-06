@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} .*yourdomain.com
+RewriteRule ^/forums/((urllist|sitemap_).*\.(xml|txt)(\.gz)?)$ /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]
+
+RewriteCond %{HTTP_HOST} .*yourdomain.com
+RewriteCond %{REQUEST_URI} !/forums/(admincp/|modcp/|cron)
+RewriteRule ^/forums/((archive/)?(.*\.php(/.*)?)?)$ /forums/vbseo.php [L,QSA]
+
+RewriteCond %{HTTP_HOST} .*yourdomain.com
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !^/forums/(admincp|modcp|clientscript|cpstyles|images)/
+RewriteRule ^/forums/(.+)$ /forums/vbseo.php [L,QSA]

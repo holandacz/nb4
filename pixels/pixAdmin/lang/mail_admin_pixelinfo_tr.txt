@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Yonetici Bilgisi >
+
+Merhaba,
+
+%[DOMAINNAME]% sitesi aþaðýdaki þekilde iliþkilendirilmiþtir:
+
+Grid: %[GRID]%
+
+Domain:    %[URL]%
+Baþlýk:    %[TITLE]%
+eMail:     %[EMAIL]%
+Blok:     %[BLOCKS]%
+Miktar:    %[B]%
+Dil:       %[LANGUAGE]%
+ID:        %[USERID]%
+
+Durum:     %[STATUS]%
+
+Admin Paneli:
+%[ADMINDIR]%

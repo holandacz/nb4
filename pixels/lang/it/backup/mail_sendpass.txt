@@ -1,0 +1,13 @@
+<Subject: %[DOMAINNAME]% - Informazioni sul suo account >
+
+Salve,
+
+lei è in grado di editare la sua registrazione su %[DOMAINNAME]%
+inserendo queste informazioni:
+
+ID utente: %[USERID]%
+Password: %[LOGINCODE]%
+
+
+la squadra di %[DOMAINNAME]%
+%[DOMAIN]%

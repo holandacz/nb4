@@ -1,0 +1,15 @@
+<Subject: Kennst Du schon %[DOMAINNAME]%>
+
+Hallo,
+
+%[EMAIL]% empfiehlt Dir, mal auf folgende Webseite zu schauen:
+
+%[DOMAIN]%
+
+
+Dort kannst Du kostenlos Deine Webseite verlinken
+und dadurch neue Besucher erhalten.
+
+-----------------------------------------------------
+Diese Empfehlung wurde Dir von %[EMAIL]% geschickt.
+%[DOMAIN]%

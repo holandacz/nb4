@@ -1,0 +1,151 @@
+td.re_toolbar{
+  border-top: 1px solid buttonhighlight;
+  border-left: 1px solid buttonhighlight;
+  border-bottom: 1px solid buttonshadow;
+  border-right: 1px solid buttonshadow;
+  padding: 0; margin: 0; padding-bottom:1; padding-top:1;
+  font-family: "Arial";
+  font-size: xx-small;
+  color: black;
+  font-weight: normal;
+  background-color: buttonface;
+  text-align: left;
+}
+
+.re_toolbar{
+  font-family: "Arial";
+  font-size: xx-small;
+  vertical-align: middle;
+  cursor: default;
+}
+
+.re_toolbar img{
+  border: 1px solid buttonface; margin:0; padding:1;
+  cursor: hand;
+}
+
+.re_toolbar span.re_delimiter{
+  background-color: buttonface;
+  border-top: 1px solid buttonshadow;
+  border-left: 1px solid buttonshadow;
+  border-bottom: 1px solid buttonhighlight;
+  border-right: 1px solid buttonhighlight;
+  width: 2px;
+  cursor: default;
+}
+
+.re_toolbar span.re_space{
+  background-color: buttonface;
+  width: 2px;
+  cursor: default;
+}
+
+.re_toolbar span.re_text{
+  position:relative;
+  top: -2;
+  margin-left: 4;
+}
+
+.re_toolbar select{
+  font-size: 12px;
+  margin-top: 1; margin-bottom: 1;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.re_toolbar input{
+  font-size: 12px;
+  margin-top: 1; margin-bottom: 1;
+  background: buttonface;
+}
+
+div.re_editor{
+  font-family: "Times New Roman";
+  border: 2px inset buttonface; padding:5;
+}
+
+.re_dialog td,
+.re_dialog input,
+.re_dialog select,
+.re_dialog legend{
+  font-family : "Verdana";
+  font-size : 13px;
+  font-weight : normal;
+  color : black;
+}
+
+.re_dialog{
+  font-family : "Verdana";
+  font-size : 13px;
+  font-weight : normal;
+  color : black;
+  background: buttonface
+}
+
+A:link.re_remote {
+ text-decoration: none;
+ color : #000099;
+}
+
+A:visited.re_remote {
+ text-decoration: none;
+ color : #000099;
+}
+
+A:hover.re_remote {
+ text-decoration: underline;
+ color: red;
+}
+
+td.re_char {
+  font-family: "Times New Roman";
+  border-top : '1px solid buttonhighlight';
+  border-left : '1px solid buttonhighlight';
+  border-bottom : '1px solid buttonshadow';
+  border-right : '1px solid buttonshadow';
+  cursor : hand;
+}
+
+.re_toolbar img.re_img_off{
+  filter: alpha(opacity:40);
+  cursor: default;
+}
+
+table.re_table {
+}
+
+img.re_mouse_up {
+  border-top : 1px solid buttonhighlight;
+  border-left : 1px solid buttonhighlight;
+  border-bottom : 1px solid buttonshadow;
+  border-right : 1px solid buttonshadow;
+}
+
+img.re_mouse_down {
+  border-top : 1px solid buttonshadow;
+  border-left : 1px solid buttonshadow;
+  border-bottom : 1px solid buttonhighlight;
+  border-right : 1px solid buttonhighlight;
+}
+
+img.re_mouse_over {
+  border-top : 1px solid buttonhighlight;
+  border-left : 1px solid buttonhighlight;
+  border-bottom : 1px solid buttonshadow;
+  border-right : 1px solid buttonshadow;
+}
+
+img.re_mouse_out {
+  border-top : 1px solid buttonface;
+  border-left : 1px solid buttonface;
+  border-bottom : 1px solid buttonface;
+  border-right : 1px solid buttonface;
+}
+
+td.re_remote_dirsize {
+  font-family : "Verdana";
+  font-size : 10px;
+  font-weight : normal;
+  color : white;
+  background : #000080;
+}

@@ -1,0 +1,19 @@
+<Subject: %[DOMAINNAME]% - Admininfo: Random choosed >
+
+Hello,
+
+on your site %[DOMAINNAME]% the job %[JOBNAME]% was started
+and the following field was choosed by random:
+
+Field %[FIELD]% on grid %[GRIDID]%.
+
+Position x/y:  %[POS_X]% / %[POS_Y]%
+
+This field is from the following user:
+
+Userid: %[USERID]%
+Url   : %[URL]%
+eMail : %[EMAIL]%
+
+------------------------------------------------------------
+Admin Million Pixel Script

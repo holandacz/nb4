@@ -1,0 +1,130 @@
+COMMON ISSUES
+
+
+1) 404 (Page not found) Errors
+
+Your setup might require you to enable the 'RewriteBase' directive within .htaccess. Open your .htaccess file and remove the '#' before 'RewriteBase' Please note: When enabled, you must include the path to your root vB folder (i.e. RewriteBase /forums)
+
+
+
+2) Broken Links
+
+Ensure you have a SINGLE copy of the vBSEO files in the following folders:
+.htaccess -> vB-root/.htaccess 
+vbseo.php -> vB-root/vbseo.php 
+functions_vbseo.php -> vB-root/includes/functions_vbseo.php 
+config_vbseo.php -> vB-root/includes/config_vbseo.php
+
+Duplicate copies of 'functions_vbseo.php' in folders other than '/includes' are known to cause this issue.
+
+
+
+
+3) Broken Images and/or stylesheet (CSS) references
+
+Ensure your 'Forum URL' setting in your 'vBulletin Options' (ADMINCP) is set correctly.
+
+
+
+5) Dynamic URLs and Broken Images
+
+vB 3.0.x - Ensure you have made the appropriate changes to functions.php
+vB 3.5.x or higher - Ensure you have uploaded the vBSEO (vbseo-install.xml) file via the vB Plugin/Hook System and that it is activated and enabled in the admincp.
+ 
+
+
+6) One (or more) public forum not available or giving a 403 error.
+
+Ensure that you don't have physical folders with the same name as any of your forums.
+
+
+
+7) Random images replaced by the navigation bullet images.
+
+Ensure the images being replaced exist on your server.
+
+
+
+
+8) vBSEO's copyright appears twice at the bottom of your pages.
+
+Ensure the vBSEO plugin has not been installed twice in your vBulletin Plugin System > Plugin Manager.
+
+
+
+9) New post / last post links for show thread pages seem to be working not quite correctly.
+
+Make sure you have the following settings within your vBulletin admincp: vBulletin Options > General Settings > Thread/Forum Read Marking Type: Database (automatic forum marking)
+The cookie storing method is known to be inconsistent since vBulletin 3.0.x.
+
+
+
+10) I started receiving automated emails with DB Error reports like "Link-ID == false, connect failed"
+
+Please check your MySQL DB parameters in my.cnf, more info at http://www.vbulletin.com/forum/showthread.php?t=160995
+
+
+
+11) I keep getting mysql DB error messages like "Invalid SQL: UPDATE session..."
+
+Make sure to upgrade your vBulletin to the stable release (RC versions may have this problem)
+
+
+
+12) I cannot complete the "Site Verification" step at my Google webmaster account to submit the sitemap.
+
+The verifications step at your Google webmaster account is NOT required to submit sitemap, it is only needed to see stats provided by Google. However, to proceed with this step, you may:
+1. Upload the file as requested by Google.
+2. *Temporarily* disable "Redirect To Home Page" at vbseocp.php (set it to "Send 404 code" instead).
+3. Confirm file uploading at your Google page.
+4. set "Redirect To Home Page" back again, as verification is completed now.
+
+
+
+13) Some of my show thread / show post pages do not work correctly, displaying the error: > Warning: main(file-name.php): failed to open stream: No such file or directory
+
+Please check your Custom Rewrite Rules for possible conflicts with this URL and either modify or remove your CRR.
+
+
+
+14) Links to member profiles with "unusual" characters don't work properly.
+
+You have two options for solving this problem:
+- include the [user id] for your user profiles (or)
+- enable the following option via your config_vbseo.php (change setting to 1): define('VBSEO_REWRITE_MEMBER_MORECHARS', 0); 
+
+
+
+15) I'm getting an error when accessing vbseocp.php: Fatal error: session_start(): Failed to initialize storage module: user
+
+This may be related to a known PHP bug: http://bugs.php.net/bug.php?id=25876
+
+Add the following line to your .htaccess file:
+php_value session.save_handler files
+
+
+16) I have a problem accessing vB admincp: 404 error is displayed or page is redirected to forums homepage.
+
+If you have restricted access to your admincp folder using .htaccess (Auth directives), please check
+your apache configuration: having "ErrorDocument 401 401.shtml" directive in httpd.conf requires that
+"401.shtml" file exists. You should create one if it doesn't to solve the problem.
+
+
+17) I have mod_rewrite enabled in apache config, but I'm still getting 404 error when accessing vBSEO URLs - seems like rewrite rules are not working in .htaccess.
+
+Using the .htaccess file to define mod_rewrite rules requires the following defined in httpd.conf:
+<Directory /your/httpd/docs>
+...
+Options +FollowSymLinks +FileInfo
+</Directory>
+
+
+18) If you have mod_security Apache module enabled and have issues with posting new threads, add the 
+following in .htaccess:
+
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
+
+

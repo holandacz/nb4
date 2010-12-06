@@ -1,0 +1,13 @@
+<Subjet: %[DOMAINNAME]% - Information du compte >
+
+Bonjour,
+
+Vous pouvez éditer votre entrée sur %[DOMAINNAME]%
+en écrivant les informations suivantes :
+
+ID utilisateur : %[USERID]%
+Mot de passe : %[LOGINCODE]%
+
+
+Votre équipe %[DOMAINNAME]%
+%[DOMAIN]%

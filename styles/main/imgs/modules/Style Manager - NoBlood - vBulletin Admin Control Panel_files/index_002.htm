@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="navbody" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+	<title>NoBlood - vBulletin Admin Control Panel</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="index_data/controlpanel.css">
+	<!-- base -->
+	<style type="text/css">
+		.page { background-color:white; color:black; }
+		.time { color:silver; }
+	</style>
+	<script type="text/javascript">
+	<!--
+	var SESSIONHASH = "";
+	var IMGDIR_MISC = "../cpstyles/vBulletin_3_Default";
+	var CLEARGIFURL = "./clear.gif";
+	function set_cp_title()
+	{
+		if (typeof(parent.document) != 'undefined' && typeof(parent.document) != 'unknown' && typeof(parent.document.title) == 'string')
+		{
+			parent.document.title = (document.title != '' ? document.title : 'vBulletin');
+		}
+	}
+	//-->
+	</script>
+	<script type="text/javascript" src="index_data/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="index_data/connection-min.js"></script>
+	<script type="text/javascript" src="index_data/vbulletin_global.js"></script>
+
+</head><body linkifymax="0" linkifycurrent="0" linkifying="true" style="margin: 0px;" onload="set_cp_title();" class="navbody">
+<!-- END CONTROL PANEL HEADER -->
+
+	<table width="100%" border="0" height="100%">
+	<tbody><tr valign="top" align="center">
+		<td style="text-align: left;"><a href="http://www.vbulletin.com/" target="_blank"><b>Admin Control Panel</b> (vBulletin 3.7.3<img src="index_data_002/version.gif" alt="" style="visibility: hidden;" width="1" border="0" height="1">)</a></td>
+		<td><a href="http://members.vbulletin.com/" id="head_version_link" target="_blank">Latest version available: 3.7.3 Patch Level 1</a></td>
+		<td style="white-space: nowrap; text-align: right; font-weight: bold;">
+			<a href="http://nobloodtest.org/index.php" target="_blank">Forum Home Page</a>
+			|
+			<a href="http://nobloodtest.org/admincp/index.php?do=cplogout" onclick="return confirm('Are you sure you want to log out of the control panel?');" target="_top">Log Out</a>
+		</td>
+	</tr>
+	</tbody></table>
+	<script type="text/javascript" src="index_data_002/version.js"></script>
+	<script type="text/javascript">
+	<!--
+	fetch_object('head_version_link').innerHTML = construct_phrase('Latest version available: %1$s', ((typeof(vb_version) == 'undefined' || vb_version == '') ? 'N/A' : vb_version));
+	//-->
+	</script>
+	
+
+<!-- START CONTROL PANEL FOOTER -->
+
+</body></html>

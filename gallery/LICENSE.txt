@@ -1,0 +1,59 @@
+Definition of Software: The ThinkDing LLC software herein is defined to include all of the PhotoPlog Pro files and 
+supporting documentation. ThinkDing LLC software is not free software and is not open source software. This license 
+is not a sale of the software. ThinkDing LLC retains ownership of the software. All rights to the use of ThinkDing LLC 
+software not expressly granted under this license are reserved to ThinkDing LLC. 
+
+Copies of Software: The ThinkDing LLC software is only licensed to you, the licensee. Licensee is not allowed to 
+assign, lease, sell, sublicense, or otherwise transfer the software in any form without prior written permission from 
+ThinkDing LLC. Only one copy of a licensed version of ThinkDing LLC software may used on one website for each license 
+purchased. Multiple licenses must be purchased to use the software, whether in whole or in part, at multiple locations. 
+
+Access to Software: A subscription grants the licensee access to the members area where newer versions of the software 
+may be downloaded for one year from the date of purchase. After a subscription expires, licensee may continue to use, 
+according to the terms of this license, the last version of the software that licensee downloaded prior to subscription 
+expiration, or make another purchase to gain access to the latest version. 
+
+Distribution of Software: Distributing the ThinkDing LLC software, commercial or otherwise, without prior written 
+permission from ThinkDing LLC, is strictly forbidden, regardless of whether the licensee modifies the software. 
+
+Modification of Software: Licensee may modify the ThinkDing LLC software at his or her own risk. Official support 
+is not offered for modifications. Licensee may post code modification instructions on forums, with slight reference 
+to ThinkDing LLC software, so long as no full or substantial copy of any ThinkDing LLC software file is posted. 
+ThinkDing LLC reserves the right to remedy, modify, or remove posted modifications at its sole discretion. 
+
+Copyright of Software: All copyright notices, including links, contained in the ThinkDing LLC software must remain 
+unchanged and visible at all times, unless a branding free option is purchased. 
+
+Branding Free Option: A branding free option allows the licensee to remove the copyright notices, including links, that 
+are present when viewing a webpage. Copyright notices in the source code itself must not be removed. Each branding free 
+purchase applies to only one copy of a licensed version of ThinkDing LLC software. 
+
+URL to Website: All licensees must submit the URL where the software will be used, and must keep this URL up-to-date. 
+The URL can be submitted via the members area and may be used to inspect the validity of the license. 
+
+License Transfers or Refunds: Sale prices or price reductions are not applied retroactively. Fees are non-refundable, 
+and the license is non-transferable, regardless of whether the licensee installs the ThinkDing LLC software, without 
+prior written permission from ThinkDing LLC. 
+
+Intellectual Property Rights: Licensee agrees that the ThinkDing LLC software will not be used for any purpose that 
+may constitute an intellectual property violation, including, but not limited to, copyright or trademark violations. 
+
+Revocation of License: If any of the terms of this license are violated, ThinkDing LLC reserves the right to revoke 
+the license at any time. 
+
+Changes to License: Any or all terms of this license may be modified at any time without prior notice. 
+
+Disclaimer of Warranty: THE SOFTWARE AND ACCOMPANYING DOCUMENTATION ARE PROVIDED "AS IS" AND WITHOUT ANY WARRANTIES 
+AS TO PERFORMANCE, MERCHANTABILITY, FITNESS OR OTHER PURPOSES, WHETHER EXPRESSED OR IMPLIED. ALL EXPRESSED OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR 
+PURPOSE ARE DISCLAIMED. THE LICENSEE MUST ASSUME THE ENTIRE RISK OF USING THE SOFTWARE. IN NO CASE SHALL THINKDING LLC 
+OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR OTHER DAMAGES 
+OR LOSS, INCLUDING, WITHOUT LIMITATION, LOST PROFITS OR THE INABILITY TO USE EQUIPMENT OR ACCESS DATA, WHETHER SUCH 
+DAMAGES ARE BASED UPON A BREACH OF EXPRESS OR IMPLIED WARRANTIES, BREACH OF CONTRACT, NEGLIGENCE, STRICT TORT, OR ANY 
+OTHER LEGAL THEORY. THIS IS TRUE EVEN IF THINKDING LLC OR ITS CONTRIBUTORS ARE ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES. IN NO CASE WILL THE LIABILITY OF THINKDING LLC OR ITS CONTRIBUTORS EXCEED THE AMOUNT OF THE LICENSE FEE PAID 
+BY LICENSEE TO THINKDING LLC. ANY LIABILITY OF THINKDING LLC OR ITS CONTRIBUTORS IS LIMITED EXCLUSIVELY TO PRODUCT 
+REPLACEMENT OR REFUND OF THE PURCHASE PRICE. THINKDING LLC OR ITS CONTRIBUTORS ARE NOT LIABLE FOR ANY CONTENT DISPLAYED 
+ON A WEBSITE POWERED BY THINKDING LLC SOFTWARE. ANY UNSETTLED LICENSEE DISPUTE SHALL BE SUBMITTED TO ARBITRATION IN 
+PITTSBURGH, PENNSYLVANIA. IF ANY PROVISION OF THIS AGREEMENT IS NOT ENFORCEABLE, ALL OTHER PROVISIONS SHALL REMAIN IN 
+FORCE. THIS LICENSE SHALL BE GOVERNED BY THE LAWS OF THE COMMONWEALTH OF PENNSYLVANIA.

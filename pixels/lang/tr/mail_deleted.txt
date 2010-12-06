@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Linkiniz kaldirildi >
+
+Merhaba,
+
+(%[URL]%)  adresini %[DOMAINNAME]% üzerinde kaydetmiþtiniz.
+Alanýnýzýn süresinin dolduðunu üzülerek belirtmek isteriz..
+
+%[VISITORS]% ziyaretçi alanýnýza týklayarak sitenize ulaþtý.
+
+Arzu ederseniz tekrar alan alarak sitenizin reklamýný yapmaya devam edebilirsiniz.
+
+Teþekkürler,
+%[DOMAINNAME]% Takýmý
+
+%[DOMAIN]%
+

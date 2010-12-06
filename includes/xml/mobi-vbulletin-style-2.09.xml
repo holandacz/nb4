@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<style name="Mobi" vbversion="3.6.9" product="vbulletin" type="custom">
+	<templategroup name="CSS Special Templates">
+		<template name=".alt1, .alt1Active" templatetype="css" date="1183722719" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:7:"#FFFFFF";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".alt2, .alt2Active" templatetype="css" date="1183722719" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:7:"#999999";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".button" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".fjdpth0" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:2:{s:10:"background";s:0:"";s:5:"color";s:0:"";}]]></template>
+		<template name=".fjsel" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:2:{s:10:"background";s:0:"";s:5:"color";s:0:"";}]]></template>
+		<template name=".highlight" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".navbar" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".panel" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".panelsurround" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".smallfont" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".tborder" templatetype="css" date="1088206879" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".tcat" templatetype="css" date="1088206879" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".tfoot" templatetype="css" date="1088206879" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".thead" templatetype="css" date="1088206879" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".time" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".vbmenu_control" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".vbmenu_hilite" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".vbmenu_option" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name=".vbmenu_popup" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name=".wysiwyg" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name="body" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name="EXTRA" templatetype="css" date="1182781640" username="dartho" version=""><![CDATA[a:1:{s:3:"all";s:0:"";}]]></template>
+		<template name="legend" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name="select" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name="td, th, p, li" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+		<template name="td.inlinemod" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:7:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";s:6:"LINK_N";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_V";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}s:6:"LINK_M";a:3:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:15:"text-decoration";s:0:"";}}]]></template>
+		<template name="textarea, .bginput" templatetype="css" date="1183266979" username="dartho" version=""><![CDATA[a:4:{s:10:"background";s:0:"";s:5:"color";s:0:"";s:4:"font";a:3:{s:5:"style";s:0:"";s:4:"size";s:0:"";s:6:"family";s:0:"";}s:5:"EXTRA";s:0:"";}]]></template>
+	</templategroup>
+	<templategroup name="Replacement Var Special Templates">
+		<template name="&lt;br&gt;" templatetype="replacement" date="0" username="" version=""><![CDATA[<br />]]></template>
+		<template name="border=&quot;0&quot; alt=&quot;&quot; /&gt;" templatetype="replacement" date="0" username="" version=""><![CDATA[target="_blank">Image</a>]]></template>
+		<template name="class=&quot;inlineimg&quot; /&gt;" templatetype="replacement" date="0" username="" version=""><![CDATA[>:-)</a>]]></template>
+		<template name="img src" templatetype="replacement" date="0" username="" version=""><![CDATA[a href]]></template>
+	</templategroup>
+	<templategroup name="StyleVar Special Templates">
+		<template name="cellpadding" templatetype="stylevar" date="1088187208" username="dartho" version=""><![CDATA[0]]></template>
+		<template name="cellspacing" templatetype="stylevar" date="1088184619" username="dartho" version=""><![CDATA[0]]></template>
+		<template name="codeblockwidth" templatetype="stylevar" date="1157200755" username="dartho" version=""><![CDATA[180px]]></template>
+		<template name="formwidth" templatetype="stylevar" date="1157200755" username="dartho" version=""><![CDATA[220px]]></template>
+		<template name="formwidth_usercp" templatetype="stylevar" date="1157200755" username="dartho" version=""><![CDATA[220px]]></template>
+		<template name="htmldoctype" templatetype="stylevar" date="1183863849" username="dartho" version=""><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-strict.dtd">]]></template>
+		<template name="messagewidth" templatetype="stylevar" date="1157200755" username="dartho" version=""><![CDATA[220px]]></template>
+		<template name="messagewidth_usercp" templatetype="stylevar" date="1157200755" username="dartho" version=""><![CDATA[220px]]></template>
+		<template name="spacersize" templatetype="stylevar" date="1088184619" username="dartho" version=""><![CDATA[0]]></template>
+	</templategroup>
+	<templategroup name="BB Code Layout">
+		<template name="bbcode_quote" templatetype="template" date="1182779917" username="dartho" version="3.6.9"><![CDATA[<p class="quote"><i><phrase 1="$username">$vbphrase[originally_posted_by_x]</phrase>:<br />
+$message</i></p>
+]]></template>
+		<template name="bbcode_quote_printable" templatetype="template" date="1182779928" username="dartho" version="3.6.9"><![CDATA[<p class="quote"><i><phrase 1="$username">$vbphrase[originally_posted_by_x]</phrase>:<br />
+$message</i></p>
+]]></template>
+	</templategroup>
+	<templategroup name="Editor">
+		<template name="editor_styles_button_down" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_button_hover" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_button_normal" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_button_selected" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_menu_down" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_menu_hover" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_menu_normal" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_styles_popup_down" templatetype="template" date="1183287109" username="dartho" version="3.6.9"><![CDATA[background: ; color:; color: ; padding:; padding: ; border:; border: ;]]></template>
+		<template name="editor_toolbar_off" templatetype="template" date="1187617204" username="dartho" version="3.6.8"><![CDATA[<textarea name="message" id="{$editorid}_textarea" rows="15" cols="15" style="width:100%;">$newpost[message]</textarea><br />
+]]></template>
+		<template name="editor_toolbar_on" templatetype="template" date="1187617214" username="dartho" version="3.6.8"><![CDATA[<textarea name="message" id="{$editorid}_textarea" rows="15" cols="15" style="width:100%;">$newpost[message]</textarea><br />
+]]></template>
+		<template name="editor_toolbar_standard" templatetype="template" date="1183634874" username="dartho" version="3.6.9"><![CDATA[<textarea name="message" id="{$editorid}_textarea" rows="15" cols="15" style="width:100%;">$newpost[message]</textarea><br />
+]]></template>
+		<template name="editor_toolbar_wysiwyg" templatetype="template" date="1183634855" username="dartho" version="3.6.9"><![CDATA[<textarea name="message" id="{$editorid}_textarea" rows="15" cols="15" style="width:100%;">$newpost[message]</textarea><br />
+]]></template>
+	</templategroup>
+	<templategroup name="Forum Display">
+		<template name="FORUMDISPLAY" templatetype="template" date="1185451039" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">$foruminfo[title]</div>
+<if condition="$show['forumslist']">
+<!-- sub-forum list  -->
+<div>$vbphrase[subforums]:</div>
+$forumbits
+<!-- / sub-forum list  -->
+</if>
+<div>Threads:
+<if condition="$show['newthreadlink']"><a href="newthread.php?$session[sessionurl]do=newthread&amp;f=$foruminfo[forumid]">(New?)</a></if></div>
+$announcebits
+<if condition="$show['threads']">
+	<!-- show threads -->
+	<if condition="$show['stickies']">
+	$threadbits_sticky
+	</if>
+	$threadbits	
+	<!-- end show threads -->
+<else />
+</if>
+<if condition="$pagenav"><hr>$pagenav</if>
+
+<if condition="$foruminfo[parentid] > '1'"> 
+<div><a href="forumdisplay.php?$session[sessionurl]f=$foruminfo[parentid]">Up</a></div>
+<else />
+<div><a href="$vboptions[forumhome].php?$session[sessionurl_q]">Up</a></div>
+</if>
+$footer
+</body>
+</html>]]></template>
+		<template name="forumdisplay_announcement" templatetype="template" date="1183285858" username="dartho" version="3.6.9"><![CDATA[<div style="padding-left: 5px;padding-bottom:6px;">
+<span class="smallfont">$announcement[username]</span>:: <a href="announcement.php?$session[sessionurl]f=$foruminfo[forumid]$announcementidlink"><strong>$announcement[title]</strong></a>
+</div>
+]]></template>
+	</templategroup>
+	<templategroup name="Forum Home">
+		<template name="FORUMHOME" templatetype="template" date="1189337327" username="dartho" version="3.6.8"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+$forumbits
+<div class="navbar"><a href="$vboptions[bburl]/forumdisplay.php?$session[sessionurl]do=markread">Mark Forums Read</a></div>
+
+$footer
+
+</body>
+</html>
+]]></template>
+		<template name="forumhome_forumbit_level1_nopost" templatetype="template" date="1189340612" username="dartho" version="3.6.8"><![CDATA[<div class="titlebg"><a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></div>
+<if condition="$childforumbits">
+$childforumbits
+</if>
+
+
+]]></template>
+		<template name="forumhome_forumbit_level1_post" templatetype="template" date="1189340633" username="dartho" version="3.6.8"><![CDATA[<div class="$forum[statusicon]titlebg"><a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a>
+</div> 
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level2_nopost" templatetype="template" date="1189340652" username="dartho" version="3.6.8"><![CDATA[<div class="windowbg">-&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></div>
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level2_post" templatetype="template" date="1189340275" username="dartho" version="3.6.8"><![CDATA[<div class="$forum[statusicon]windowbg">-&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></div>
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level3_nopost" templatetype="template" date="1189337393" username="dartho" version="3.6.8"><![CDATA[<strong>--&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></strong>
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level3_post" templatetype="template" date="1189337421" username="dartho" version="3.6.8"><![CDATA[<p class="$forum[statusicon]">--&nbsp;
+<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a>
+</p>
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level4_nopost" templatetype="template" date="1189337431" username="dartho" version="3.6.8"><![CDATA[---&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a>
+<if condition="$childforumbits">
+$childforumbits
+</if>
+]]></template>
+		<template name="forumhome_forumbit_level4_post" templatetype="template" date="1189337454" username="dartho" version="3.6.8"><![CDATA[<p class="$forum[statusicon]">---&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></p>
+<if condition="$childforumbits">
+$childforumbits
+</if>
+]]></template>
+		<template name="forumhome_forumbit_level5_nopost" templatetype="template" date="1189337485" username="dartho" version="3.6.8"><![CDATA[----&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a>
+<if condition="$childforumbits">
+<br />$childforumbits
+</if>]]></template>
+		<template name="forumhome_forumbit_level5_post" templatetype="template" date="1189337496" username="dartho" version="3.6.8"><![CDATA[<p class="$forum[statusicon]">----&nbsp;<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a></p>
+<if condition="$childforumbits">
+$childforumbits
+</if>]]></template>
+	</templategroup>
+	<templategroup name="Modify User Option">
+		<template name="modifyoptions" templatetype="template" date="1185583018" username="dartho" version="3.6.9"><![CDATA[<form action="profile.php?do=updateoptions" method="post">
+<input type="hidden" name="s" value="$session[dbsessionhash]" />
+<input type="hidden" name="do" value="updateoptions" />
+<div class="titlebg">$vbphrase[edit_options]: $bbuserinfo[username]</div>
+<div class="windowbg2">$vbphrase[login_privacy]</div>
+
+<if condition="$show['invisibleoption']">				
+<div><label for="cb_invisible"><input type="checkbox" name="options[invisible]" value="1" id="cb_invisible" $checked[invisible] />$vbphrase[use_invisible_mode]</label><input type="hidden" name="set_options[invisible]" value="1" /></div>
+</if>
+
+<if condition="$show['reputationoption']">
+<div><label for="cb_showreputation"><input type="checkbox" name="options[showreputation]" value="1" id="cb_showreputation" $checked[showreputation] />$vbphrase[show_my_reputation_level]</label><input type="hidden" name="set_options[showreputation]" value="1" /></div>
+</if>
+
+<div><label for="cb_showvcard"><input type="checkbox" name="options[showvcard]" value="1" id="cb_showvcard" $checked[showvcard] />$vbphrase[allow_vcard_download]</label><input type="hidden" name="set_options[showvcard]" value="1" /></div>
+
+
+<br />
+
+<div class="windowbg2">$vbphrase[messaging_notification]</div>
+
+<div><label for="cb_adminemail"><input type="checkbox" name="options[adminemail]" value="1" id="cb_adminemail" $checked[adminemail] />$vbphrase[receive_email_from_bulletin_board_staff]</label><input type="hidden" name="set_options[adminemail]" value="1" /></div>
+
+<if condition="$show['receiveemail']">
+<div><label for="cb_showemail"><input type="checkbox" name="options[showemail]" value="1" id="cb_showemail" $checked[showemail] />$vbphrase[receive_email_from_other_members]</label><input type="hidden" name="set_options[showemail]" value="1" /></div>
+</if>
+
+<if condition="!$vboptions['enableemail']">
+<input type="hidden" name="options[showemail]" value="$bbuserinfo[showemail]" />
+</if>
+
+<if condition="$show['pmoptions']">
+<div><label for="cb_receivepm"><input type="checkbox" name="options[receivepm]" value="1" id="cb_receivepm" onclick="toggle_disabled(this.checked, 'pmoptions')" $checked[receivepm] />$vbphrase[enable_private_messaging]</label><input type="hidden" name="set_options[receivepm]" value="1" /></div>
+
+<div><label for="cb_receivepmbuddies"><input type="checkbox" name="options[receivepmbuddies]" value="1" id="cb_receivepmbuddies" $checked[receivepmbuddies] />$vbphrase[pm_from_buddies_only]</label><input type="hidden" name="set_options[receivepmbuddies]" value="1" /></div>
+<div><label for="cb_emailonpm"><input type="checkbox" name="options[emailonpm]" value="1" id="cb_emailonpm" $checked[emailonpm] />$vbphrase[receive_email_notification_pm]</label><input type="hidden" name="set_options[emailonpm]" value="1" /></div>
+<div><label for="cb_pmpopup"><input type="checkbox" name="pmpopup" value="1" id="cb_pmpopup" $checked[pmpopup] />$vbphrase[show_pm_popup]</label></div>
+<else />
+<input type="hidden" name="options[receivepm]" value="$bbuserinfo[receivepm]" />
+<input type="hidden" name="options[emailonpm]" value="$bbuserinfo[emailonpm]" />
+<input type="hidden" name="pmpopup" value="$bbuserinfo[pmpopup]" />
+</if>
+
+<br />
+
+<div class="windowbg2">$vbphrase[visible_post_elements]</div>
+<div><label for="cb_showsignatures"><input type="checkbox" name="options[showsignatures]" value="1" id="cb_showsignatures" $checked[showsignatures] />$vbphrase[show_signatures]</label><input type="hidden" name="set_options[showsignatures]" value="1" /></div>
+<div><label for="cb_showavatars"><input type="checkbox" name="options[showavatars]" value="1" id="cb_showavatars" $checked[showavatars] />$vbphrase[show_avatars]</label><input type="hidden" name="set_options[showavatars]" value="1" /></div>
+<div><label for="cb_showimages"><input type="checkbox" name="options[showimages]" value="1" id="cb_showimages" $checked[showimages] />$vbphrase[show_images] ($vbphrase[including_attached_and_img_code])</label><input type="hidden" name="set_options[showimages]" value="1" /></div>
+
+<br />
+<div class="windowbg2">$vbphrase[thread_display_mode]:</div>
+<span>
+<input type="radio" name="threadedmode"  value="0" $threaddisplaymode[0]>$vbphrase[linear] - $vbphrase[oldest_first]<br />
+<input type="radio" name="threadedmode"  value="3" $threaddisplaymode[3]>$vbphrase[linear] - $vbphrase[newest_first]<br />
+<if condition="$vboptions['allowthreadedmode']">
+<input type="radio" name="threadedmode"  value="1" $threaddisplaymode[1]>$vbphrase[threaded]<br />
+<input type="radio" name="threadedmode"  value="2" $threaddisplaymode[2]>$vbphrase[hybrid]<br />
+</if>
+</span>
+<div>
+<input type="submit" class="button" value="$vbphrase[save_changes]" accesskey="s" />
+<input type="reset" class="button" value="$vbphrase[reset_fields]" accesskey="r" />
+</div>
+</form>]]></template>
+		<template name="modifysignature" templatetype="template" date="1185584626" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">$vbphrase[edit_signature]</div>
+<div class="windowbg2">$preview</div>
+
+<form action="profile.php?do=updatesignature" enctype="multipart/form-data" method="post" name="vbform"<if condition="!is_browser('webtv')"> onsubmit="return vB_Editor['$editorid'].prepare_submit(0, 0)"</if>>
+<div>
+<div>$vbphrase[your_signature]:</div>
+$messagearea
+</div>
+	<div style="margin-top:$stylevar[cellpadding]px">
+		<input type="hidden" name="url" value="$url" />
+		<input type="hidden" name="s" value="$session[sessionhash]" />
+		<input type="hidden" name="do" value="updatesignature" />
+		<input type="hidden" name="MAX_FILE_SIZE" value="$inimaxattach" />
+		<input type="submit" class="button" value="$vbphrase[save]" accesskey="s" tabindex="1" />
+		<input type="submit" class="button" value="$vbphrase[preview]" name="preview" accesskey="r" tabindex="1" />	
+	</div>
+</form>
+]]></template>
+	</templategroup>
+	<templategroup name="Navigation / Breadcrumb">
+		<template name="navbar" templatetype="template" date="1185583732" username="dartho" version="3.6.9"><![CDATA[<div class="navbar"><a class="navbar" href="$vboptions[bburl]/?$session[sessionurl]">Home</a>
+
+<if condition="$show['member']">
+<a class="navbar" href="$vboptions[bburl]/search.php?$session[sessionurl]do=getnew">
+New Posts</a>
+<a class="navbar" href="$vboptions[bburl]/usercp.php?$session[sessionurl]">
+<if condition="$vbulletin->userinfo[pmunread]>0">
+<strong>*UserCP*</strong>
+<else />
+UserCP
+</if>
+</a>
+<else />
+<a class="navbar" href="$vboptions[bburl]/search.php?$session[sessionurl]do=getdaily">Today's Posts</a>
+</if>
+
+
+</div>
+
+]]></template>
+		<template name="navbar_link" templatetype="template" date="1182782493" username="dartho" version="3.6.9"><![CDATA[<if condition="$show['breadcrumb']">
+	<span class="navbar">&gt; <a href="$nav_url">$nav_title</a></span>
+<else />
+	$nav_title
+</if>]]></template>
+	</templategroup>
+	<templategroup name="New Posting">
+		<template name="newpoll" templatetype="template" date="1181218095" username="dartho" version="3.6.9"><![CDATA[<!-- Empty Template -->]]></template>
+		<template name="newreply" templatetype="template" date="1185451054" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">Reply To: $threadinfo[title]</div>
+<form action="newreply.php" method="post">
+<div>
+$vbphrase[message]:<br />
+<textarea name="message" rows="10" cols="15" style="width:100%; height:100px"></textarea><br />	
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="do" value="postreply" />
+<input type="hidden" name="t" value="$threadid" />
+<input type="hidden" name="p" value="$postid" />
+<input type="hidden" name="posthash" value="$posthash" />
+<input type="hidden" name="poststarttime" value="$poststarttime" />
+<input type="submit" class="button" name="sbutton" value="$vbphrase[submit_reply]" accesskey="s" tabindex="1" />
+</div>
+</form>
+$footer
+</body>
+</html>]]></template>
+		<template name="newthread" templatetype="template" date="1185451047" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">New Thread</div>
+<form action="newthread.php" method="post">
+<div>
+<strong>$vbphrase[forum]</strong>: <a href="forumdisplay.php?$session[sessionurl]f=$foruminfo[forumid]">$foruminfo[title]</a><br />
+$vbphrase[title]:<br />
+<input type="text" class="bginput" name="subject" value="$subject" size="20" maxlength="85" style="width:100%"/><br />
+$vbphrase[message]:<br />
+<textarea name="message" rows="10" cols="15" style="width:100%; height:100px"></textarea><br />
+
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="f" value="$forumid" />
+<input type="hidden" name="do" value="postthread" />
+<input type="hidden" name="posthash" value="$posthash" />
+<input type="hidden" name="poststarttime" value="$poststarttime" />
+<input type="submit" class="button" name="sbutton" value="$vbphrase[submit]" accesskey="s"  />
+</div>
+</form>
+$footer
+</body>
+</html>]]></template>
+	</templategroup>
+	<templategroup name="Page Navigation">
+		<template name="pagenav" templatetype="template" date="1185451497" username="dartho" version="3.6.9"><![CDATA[<div><phrase 1="$pagenumber" 2="$totalpages">$vbphrase[page_x_of_y]</phrase><br>
+<if condition="$show['first']"><a class="smallfont" href="$address$address2" title="$vbphrase[first_page] - <phrase 1="$firstnumbers[first]" 2="$firstnumbers[last]" 3="$total">$vbphrase[results_x_to_y_of_z]</phrase>"><strong>&laquo;</strong> $vbphrase[first]</a></if>
+	<if condition="$show['prev']"><a class="smallfont" href="$address$address2<if condition="$prevpage != 1">&amp;page=$prevpage</if>" title="$vbphrase[prev_page] - <phrase 1="$prevnumbers[first]" 2="$prevnumbers[last]" 3="$total">$vbphrase[results_x_to_y_of_z]</phrase>">&lt;</a></if>
+	$pagenav
+	<if condition="$show['next']"><a class="smallfont" href="$address$address2&amp;page=$nextpage" title="$vbphrase[next_page] - <phrase 1="$nextnumbers[first]" 2="$nextnumbers[last]" 3="$total">$vbphrase[results_x_to_y_of_z]</phrase>">&gt;</a></if>
+	<if condition="$show['last']"><a class="smallfont" href="$address$address2&amp;page=$totalpages" title="$vbphrase[last_page] - <phrase 1="$lastnumbers[first]" 2="$lastnumbers[last]" 3="$total">$vbphrase[results_x_to_y_of_z]</phrase>">$vbphrase[last] <strong>&raquo;</strong></a></if>
+	<if condition="$show['popups']"><a name="PageNav"></a></if>
+</div>]]></template>
+		<template name="pagenav_curpage" templatetype="template" date="1182780972" username="dartho" version="3.6.9"><![CDATA[<strong>$curpage</strong>
+ ]]></template>
+		<template name="pagenav_pagelink" templatetype="template" date="1182781244" username="dartho" version="3.6.9"><![CDATA[<a href="$address$address2<if condition="$curpage != 1">&amp;page=$curpage</if>" title="<phrase 1="$pagenumbers[first]" 2="$pagenumbers[last]" 3="$total">$vbphrase[show_results_x_to_y_of_z]</phrase>">$curpage</a>]]></template>
+		<template name="pagenav_pagelinkrel" templatetype="template" date="1183186792" username="dartho" version="3.6.9"><![CDATA[<a class="smallfont" href="$address$address2<if condition="$curpage != 1">&amp;page=$curpage</if>" title="<phrase 1="$pagenumbers[first]" 2="$pagenumbers[last]" 3="$total">$vbphrase[show_results_x_to_y_of_z]</phrase>"><!--$relpage-->$curpage</a>]]></template>
+	</templategroup>
+	<templategroup name="Private Message">
+		<template name="pm_messagelist" templatetype="template" date="1184329951" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">PM: $foldername</div>
+<if condition="$show['messagelist']">
+<if condition="$show['pagenav']">
+<if condition="$pagenav">$pagenav
+</if>
+</if>
+
+$messagelist_periodgroups
+
+
+<if condition="$show['pagenav']">
+<if condition="$pagenav">$pagenav</if>
+</if>
+</if>
+<if condition="$show['pmstats']">
+<div>
+<strong>$vbphrase[private_messages]</strong>
+</if>
+$cpnav[pmfolders]
+<a href="private.php?$session[sessionurl]">$vbphrase[list_messages]</a>
+<a href="private.php?$session[sessionurl]do=newpm">$vbphrase[send_new_message]</a>
+<if condition="$show['pmtracklink']">
+<a href="private.php?$session[sessionurl]do=trackpm">$vbphrase[track_messages]</a>
+</div>
+</if>
+
+]]></template>
+		<template name="pm_messagelistbit" templatetype="template" date="1183547709" username="dartho" version="3.6.9"><![CDATA[<if condition="$show['unread']">
+<div class="new"><a href="private.php?$session[sessionurl]do=showpm&amp;pmid=$pm[pmid]">$pm[title]</a><else />
+<div class="old"><a href="private.php?$session[sessionurl]do=showpm&amp;pmid=$pm[pmid]">$pm[title]</a> </if>
+</div>
+<div class="windowbg">$pm[senddate],&nbsp;$pm[sendtime] - from: $userbit</div>
+
+]]></template>
+		<template name="pm_messagelistbit_user" templatetype="template" date="1183268296" username="dartho" version="3.6.9"><![CDATA[$username]]></template>
+		<template name="pm_messagelist_periodgroup" templatetype="template" date="1183269790" username="dartho" version="3.6.9"><![CDATA[$messagelistbits
+]]></template>
+		<template name="pm_newpm" templatetype="template" date="1183634301" username="dartho" version="3.6.9"><![CDATA[<form action="private.php" method="post">
+<div>
+<div class="titlebg">New PM</div>
+<div>$vbphrase[recipient_usernames]:</div>
+<input type="text" style="width:100%" name="recipients" value="$pm[recipients]" tabindex="1" />
+<if condition="$show['sendmax']"><div><phrase 1="$permissions[pmsendmax]">$vbphrase[may_send_x_messages_a_time]</phrase></div></if>
+<div>$vbphrase[separate_multiple_names]</div>
+$vbphrase[title]:<br />
+<input type="text" name="title" value="$pm[title]" maxlength="85" style="width:100%" tabindex="1" />
+<div>$vbphrase[message]:</div>		
+<textarea name="message" rows="20" cols="20" style="width:100%; height:100px" tabindex="1"></textarea>
+<div>
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="do" value="insertpm" />
+<input type="hidden" name="pmid" value="$pm[pmid]" />
+<input type="hidden" name="forward" value="$pm[forward]" />
+<input type="hidden" name="receipt" value="0" />
+<input type="submit" class="button" name="sbutton" value="$vbphrase[submit]" accesskey="s" tabindex="1" />
+</div>
+<br />
+
+$vbphrase[additional_options]<br />
+<label for="cb_savecopy">
+<input type="checkbox" name="savecopy" value="1" id="cb_savecopy" tabindex="1" $checked[savecopy] /><phrase 1="private.php?$session[sessionurl]folderid=-1">Save a copy</phrase></label>
+<if condition="$bbuserinfo['signature']">
+<label for="cb_signature"><input type="checkbox" name="signature" value="1" id="cb_signature" tabindex="1" $checked[signature] />$vbphrase[show_your_signature]</label></if>
+</div>
+</form>
+]]></template>
+		<template name="pm_showpm" templatetype="template" date="1183629751" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">$pm[title]</div>
+$postbit
+]]></template>
+	</templategroup>
+	<templategroup name="Postbit">
+		<template name="postbit" templatetype="template" date="1189338186" username="dartho" version="3.6.8"><![CDATA[<div class="$post[statustitle]windowbg2" id="post$post[postid]">
+<a name="post$post[postid]"></a>
+$post[username] $post[posttime] $post[postdate]
+</div>
+
+<div class="windowbg">$post[message]
+<if condition="$post['editlink']"><a href="$post[editlink]">[Ed]</a></if>
+<if condition="$post['replylink']"><a href="$post[replylink]">[Rep]</a></if>
+<if condition="$show['reportlink']"><a href="report.php?$session[sessionurl]p=$post[postid]" rel="nofollow">[!!]</a> </if>
+
+</div>]]></template>
+		<template name="postbit_deleted" templatetype="template" date="1185586737" username="dartho" version="3.6.9"><![CDATA[<div class="windowbg2">$post[username] $post[postdate]<if condition="!$show['detailedtime']">, $post[posttime]</if> $post[firstnewinsert]
+</div>
+
+<div>
+<span>
+<phrase 1="member.php?$session[sessionurl]u=$post[del_userid]" 2="$post[del_username]">$vbphrase[message_deleted_by_x]</phrase>
+</span>
+<if condition="$show['managepost']">
+<span>
+<a href="postings.php?$session[sessionurl]do=managepost&amp;p=$post[postid]">$vbphrase[manage]</a>
+</span>
+</if>
+
+<if condition="$post['del_reason']">
+<span>
+$vbphrase[reason]: <em>$post[del_reason]</em>
+</span>
+</if>
+</div>
+			
+]]></template>
+		<template name="postbit_legacy" templatetype="template" date="1182780892" username="dartho" version="3.6.9"><![CDATA[<div class="windowbg2">$post[username] $post[posttime] $post[postdate]
+</div>
+$post[message]
+<if condition="$post['replylink']"><a href="$post[replylink]">[Reply]</a>	</if>]]></template>
+		<template name="postbit_wrapper" templatetype="template" date="1182608130" username="dartho" version="3.6.9"><![CDATA[$postbit
+]]></template>
+	</templategroup>
+	<templategroup name="Post Icon">
+		<template name="posticonbit" templatetype="template" date="1157201885" username="dartho" version="3.6.9" />
+		<template name="posticons" templatetype="template" date="1157201899" username="dartho" version="3.6.9" />
+	</templategroup>
+	<templategroup name="Search">
+		<template name="search_results" templatetype="template" date="1185451444" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<if condition="$pagenav">$pagenav</if>
+
+<div class="titlebg">
+<if condition="$action == 'getnew'">$vbphrase[new_posts_nav]
+<else />
+$vbphrase[posts_from_last_day]
+</if>
+</div>
+$searchbits
+
+<if condition="$pagenav">$pagenav</if>
+
+<div class="navbar"><a href="$vboptions[bburl]/forumdisplay.php?$session[sessionurl]do=markread">Mark Forums Read</a></div>
+$footer
+</body></html>
+]]></template>
+	</templategroup>
+	<templategroup name="Show Thread">
+		<template name="SHOWTHREAD" templatetype="template" date="1185451850" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+
+<if condition="$show['pagenav']">$pagenav</if>
+<div class="titlebg"><a href="forumdisplay.php?$session[sessionurl]f=$foruminfo[parentid]">$foruminfo[title_clean]</a>>$thread[title]</div>
+$postbits
+<if condition="$show['pagenav']">$pagenav</if>
+
+<if condition="$show['member']">
+<form action="newreply.php" method="post">
+<div>
+<textarea name="message" rows="10" cols="30" style="height:100px;width:100%" tabindex="1"></textarea><br />
+<input type="hidden" name="wysiwyg" value="0" />
+<input type="hidden" name="fromquickreply" value="1" />
+<input type="hidden" name="s" value="" />
+<input type="hidden" name="do" value="postreply" />
+<input type="hidden" name="t" value="$threadid" id="qr_threadid" />
+<input type="hidden" name="p" value="who cares" id="qr_postid" />
+<input type="hidden" name="parseurl" value="1" />
+<input type="hidden" name="clickedelm" value="" />
+<input type="submit" class="button" value="Post Reply" />
+</div>
+</form>
+</if>
+<if condition="$foruminfo[parentid] > '1'"> 
+<div><a href="forumdisplay.php?$session[sessionurl]f=$foruminfo[parentid]">Up</a></div>
+<else />
+<div><a href="$vboptions[forumhome].php?$session[sessionurl_q]">Up</a></div>
+</if>
+$footer
+</body>
+</html>]]></template>
+		<template name="showthread_quickreply" templatetype="template" date="1181218408" username="dartho" version="3.6.9"><![CDATA[<script type="text/javascript">
+<!--
+var WYSIWYG = $WYSIWYG;
+var threadedmode = $threadedmode;
+var minchars = $vboptions[postminchars];
+var maxchars = $vboptions[postmaxchars];
+var require_click = $QRrequireclick;
+var must_click_message = "$vbphrase[click_quick_reply_icon]";
+var istyles = new Array(); istyles = { $istyles_js };
+var normalmode = false;
+var vbphrase = {
+	// wysiwyg only
+	"wysiwyg_please_wait" : "$vbphrase[wysiwyg_please_wait]",
+	"wysiwyg_initialized" : "$vbphrase[wysiwyg_initialized]",
+	"wysiwyg_command_invalid" : "$vbphrase[wysiwyg_command_invalid]",
+	"moz_must_select_text" : "$vbphrase[moz_must_select_text]",
+	"moz_edit_config_file" : "$vbphrase[moz_edit_config_file]",
+	"enter_tag_option" : "$vbphrase[enter_tag_option]",
+	"must_select_text_to_use" : "$vbphrase[must_select_text_to_use]",
+	"browser_is_safari_no_wysiwyg" : "$vbphrase[browser_is_safari_no_wysiwyg]",
+	// standard only
+	"enter_text_to_be_formatted" : "$vbphrase[enter_text_to_be_formatted]",
+	"enter_link_text" : "$vbphrase[enter_link_text]",
+	"enter_list_type" : "$vbphrase[enter_list_type]",
+	"enter_list_item" : "$vbphrase[enter_list_item]",
+	// both
+	"must_enter_subject" : "$vbphrase[must_enter_subject]",
+	"message_too_short" : "$vbphrase[message_too_short]",
+	"enter_link_url" :  "$vbphrase[enter_link_url]",
+	"enter_image_url" : "$vbphrase[enter_image_url]",
+	"enter_email_link" : "$vbphrase[enter_email_link]"
+};
+//-->
+</script>
+	
+<form action="newreply.php" method="post" name="vbform" onsubmit="return checkQR(this);">
+
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" colspan="2">
+			$vbphrase[quick_reply]
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_quickreply" style="$vbcollapse[collapseobj_quickreply]">
+<tr>
+	<td class="panelsurround" align="center">
+		<div class="panel">	
+			<table cellpadding="0" cellspacing="0" border="0" align="center">
+			<tr>
+				<td class="smallfont" align="$stylevar[left]">$vbphrase[message]:</td>
+			</tr>
+			<tr>
+				<td id="vBulletin_editor" align="$stylevar[left]">
+				<!-- <<<< indent back for ease of reading -->		
+
+
+
+<if condition="$WYSIWYG == 0">	
+<!-- no-toolbar quick reply -->
+
+	<div class="controlbar">
+		<textarea name="message" id="qr_message" class="bginput" style="width:600px; height:100px;" rows="5" cols="60" tabindex="1"></textarea>		
+	</div>
+
+<!-- / no-toolbar quick reply -->	
+</if>
+
+
+				<!-- >>>> outdent back to normal -->
+				</td>
+			</tr>
+			<tr>
+				<td align="$stylevar[left]">
+				
+					<fieldset class="fieldset" style="margin:$stylevar[formspacer]px 0px 0px 0px">
+						<legend>$vbphrase[options]</legend>
+						<div>
+							<if condition="$bbuserinfo['signature']">
+								<div style="float:$stylevar[right]">
+									<label for="cb_signature"><input type="checkbox" name="signature" value="1" id="cb_signature" tabindex="5" checked="checked" />$vbphrase[show_your_signature]</label>
+								</div>
+							</if>
+							<label for="qr_quickreply"><input type="checkbox" name="quickreply" value="1" id="qr_quickreply" accesskey="w" tabindex="4" />$vbphrase[quote_message_in_reply]</label>
+						</div>
+					</fieldset>
+				
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+		<div style="margin-top:$stylevar[cellpadding]px">
+			<input type="hidden" name="fromquickreply" value="1" />
+			<input type="hidden" name="s" value="$session[sessionhash]" />
+			<input type="hidden" name="do" value="postreply" />
+			<input type="hidden" name="t" value="$threadid" id="qr_threadid" />
+			<input type="hidden" name="p" value="$qrpostid" id="qr_postid" />
+			<input type="hidden" name="parseurl" value="1" />
+			<input type="hidden" name="clickedelm" value="" />
+			<input type="submit" class="button" value="$vbphrase[post_quick_reply]" accesskey="s" title="(Alt + S)" name="sbutton" tabindex="2" onclick="this.form.clickedelm.value=this.value" />
+			<input type="submit" class="button" value="$vbphrase[go_advanced]" accesskey="x" title="(Alt + X)" name="preview" tabindex="3" id="qr_preview" onclick="this.form.clickedelm.value = this.value" />
+		</div>		
+	</td>
+</tr>
+</tbody>
+</table>
+
+</form>
+<br />
+
+<if condition="!is_browser('ie') AND $WYSIWYG == 2">
+	<!-- Mozilla work around for focusing on QR in WYSIWYG mode -->
+	<div id="qr_scroll"></div>
+</if>
+<script type="text/javascript" src="clientscript/vbulletin_quickreply.js"></script>
+<!-- END WYSWIWYG QUICK REPLY -->]]></template>
+	</templategroup>
+	<templategroup name="Subscribed Thread">
+		<template name="SUBSCRIBE" templatetype="template" date="1184055731" username="dartho" version="3.6.9"><![CDATA[<!-- topic table -->
+<div class="titlebg">$vbphrase[subscribed_threads]</div>
+
+<if condition="$show['pagenav']">$pagenav
+</if>
+
+<!-- topic table -->
+<if condition="$show['havethreads']">
+$threadbits
+<else />
+$vbphrase[folder_is_currently_empty]
+</if>
+<if condition="$show['pagenav']">
+$pagenav
+</if>
+<div>
+<a href="subscription.php?$session[sessionurl]do=viewsubscription&amp;daysprune=-1&amp;folderid=all">$vbphrase[view_all_subscribed_threads]</a> 
+</div>
+]]></template>
+	</templategroup>
+	<templategroup name="Thread Administration">
+		<template name="THREADADMIN" templatetype="template" date="1185587307" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html dir="$stylevar[textdirection]" lang="$stylevar[languagecode]">
+<head>
+$headinclude
+
+</head>
+<body>
+$header
+$navbar
+
+$HTML
+
+$footer
+</body>
+</html>]]></template>
+		<template name="threadadmin_deletethread" templatetype="template" date="1185594363" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">$vbphrase[delete_thread]</div>
+<form action="postings.php?do=dodeletethread&amp;threadid=$threadid" method="post" name="vbform">
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="t" value="$threadid" />
+<input type="hidden" name="do" value="dodeletethread" />
+
+<div class="windowbg2">$vbphrase[title]: $threadinfo[title]</div>
+
+<td>$vbphrase[how_would_you_like_to_delete]</td>
+<if condition="$show['softdelete']">
+<div>
+<input type="radio" name="deletetype" value="1" id="rb_deletetype_1" checked="checked" />$vbphrase[soft_delete_leave_deleted_message]<br />
+<input type="checkbox" name="keepattachments" value="1" id="cb_keepattachments" />$vbphrase[keep_attachments]<br />
+</div>
+</if>
+
+<if condition="$show['harddelete']">
+<div>
+<input type="radio" name="deletetype" value="2" />$vbphrase[physically_remove]<br />
+</div>
+</if>
+<div>
+$vbphrase[reason_for_deletion]:<br />
+<input type="text" class="bginput" name="deletereason" value="$threadinfo[del_reason]" size="50" style="width:100%;" maxlength="125" />
+<input type="submit" class="button" value="$vbphrase[delete]" accesskey="s" />
+<input type="reset" class="button" value="$vbphrase[reset]" accesskey="r" />
+</div>
+</form>]]></template>
+		<template name="threadadmin_editthread" templatetype="template" date="1185596745" username="dartho" version="3.6.9"><![CDATA[<form action="postings.php?do=updatethread&amp;t=$threadid" method="post" name="vbform">
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="t" value="$threadid" />
+<input type="hidden" name="do" value="updatethread" />
+<div class="titlebg">Edit Thread: $threadinfo[title]</div>
+<div>$vbphrase[title]:<br />
+<input type="text" name="title" value="$threadinfo[title]" size="50" style="width:100%;" maxlength="50" tabindex="1" title="$vbphrase[optional]" /></div>
+</div>
+<div>$vbphrase[moderator_notes] / $vbphrase[thread_summary]:<br />
+<input type="text" class="bginput" name="notes" value="$threadinfo[notes]" size="50" maxlength="250" style="width:100%;" />
+</div>
+
+<if condition="$show['undeleteoption']">
+ <div>$vbphrase[item_deleted_would_you_like_to]</div>
+ <div><input type="radio" name="threadstatus" value="0" id="rb_threadstatus_0" checked="checked" />$vbphrase[leave_it_deleted]</div>
+ <div><input type="radio" name="threadstatus" value="1" id="rb_threadstatus_1" />$vbphrase[undelete_it_restore]</div>
+ <if condition="$show['removeoption']">
+  <div><input type="radio" name="threadstatus" value="2" id="rb_threadstatus_2" />$vbphrase[physically_remove]</div>
+ </if>
+ <div>$vbphrase[reason_for_deletion]:<br />
+ <input type="text" name="reason" value="$threadinfo[del_reason]" size="50" maxlength="125" style="width:100%;" />
+ <div><input type="checkbox" name="keepattachments" value="yes" id="cb_keepattachments" checked="checked" />$vbphrase[keep_attachments]</div>
+</if>
+
+	
+<if condition="$show['options']">
+ <div><input type="checkbox" name="open" value="yes" id="cb_open" $openchecked />$vbphrase[thread_is_open]</div>
+ <div><input type="checkbox" name="sticky" value="yes" id="cb_sticky" $stickychecked />$vbphrase[thread_is_sticky]</div>
+  <if condition="$show['moderateoption']">
+   <div><input type="checkbox" name="visible" value="yes" id="cb_visible" $visiblechecked />$vbphrase[thread_is_visible]</div>
+  </if>
+ </if>
+</if>
+
+<div style="margin-top:$stylevar[cellpadding]px">
+ <input type="submit" class="button" value="$vbphrase[save]" accesskey="s" />
+ <input type="reset" class="button" value="$vbphrase[reset]" accesskey="r" />
+ </div>
+</form>
+
+]]></template>
+		<template name="threadadmin_managepost" templatetype="template" date="1185587735" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">$vbphrase[manage_post]</div>
+
+<form action="postings.php?do=domanagepost&amp;t=$threadid&amp;p=$postid" method="post" name="vbform">
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="t" value="$threadid" />
+<input type="hidden" name="do" value="domanagepost" />
+<input type="hidden" name="p" value="$postid" />
+
+<div>
+<if condition="$show['undeleteoption']">
+<div>$vbphrase[item_deleted_would_you_like_to]</div>
+<div><label for="rb_poststatus_0"><input type="radio" name="poststatus" value="0" id="rb_poststatus_0" checked="checked" />$vbphrase[leave_it_deleted]</label></div>
+<div><label for="rb_poststatus_1"><input type="radio" name="poststatus" value="1" id="rb_poststatus_1" />$vbphrase[undelete_it_restore]</label></div>
+<if condition="$show['harddelete']"><div><label for="rb_poststatus_2"><input type="radio" name="poststatus" value="2" id="rb_poststatus_2" />$vbphrase[physically_remove]</label></div></if>
+$vbphrase[reason_for_deletion]:<br />
+<input type="text" class="bginput" name="reason" value="$postinfo[del_reason]" size="20" style="width:100%;" maxlength="125" />
+</if>
+</div>
+	
+	<div style="margin-top:$stylevar[cellpadding]px">
+		<input type="submit" class="button" value="$vbphrase[save_changes]" accesskey="s" />
+		<input type="reset" class="button" value="$vbphrase[reset_fields]" accesskey="r" />
+	</div>
+<br />
+<div class="titlebg">$vbphrase[info]</div>
+<div class="windowbg2">$postinfo[username] $postinfo[posttime] $postinfo[postdate]</div>
+<div class="windowbg">$postinfo[pagetext]</div>
+</form>]]></template>
+	</templategroup>
+	<templategroup name="Threadbit">
+		<template name="threadbit" templatetype="template" date="1189339380" username="dartho" version="3.6.8"><![CDATA[<if condition="$show['sticky']">
+<div class="sticky">Sticky:
+<a href="showthread.php?$session[sessionurl]goto=newpost&amp;t=$thread[threadid]"><strong>$thread[threadtitle]</strong></a>
+<br />
+by $thread[lastposter]: $thread[lastpostdate]
+</div>
+<else />
+<div class="thread$thread[statusicon]">
+<a href="showthread.php?$session[sessionurl]goto=newpost&amp;t=$thread[threadid]"><strong>$thread[threadtitle]</strong></a>
+<if condition="$thread['pagenav']">$stylevar[dirmark]<span class="smallfont" style="white-space:nowrap">( $thread[pagenav]<if condition="$show[pagenavmore]"> ... <a href="showthread.php?$session[sessionurl]t=$thread[threadid]&amp;page=$thread[totalpages]$thread[highlight]">$vbphrase[last_page]</a></if>)</span></if>
+<if condition="$show['deletethread']">
+ <a href="postings.php?$session[sessionurl]do=deletethread&t=$thread[threadid]">[X]</a></if>
+</div>
+<div class="windowbg">
+by $thread[lastposter]: $thread[lastpostdate]
+
+</div>
+</if>
+
+
+
+]]></template>
+		<template name="threadbit_announcement" templatetype="template" date="1183632774" username="dartho" version="3.6.9"><![CDATA[<div class="announce">
+$vbphrase[announcement]: <a href="announcement.php?$session[sessionurl]f=$foruminfo[forumid]$announcementidlink">$announcement[title]</a>
+<br /><if condition="$show['forumtitle']"><a href="forumdisplay.php?$session[sessionurl]f=$announcement[forumid]">$announcement[forumtitle]</a> </if>
+by $announcement[username] $announcement[postdate]
+</div>
+]]></template>
+		<template name="threadbit_deleted" templatetype="template" date="1185595249" username="dartho" version="3.6.9"><![CDATA[<div class="windowbg2">
+$thread[typeprefix]
+<if condition="$show['threadtitle']"><em>$thread[threadtitle]</em> by $thread[postusername]</if>
+</div>
+	
+<div>
+<phrase 1="member.php?$session[sessionurl]u=$thread[del_userid]" 2="$thread[del_username]">$vbphrase[thread_deleted_by_x]</phrase>
+<if condition="$show['deletereason']">
+	<span>$vbphrase[reason]: <em>$thread[del_reason]</em></span>
+</if>
+
+	<if condition="$show['managethread']"><span><a href="postings.php?$session[sessionurl]do=editthread&amp;t=$thread[threadid]">$vbphrase[manage]</a></span></if>
+</div>
+
+	
+	
+
+
+	
+	
+
+]]></template>
+		<template name="threadbit_lastvisit" templatetype="template" date="1183548296" username="dartho" version="3.6.9" />
+	</templategroup>
+	<templategroup name="User Control Panel">
+		<template name="USERCP" templatetype="template" date="1185585120" username="dartho" version="3.6.9"><![CDATA[<div class="titlebg">User Control Panel</div>
+<!-- ############## PRIVATE MESSAGES ##############  -->
+<div>
+<if condition="$show['privatemessages']">
+<a href="private.php?$session[sessionurl]">$vbphrase[new_private_messages]</a>
+: ($numpms)<br />
+<else />
+<a href="private.php?$session[sessionurl]">$vbphrase[private_messages]</a><br />
+</if>
+<a href="$vboptions[bburl]/subscription.php?$session[sessionurl]">Subscribed Threads</a><br />
+
+<a href="profile.php?$session[sessionurl]do=editsignature">$vbphrase[edit_signature]</a> <br />
+
+<a href="profile.php?$session[sessionurl]do=editoptions">$vbphrase[edit_options]</a>
+</div>
+
+
+<!-- ############## END PRIVATE MESSAGES ##############  -->
+
+]]></template>
+		<template name="usercp_nav_folderbit" templatetype="template" date="1183268550" username="dartho" version="3.6.9"><![CDATA[<a href="$linkurl">$foldername</a>
+]]></template>
+		<template name="USERCP_SHELL" templatetype="template" date="1185451097" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<!-- main page contents -->
+$HTML
+<!-- / main page contents -->
+
+$footer
+</body>
+</html>]]></template>
+	</templategroup>
+	<templategroup name="Who's Online">
+		<template name="WHOSONLINE" templatetype="template" date="1185451295" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg"><phrase 1="$numbervisible" 2="$numberguests">$vbphrase[x_members_and_y_guests]</phrase></div>
+
+<if condition="$pagenav">
+<div>$pagenav</div>
+</if>
+<div>
+<span>$vbphrase[username]&nbsp;-&nbsp;</span>
+<span>$vbphrase[last_activity]</span>
+</div>
+$onlinebits
+<div><a href="$reloadurl"><strong>$vbphrase[reload_this_page]</strong></a></div>
+$footer
+</body>
+</html>]]></template>
+		<template name="whosonlinebit" templatetype="template" date="1183723641" username="dartho" version="3.6.9"><![CDATA[<if condition="exec_switch_bg()"></if>
+<div>
+<if condition="$show['spider']">$spidertype
+<else />
+$userinfo[musername]
+</if>
+&nbsp;-&nbsp;$userinfo[action]
+</div>]]></template>
+	</templategroup>
+	<templategroup name="Ungrouped Templates">
+		<template name="contactus" templatetype="template" date="1187617143" username="dartho" version="3.6.8"><![CDATA[$stylevar[htmldoctype]
+<html dir="$stylevar[textdirection]" lang="$stylevar[languagecode]">
+<head>
+$headinclude
+<title>$vboptions[bbtitle] - $vbphrase[contact_us]</title>
+</head>
+<body>
+$header
+<if condition="$navbar">$navbar<else /><br /><br /></if>
+
+
+<form action="sendmessage.php?do=docontactus" method="post">
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="do" value="docontactus" />
+<input type="hidden" name="url" value="$url" />
+
+<if condition="$show['errors']">
+	<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+	<tr>
+		<td class="tcat">$vbphrase[errors_occured_when_submitted]:</td>
+	</tr>
+	<tr>
+		<td class="alt2">
+			<ol>$errormessages</ol>
+		</td>
+	</tr>
+	</table>
+	<br />
+</if>
+
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tr>
+	<td class="tcat">
+		<span class="smallfont" style="float:$stylevar[right]"><strong>$vbphrase[send_email_to_forum_administrator]</strong></span>
+		$vbphrase[contact_us]	
+	</td>
+</tr>
+<tr>
+	<td class="panelsurround" align="center">
+	<div class="panel">
+		<div style="width:$stylevar[formwidth]" align="$stylevar[left]">
+		
+			<fieldset class="fieldset">
+				<legend>$vbphrase[your_details]</legend>
+				<table cellpadding="0" cellspacing="$stylevar[formspacer]" border="0">
+				<tr>
+					<td>
+						$vbphrase[your_name] :<br />
+						<input type="text" class="bginput" name="name" value="$name" size="25" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						$vbphrase[email_address] :<br />
+						<input type="text" class="bginput" name="email" value="$email" size="25" dir="ltr" />
+					</td>
+				</tr>
+				</table>
+			</fieldset>
+			
+			<fieldset class="fieldset">
+				<legend>$vbphrase[subject]</legend>
+				<div style="padding:$stylevar[formspacer]px">
+					<if condition="$vboptions['contactusoptions']">
+						$contactusoptions
+						<div>
+							<label for="rb_subjother"><input type="radio" name="subject" value="other" id="rb_subjother" />$vbphrase[other]</label>
+							<input type="text" class="bginput" name="other_subject" size="25" maxlength="85" />
+						</div>
+					<else />
+						$vbphrase[subject] :<br />
+						<input type="text" class="bginput" name="subject" value="$subject" size="25" maxlength="85" />
+					</if>
+				</div>
+			</fieldset>
+
+			$imagereg
+					
+			<div class="fieldset">
+				$vbphrase[message]:<br />
+				<textarea name="message" rows="10" cols="25" wrap="virtual" style="width:$stylevar[messagewidth]">$message</textarea>
+			</div>
+		
+		</div>
+	</div>
+	
+	<div style="margin-top:$stylevar[cellpadding]px">
+		<input type="submit" class="button" value="$vbphrase[send]" accesskey="s" />
+		<input type="reset" class="button" name="reset" value="$vbphrase[reset_fields]" accesskey="r" />
+	</div>
+	</td>
+</tr>
+</table>
+
+</form>
+
+$footer
+
+</body>
+</html>]]></template>
+		<template name="editpost" templatetype="template" date="1185586017" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">$vbphrase[edit_post]</div>
+<form action="editpost.php" method="post">
+<div>
+<strong>$vbphrase[thread]</strong>: <a href="showthread.php?$session[sessionurl]t=$threadinfo[threadid]">$threadinfo[title]</a><br />
+$vbphrase[title]:
+<input type="text" class="bginput" name="title" value="$title" style="width:100%;" maxlength="85" tabindex="1" title="$vbphrase[optional]" /><br />
+$messagearea
+</div>
+<div>
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="do" value="updatepost" />
+<input type="hidden" name="p" value="$postid" />
+<input type="hidden" name="posthash" value="$posthash" />
+<input type="hidden" name="poststarttime" value="$poststarttime" />
+<input type="submit" class="button" name="sbutton" value="$vbphrase[save]" accesskey="s" tabindex="1" />
+</div>
+</form>
+<if condition="$show['deletepostoption']">
+  <form action="editpost.php" method="post">
+  <input type="hidden" name="s" value="$session[sessionhash]" />
+  <input type="hidden" name="p" value="$postid]" />
+  <input type="hidden" name="do" value="deletepost" />
+  <input type="submit" name="deletepost" value="Delete" id="rb_del_soft" class="button" />
+           
+                </form>  
+</if>
+$footer
+</body>
+</html>]]></template>
+		<template name="footer" templatetype="template" date="1189341265" username="dartho" version="3.6.8"><![CDATA[<!-- Do not remove this copyright notice -->
+
+<if condition="$show['member']">
+<div class="navbar">
+<a class="navbar" href="$vboptions[bburl]/login.php?$session[sessionurl]do=logout&amp;logouthash=$bbuserinfo[logouthash]">
+Logout</a> <a class="navbar" href="$vboptions[bburl]/online.php?$session[sessionurl]">Online</a>
+</div>
+<else />
+<form action="login.php?do=login" method="post">
+<div>
+<label for="navbar_username">$vbphrase[username]</label>
+<input type="text" class="windowbg" size="10" name="vb_login_username" id="navbar_username" accesskey="1" /><br />
+<label for="navbar_password">$vbphrase[password]</label>
+<input type="password" class="windowbg" size="10" name="vb_login_password" id="navbar_password" accesskey="2" /><input type="checkbox" name="cookieuser" value="1" />
+<input type="submit" class="button" value="$vbphrase[log_in]" title="$vbphrase[enter_username_to_login_or_register]" accesskey="3" />
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<input type="hidden" name="do" value="login" />
+<input type="hidden" name="vb_login_md5password" />
+<input type="hidden" name="vb_login_md5password_utf" />
+</div></form>
+</if>
+<div class="footer">
+<!-- Do not remove this copyright notice -->
+vBulletin; Copyright ©2000 - 2007, Jelsoft Enterprises Ltd.</div>
+]]></template>
+		<template name="forumjump" templatetype="template" date="1181220868" username="dartho" version="3.6.9" />
+		<template name="GENERIC_SHELL" templatetype="template" date="1183721936" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+
+$HTML
+
+$footer
+</body>
+</html>]]></template>
+		<template name="header" templatetype="template" date="1185418989" username="dartho" version="3.6.9"><![CDATA[<div class="header">$vboptions[bbtitle]</div>
+$_phpinclude_output]]></template>
+		<template name="headinclude" templatetype="template" date="1185418739" username="dartho" version="3.6.9"><![CDATA[<title>$vboptions[bbtitle] Mobile</title>
+<link rel="stylesheet" href="wireless.css" type="text/css" />]]></template>
+		<template name="MobileLogin" templatetype="template" date="1182831492" username="dartho" version="3.6.9"><![CDATA[
+]]></template>
+		<template name="phpinclude_start" templatetype="template" date="1183473454" username="dartho" version="3.6.9"><![CDATA[$vboptions[forumhomedepth]=2;]]></template>
+		<template name="reportbadpost" templatetype="template" date="1185581158" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html dir="$stylevar[textdirection]" lang="$stylevar[languagecode]">
+<head>
+$headinclude
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">$vbphrase[report_bad_post]</div>
+<form action="report.php?do=sendemail&amp;hint=reportbadpost" method="post">
+<input type="hidden" name="s" value="$session[sessionhash]" />
+<div>
+<span><strong>$vbphrase[forum]</strong>: <a href="forumdisplay.php?$session[sessionurl]f=$foruminfo[forumid]">$foruminfo[title]</a></span>
+
+</div>
+<!-- report field -->
+<div>
+<div>$vbphrase[message]:</div>
+<textarea name="reason" rows="6" cols="20" style="width:100%;" wrap="virtual"></textarea>
+</div>
+<!-- / report field -->
+		
+<div>
+$vbphrase[only_used_to_report]
+</div>
+			
+<div>
+		<input type="hidden" name="p" value="$postid" />
+		<input type="hidden" name="do" value="sendemail" />
+		<input type="hidden" name="url" value="$url" />
+		<input type="submit" class="button" value="$vbphrase[send_report]" accesskey="s" />
+	</div>
+	</td>
+</form>
+
+$footer
+</body>
+</html>]]></template>
+		<template name="spacer_close" templatetype="template" date="1182603924" username="dartho" version="3.6.9" />
+		<template name="spacer_open" templatetype="template" date="1182603910" username="dartho" version="3.6.9" />
+		<template name="STANDARD_ERROR" templatetype="template" date="1185546416" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+<if condition="$show['search_noindex']"><meta name="robots" content="noindex,follow" /></if>
+</head>
+<body>
+$header
+$navbar
+<div class="titlebg">$vbphrase[vbulletin_message]
+</div>
+<p class="quote">$errormessage</p>
+$footer
+</body>
+</html>
+
+
+]]></template>
+		<template name="STANDARD_ERROR_LITE" templatetype="template" date="1185546492" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+$headinclude
+<title>$pagetitle</title>
+</head>
+<body>
+<p class="titlebg">$vbphrase[vbulletin_message]
+</p>
+<if condition="$show['search_noindex']"><meta name="robots" content="noindex,follow" /></if>
+$footer
+</body>
+</html>
+
+
+]]></template>
+		<template name="STANDARD_ERROR_LOGIN" templatetype="template" date="1185546475" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="robots" content="noindex,follow" />
+$headinclude
+</head>
+<body>
+<p class="titlebg">$vbphrase[vbulletin_message]
+</p>
+$footer
+</body>
+</html>
+
+
+]]></template>
+		<template name="STANDARD_REDIRECT" templatetype="template" date="1185451092" username="dartho" version="3.6.9"><![CDATA[$stylevar[htmldoctype]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Refresh" content="2; URL=$url?$session[sessionurl]" />
+$headinclude
+<title>$pagetitle</title>
+</head>
+<body>
+<p class="titlebg"><a href="$url?$session[sessionurl]">$vbphrase[click_if_browser_does_not_redirect]</a></p>
+</p>
+</body>
+</html>]]></template>
+	</templategroup>
+</style>

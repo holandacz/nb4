@@ -1,0 +1,24 @@
+<Onderwerp: %[DOMAINNAME]% - Betaalde link >
+
+Hallo,
+
+Dank u voor registratie van uw website (%[URL]%)
+op %[DOMAINNAME]%
+
+Uw link zal worden geactiveerd zodra we %[B]%
+ontvangen op onze account/rekening.
+
+In het geval dat u al wel heeft geplaatst maar nog niet heeft betaald
+via de betalingsknoppen, dan kunt u dit nog doen tot %[DELETE_DAYS]% dagen na plaatsing:
+
+%[PAYLINK]%
+
+Als uw betaling niet binnen is binnen deze 2 dagen,
+zullen uw gereserveerde premium pixels worden verwijderd.
+
+
+Wij wensen u vele hits toe en wensen dat u ons
+aanbeveelt bij uw vrienden!
+
+Dank u voor het gebruiken van %[DOMAINNAME]%!
+%[DOMAIN]%

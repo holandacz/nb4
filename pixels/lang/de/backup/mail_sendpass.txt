@@ -1,0 +1,13 @@
+<Subject: %[DOMAINNAME]% - Zugangsdaten >
+
+Hallo,
+
+Sie können bei %[DOMAINNAME]% Ihren Eintrag
+mit den folgenden Zugangsdaten bearbeiten:
+
+Benutzerkennung: %[USERID]%
+Passwort: %[LOGINCODE]%
+
+
+Ihr Team von %[DOMAINNAME]%
+%[DOMAIN]%

@@ -1,0 +1,76 @@
+<?php
+// vbprojecttools 2.0.0, VBP05E32E9, 17:45:44, Tue Nov 18th 2008
+$md5_sums = array(
+	'/' => array(
+		'project.php' => '9a48ddfda70667130af045bcb9454ca9',
+		'projectajax.php' => '7b85cf9360cc8fbda86fdd9d3b619d3b',
+		'projectattachment.php' => 'aed6ece8578fa1dc30481cc0a189563d',
+		'projectexternal.php' => 'c859ecab40ee12beb41eb5ddc81ce564',
+		'projectmilestone.php' => '16d50c76169f373994b976d517f38030',
+		'projectpost.php' => 'bcd75ba213246d57216f841faf17a2e5',
+		'projectsearch.php' => '9e77f5821f4dc3c7d28fa16991b26c88',
+	),
+	'/admincp' => array(
+		'project.php' => 'a75d869520e007b976c883036786b1d3',
+		'projectattachment.php' => '91746af5919092387a8f328c84a79d15',
+		'projectpermission.php' => '79f6b12ff980f636c5e4820b7db9a710',
+	),
+	'/archive' => array(
+		'project.php' => '49302acf16df28517470796dd9e30086',
+	),
+	'/clientscript' => array(
+		'vbulletin_list_builder.js' => 'f2d958035aec9c75218a029d60d90fd9',
+		'vbulletin_magic_select.css' => '58d0f938e8de726bd8082ef2f450ad9c',
+		'vbulletin_magic_select.js' => '18644a8464aee5f840802d72b28260ae',
+		'vbulletin_pt_issue.js' => 'd0f76a18d27844a3b3329f245852b09f',
+		'vbulletin_pt_read_marker.js' => '33de587c82dbfc15d8466d3da57dbeaf',
+		'vbulletin_ptsearch_form.js' => '5918b742e346ff72184fbc55d94dc5ed',
+	),
+	'/includes' => array(
+		'adminfunctions_projecttools.php' => '24258181a78d075ce56189fb61c69f1f',
+		'class_dm_attachment_pt.php' => '4a60f76bc574d6212f4ac57c7adf9a1c',
+		'class_dm_pt_issue.php' => 'b55cb2376134ba2e21cac5e88ab6de53',
+		'class_dm_pt_issueassign.php' => '2619bd3b062faff22096569cd4189e14',
+		'class_dm_pt_issuechange.php' => '37974b991f53be8dd7a140d7e64b7ff1',
+		'class_dm_pt_issuenote.php' => '06b0427cff154f3a8fcd9379b6a12efa',
+		'class_dm_pt_issuepetition.php' => '0b870a92f533c6b6d473b11ceba826b8',
+		'class_dm_pt_issuereport.php' => 'e96aa2be98c9fa6219e249e1eb9d2ea3',
+		'class_dm_pt_issuestatus.php' => '313a3482b28ba0eb399432b36ddce161',
+		'class_dm_pt_issuesubscribe.php' => '60989eb7e9becfb8dc48d84ae88e2731',
+		'class_dm_pt_issuetype.php' => '46e45ea90113770076edea5799c4d031',
+		'class_dm_pt_issuevote.php' => '1f3c32af2432541d59a3f71c621a9c1f',
+		'class_dm_pt_milestone.php' => '789cbdd939ffd9a97f58c3aaa499ff28',
+		'class_dm_pt_project.php' => '408f4cdaac3b58da41b961ef2600eeb3',
+		'class_pt_issuelist.php' => 'a265e08b1325a89833cea58aad4f53e6',
+		'class_pt_issuenote.php' => '84d4ce8e5b645c13c337ac91ada92948',
+		'class_pt_issuesearch.php' => '430781237f9e5460afc0babec2e34cb6',
+		'class_pt_patch_parse.php' => '75cbddb2cc8ad59e185310128a12601d',
+		'class_reportitem_pt.php' => '220417ac36e2e21958ba4c7a80cd045e',
+		'class_upload_pt.php' => 'c919853a8a6085962f106a7aa4ce9b3a',
+		'functions_projecttools.php' => '74d758fea8f61a6ddfdf472ab20603eb',
+		'functions_pt_digest.php' => 'cee89a32436f0f263184834814307ab1',
+		'functions_pt_forumbit.php' => 'd7dcec60f4369807ee4321e6bcd633ab',
+		'functions_pt_milestone.php' => '34958ee3e07b88d925dbea742541ff0a',
+		'functions_pt_notehistory.php' => '45af8e7435bd3b8dbbf76d2163b92ca0',
+		'functions_pt_patch.php' => '5f4076b8132197eb8d2804b448806bd4',
+		'functions_pt_posting.php' => 'a53bf51aa3c7fdaf80a698f9066e9d84',
+		'functions_pt_search.php' => 'ab627ff9534a3b433cbe1ca04b9d5093',
+		'functions_pt_timeline.php' => 'b870e3a7c57a3c6c97ebe52358d5ffc0',
+		'functions_pt_usercp.php' => '8efe17b9d7eb9cbb980b94e41a1ca815',
+		'functions_pt_usertools.php' => 'a15e750f7a222f5db62388bf7e95e1a4',
+	),
+	'/includes/cron' => array(
+		'pt_cleanup.php' => 'c9f802a9a7b9b0d94e9292dca59423f3',
+		'pt_digestdaily.php' => '28bb82730236cf6987c0e8b442aa75a6',
+		'pt_digestweekly.php' => '0900ef631c64d1268d03bf487447ec49',
+	),
+	'/includes/xml' => array(
+		'bitfield_vbprojecttools.xml' => '32165347ac81d1807b5200eaa27ecddf',
+		'cpnav_vbprojecttools.xml' => 'b11204aed357b78e4ab31dd0c9b38d0c',
+		'hooks_vbprojecttools.xml' => 'ab3876ae66973c4d737cd36b5c8b67bb',
+		'product-vbprojecttools.xml' => 'baf96a20f22de0a6217eccf499ab243c',
+	),
+);
+$md5_sum_softwareid = 'vbprojecttools';
+$md5_sum_versions['vbprojecttools'] = '2.0.0';
+?>

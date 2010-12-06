@@ -1,0 +1,18 @@
+<Subject: %[DOMAINNAME]% - Yonetici Bilgilendirme: Rastgele >
+
+Merhaba,
+
+%[DOMAINNAME]% sitenizde %[JOBNAME]% iþlemi gerçekleþtirilmiþ ve aþaðýdaki alanlar rastgele bir þekilde belirlenmiþtir:
+
+%[GRIDID]% üzerinde %[FIELD]% alan.
+
+Pozisyon x/y:  %[POS_X]% / %[POS_Y]%
+
+Bu alana ait kullanýcý bilgileri:
+
+ID: %[USERID]%
+Adres  : %[URL]%
+eMail : %[EMAIL]%
+
+------------------------------------------------------------
+Million Pixel Script

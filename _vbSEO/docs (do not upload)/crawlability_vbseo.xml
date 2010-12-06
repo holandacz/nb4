@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ 
+<product productid="crawlability_vbseo" active="1">
+	<title>vBSEO</title>
+	<description>vBulletin SEO</description>
+	<version>3.2.0</version>
+ 
+ 
+	<url>http://www.vbseo.com</url>
+	<versioncheckurl />
+	<dependencies>
+	</dependencies>
+	<codes>
+ 
+		<code version="3.0.0 RC3">
+			<installcode><![CDATA[
+$db->hide_errors();
+
+$db->query_write("
+	CREATE TABLE IF NOT EXISTS " . TABLE_PREFIX . "linkback
+	(
+  `t_id` mediumint(9) NOT NULL auto_increment,
+  `t_time` int(10) NOT NULL default '0',
+  `t_src_url` varchar(255) NOT NULL default '',
+  `t_dest_url` varchar(255) NOT NULL default '',
+  `t_type` tinyint(4) NOT NULL default '0',
+  `t_postid` int(10) NOT NULL default '0',
+  `t_postcount` int(10) NOT NULL default '0',
+  `t_threadid` int(10) NOT NULL default '0',
+  `t_page` smallint(6) NOT NULL default '0',
+  `t_title` varchar(250) NOT NULL default '',
+  `t_text` text NOT NULL,
+  `t_approve` tinyint(4) NOT NULL default '0',
+  `t_incoming` tinyint(4) NOT NULL default '1',
+  `t_deleted` tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (`t_id`),
+  KEY `t_time` (`t_time`,`t_type`,`t_threadid`,`t_approve`)
+	)
+");
+$db->show_errors();
+
+if (!$db->query_first("SHOW COLUMNS FROM " . TABLE_PREFIX . "forum LIKE 'vbseo_moderatepingbacks'"))
+	$db->query_write("ALTER TABLE " . TABLE_PREFIX . "forum ADD COLUMN vbseo_moderatepingbacks INT UNSIGNED NOT NULL DEFAULT '1'");
+if (!$db->query_first("SHOW COLUMNS FROM " . TABLE_PREFIX . "forum LIKE 'vbseo_moderatetrackbacks'"))
+	$db->query_write("ALTER TABLE " . TABLE_PREFIX . "forum ADD COLUMN vbseo_moderatetrackbacks INT UNSIGNED NOT NULL DEFAULT '1'");
+
+]]></installcode>
+			<uninstallcode><![CDATA[
+define('DISABLE_PRODUCT_REDIRECT', '1');
+print_form_header('admin_vbseo', 'kill', 0, 1, '', '90%', '', 0);
+print_table_header("vBSEO", 2, 0, '', 'center', 0);
+print_submit_row('Cleanup vBSEO Data', 0, 2, '', '
+<input type="submit" name="keepdata" class="button" tabindex="1" value="Keep vBSEO Data in Database" />', true);
+]]></uninstallcode>
+		</code>
+		<code version="3.0.0 RC4">
+			<installcode><![CDATA[
+$db->hide_errors();
+
+if (!$db->query_first("SHOW COLUMNS FROM " . TABLE_PREFIX . "forum LIKE 'vbseo_moderaterefbacks'"))
+	$db->query_write("ALTER TABLE " . TABLE_PREFIX . "forum ADD COLUMN vbseo_moderaterefbacks INT UNSIGNED NOT NULL DEFAULT '1'");
+
+$db->query_write("RENAME TABLE " . TABLE_PREFIX . "trackback TO " . TABLE_PREFIX . "linkback");
+
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.0.0 RC8">
+			<installcode><![CDATA[
+$db->hide_errors();
+
+if (!$db->query_first("SHOW COLUMNS FROM " . TABLE_PREFIX . "linkback LIKE 't_hits'"))
+	$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD COLUMN t_hits INT UNSIGNED NOT NULL DEFAULT '1'");
+
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.0.1">
+			<installcode><![CDATA[
+$db->hide_errors();
+
+if (!$db->query_first("SHOW INDEX FROM " . TABLE_PREFIX . "linkback WHERE key_name = 't_approve'"))
+{
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback DROP INDEX `t_time`");
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD INDEX (`t_time`)");
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD INDEX (`t_type`)");
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD INDEX (`t_approve`)");
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD INDEX (`t_threadid`)");
+}
+
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.0.2">
+			<installcode><![CDATA[
+$db->hide_errors();
+
+$db->query_write("
+CREATE TABLE " . TABLE_PREFIX . "thread_serviceupdate (
+`s_threadid` INT( 10 ) NOT NULL ,
+`s_updated` TINYINT NOT NULL DEFAULT '0',
+`s_dateline` INT( 10 ) NOT NULL,
+KEY `s_updated` (`s_updated`)
+)
+");
+
+$db->show_errors();
+require_once(DIR . '/includes/class_bitfield_builder.php');
+vB_Bitfield_Builder::save($db);
+build_forum_permissions();
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.1.0.1">
+			<installcode><![CDATA[
+$db->hide_errors();
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "linkback ADD `t_wait` TINYINT NOT NULL DEFAULT '0' AFTER `t_approve`");
+$db->show_errors();
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.1.0.2">
+			<installcode><![CDATA[
+$db->hide_errors();
+$db->query_write("ALTER TABLE " . TABLE_PREFIX . "thread_serviceupdate ADD `s_type` TINYINT NOT NULL DEFAULT '0' AFTER `s_dateline`");
+$db->show_errors();
+]]></installcode>
+			<uninstallcode />
+		</code>
+		<code version="3.2.0 RC4">
+			<installcode><![CDATA[
+$db->hide_errors();
+$db->query_write("
+CREATE TABLE IF NOT EXISTS `" . TABLE_PREFIX . "vbseo_blacklist` (
+  `l_domain` varchar(80) NOT NULL,
+  `l_type` tinyint(4) NOT NULL default '0',
+  `l_dateline` int(10) NOT NULL,
+  `l_hits` int(8) NOT NULL default '0',
+  `l_deleted` tinyint(4) NOT NULL default '0',
+  UNIQUE KEY `l_domain_2` (`l_domain`,`l_type`),
+  KEY `l_domain` (`l_domain`)
+)
+");
+
+$db->query_write("RENAME TABLE " . TABLE_PREFIX . "linkback TO " . TABLE_PREFIX . "vbseo_linkback");
+$db->query_write("RENAME TABLE " . TABLE_PREFIX . "thread_serviceupdate TO " . TABLE_PREFIX . "vbseo_serviceupdate");
+
+if (!$db->query_first("SHOW COLUMNS FROM " . TABLE_PREFIX . "thread LIKE 'vbseo_linkbacks_no'"))
+	$db->query_write("ALTER TABLE " . TABLE_PREFIX . "thread ADD COLUMN vbseo_linkbacks_no INT UNSIGNED NOT NULL DEFAULT '0'");
+
+$db->show_errors();
+]]></installcode>
+			<uninstallcode />
+		</code>
+ 
+	</codes>
+	<templates>
+ 
+		<template name="vbseo_blog_bmarkentry" templatetype="template" date="1191580626" username="Crawlability" version=""><![CDATA[<if condition="VBSEO_BOOKMARK_BLOG==1">
+<li class="smallfont" style="margin-top:2px">
+	<img src="$bm[1]" class="inlineimg" alt="$bm[3]" border="0" /><a href="$blink" target="_blank">$bm[3]</a>
+</li>
+<else />
+	<a href="$blink" target="_blank"><img src="$bm[1]" class="inlineimg" alt="$bm[3]" border="0" /></a>
+</if>]]></template>
+		<template name="vbseo_blog_bmarksection" templatetype="template" date="1191580626" username="Crawlability" version=""><![CDATA[<if condition="VBSEO_BOOKMARK_BLOG==1">
+<div class="alt2 smallfont" style="padding:$stylevar[cellpadding]px; margin-top:$stylevar[cellspacing]px; float:right; clear:both;">
+<!--BLOG_RATING-->
+<div<if condition="$show['blograting']"> style="border-top: 1px #CCCCCC solid; margin-top:10px; padding-top:8px;"</if>>
+            <ul style="list-style:none; padding:0px; margin:0px">
+<!--VBSEO_BOOKMARKS-->
+            </ul>
+</div>
+</div>
+<else />
+<div style="float:left; margin-top:-2px"><!--VBSEO_BOOKMARKS--></div>
+</if>]]></template>
+		<template name="vbseo_help_linkback" templatetype="template" date="1191580626" username="Crawlability" version="3.2.0 RC4"><![CDATA[
+$stylevar[htmldoctype]
+<html dir="$stylevar[textdirection]" lang="$stylevar[languagecode]">
+<head>
+$headinclude
+<title>$vboptions[bbtitle] - $vbphrase[vbseo_linkbacks]</title>
+</head>
+<body>
+$header
+$navbar
+
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1">
+		<phrase 1="$stylevar[imagesfolder]">$vbphrase[vbseo_help_linkback]</phrase>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<a name="trackbacks"></a>
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tr>
+	<td class="tcat">$vbphrase[vbseo_trackback]</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<phrase 1="$stylevar[imagesfolder]">$vbphrase[vbseo_help_trackback]</phrase>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<a name="pingbacks"></a>
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tr>
+	<td class="tcat">$vbphrase[vbseo_pingback]</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<phrase 1="$stylevar[imagesfolder]">$vbphrase[vbseo_help_pingback]</phrase>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<a name="refbacks"></a>
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tr>
+	<td class="tcat">$vbphrase[vbseo_refback]</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<phrase 1="$stylevar[imagesfolder]">$vbphrase[vbseo_help_refback]</phrase>
+	</td>
+</tr>
+</table>
+
+<br />
+
+
+$footer
+
+</body>
+</html>
+]]></template>
+		<template name="vbseo_linkbackbit" templatetype="template" date="1191580626" username="Crawlability" version="3.2.0 RC4"><![CDATA[<tr id="linkback_$vbseoping[t_id]">	
+	<td id="linkbacktitle_$vbseoping[t_id]" ondblclick="if(!dblhandled) vbseo_linkback_ondblclick(this);dblhandled=false;" <if condition="$vbseoping[t_approve]">class="alt1"<else />class="inlinemod"</if> align="$stylevar[left]" title="$vbseoping[t_text_nohtml]"><span class="smallfont"><if condition="$vbseoping[ismod]"><img src="$stylevar[imgdir_misc]/moderated_small.gif" border="0" ondblclick="dblhandled=true;return vBSEO_linkback_mod_Init('$vbseoping[t_id]', 'mod')" id="linkbackimg_$vbseoping[t_id]" alt="<if condition="$vbseoping[t_approve]">$vbphrase[vbseo_mod_unapprove]<else />$vbphrase[vbseo_mod_approve]</if>" style="cursor:pointer"> 
+<img src="$stylevar[imgdir_misc]/trashcan_small.gif" border="0" ondblclick="dblhandled=true;return vBSEO_linkback_mod_Init('$vbseoping[t_id]', 'del')" id="linkbackdelimg_$vbseoping[t_id]" alt="$vbphrase[vbseo_mod_delete]" style="cursor:pointer"> 
+<img src="$stylevar[imgdir_misc]/redcard_small.gif" border="0" ondblclick="dblhandled=true;return vBSEO_linkback_mod_Init('$vbseoping[t_id]', 'ban')" id="linkbackbanimg_$vbseoping[t_id]" alt="$vbphrase[vbseo_mod_ban]" style="cursor:pointer"> 
+</if><a id="linkback_title_$vbseoping[t_id]" href="$vbseoping[t_src_url]" target="_blank"><if condition="$vbseoping[t_title_html]">$vbseoping[t_title_html]<else />$vbphrase[vbseo_untitled_document]</if></a></span></td>
+	<td <if condition="$vbseoping[t_approve]">class="alt2"<else />class="inlinemod"</if> nowrap="nowrap"><span class="smallfont"><a href="$vbseoping[t_dest_url]"><if condition="$vbseoping[t_postid]>0">$vbphrase[vbseo_post_no]$vbseoping[postno]<else />$vbphrase[vbseo_this_thread]</if></a></span></td>
+	<td <if condition="$vbseoping[t_approve]">class="alt1"<else />class="inlinemod"</if> nowrap="nowrap"><span class="smallfont"><if condition="$vbseoping[t_type]==0">$vbphrase[vbseo_pingback]<else /><if condition="$vbseoping[t_type]==2">$vbphrase[vbseo_refback]<else />$vbphrase[vbseo_trackback]</if></if></span></td>
+	<td <if condition="$vbseoping[t_approve]">class="alt2"<else />class="inlinemod"</if> align="$stylevar[right]"><span class="smallfont">$vbseoping[date] <span class="time">$vbseoping[time]</span></span></td>
+</tr>
+]]></template>
+		<template name="vbseo_linkbackmenu" templatetype="template" date="1191580626" username="Crawlability" version="3.2.0 RC4"><![CDATA[
+<div class="vbmenu_popup" id="linkbacktools_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">$vbphrase[vbseo_linkback]<a name="goto_linkback"></a></td>
+	</tr>
+<if condition="$vbseo_linkbacks_no">
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="$stylevar[imagesfolder]/vbseo/goto_linkbacks.gif" alt="$vbphrase[vbseo_goto_linkbacks]" /> <a href="#linkbacks">$vbphrase[vbseo_goto_linkbacks]</a></td>
+	</tr>
+</if>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="$stylevar[imagesfolder]/vbseo/linkback_url.gif" alt="$vbphrase[vbseo_linkback_url]" /> <a href="$vbseo_linkback_uri" onclick="prompt('$vbphrase[vbseo_linkback_url_popup]','$vbseo_linkback_uri');return false;">$vbphrase[vbseo_linkback_url]</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="$stylevar[imagesfolder]/vbseo/linkback_about.gif" alt="$vbphrase[vbseo_about_linkbacks]" /> <a href="misc.php?$session[sessionurl]do=linkbacks">$vbphrase[vbseo_about_linkbacks]</a></td>
+	</tr>
+<if condition="$vbseo_bookmarks">
+	<tr>
+		<td class="thead">$vbphrase[vbseo_bookmark_share]</td>
+	</tr>
+	$vbseo_bookmarks
+</if>
+	</table>
+</div>
+]]></template>
+		<template name="vbseo_linkbackmenu_entry" templatetype="template" date="1191580626" username="Crawlability" version="3.2.0 RC4"><![CDATA[
+<td class="vbmenu_control" id="linkbacktools" nowrap="nowrap">
+	<a href="$show[nojs_link]#links">$vbphrase[vbseo_linkback]<if condition="$vbseo_linkbacks_no"> ($vbseo_linkbacks_no)</if></a>
+	<if condition="$show['popups']"><script type="text/javascript"> vbmenu_register("linkbacktools"); </script></if>
+</td>
+]]></template>
+		<template name="vbseo_linkbacks" templatetype="template" date="1191617369" username="Crawlability" version="3.2.0 RC4"><![CDATA[
+<script type="text/javascript" src="clientscript/vbseo_ajax.js"></script>
+<script type="text/javascript">
+<!--
+vbphrase['vbseo_mod_approve'] = "$vbphrase[vbseo_mod_approve]";
+vbphrase['vbseo_mod_unapprove'] = "$vbphrase[vbseo_mod_unapprove]";
+vbphrase['vbseo_mod_delete'] = "$vbphrase[vbseo_mod_delete]";
+
+dblhandled = false
+//-->
+</script>
+<a name="linkbacks"></a>
+<if condition="$vbseolinkbackbits">
+<if condition="$pagenav">$pagenav <br/></if>
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:$stylevar[right]" href="#top" onclick="return toggle_collapse('linkbacks')"><img id="collapseimg_linkbacks" src="$stylevar[imgdir_button]/collapse_tcat$vbcollapse[collapseimg_linkbacks].gif" alt="" border="0" /></a>
+<if condition="THIS_SCRIPT=='moderation'">
+$vbphrase[vbseo_moderated_linkbacks]
+<else />		$vbphrase[vbseo_linkbacks] (<a href="misc.php?$session[sessionurl]do=linkbacks" title="$vbphrase[vbseo_link_from_elsewhere_to_this_discussion]">?</a>)
+<div class="smallfont">$vbphrase[vbseo_linkback_here]: $vbseo_linkback_uri</div>
+</if>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_linkbacks" style="$vbcollapse[collapseobj_linkbacks]">
+<tr class="thead" align="center">
+	<td class="thead">$vbphrase[posted_by]</td>
+	<td class="thead">$vbphrase[vbseo_for]</td>
+	<td class="thead">$vbphrase[vbseo_type]</td>
+	<td class="thead">$vbphrase[date]</td>
+</tr>
+$vbseolinkbackbits
+</tbody>
+</table>
+<if condition="$pagenav"><br/>$pagenav</if>
+</if>
+]]></template>
+ 
+	</templates>
+	<plugins>
+ 
+		<plugin active="1">
+			<title>vBSEO Admin Complete</title>
+			<hookname>admin_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('forumadmin_update_save');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Moderator Admin</title>
+			<hookname>admin_moderator_form</hookname>
+			<phpcode><![CDATA[
+	print_description_row($vbphrase['vbseo_options'], false, 2, 'thead');
+   	print_yes_no_row($vbphrase['vbseo_can_moderate_linkbacks'], 'modperms[vbseo_linkbacks]', $moderator['vbseo_linkbacks']);
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Ajax Start</title>
+			<hookname>ajax_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('ajax_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Archive Forum Thread</title>
+			<hookname>archive_forum_thread</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('archive_forum_thread');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Archive Navigation</title>
+			<hookname>archive_navigation</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('archive_navigation');
+]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>Blog Complete</title>
+			<hookname>blog_complete</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_complete');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Attachments</title>
+			<hookname>blog_entry_attachmentbit</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_entry_attachmentbit');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Entry Complete</title>
+			<hookname>blog_entry_complete</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_entry_complete');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Entry Start</title>
+			<hookname>blog_entry_start</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_entry_start');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Entry Pre Save</title>
+			<hookname>blog_fpdata_presave</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_fpdata_presave');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Entry Post Save</title>
+			<hookname>blog_fpdata_postsave</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_fpdata_postsave');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Start</title>
+			<hookname>blog_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_start');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Text Data Start</title>
+			<hookname>blog_textdata_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_textdata_start');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Blog Data Start</title>
+			<hookname>blog_data_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('blog_data_start');
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Cache Templates</title>
+			<hookname>cache_templates</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('cache_templates');]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>vBSEO Edit Post: Controls</title>
+			<hookname>editpost_edit_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('editpost_edit_complete', $post);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Error Fetch</title>
+			<hookname>error_fetch</hookname>
+			<phpcode><![CDATA[
+$GLOBALS['vbseo_errortype'] = $args[0];
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>Error Generic</title>
+			<hookname>error_generic</hookname>
+			<phpcode><![CDATA[if( VBSEO_ENABLED && VBSEO_INVALIDID_404 && 
+	in_array($GLOBALS['vbseo_errortype'], array('noid', 'invalidid'))
+	)
+{
+    header ("HTTP/1.1 404 Not Found");
+}
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Forum Admin</title>
+			<hookname>forumadmin_edit_form</hookname>
+			<phpcode><![CDATA[
+   	print_table_header($vbphrase['vbseo_permissions']);
+   	print_yes_no_row($vbphrase['vbseo_moderate_pingbacks'] . ' <dfn>(' . $vbphrase['vbseo_require_moderator_validation_before_pingbacks_are_displayed'] . ')</dfn>', 'forum[vbseo_moderatepingbacks]', isset($forum['vbseo_moderatepingbacks'])?$forum['vbseo_moderatepingbacks']:1);
+   	print_yes_no_row($vbphrase['vbseo_moderate_trackbacks'] . ' <dfn>(' . $vbphrase['vbseo_require_moderator_validation_before_trackbacks_are_displayed'] . ')</dfn>', 'forum[vbseo_moderatetrackbacks]', isset($forum['vbseo_moderatetrackbacks'])?$forum['vbseo_moderatetrackbacks']:1);
+   	print_yes_no_row($vbphrase['vbseo_moderate_refbacks'] . ' <dfn>(' . $vbphrase['vbseo_require_moderator_validation_before_refbacks_are_displayed'] . ')</dfn>', 'forum[vbseo_moderaterefbacks]', isset($forum['vbseo_moderaterefbacks'])?$forum['vbseo_moderaterefbacks']:1);
+   	
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Forum Admin Start</title>
+			<hookname>forumdata_start</hookname>
+			<phpcode><![CDATA[
+$this->validfields['vbseo_moderatepingbacks'] = array(TYPE_INT, REQ_NO);
+$this->validfields['vbseo_moderatetrackbacks'] = array(TYPE_INT, REQ_NO);
+$this->validfields['vbseo_moderaterefbacks'] = array(TYPE_INT, REQ_NO);
+
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Precache Annoncements</title>
+			<hookname>forumdisplay_announcement</hookname>
+			<phpcode><![CDATA[global $vbseo_precache;
+
+$vbseo_precache['annoncements'][] = $announcement;]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Forumdisplay Complete</title>
+			<hookname>forumdisplay_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('forumdisplay_complete');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Precache Moderators</title>
+			<hookname>forumdisplay_moderator</hookname>
+			<phpcode><![CDATA[global $usercache;
+
+$usercache[$moderator['userid']] = array(
+'userid'=>$moderator['userid'],
+'username'=>$moderator['username']
+);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Forumhome Complete</title>
+			<hookname>forumhome_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('forumhome_complete');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Forum Rules</title>
+			<hookname>forumrules</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('forumrules');]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>vBSEO Global Hook</title>
+			<hookname>global_complete</hookname>
+			<phpcode><![CDATA[if(@include_once(DIR . '/includes/functions_vbseo.php'))
+    $output = make_crawlable($output);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Global Start</title>
+			<hookname>global_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('global_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Init Startup</title>
+			<hookname>init_startup</hookname>
+			<phpcode><![CDATA[if(@include_once(DIR . '/includes/functions_vbseo.php'))	
+vbseo_complete_sec('init_startup');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO  Email Send</title>
+			<hookname>mail_send</hookname>
+			<phpcode><![CDATA[@include_once(DIR . '/includes/functions_vbseo.php');
+
+$GLOBALS['VBSEO_REWRITE_TEXTURLS'] = 1;
+
+if(function_exists('make_crawlable') && VBSEO_REWRITE_EMAILS)
+ $message = make_crawlable($message);
+
+unset($GLOBALS['VBSEO_REWRITE_TEXTURLS']);]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>Memberlist Bit</title>
+			<hookname>memberlist_bit</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('memberlist_bit');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Member Infraction Bit</title>
+			<hookname>member_infractionbit</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('member_infractionbit', $infraction);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Misc Start</title>
+			<hookname>misc_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('misc_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Moderation Start</title>
+			<hookname>moderation_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('moderation_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO ModCP Navbar</title>
+			<hookname>mod_index_navigation</hookname>
+			<phpcode><![CDATA[
+	if (can_moderate(0, 'vbseo_linkbacks'))
+	{
+	construct_nav_option($vbphrase['vbseo_moderate_linkbacks'], 'vbseo_moderate.php?do=linkbacks');
+	construct_nav_group($vbphrase['vbseo_linkbacks']);
+	construct_nav_spacer();
+	}
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO New Post Complete</title>
+			<hookname>newpost_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+@vbseo_complete_sec('newpost_complete');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO New Post Preview</title>
+			<hookname>newpost_preview</hookname>
+			<phpcode><![CDATA[
+if(defined('VBSEO_ENABLED'))
+{ 
+	global $vbseo_previewmessage;
+	$vbseo_previewmessage = $previewmessage;
+	vbseo_complete_sec('newpost_preview');
+	$previewmessage = $vbseo_previewmessage;
+}
+]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO New Post Process</title>
+			<hookname>newpost_process</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('newpost_process');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO New Reply: Controls</title>
+			<hookname>newreply_form_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('newreply_form_complete', $post);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO New Thread: Controls</title>
+			<hookname>newthread_form_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('newthread_form_complete', $post);]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>vBSEO Parse Templates</title>
+			<hookname>parse_templates</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('parse_templates');]]></phpcode>
+		</plugin>
+ 
+		<plugin active="1">
+			<title>vBSEO Postbit Display Complete</title>
+			<hookname>postbit_display_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+{
+@vbseo_complete_sec('postbit_display_complete', $post);
+$post['message'] = vbseo_process_content_area($post['message']);
+}]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Edit Post Presave</title>
+			<hookname>postdata_presave</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('postdata_presave');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO PM send</title>
+			<hookname>private_insertpm_process</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('private_insertpm_process');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Showthread Complete</title>
+			<hookname>showthread_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('showthread_complete');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Precache Postbits</title>
+			<hookname>showthread_postbit_create</hookname>
+			<phpcode><![CDATA[global $usercache;
+
+$usercache[$post['userid']] = array(
+'userid'=>$post['userid'],
+'username'=>$post['username']
+);]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Showthread Post Start</title>
+			<hookname>showthread_post_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('showthread_post_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Precache Similar Threads</title>
+			<hookname>showthread_similarthreadbit</hookname>
+			<phpcode><![CDATA[global $threadcache;
+
+$threadcache[$simthread['threadid']] = $simthread;]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Template Group</title>
+			<hookname>template_groups</hookname>
+			<phpcode><![CDATA[$only = array_merge($only, array('vbseo' => 'vBSEO'));]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Precache Threads</title>
+			<hookname>threadbit_process</hookname>
+			<phpcode><![CDATA[global $threadcache;
+
+if ($thread['open'] != 10 && !isset($threadcache[$thread['threadid']]) && 
+isset($thread['forumid'])
+)
+{
+$threadcache[$thread['threadid']] = $thread;
+}]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Edit Thread</title>
+			<hookname>threadmanage_complete</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('threadmanage_complete');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Visitor Message Data Start</title>
+			<hookname>visitormessagedata_start</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('visitormessagedata_start');]]></phpcode>
+		</plugin>
+		<plugin active="1">
+			<title>vBSEO Edit Thread: Update</title>
+			<hookname>threadmanage_update</hookname>
+			<phpcode><![CDATA[if(defined('VBSEO_ENABLED'))
+vbseo_complete_sec('threadmanage_update');]]></phpcode>
+		</plugin>
+ 
+	</plugins>
+	<phrases>
+ 
+		<phrasetype name="Control Panel Global" fieldname="cpglobal">
+			<phrase name="are_you_sure_you_want_to_cleanup_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Are you sure you want to cleanup selected linkback types?]]></phrase>
+			<phrase name="confirm_linkbacks_cleanup" date="0" username="Crawlability" version=""><![CDATA[Confirm Linkbacks Cleanup]]></phrase>
+			<phrase name="vbseo" date="0" username="Crawlability" version=""><![CDATA[vBSEO]]></phrase>
+			<phrase name="vbseo_approved" date="0" username="Crawlability" version=""><![CDATA[Approved]]></phrase>
+			<phrase name="vbseo_cp" date="0" username="Crawlability" version=""><![CDATA[Control Panel]]></phrase>
+			<phrase name="vbseo_incoming" date="0" username="Crawlability" version=""><![CDATA[Incoming]]></phrase>
+			<phrase name="vbseo_newlicense" date="0" username="Crawlability" version=""><![CDATA[New License]]></phrase>
+			<phrase name="vbseo_nonapproved" date="0" username="Crawlability" version=""><![CDATA[Non-approved]]></phrase>
+			<phrase name="vbseo_outgoing" date="0" username="Crawlability" version=""><![CDATA[Outgoing]]></phrase>
+			<phrase name="vbseo_revalidate_desc" date="0" username="Crawlability" version=""><![CDATA[vBSEO will check all target pages and unapprove (or delete) linkback record if there is no backlink existing.]]></phrase>
+			<phrase name="vbseo_revalidate_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Re-Validate Linkbacks]]></phrase>
+			<phrase name="vbseo_select_all" date="0" username="Crawlability" version=""><![CDATA[Select All]]></phrase>
+			<phrase name="vbseo_support" date="0" username="Crawlability" version=""><![CDATA[Total Support]]></phrase>
+			<phrase name="vbseo_upgrade" date="0" username="Crawlability" version=""><![CDATA[Upgrade]]></phrase>
+			<phrase name="vbseo_require_moderator_validation_before_pingbacks_are_displayed" date="0" username="Crawlability" version=""><![CDATA[Require moderator validation before new Pingbacks are displayed]]></phrase>
+			<phrase name="vbseo_require_moderator_validation_before_refbacks_are_displayed" date="0" username="Crawlability" version=""><![CDATA[Require moderator validation before new Refbacks are displayed]]></phrase>
+			<phrase name="vbseo_require_moderator_validation_before_trackbacks_are_displayed" date="0" username="Crawlability" version=""><![CDATA[Require moderator validation before new Trackbacks are displayed]]></phrase>
+		</phrasetype>
+		<phrasetype name="Permissions" fieldname="cppermission">
+			<phrase name="vbseo_user_can_moderate_linkbacks" date="0" username="Crawlability" version=""><![CDATA[This usergroup can Moderate LinkBacks]]></phrase>
+			<phrase name="vbseo_user_permissions" date="0" username="Crawlability" version=""><![CDATA[vBSEO Permissions]]></phrase>
+		</phrasetype>
+		<phrasetype name="Scheduled Tasks" fieldname="cron">
+			<phrase name="task_vbseo_serviceupdate_desc" date="1190908290" username="Crawlability" version="3.2.0 RC4"><![CDATA[Update services with new threads.]]></phrase>
+			<phrase name="task_vbseo_serviceupdate_log" date="1190908290" username="Crawlability" version="3.2.0 RC4" />
+			<phrase name="task_vbseo_serviceupdate_title" date="1190908290" username="Crawlability" version="3.2.0 RC4"><![CDATA[vBSEO Update Service]]></phrase>
+		</phrasetype>
+		<phrasetype name="Email Body Text" fieldname="emailbody">
+			<phrase name="vbseo_notify_linkbacks_mod_msg" date="0" username="Crawlability" version=""><![CDATA[Hello,
+
+A new LinkBack has been recorded for a thread entitled - $threadinfo[title] - in the $foruminfo[title_clean] forum of $vboptions[bbtitle].
+
+This LinkBack may be awaiting moderation if administrator has chosen to require approval before publishing at:
+$vboptions[bburl]/showthread.php?t=$threadinfo[threadid]#linkbacks
+
+The originating site is located at:
+$vbseo_linkback_uri
+
+Here is the associated message:
+***************
+$message
+***************
+
+
+All the best,
+$vboptions[bbtitle]]]></phrase>
+			<phrase name="vbseo_notify_linkbacks_msg" date="0" username="Crawlability" version=""><![CDATA[Dear $touser[username],
+
+A new LinkBack has been recorded for a thread you have participated entitled - $threadinfo[title] - in the $foruminfo[title_clean] forum of $vboptions[bbtitle].
+
+This LinkBack is located at:
+$vboptions[bburl]/showthread.php?t=$threadinfo[threadid]#linkbacks
+
+The originating site is located at:
+$vbseo_linkback_uri
+
+Here is the associated message:
+***************
+$message
+***************
+
+
+All the best,
+$vboptions[bbtitle]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What is a LinkBack?
+
+LinkBacks are links from elsewhere that reference a forum discussion. These links are registered in our forums in three different ways: Pingbacks, Trackbacks or Refbacks. To learn more about this feature, please visit this page:
+$vboptions[bburl]/misc.php?do=linkbacks
+
+Unsubscription information:
+
+To unsubscribe from this thread, please visit this page:
+$vboptions[bburl]/subscription.php?do=usub&t=$threadinfo[threadid]
+
+To unsubscribe from ALL threads, please visit this page:
+$vboptions[bburl]/subscription.php?do=viewsubscription&folderid=all]]></phrase>
+		</phrasetype>
+		<phrasetype name="Email Subject Text" fieldname="emailsubject">
+			<phrase name="vbseo_notify_linkbacks_mod_subj" date="0" username="Crawlability" version=""><![CDATA[New LinkBack to post '$threadinfo[title]']]></phrase>
+			<phrase name="vbseo_notify_linkbacks_subj" date="0" username="Crawlability" version=""><![CDATA[New LinkBack to post '$threadinfo[title]']]></phrase>
+		</phrasetype>
+		<phrasetype name="Front-End Error Messages" fieldname="error">
+			<phrase name="vbseo_linkback_cleanup_successfully" date="0" username="Crawlability" version=""><![CDATA[Linkbacks cleaned up successfully]]></phrase>
+			<phrase name="vbseo_linkbacks_updated_successfully" date="0" username="Crawlability" version=""><![CDATA[LinkBacks updated successfully]]></phrase>
+			<phrase name="vbseo_moderated_linkbacks_successfully" date="0" username="Crawlability" version=""><![CDATA[Moderated LinkBacks Successfully]]></phrase>
+		</phrasetype>
+ 
+		<phrasetype name="Postbit" fieldname="postbit">
+ 
+			<phrase name="vbseo_add_to_delicious" date="0" username="Crawlability" version=""><![CDATA[Add Thread to del.icio.us]]></phrase>
+			<phrase name="vbseo_add_to_delicious_blog" date="0" username="Crawlability" version=""><![CDATA[Add to del.icio.us]]></phrase>
+			<phrase name="vbseo_add_to_delicious_post" date="0" username="Crawlability" version=""><![CDATA[Add Post to del.icio.us]]></phrase>
+			<phrase name="vbseo_add_to_digg" date="0" username="Crawlability" version=""><![CDATA[Digg this Thread!]]></phrase>
+			<phrase name="vbseo_add_to_digg_blog" date="0" username="Crawlability" version=""><![CDATA[Digg this Entry!]]></phrase>
+			<phrase name="vbseo_add_to_digg_post" date="0" username="Crawlability" version=""><![CDATA[Digg this Post!]]></phrase>
+			<phrase name="vbseo_add_to_furl" date="0" username="Crawlability" version=""><![CDATA[Furl this Thread!]]></phrase>
+			<phrase name="vbseo_add_to_furl_blog" date="0" username="Crawlability" version=""><![CDATA[Furl this Entry!]]></phrase>
+			<phrase name="vbseo_add_to_furl_post" date="0" username="Crawlability" version=""><![CDATA[Furl this Post!]]></phrase>
+			<phrase name="vbseo_add_to_technorati" date="0" username="Crawlability" version=""><![CDATA[Bookmark in Technorati]]></phrase>
+			<phrase name="vbseo_add_to_technorati_blog" date="0" username="Crawlability" version=""><![CDATA[Bookmark in Technorati]]></phrase>
+			<phrase name="vbseo_add_to_technorati_post" date="0" username="Crawlability" version=""><![CDATA[Bookmark Post in Technorati]]></phrase>
+			<phrase name="vbseo_add_to_wong" date="0" username="Crawlability" version=""><![CDATA[Wong this Thread!]]></phrase>
+			<phrase name="vbseo_add_to_wong_post" date="0" username="Crawlability" version=""><![CDATA[Wong this Post!]]></phrase>
+		</phrasetype>
+		<phrasetype name="Inline Moderation" fieldname="inlinemod">
+			<phrase name="vbseo_mod_approve" date="0" username="Crawlability" version=""><![CDATA[LinkBack awaiting moderation. Double-click this icon to approve.]]></phrase>
+			<phrase name="vbseo_mod_delete" date="0" username="Crawlability" version=""><![CDATA[Double-click this icon to delete linkback.]]></phrase>
+			<phrase name="vbseo_mod_ban" date="0" username="Crawlability" version=""><![CDATA[Double-click this icon to ban entire domain.]]></phrase>
+			<phrase name="vbseo_mod_unapprove" date="0" username="Crawlability" version=""><![CDATA[Double-click this icon to unapprove.]]></phrase>
+			<phrase name="vbseo_untitled_document" date="0" username="Crawlability" version=""><![CDATA[Untitled document]]></phrase>
+		</phrasetype>
+		<phrasetype name="Showthread" fieldname="showthread">
+			<phrase name="vbseo_pingback_is_x" date="0" username="Crawlability" version=""><![CDATA[<a href="{1}" target="_blank">Pingbacks</a> are <strong>{2}</strong>]]></phrase>
+			<phrase name="vbseo_refback_is_x" date="0" username="Crawlability" version=""><![CDATA[<a href="{1}" target="_blank">Refbacks</a> are <strong>{2}</strong>]]></phrase>
+			<phrase name="vbseo_trackback_is_x" date="0" username="Crawlability" version=""><![CDATA[<a href="{1}" target="_blank">Trackbacks</a> are <strong>{2}</strong>]]></phrase>
+		</phrasetype>
+		<phrasetype name="User" fieldname="user">
+			<phrase name="vbseo_moderated_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Moderated LinkBacks]]></phrase>
+		</phrasetype>
+		<phrasetype name="Thread Management" fieldname="threadmanage">
+			<phrase name="vbseo_no_linkbacks_yet" date="0" username="Crawlability" version=""><![CDATA[No LinkBack records available yet.]]></phrase>
+			<phrase name="vbseo_moderate_pingbacks" date="0" username="Crawlability" version=""><![CDATA[Moderate PingBacks]]></phrase>
+			<phrase name="vbseo_moderate_refbacks" date="0" username="Crawlability" version=""><![CDATA[Moderate Refbacks]]></phrase>
+			<phrase name="vbseo_moderate_trackbacks" date="0" username="Crawlability" version=""><![CDATA[Moderate Trackbacks]]></phrase>
+			<phrase name="vbseo_moderated_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Moderated LinkBacks]]></phrase>
+			<phrase name="vbseo_no_linkbacks_awaiting_moderation" date="0" username="Crawlability" version=""><![CDATA[No LinkBacks Awaiting Moderation]]></phrase>
+			<phrase name="vbseo_remove_selected_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Remove Selected]]></phrase>
+			<phrase name="vbseo_remove_successful_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Remove successful LinkBacks]]></phrase>
+			<phrase name="vbseo_outgoing_linkbacks_manager" date="0" username="Crawlability" version=""><![CDATA[Outgoing LinkBacks Manager]]></phrase>
+			<phrase name="vbseo_outgoing_linkbacks_note" date="0" username="Crawlability" version=""><![CDATA[<p>You may resend unsuccessful Outgoing LinkBacks using the table below. From time to time you might want to remove all successful LinkBacks by pressing the button at the bottom of the screen. </p>      <p><strong>NOTE:</strong> Manage Incoming LinkBacks awaiting moderation via the <a href="vbseo_moderate.php?do=linkbacks"><strong>Moderate Incoming LinkBacks</strong></a>.</p>]]></phrase>
+			<phrase name="vbseo_incoming_linkbacks_manager" date="0" username="Crawlability" version=""><![CDATA[Incoming LinkBacks Manager]]></phrase>
+			<phrase name="vbseo_incoming_linkbacks_note" date="0" username="Crawlability" version=""><![CDATA[<p>You may edit or delete individual Incoming LinkBacks records using the table below.</p>      <p><strong>NOTE:</strong> Manage Incoming LinkBacks awaiting moderation via the <a href="vbseo_moderate.php?do=linkbacks"><strong>Moderate Incoming LinkBacks</strong></a>.</p>]]></phrase>
+		</phrasetype>
+		<phrasetype name="GLOBAL" fieldname="global">
+			<phrase name="vbseo_moderate_linkbackslist" date="0" username="Crawlability" version=""><![CDATA[Incoming LinkBacks]]></phrase>
+			<phrase name="vbseo_moderate_linkbacksout" date="0" username="Crawlability" version=""><![CDATA[Outgoing LinkBacks]]></phrase>
+			<phrase name="vbseo_moderate_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Moderate LinkBacks]]></phrase>
+			<phrase name="vbseo_about_linkbacks" date="0" username="Crawlability" version=""><![CDATA[About LinkBacks]]></phrase>
+			<phrase name="vbseo_already_pinged" date="0" username="Crawlability" version=""><![CDATA[Already pinged]]></phrase>
+			<phrase name="vbseo_auto_retrieve_titles" date="0" username="Crawlability" version=""><![CDATA[Automatically retrieve titles from external links]]></phrase>
+			<phrase name="vbseo_awaiting_moderation_linkbacks" date="0" username="Crawlability" version=""><![CDATA[LinkBacks awaiting moderation]]></phrase>
+			<phrase name="vbseo_bookmark_share" date="0" username="Crawlability" version=""><![CDATA[Bookmark &amp; Share]]></phrase>
+			<phrase name="vbseo_can_moderate_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Can moderate LinkBacks]]></phrase>
+			<phrase name="vbseo_cleanup_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Cleanup LinkBacks]]></phrase>
+			<phrase name="vbseo_edit_linkback" date="0" username="Crawlability" version=""><![CDATA[Edit LinkBack]]></phrase>
+			<phrase name="vbseo_for" date="0" username="Crawlability" version=""><![CDATA[For]]></phrase>
+			<phrase name="vbseo_goto_linkbacks" date="0" username="Crawlability" version=""><![CDATA[See LinkBacks]]></phrase>
+			<phrase name="vbseo_is_successful" date="0" username="Crawlability" version=""><![CDATA[Successful?]]></phrase>
+			<phrase name="vbseo_link_from_elsewhere_to_this_discussion" date="0" username="Crawlability" version=""><![CDATA[Links from elsewhere to this discussion (Pingbacks, Trackbacks or Refbacks)]]></phrase>
+			<phrase name="vbseo_link_to_this_post" date="0" username="Crawlability" version=""><![CDATA[Link to this Post]]></phrase>
+			<phrase name="vbseo_linkback" date="0" username="Crawlability" version=""><![CDATA[LinkBack]]></phrase>
+			<phrase name="vbseo_linkback_here" date="0" username="Crawlability" version=""><![CDATA[LinkBack to this Thread]]></phrase>
+			<phrase name="vbseo_linkback_notes" date="0" username="Crawlability" version=""><![CDATA[Notes on LinkBacks for Forums and Blogs]]></phrase>
+			<phrase name="vbseo_linkback_url" date="0" username="Crawlability" version=""><![CDATA[LinkBack URL]]></phrase>
+			<phrase name="vbseo_linkback_url_popup" date="0" username="Crawlability" version=""><![CDATA[Use the following URL when referencing this thread from another forum or blog.]]></phrase>
+			<phrase name="vbseo_linkbacks" date="0" username="Crawlability" version=""><![CDATA[LinkBacks]]></phrase>
+			<phrase name="vbseo_no_linkbacks_found" date="0" username="Crawlability" version=""><![CDATA[No LinkBacks Found]]></phrase>
+			<phrase name="vbseo_no_links_to_this_post" date="0" username="Crawlability" version=""><![CDATA[{1} links from elsewhere to this Post. Click to view.]]></phrase>
+			<phrase name="vbseo_options" date="0" username="Crawlability" version=""><![CDATA[vBSEO Options]]></phrase>
+			<phrase name="vbseo_permalink" date="0" username="Crawlability" version=""><![CDATA[permalink]]></phrase>
+			<phrase name="vbseo_permissions" date="0" username="Crawlability" version=""><![CDATA[vBSEO Permissions]]></phrase>
+			<phrase name="vbseo_pingback" date="0" username="Crawlability" version=""><![CDATA[Pingback]]></phrase>
+			<phrase name="vbseo_post_no" date="0" username="Crawlability" version=""><![CDATA[Post #]]></phrase>
+			<phrase name="vbseo_refback" date="0" username="Crawlability" version=""><![CDATA[Refback]]></phrase>
+			<phrase name="vbseo_resend" date="0" username="Crawlability" version=""><![CDATA[Re-Send]]></phrase>
+			<phrase name="vbseo_resend_linkbacks" date="0" username="Crawlability" version=""><![CDATA[Re-Send Selected]]></phrase>
+			<phrase name="vbseo_send_trackbacks_to" date="0" username="Crawlability" version=""><![CDATA[Send Trackbacks to (Separate multiple URLs with spaces)]]></phrase>
+			<phrase name="vbseo_this_thread" date="0" username="Crawlability" version=""><![CDATA[This thread]]></phrase>
+			<phrase name="vbseo_thread_not_found" date="0" username="Crawlability" version=""><![CDATA[[Thread not found]]]></phrase>
+			<phrase name="vbseo_trackback" date="0" username="Crawlability" version=""><![CDATA[Trackback]]></phrase>
+			<phrase name="vbseo_type" date="0" username="Crawlability" version=""><![CDATA[Type]]></phrase>
+			<phrase name="vbseo_validate" date="0" username="Crawlability" version=""><![CDATA[Validate]]></phrase>
+		</phrasetype>
+		<phrasetype name="Fronthelp" fieldname="fronthelp">
+			<phrase name="vbseo_help_linkback" date="0" username="Crawlability" version=""><![CDATA[
+<h2>LinkBacks</h2>
+<p><img style="float:right" src="{1}/vbseo/linkback.gif" alt="LinkBack" />&quot;LinkBacks&quot; is the generalized term we use to reference three methods of communication between Websites:</p>
+<ul>
+<li><a href="#trackbacks">Trackbacks</a></li>
+<li> <a href="#pingbacks">Pingbacks</a></li>
+<li><a href="#refbacks">Refbacks</a></li>
+</ul>
+<h2>Why LinkBacks?</h2>
+<p>LinkBacks (Trackbacks, Pingbacks and Refbacks) allow you to notify another site that you wrote something related to what is written on a specific page. This improves the chances of contributors to this page noticing that you gave them credit for something, or that you improved upon something they wrote. With LinkBacks, websites are interconnected. Think of them as the equivalents of acknowledgments and references at the end of an academic paper, or a chapter in a textbook.</p>
+<p>Linkbacks have long been a major force in the development of the blogging network, by creating an interconnected series of blogs and posts acknowledging one another. Not only does this improve the general community ethos throughout the &quot;blog-o-sphere&quot;, but it also helps to make blogs into more powerful link-building tools.</p>
+<p><strong>Note:</strong> Links built via this method are highly relevant and do not carry the disadvantages typically associated with &quot;link farms&quot; or &quot;link exchanges&quot;. </p>
+<p>The LinkBack principle has migrated from blogs to other publishing platforms such as news content management systems and forums.</p>
+]]></phrase>
+			<phrase name="vbseo_help_pingback" date="0" username="Crawlability" version=""><![CDATA[
+<p><img src="{1}/vbseo/pingback.gif" alt="Pingback" width="347" height="110" style="float:right" />A Pingback is also a signal (ping) sent from Site A to Site B. However, it's also a link. When Site B receives the notification signal, it automatically goes back to Site A checking for the existance of a live incoming link, if it exists, the Pingback is recorded successfully. This makes Pingbacks less prone to SPAM than Trackbacks.</p>
+<p>Both sites must be Pingback enabled in order to establish this communication. If a site is Pingback enabled, each time you link-out you will be &quot;pinging&quot; external sites. Pingback requires for Site A to phisically link to Site B.</p>
+<p><strong><a onclick="return   toggle_collapse('pforum')" href="#">Pingback our Forums from another Site</a></strong></p>
+<div id="collapseobj_pforum" style="display:none">
+<p>A Pingback will be registered in our forums by simply linking back to a thread or post from a Pingback enabled website.</p>
+<p>Note: If the forum administrator requires moderation for Incoming Pingbacks, a link-back to the site originating the Pingback will be published only after the Pingback has been manually approved by a moderator.</p>
+<p>Once a Pingback has been published, an automated notification email will be sent to the thread contributors.</p>
+</div>
+<p><strong><a onclick="return toggle_collapse('psite')" href="#">Pingback other Sites from our Forums</a></strong></p>
+<div id="collapseobj_psite" style="display:none">
+<p>Pingback other sites from our forums by simply including an outgoing link to a Pingback enabled site within your post.</p>
+<p>Note: If the Pingback recipient site requires moderation for Pingbacks, a link-back to the thread originating the Pingback will be published only after the Pingback has been manually approved by the recipient's site administrator.</p>
+</div>
+]]></phrase>
+			<phrase name="vbseo_help_refback" date="0" username="Crawlability" version=""><![CDATA[
+<p><img src="{1}/vbseo/refback.gif" alt="Refback" width="347" height="110" style="float:right" />A Refback is also a link. However in this case, Site A (link originator) does not need to &quot;tell&quot; anything to Site B (receptor). Instead, the receptor Site &quot;discovers&quot; this link immediately after the first web visitor gets to the site by clicking on the link. This is done by analyzing information carried by this web visitor's browser referer header.</p>
+<p>This is an easier method than Pingbacks since the Site originating the link doesn't have to be Pingback enabled (Posting a link back within any webpage is good enough).</p>
+<p><strong><a onclick="return   toggle_collapse('rforum')" href="#">Refback our Forums from another Site</a></strong></p>
+<div id="collapseobj_rforum" style="display:none">
+<p>A Refback will be registered in our forums by simply linking back to a thread or post from anywhere on the internet.</p>
+<p>Note: If the forum administrator requires moderation for Incoming Refbacks, a link-back to the site originating the Refback will be published only after the Refback has been manually approved by a moderator.</p>
+<p>Once a Refback has been published, an automated notification email will be sent to the thread contributors.</p>
+</div>
+<p><strong><a onclick="return toggle_collapse('rsite')" href="#">Refback other Sites from our Forums</a></strong></p>
+<div id="collapseobj_rsite" style="display:none">
+<p>Refback other sites from our forums by simply including an outgoing link to a Refback enabled site within your post.</p>
+<p>Note: If the Refback recipient site requires moderation for Refbacks, a link-back to the thread originating the Refback will be published only after the Refback has been manually approved by the recipient's site administrator.</p>
+</div>
+]]></phrase>
+			<phrase name="vbseo_help_trackback" date="0" username="Crawlability" version=""><![CDATA[
+<p><img src="{1}/vbseo/trackback.gif" alt="Trackback" width="347" height="110" style="float:right" />A Trackback is simply an acknowledgment. This acknowledgment is sent via a network signal (ping) from Site A (originator) to Site B (receptor). The receptor often publishes a link back to the originator indicating its worthiness.</p>
+<p>Trackback requires both, Site A and Site B to be Trackback enabled in order to establish this communication. Trackback does not require for Site A to phisically link to Site B.</p>
+<p><strong><a onclick="return   toggle_collapse('tforum')" href="#">Trackback our Forums from another Site</a></strong></p>
+<div id="collapseobj_tforum" style="display:none">
+<ol>
+<li>Find the thread Trackback URL - In our forums, the Trackback URL is also the &quot;LinkBack URL&quot;, located under the LinkBack dropdown menu within each thread.
+</li>
+<li>Copy and paste this URL into your publishing platform</li>
+<li>Submit your entry.</li>
+</ol>
+<p>Note: If the forum administrator requires moderation for Incoming Trackbacks, a link-back to the site originating the Trackback will be published only after the Trackback has been manually approved by a moderator.</p>
+<p>Once a Trackback has been published, an automated notification email will be sent to the thread contributors.</p>
+</div>
+<p><strong><a onclick="return toggle_collapse('tsite')" href="#">Trackback other Sites from our Forums</a></strong></p>
+<div id="collapseobj_tsite" style="display:none">
+<ol>
+<li>Find the entry's Trackback URL - Find the URL for the resource you wish to Trackback. This 'Trackback' URL is<br />
+usually located somewhere visible in a blog entry or within the Linkback dropdown in forum threads.</li>
+<li>Create (or reply to) a thread; enter the Trackback URL - Trackback enabled forums include an additional <br />
+'Trackback' field where you can enter sites you wish to Trackback when submitting your entry.</li>
+<li>Submit your entry - The trackback will be sent automatically when your thread (or post) is created.</li>
+</ol>
+<p>Note: If the Trackback recipient site requires moderation for Trackbacks, a link-back to the thread originating the Trackback will be published only after the Trackback has been manually approved by the recipient's site administrator.</p>
+</div>
+]]></phrase>
+ 
+		</phrasetype>
+	</phrases>
+	<options>
+	</options>
+	<helptopics>
+	</helptopics>
+	<cronentries>
+ 
+		<cron varname="vbseo_serviceupdate" active="1" loglevel="0">
+			<filename>./includes/cron/vbseo_serviceupdate.php</filename>
+			<scheduling weekday="-1" day="-1" hour="-1" minute="5" />
+		</cron>
+ 
+	</cronentries>
+	<faqentries>
+	</faqentries>
+</product>

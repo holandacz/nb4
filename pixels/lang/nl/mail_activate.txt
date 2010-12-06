@@ -1,0 +1,27 @@
+<Subject: %[DOMAINNAME]% - Activeer uw site >
+
+Hallo,
+
+Uw website is succesvol verstuurd (%[URL]%) naar
+%[DOMAINNAME]% en de pixels zijn voor u gereserveerd!
+
+Om deze site te activeren op %[DOMAINNAME]%,
+dient u binnen %[DELETE_DAYS]% dagen op onderstaande activeringslink te klikken:
+
+%[ALINK]%
+
+Uw site zal onmiddelijk zichtbaar worden op
+%[DOMAINNAME]% zodra u op deze link klikt!
+
+%[DOMAINNAME]% zal uw pixel reservering annuleren
+mocht u deze link niet activeren.
+
+U kunt uw pixels verwijderen door op de volgende link te klikken:
+%[KLINK]%
+
+Wij wensen u vele hits toe en zouden graag zien dat u
+ons aanbeveelt bij uw vrienden!
+
+Dank u voor het gebruik maken van  %[DOMAINNAME]%!
+Het %[DOMAINNAME]% Team
+%[DOMAIN]%

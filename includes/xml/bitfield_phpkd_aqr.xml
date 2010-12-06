@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<bitfields product="phpkd_aqr">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="phpkdaqr">
+				<bitfield name="aqrcanuse" group="post_thread_permissions" phrase="phpkd_aqr_canuse">1</bitfield>
+			</group>
+		</group>
+		<group name="misc">
+			<group name="phpkdaqr">
+				<bitfield name="aqrcanuse">1</bitfield>
+			</group>
+		</group>
+		<group name="nocache">
+			<group name="phpkdaqr">
+				<bitfield name="aqr_smbox_below"         >1</bitfield>
+				<bitfield name="aqr_cutcopypaste"        >2</bitfield>
+				<bitfield name="aqr_undoredo"            >4</bitfield>
+				<bitfield name="aqr_extrabuttons"        >8</bitfield>
+				<bitfield name="aqr_attach"              >16</bitfield>
+				<bitfield name="aqr_threadmanage"        >32</bitfield>
+				<bitfield name="aqr_disablesmiliesoption">64</bitfield>
+				<bitfield name="aqr_hideattachexts"      >128</bitfield>
+				<bitfield name="aqr_hideqrdoptions"      >256</bitfield>
+				<bitfield name="aqr_collapsed"           >512</bitfield>
+			</group>
+		</group>
+	</bitfielddefs>
+</bitfields>
+
+<!-- Version: 2.0.0 | Revision: $Revision: 123 $ | Released: $Date: 2008-07-22 07:19:36 +0300 (Tue, 22 Jul 2008) $ -->

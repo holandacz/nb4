@@ -1,0 +1,3 @@
+[ISAPI_Rewrite]
+
+RewriteRule ^/vBroot/((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]

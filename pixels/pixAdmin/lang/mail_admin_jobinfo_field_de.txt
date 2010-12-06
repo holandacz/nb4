@@ -1,0 +1,19 @@
+<Subject: %[DOMAINNAME]% - Admininfo: Zufallsfeld Treffer >
+
+Hallo,
+
+auf Deiner Seite %[DOMAINNAME]% wurde der Job %[JOBNAME]% gestartet
+und das folgende Feld per Zufall ausgewählt:
+
+Feld %[FIELD]% auf der Pixelfläche %[GRIDID]%.
+
+Position x/y:  %[POS_X]% / %[POS_Y]%
+
+Auf diesem Feld ist der folgende Benutzer hinterlegt.
+
+Userid: %[USERID]%
+Url   : %[URL]%
+eMail : %[EMAIL]%
+
+------------------------------------------------------------
+Admin Million Pixel Script

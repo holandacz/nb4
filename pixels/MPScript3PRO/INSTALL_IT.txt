@@ -1,0 +1,143 @@
+ISTRUZIONi PER L'INSTALLAZIONE DI PHP PIXEL SCRIPT VERSIONE 3
+*******************************************************************
+
+Grazie per aver acquistato Million Pixel Script (R)!
+Legga attentamente le istruzioni per installare con successo PHP Pixel Script
+sul suo server/spazioweb.
+
+Per qualsiasi domanda, problema, e aggiornamento vada a:
+http://millionhelp.texmedia.de
+
+
+Requisiti per la corretta installazione Million Pixel Script (R):
+----------------------------------------------------------------------------
+
+- Un dominio con un  Webhost che garantisce:
+  > PHP 4.3 o superiore con le GD library installate (questo è lo standard normale)
+  > MySQL
+
+
+Procedura di installazione:
+--------------------------------------------------------
+
+1. UNZIP (scompatta):
+   Unzippare "MPScript3PRO.zip" e salvare i file sul proprio computer.
+
+2. DATABASE (archivio):
+   Creare un database MYSQL (i.e. con il nome: milliondata) sul tuo  webserver,
+   sia con un software di gestione come PHPMyAdmin sia contattando
+   il webmaster del tuo hosting account (cerca termini come 'mysql' o 'database').
+
+3. UPLOAD (carica):
+   Carica tutti i file e le cartelle dalla cartella "public_html" al tuo webserver.
+
+4. WRITE PERMISSIONS (permessi di scrittura):
+   Se il tuo webhost usa un sistema di server Unix avrai bisogno di dare il permesso di
+   scrittura ad alcuni file e cartelle dello script, così che lo script stesso possa
+   modificare e salvare alcuni file.
+   Puoi cambiare questi parametri di scrittura (chiamati "chmod 777" nel linguaggio Unix)
+   di ciascun file o cartella con il tuo client FTP che userai per caricare lo script sul server.
+   Seleziona i file elencati sotto e modifica l'attributo 777 (cerca nel tuo client FTP
+   dove puoi modificare questi parametri.)
+
+   E' stretamente necessario che tu dia il permesso di scrittura (chmod 777) a questi file e cartelle
+
+
+    CARTELLE:       - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/it   (se vuoi usare la lingua italiana)
+                    - lang/en   (se vuoi usare la lingua inglese)
+                    - lang/..
+                    - mydir
+
+
+    FILE :          - grids     -> Tutti i file in questa directory "grids"
+                    - lang/it/  -> Tutti i file in questa directory,se vuoi usare la lingua italiana
+                    - lang/en/  -> Tutti i file in questa directory,se vuoi usare la lingua inglese
+                    - lang/../
+
+5. MYSQL:
+   Apri il tuo sito web e sarai direttamente indirizzato al processo di  installazione di MySql
+   Inserisci idati necessari. che saranno:
+   nome utente  MYSQL       --> Username  della tua connessione a MySql
+   password di MYSQL        --> Password  della tua connessione a MySql
+   Nome del database MYSQL  --> nome del database creato per lo script(i.e.'milliondata')
+   MYSQL hosting name       --> Hostname di mysql-server (di solito 'localhost' o 'mysql')
+
+   se hai inserito i dati corretti, le tabelle saranno create nel database (che hai precedentemente creato nel passo 2).
+   se non ricordi i tuoi parametri di MySql chiedi al tuo provider di servizi internet.
+
+6. CANCELLA LA CARTELLA INSTALL:
+   Se l'installazione di MySql ha avuto successo, il tuo sito è pronto.
+   Cancella la cartella install dal server adesso !
+
+
+Finito.
+
+SE HAI PROBLEMI:
+--------------------------------------------
+Guarda se il tuo sito funziona su http://www.yourdomain.com
+
+-> Se non vedi alcun sito prova http://www.yourdomain.com/index.php
+   se funziona, devi configurare il tuo webserver, che di solito carica come prima pagina 'index.php' quando viene richiamato il dominio. Puoi fare questo
+   creando un semplice file di testo chiamato ".htaccess" (point htaccess) con la seguente istruzione all'interno:
+
+   DirectoryIndex index.php
+
+   Salva questo file nella directory principale del tuo script sul server.
+   Questo file dice al server di caricare come pagina principale "index.php"
+
+
+   ma normalmente la procedura standard è di eliminare dal server il file "index.htm" or   "index.html"
+   nella directory principale del tuo webserver, perchè questi sono i file ad essere   caricati per prima
+
+   Controlla il tutto caricando qualche pixel .
+
+--> se ricevi un errore di permesso (permission error), dovrai controllare, se hai dato  ai file della lista il permesso di scrittura (chmod 777) e non ne hai tralasciato  alcuno
+    Controlla il passo 4 e guarda se hai impostato il permesso di scrittura ai file e  cartelle elencati precedentemente.
+    non attribuire il permesso di scrittura a tutti i file e le cartelle contenuti  nella cartella script, SOLO QUELLI ELENCATI.
+    e' molto rischioso e su alcuni server potrebbe causare problemi. Solo i file e le cartelle elencate
+
+
+Problemi con il mandare email e con il tell a friend?
+
+--> Forse il tuo server è impostato e non permette di spedire mail da altri indirizzi se non solo dal tuo indirizzo webmaster
+    Se così, metti nel campo 'email webmaster' e 'email contact form' nell'area di controllo dello script (CONFIG) il tuo indirizzo webmaster del tuo dominio (webmaster@domain.com)
+
+   Dopo ciò edita le due righe seguenti con un semplice text editor (i.e.notepad
+
+-> apri il file da notepad, non fare doppio clic per editarlo):
+
+    feedback.php
+    recommend.php
+
+    e cancella dalla linea 33 il carattere # dall'inizio della riga, cosicchè ci sarà
+
+
+    $from = $CONFIG['email_feedback'];
+
+    (invece di #$from = $CONFIG['email_feedback'];)
+
+    Salva e sostituisci il file sul server .
+    Questo dovrebbe risolvere il problema .
+
+
+
+FREQUENTLY ASKED QUESTIONS:
+---------------------------
+Troverai risposte esaustive ai tuo problemi su
+http://www.texmedia.de/help/million
+
+Guarda sempre prima le faq online prima di chiedere supporto via email.
+Ci vuole qualche giorno prima di avere una risposta.
+
+
+
+ADMIN-AREA:
+-----------
+Per accedere all' admin-area, per attivare o cancellare le entarate e modificare il sistema,
+devi digitare http://www.yourdomain.com/control/index.php con la password preimpostata "admin" (senza virgolette).
+CI RACCOMANDIAMO DI CAMBIARE SUBITO LA PASSWORD PRIMA DI ANDARE AVANTI.
+LA PUOI CAMBIARE NELL'AREA ADMIN CLICCANDO SU "CONFIG"

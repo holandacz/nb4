@@ -1,0 +1,21 @@
+<Subject: %[DOMAINNAME]% - Link Odemesi >
+
+Merhaba,
+
+(%[URL]%) adresinizi %[DOMAINNAME]% altýna kaydettiðiniz için teþekkürler
+
+Hesabýmýza %[B]% geçmesi halinde, linkiniz aktif hale getirilecektir.
+
+Sipariþi verdiðinizden beri henüz ödeme yapmadýysanýz, 
+önümüzdeki iki gün boyunca ödeme iþlemini gerçekleþtirebilirsiniz:
+
+%[PAYLINK]%
+
+Eðer %[DELETE_DAYS]% gün süresince ödeme yapýlmazsa,
+adýnýza ayrýlmýþ pixeller sistemden kaldýrýlacaktýr.
+
+Bol ziyaretçili günler diler,
+arkadaþlarýnýza yapacaðýnýz her tavsiyenin bizim için çok önemli olduðunu bilmenizi isteriz.
+
+%[DOMAINNAME]% kullandýðýnýz için teþekkür ederiz!
+%[DOMAIN]%

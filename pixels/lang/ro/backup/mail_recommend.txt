@@ -1,0 +1,13 @@
+<Subject: Stiti ceva despre %[DOMAINNAME]%? >
+
+Buna ,
+
+%[EMAIL]% va recoamdam sa aruncati o privire:
+
+%[DOMAIN]%
+
+Va pueti introduce un link aici pentru a marii numarul vizitatorilor.
+
+-----------------------------------------------------
+Aceste recomandari v-au fost trimise de catre %[EMAIL]% .
+%[DOMAIN]%

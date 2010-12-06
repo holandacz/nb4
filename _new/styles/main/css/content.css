@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+#l_col_nav{
+	float:left;
+	margin-left:-664px;
+	overflow:hidden;
+	padding-left:4px;
+	width:162px;
+}
+#l_col_nav_box{
+	background-color:#FFFFFF;
+}
+#l_col_nav_filler_top{
+	background:transparent url(../imgs/layout/shared/filler_navColumn_top.gif) no-repeat scroll 0 0;
+	float:left;
+	font-size:1%;
+	height:3px;
+	width:162px;
+}
+.directories {
+	width:162px;
+}
+.directories .header {
+	background:transparent url(../imgs/layout/shared/hosdir_hp_sprite.png) no-repeat scroll 0 0;
+	height:26px;
+	width:162px;
+}
+.directories .footer {
+	background:#F8F7F3 url(../imgs/layout/shared/hosdir_hp_sprite.png) no-repeat scroll 0 -28px;
+	float:left;
+	font-size:1%;
+	height:7px;
+	width:162px;
+}

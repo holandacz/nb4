@@ -1,0 +1,13 @@
+*.bak
+*~
+*-
+z-*
+*.zip
+*.gz
+.htaccess
+config.php
+thumbnails.php
+backups
+etc
+*.log
+

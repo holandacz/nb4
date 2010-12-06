@@ -1,0 +1,27 @@
+<Subject: %[DOMAINNAME]% - Activate your site >
+
+Hello,
+
+You have successfully submitted your webpage (%[URL]%) to
+%[DOMAINNAME]% and the pixels have been reserved for you!
+
+In order to activate your site on %[DOMAINNAME]%,
+please click on the following link within the next %[DELETE_DAYS]% days:
+
+%[ALINK]%
+
+Your site will immediately become visible
+on %[DOMAINNAME]% as soon as you click the link!
+
+%[DOMAINNAME]% will cancel your pixels reservation
+should you choose not to activate pixel blocks.
+
+You can remove your entry by clicking on the following link:
+%[KLINK]%
+
+We wish you many hits and we would like you
+to recommend us to your friends!
+
+Thank you for using %[DOMAINNAME]%!
+The %[DOMAINNAME]% Team
+%[DOMAIN]%

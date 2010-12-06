@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Admininfo >
+
+Hallo,
+
+auf Deiner Seite %[DOMAINNAME]% wurden die folgenden Pixel verlinkt:
+
+Pixelfläche: %[GRID]%
+
+Domain:    %[URL]%
+Titel:     %[TITLE]%
+eMail:     %[EMAIL]%
+Blöcke:    %[BLOCKS]%
+Kosten:    %[B]%
+Sprache:   %[LANGUAGE]%
+Userid:    %[USERID]%
+
+Status:    %[STATUS]%
+
+Zum Adminbereich:
+%[ADMINDIR]%

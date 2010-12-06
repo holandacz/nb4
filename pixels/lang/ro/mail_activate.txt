@@ -1,0 +1,26 @@
+<Subject: %[DOMAINNAME]% - Activare site >
+
+Hello,
+
+Ati activat cu succes pagina dumneavoastra (%[URL]%) pe
+%[DOMAINNAME]% si pixelii v-au fost rezervati!
+
+Pentru activarea sitului %[DOMAINNAME]%,
+apasa click aici in urmatoarele 2 zile:
+
+%[ALINK]%
+
+Sate-ul va fi vizibil pe  %[DOMAINNAME]% la scurt timp dupa activare!
+
+%[DOMAINNAME]% V-om anula pixelii rezervati daca nu activati link-ul.
+
+Puteti sterge intrarile folosind urmatorul link:
+%[KLINK]%
+
+Va dorim multe vizite si sa ne recomandati altor cunostinte!
+
+Va multumim ca ati accesat %[DOMAINNAME]%!
+ %[DOMAINNAME]% Echipa
+
+
+%[DOMAIN]%

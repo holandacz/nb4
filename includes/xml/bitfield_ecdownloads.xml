@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bitfields product="ecdownloads">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="ecdownloadpermissions">
+				<bitfield name="canviewfiles" group="ecdownloadpermissions" phrase="ecdownloads_can_view_files">1</bitfield>
+				<bitfield name="candownloadfiles" group="ecdownloadpermissions" phrase="ecdownloads_can_download_files">2</bitfield>
+				<bitfield name="canratefiles" group="ecdownloadpermissions" phrase="ecdownloads_can_rate_files">4</bitfield>
+				<bitfield name="cancomment" group="ecdownloadpermissions" phrase="ecdownloads_can_comment">8</bitfield>
+				<bitfield name="canmanageowncomments" group="ecdownloadpermissions" phrase="ecdownloads_can_manage_own_comments">16</bitfield>
+				<bitfield name="canmanageallcomments" group="ecdownloadpermissions" phrase="ecdownloads_can_manage_all_comments">32</bitfield>
+				<bitfield name="canuploadimages" group="ecdownloadpermissions" phrase="ecdownloads_can_upload_images">64</bitfield>
+				<bitfield name="canlinktofiles" group="ecdownloadpermissions" phrase="ecdownloads_can_link_to_files">128</bitfield>
+				<bitfield name="canuploadfiles" group="ecdownloadpermissions" phrase="ecdownloads_can_upload_files">256</bitfield>
+				<bitfield name="canavoidpurgatory" group="ecdownloadpermissions" phrase="ecdownloads_can_avoid_purgatory">512</bitfield>
+				<bitfield name="canmanagepurgatory" group="ecdownloadpermissions" phrase="ecdownloads_can_manage_purgatory">1024</bitfield>
+				<bitfield name="caneditownfiles" group="ecdownloadpermissions" phrase="ecdownloads_can_edit_own_files">2048</bitfield>
+				<bitfield name="caneditallfiles" group="ecdownloadpermissions" phrase="ecdownloads_can_edit_all_files">4096</bitfield>
+				<bitfield name="canviewdisabled" group="ecdownloadpermissions" phrase="ecdownloads_view_disabled">8192</bitfield>
+				<bitfield name="excludecats" group="ecdownloadpermissions" phrase="ecdownloads_exclude_cats">16384</bitfield>
+				<bitfield intperm="true" name="ecexcludecatlist" group="ecdownloadpermissions" phrase="ecdownloads_exclude_cats_list">1</bitfield>
+				<bitfield intperm="true" name="ecdownloadsmaxuploadtotal" group="ecdownloadpermissions" phrase="ecdownloads_max_upload_total">1</bitfield>
+				<bitfield intperm="true" name="ecdownloadsmaxdailydl" group="ecdownloadpermissions" phrase="ecdownloads_max_dialydl">1</bitfield>
+				<bitfield intperm="true" name="ecdownloadsmaxdailyfiles" group="ecdownloadpermissions" phrase="ecdownloads_max_dl_files">1</bitfield>
+				<bitfield name="dailylimits" group="ecdownloadpermissions" phrase="ecdownloads_daily_limits">32768</bitfield>
+				<bitfield intperm="true" name="ecdownloaddelaygrp" group="ecdownloadpermissions" phrase="ecdownloads_delay">1</bitfield>
+				
+			</group>
+		</group>
+	</bitfielddefs>
+</bitfields>

@@ -1,0 +1,94 @@
+body{background:#E1E1E1;color:#000;font:10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;margin:10px 10px 10px 10px;padding:0px;}
+a:visited,body_avisited,a:link,body_alink{color:#22229C}
+.page{color:#000}
+.tborder{background:#E1E1E1;color:#000;border:1px solid #465786}
+.tcat{background:#465786;color:#FFF;font:700 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+.tcat a:visited,.tcat_avisited,.tcat a:link,.tcat_alink{color:#ccc/*changed from fff*/;text-decoration:none}
+.tcat a:hover,.tcat a:active,.tcat_ahover{color:#E0E0F6;text-decoration:underline}
+.thead{background:#6E7A9A;color:#FFF;font:700 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+.tfoot{background:#465786;color:#E0E0F6}
+.tfoot a:visited,.tfoot_avisited,.tfoot a:link,.tfoot_alink,.thead a:hover,.thead a:active,.thead_ahover{color:#E0E0F6}
+.tfoot a:hover,.tfoot a:active,.tfoot_ahover,.thead a:visited,.thead_avisited,.thead a:link,.thead_alink{color:#ccc/*changed from fff*/}
+.alt1,.alt1Active{background:#fff/*changed from fff*/;color:#000;border-right:solid #EFEFEF 1px}
+.alt2,.alt2Active{background:#EFEFEF;color:#000;border-right:solid #FFF 1px}
+td.inlinemod{background:#FFC;color:#000}
+.wysiwyg{background:#F5F5FF;color:#000;font:10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+textarea,.bginput,td,th,p,li{font:10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+option,optgroup{font-size:11px;font-family:verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+.time{color:#666686}
+.navbar,.smallfont,select,.button{font:11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+.smallfont_modified{ font-weight:bold; text-align:center; }
+.smallfont_modified a {color:#000000; text-decoration:none;}
+.highlight{color:#F00;font-weight:700}
+.fjsel{background:#3E5C92;color:#E0E0F6}
+.fjdpth0{background:#F7F7F7;color:#000}
+.panel{background:#F2F2F2;color:#000;padding:10px}
+.panelsurround{background:#F2F2F2;color:#000}
+legend{color:#22229C;font:11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif}
+.vbmenu_control{background:#465786;color:#FFF;font:700 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;padding:3px 6px;white-space:nowrap}
+.vbmenu_control a:visited,.vbmenu_control_avisited,.vbmenu_control a:link,.vbmenu_control_alink{color:#ccc/*changed from fff*/;text-decoration:none}
+.vbmenu_control a:hover,.vbmenu_control a:active,.vbmenu_control_ahover{color:#ccc/*changed from fff*/;text-decoration:underline}
+.vbmenu_popup{background:#FFF;color:#ccc/*changed from fff*/;border:1px solid #465786}
+.vbmenu_option{background:#FFF;color:#000;font:11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;white-space:nowrap;cursor:pointer}
+.vbmenu_hilite{background:#EAEAEA;color:#000;font:11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;white-space:nowrap;cursor:pointer}
+.vbmenu_hilite a:visited,.vbmenu_hilite_avisited,.vbmenu_hilite a:link,.vbmenu_hilite_alink,.vbmenu_option a:visited .vbmenu_option_avisited,.vbmenu_option a:link,.vbmenu_option_alink,a:hover,a:active,body_ahover{color:#22229C;text-decoration:none}.bigusername{font-size:14pt}
+td.thead,th.thead,div.thead{padding:4px}
+.pagenav td{padding:2px 4px}
+.shade,a.shade:link,a.shade:visited{color:#777;text-decoration:none}
+a.shade:active ,a.shade:hover{color:#F40;text-decoration:underline}.tcat .shade,.thead .shade,.tfoot .shade{color:#DDD
+
+}.fieldset{margin-bottom:6px}.fieldset,.fieldset td,.fieldset p,.fieldset li{font-size:11px}form{display
+
+:inline}label{cursor:default}.normal{font-weight:400}.inlineimg{vertical-align:middle}.bullseye{background-image
+
+:url(images/vbseo_skin_1.0/bullseye.gif);background-position:top left;background-color:#FFF;margin-right
+
+:auto;margin-left:auto}.header{position:relative;padding-top:160px}#logo_image{position:absolute;top
+
+:48px;left:20px;margin:0}#logo_h1{color:#000;position:absolute;left:99px;top:55px;letter-spacing:-3px
+
+;font-size:40px;margin:0}#logo_tagline{position:absolute;top:96px;left:100px;font:700 11px arial, verdana
+
+, sans-serif;margin:0}.header h2{color:#000;font:700 24px arial, verdana, sans-serif;padding:4px;margin
+
+:0 25px}#relevant_replacement{font-size:11px;width:70%;border-top:#CCC 1px solid;padding:4px;margin:0
+
+ 25px -16px}.header ul{position:absolute;right:20px;top:80px;margin:0;padding:4px;border-top:#CCC solid
+
+ 1px}.header li{display:inline;list-style-type:none;padding-right:5px;font-weight:700;font-size:110%}
+
+ .vbseo_main_menu a,.pagenav a{text-decoration:none}.vbseo_main_menu a:hover,.underline
+
+{text-decoration:underline}#vbseo_login{position:absolute;top:36px;right:20px;margin:0;padding:4px}.vbseo_navbar
+
+{padding-right:29px;padding-left:29px}.navbar h3{font-family:arial,sans-serif;font-size:16px;color:#000
+
+;padding-top:1px;margin:0}.tcat h4{font-size:10pt;font-weight:700;margin:0}
+;.vbseo_top_menu{position:absolute; top:10px;left:10px; height:28px}
+.vbseo_top_menu td{background-color:#9CCE21;color:#000;font:700 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;padding:3px 6px;white-space:nowrap}
+#vbseo_top_menu_left_corner{padding-left:12px;background-image:url(images/vbseo_skin_1.0/corner_top_left.gif);background-repeat:no-repeat;background-position:top left}
+#vbseo_top_menu_left_corner p{margin:0;font-size:14px;text-align:left}#vbseo_top_menu_right_corner{padding-right:6px;padding-left:0;background-image:url(images/vbseo_skin_1.0/corner_top_right.gif);background-repeat:no-repeat;background-position:top right}#vbseo_bottom_menu td{color:#000;background-color:#9CCE21}#vbseo_bottom_menu a:visited,#vbseo_bottom_menu
+
+ a:link,.vbseo_vbmenu_control a:link,.vbseo_vbmenu_control a:visited,#logo_h1 a,#logo_h1 a:visited,#logo_tagline
+
+ a,#logo_tagline a:visited,.vbmenu_hilite a:hover,.vbmenu_hilite a:active,.vbmenu_hilite_ahover,.vbmenu_option
+
+ a:hover,.vbmenu_option a:active,.vbmenu_option_ahover{color:#000;text-decoration:none}#vbseo_bottom_menu
+
+ a:hover,#vbseo_bottom_menu a:active,.vbseo_vbmenu_control a:hover,.vbseo_vbmenu_control a:active{color
+
+:#000;text-decoration:underline}#vbseo_bottom_menu_left_corner{padding-left:6px;padding-right:0;background-image
+
+:url(images/vbseo_skin_1.0/corner_bottom_left.gif);background-repeat:no-repeat;background-position:bottom
+
+ left}#vbseo_bottom_menu_right_corner{padding-right:6px;padding-left:0;background-image:url(images/vbseo_skin_1.0/corner_bottom_right.gif);background-repeat:no-repeat;background-position:bottom right}
+
+ .inputgood{width:211px;border:1px solid Green}.inputbad{width:211px;border:1px solid Red}.GrpPros{color:#0000CD}
+
+ .GrpBMSPros{color:#228B22}
+ .GrpNurses{color:orange}
+ .GrpPhysicians{color:red}
+ .GrpNBTeam{font-weight:700}
+ .GrpAdmins{color:Blue;font-weight:700}
+ ul{ margin: 7px;padding-left:7px;list-style-type:disc}
+

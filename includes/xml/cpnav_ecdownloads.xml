@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="ecdownloads">
+	<navgroup text="Downloads" hr="true">
+		<navoption>
+			<text>Settings</text>
+			<link><![CDATA[options.php?do=options&amp;dogroup=ecdownloads]]></link>
+		</navoption>
+		<navoption>
+			<text>Categories</text>
+			<link>downloadadmin.php?do=category</link>
+		</navoption>
+		<navoption>
+			<text>Import</text>
+			<link>downloadadmin.php?do=import</link>
+		</navoption>
+		<navoption>
+			<text>Downloads</text>
+			<link>downloadadmin.php?do=downloads</link>
+		</navoption>
+	</navgroup>
+</navgroups>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="emailreplyint">
+	<navgroup phrase="usergroups" permissions="canadminpermissions" displayorder="120">
+		<navoption displayorder="70">
+			<phrase>ei_auto_sub</phrase>
+			<link>admin_ei.php</link>
+		</navoption>
+	</navgroup>
+
+	<navgroup phrase="emailint" permissions="canadminsettings" displayorder="500" hr="true">
+		<navoption displayorder="5">
+			<phrase>ei_search_settings</phrase>
+			<link>admin_ei_search_settings.php</link>
+		</navoption>
+		<navoption displayorder="10">
+			<phrase>ei_auto_sub</phrase>
+			<link>admin_ei.php</link>
+		</navoption>
+	</navgroup>
+
+</navgroups>

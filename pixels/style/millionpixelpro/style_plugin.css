@@ -1,0 +1,203 @@
+/*----------------------------------------------------
+    Change here for main background style for PLUGIN
+----------------------------------------------------*/
+body {
+    margin: 0px 0px 0px 0px;
+    padding:0px;
+    background: #000000;
+    font: normal 11px/15px  verdana, arial;
+    color: #000000;
+    }
+
+table.getpixel {
+    margin-top:0;
+    width: 100%;
+}
+td.getpixel {
+    padding:5;
+    color: #D1FF9B;
+}
+font.getpixelinfo {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+font.getpixelerror {
+    color: #FF6262;
+    font-weight: bold;
+}
+
+select.language {
+    font-family:verdana, arial;
+    font-size:7pt;
+    margin-left:10;
+    color: #444444;
+}
+
+/*-----------------------------------------
+    Linkstyle of the Mainmenu
+-----------------------------------------*/
+a.m:link    {    color: #FFFFFF; font-weight: bold; text-decoration: none;    }
+a.m:visited {    color: #FFFFFF; font-weight: bold; text-decoration: none;    }
+a.m:hover   {    color: #D1FF9B; font-weight: bold; text-decoration: underline;    }
+
+/*-----------------------------------------
+    Linkstyle of the Premenu
+-----------------------------------------*/
+a.l:link    {    color: #FFFFFF; font-weight: normal; font-size:8pt; text-decoration: none;    }
+a.l:visited {    color: #FFFFFF; font-weight: normal; font-size:8pt; text-decoration: none;    }
+a.l:hover   {    color: #D1FF9B; font-weight: normal; font-size:8pt; text-decoration: underline;    }
+
+/*-----------------------------------------
+    Linkstyle of the Footermenu
+-----------------------------------------*/
+a.f:link    {    color: #FFFFFF; font-weight: bold; text-decoration: none;    }
+a.f:visited {    color: #FFFFFF; font-weight: bold; text-decoration: none;    }
+a.f:hover   {    color: #D1FF9B; font-weight: bold; text-decoration: underline;    }
+
+/*-----------------------------------------
+    Change here for footer tables
+-----------------------------------------*/
+table.footer {
+    margin-left:6;
+}
+
+td.footer {
+}
+
+
+/*-----------------------------------------
+    Change here for Headlines style
+------------------------------------------*/
+h3,h4,h5 {
+    margin: 0px 0px 5px 0px;
+    }
+h1 {
+    font-size:13pt;
+    margin: 0px 0px 10px 0px;
+   }
+h2 {
+    font-size:10pt;
+    margin: 0px 0px 5px 0px;
+   }
+
+/*-----------------------------------------
+    Change here for main content tables
+-----------------------------------------*/
+
+table.content {
+    background-color: #DEE0E2;
+    width: 1000;
+}
+
+td.content {
+    padding:30;
+}
+
+td.rightcontent {
+    width:150;
+    background-color: #C8C8C8;
+    padding:30;
+}
+
+/*-----------------------------------------
+    Other general
+------------------------------------------*/
+table {  border-collapse: collapse;  }
+td {
+    padding:0;
+    font: normal 11px/15px   verdana, arial;
+   }
+img { border: 0 }
+input,select,textarea {
+    font-family:verdana, arial;
+    font-size:8pt;
+    color: #666666;
+}
+
+/*-----------------------------------------
+    Linkstyles general
+-----------------------------------------*/
+a:link    {    color: #5672B0; font-weight: bold; text-decoration: underline;    }
+a:visited {    color: #5672B0; font-weight: bold; text-decoration: underline;    }
+a:hover   {    color: #7399EB; font-weight: bold; text-decoration: none;    }
+
+a.black:link    {    color: #000000; font-weight: bold; font-size:8pt; text-decoration: underline;    }
+a.black:visited {    color: #000000; font-weight: bold; font-size:8pt; text-decoration: underline;    }
+a.black:hover   {    color: #FFFFFF; font-weight: bold; font-size:8pt; text-decoration: none;    }
+
+/*-----------------------------------------
+    Get Pixel - Logo images
+------------------------------------------*/
+td.logos {
+    color: #FF6262;
+    background-color: #415383;
+}
+td.logos_highlighted {
+    color: #FF6262;
+    background-color: #778ABB;
+}
+
+a.logos:link    {    color: #D1FF9B; font-weight: bold; font-size:8pt; text-decoration: none;    }
+a.logos:visited {    color: #D1FF9B; font-weight: bold; font-size:8pt; text-decoration: none;    }
+a.logos:hover   {    color: #FFFFFF; font-weight: bold; font-size:8pt; text-decoration: underline;    }
+
+/*-----------------------------------------
+    Get Pixel Process / Edit Pixel
+------------------------------------------*/
+.linkpixel_button {
+    height:25;
+    width:150;
+    margin-left:25;
+    color:#000000;
+    margin-right:60;
+}
+.savepixel_fileupload {
+    width:420;
+    height:19;
+    margin-left:5
+}
+
+.savepixel_fileupload_button {
+    width:140;
+    margin-left:3;
+    height:25;
+    color:#000000
+}
+.savepixel_http {
+    color:#000000;
+    width:70;
+}
+.savepixel_url {
+    width:240;
+    height:19;
+    color:#000000;
+
+}
+.savepixel_inputs {
+    width:310;
+    height:19;
+    color:#000000;
+
+}
+.savepixel_password {
+    width:160;
+    height:19;
+    color:#000000;
+
+}
+.savepixel_submitbutton {
+    width:160;
+    height:25;
+    color:#000000
+}
+
+/*-----------------------------------------
+    Global Search Button
+------------------------------------------*/
+.globalsearch_input {
+    width:150;
+    color:#000000;
+}
+.globalsearch_submit {
+
+}

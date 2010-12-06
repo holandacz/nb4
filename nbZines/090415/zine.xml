@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>
+<vars>
+	<bullet><![CDATA[<span style="color: rgb(240, 147, 27); font-weight: bold; font-size: 10pt;">&#8226;&nbsp;</span>]]></bullet>
+	<item_header_pre><![CDATA[
+		<tr><td colspan="2" class="item_header" align="left" valign="top" width="406">
+	]]></item_header_pre>
+	<item_header_suf><![CDATA[
+		</td></tr>
+	]]></item_header_suf>
+	<bullet_txt>*</bullet_txt>
+	<paragraph_indent_txt>  </paragraph_indent_txt>
+</vars>
+<Zine_Items>
+
+<!-- ASD feature-->
+<Item class="Zine_Item" name="ASD" view="feature">
+	<itm_title>FEATURE: Bloodless Atrial Septal Defect Repair (ASD)
+in 8 Month Old</itm_title>
+	<feature_author>
+		<author_name>Joseph Malak, MD</author_name>
+		<author_title>Pediatrician</author_title>
+		<url>http://www.noblood.org/members/jmalak.html</url>
+	</feature_author>
+	<feature_company>
+		<company_name>Vassar Brothers Medical Center</company_name>
+		<url>http://wiki.noblood.org/index.php/Bloodless_Atrial_Septal_Defect_Repair_(ASD)_in_8_Month-Old</url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://wiki.noblood.org/images/f/fd/Bloodless_Atrial_Septal_Defect_Repair_1_130x170.png</src>
+		<thumb_title>Bloodless Atrial Septal Defect Repair</thumb_title>
+		<height>179</height>
+		<width>130</width>
+	</feature_thumb>
+	<feature_url>http://wiki.noblood.org/index.php/Bloodless_Atrial_Septal_Defect_Repair</feature_url>
+	<feature_teaser><![CDATA[<b>Do you like an adventure with a happy ending?</b> With a cute little girl? With real life drama and decision-making? Then this feature story is for you. Are you a healthcare professional? Part I was written with you in mind. Are you a parent, or do you have a family member that might depend on you to coordinate their bloodless healthcare? Then Part II will likely capture your focus.]]></feature_teaser>
+	<read_more>Read more</read_more>
+</Item>
+
+<!-- Map feature-->
+<Item class="Zine_Item" name="Map" view="feature_2">
+	<itm_title>SNEAK PREVIEW: The World of Bloodless</itm_title>
+	<feature_author>
+		<author_name></author_name>
+		<author_title></author_title>
+		<url></url>
+	</feature_author>
+	<feature_company>
+		<company_name></company_name>
+		<url>/</url>
+	</feature_company>
+	<feature_thumb>
+		<src>http://noblood.org/nbZines/090415/imgs/world_map.png</src>
+		<thumb_title>See the world of bloodless medicine and surgery.</thumb_title>
+		<height>211</height>
+		<width>400</width>
+	</feature_thumb>
+	<feature_url>http://www.noblood.org/bloodless-medicine-surgery-map</feature_url>
+	<feature_teaser><![CDATA[<b>Preview an exciting new feature!</b> We are busy at work with plotting on a map resources related to bloodless medicine and surgery. Take a moment now to Zoom into your part of the world to see what is available near you. At this time our focus is on hospitals offering transfusion alternatives and advance blood management. As this is a community-built resource, if you find that we have overlooked a particular hospital or company resource, please let us know though our <a href="http://www.noblood.org/sendemail/" target="_blank"><strong>Contact Form</strong></a>.]]></feature_teaser>
+	<read_more>Visit live map</read_more>
+</Item>
+
+<!-- Medical_Articles threads-->
+<Item class="Zine_Threads" name="Medical_Articles" view="threads">
+	<itm_title>THE CUTTING EDGE: Featured Medical Articles</itm_title>
+	<intro><![CDATA[<p>Do you have several hours available per week to scan the National Library of Medicine, popular newspapers, and other media for the latest news on bloodless healthcare? Not likely. Fortunately, our media correspondent <a href="http://www.noblood.org/members/sharon-grant.html" target="_blank">Sharon Grant</a> keeps an eye out for publications of interest. In the last three months, she has posted about 65 items. On the subject of recombinant factor VIIa, for instance, there have been three articles highlighted:</p>]]></intro>
+	<see_more_url>http://www.noblood.org/medical-articles-abstracts/</see_more_url>
+	<see_more_title>More medical articles</see_more_title>
+	<thread_ids>5526,5591,333,5182,5181,5180,5179,5178</thread_ids>
+	<show_forums></show_forums>
+	<show_views>1</show_views>
+	<closing><![CDATA[
+	]]></closing>
+</Item>
+
+<!-- PeopleAreTalking threads-->
+<Item class="Zine_Threads" name="PeopleAreTalking" view="threads">
+	<itm_title>PEOPLE ARE TALKING: Popular Discussions</itm_title>
+	<intro><![CDATA[<p>Welcome! You've discovered <strong><em>NoBlood</em></strong>, and you like it. But there's a LOT of information here, and you aren't quite sure where to start to find information. A good place to look is in the <strong>Forums</strong>! This is a part of the site in which users, including health care providers and the public, post questions, comments, interesting information and articles on varying topics related to transfusion alternatives and non-blood management. Information seekers get answers and make connections with other NoBlood users to exchange information, resources, and encouragement.</p>
+	<p>Each topic is usually posted as a separate <strong>thread.</strong> The <strong>threads</strong> are posted in one of our many <strong>forums </strong>most relevant to that topic.</p>
+<p>A sample of the most active <strong>threads</strong> (topics) for the past quarter are listed and linked to below. The <strong>forum</strong> in which each thread is located is followed by the number of views.</p>]]></intro>
+	<see_more_url>http://www.noblood.org/forums/</see_more_url>
+	<see_more_title>More discussions</see_more_title>
+	<thread_ids>3117,345,1105,2703,4953,2823,3591,490</thread_ids>
+	<show_forums>1</show_forums>
+	<show_views>1</show_views>
+	<closing><![CDATA[<p>If you are a new user, or just haven't felt comfortable posting anything yet, why not click on the <a href="http://www.noblood.org/forums/" target="_blank"><strong>Forums</strong></a> link at the top of the Home Page (in the light orange strip just below our logo)? Then scroll down to the <strong>Forums</strong> lists and maybe post just a hello in the <a href="http://www.noblood.org/new-members/" target="_blank"><strong>New Members</strong></a> forum. Or ask that question that's been in the back of your mind for so long in the <a href="http://www.noblood.org/ask-professional/" target="_blank"><strong>Ask A Professional</strong></a> forum. The more you post, the more you encourage others to respond, which helps our <b><em>NoBlood</em></b> community grow and prosper. Tell your friends to check out <b><em>NoBlood</em></b>, and join the growing number of people contributing to our wonderful knowledge base.</p>
+<p>As a nurse, and a former paralegal, one of my favorites is the <a href="http://www.noblood.org/news-hot-topics-such-hepatitis-c-sars-aids/" target="_blank"><strong>News and Hot Topics such as Hepatitis C, SARS and AIDS</strong></a> forum. It's very informative to browse through the various threads, such as "<em><a href="http://www.noblood.org/news-hot-topics-such-hepatitis-c-sars-aids/5504-fda-approves-voluven-treat-serious-blood-volume-loss-following-surgery.html" target="_blank">FDA approves Voluven to treat serious blood volume loss following surgery</a>"</em><em> (posted 3/12/2009 by </em><a href="http://www.noblood.org/members/drgapay.html" target="_blank">agapay</a><em>, one of our professional members). There have already been 615 views of this post in just three weeks! Or you could learn about "</em><em><a href="http://www.noblood.org/general-discussions/4098-path-red-blood-cell.html" target="_blank">The Path of a Red Blood Cell</a>"</em><em> by watching the YouTube video embedded in this post in the <a href="http://www.noblood.org/general-discussions/" target="_blank"><strong>General Discussions</strong></a> forum (posted 1/6/2008, by </em><a href="http://www.noblood.org/members/sharon-grant.html" target="_blank">Sharon Grant</a><em>, one of our editors).</em></p>
+<p><em>So, welcome to <a href="http://www.noblood.org" target="_blank"><strong>NoBlood</strong></a>.  Whether you are a casual passer-by looking in for the first time, a new registered user who hasn't looked around much, a professional seeking information to assist you in your practice, a student looking for research resources, or someone with a health problem needing answers to help you make the best health decisions for you or a loved one. We hope you will make good use of our many resources.</em></p>]]></closing>
+</Item>
+
+<!-- WhatWouldYouSay threads-->
+<Item class="Zine_Threads" name="WhatWouldYouSay" view="threads">
+	<itm_title>WHAT WOULD YOU SAY?: Questions That Need Answers</itm_title>
+	<intro><![CDATA[<p>The power and value of an online forum like <strong><em>NoBlood</em></strong> depend on the participation of those with knowledge to share. Are you a health professional, a program coordinator, or have you had personal experience with bloodless care? We invite you, then, to go to the home page of <a href="http://www.noblood.org/" target="_blank"> <em>NoBlood</em></a>, and examine the box labeled &quot;<em>Welcome to Our Community.</em>&quot; Notice the fifth item on the list: &quot;<em><a href="http://www.noblood.org/search.php?do=process&replyless=1&replylimit=0&exclude=41&nocache=0" target="_blank">Answer a Question</a>.</em>&quot; Go ahead and click on that. You will be brought to a list of forum entries (that have had 0 replies) in reverse chronological order. On the far right hand side, you will note categories. Go ahead and start exploring. Here are a few questions that, as <em>nbZine</em> was going to press, had not yet had a reply posted:</p>]]></intro>
+	<see_more_url>http://www.noblood.org/search.php?do=process&amp;replyless=1&amp;replylimit=0&amp;exclude=41&amp;nocache=0</see_more_url>
+	<see_more_title>Latest unanswered questions</see_more_title>
+	<thread_ids>5582,5577,5576,5565,5546,5348,5313</thread_ids>
+	<show_forums>1</show_forums>
+	<show_views></show_views>
+	<closing><![CDATA[]]></closing>
+</Item>
+
+<!-- Twitter teaser-->
+<Item class="Zine_Item" name="Twitter" view="teaser">
+	<itm_title>FEATURED TIME SAVER: Out-twit</itm_title>
+	<url>http://twitter.com/noblood</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/twitter.jpg</src>
+		<thumb_title>NoBlood Twitter</thumb_title>
+		<height>28</height>
+		<width>80</width>
+	</thumb>
+	<teaser><![CDATA[<p><strong>For you Twitterers out there,</strong> receive brief <strong>'tweets'</strong> regarding what's going on and of new threads posted at noblood.org. <a href="http://twitter.com/" target="_blank">Twitter</a> is a service for friends, family, and co-workers to communicate and stay connected through the exchange of brief messages. Just go to <a href="http://twitter.com/noblood" target="_blank">twitter.com/noblood</a> and click &quot;<b>follow&quot;</b>.</p>
+<p><a href="http://www.techhit.com/OutTwit/" target="_blank"><em>OutTwit</em></a> integrates Twitter functionality directly into Microsoft Outlook. You can receive NoBlood Twitter updates directly into Microsoft Outlook without having to open any other applications.</p>]]></teaser>
+</Item>
+
+<!-- HelpWanted bullets-->
+<Item class="Zine_Item" name="HelpWanted" view="bullets">
+	<itm_title>HELP WANTED</itm_title>
+	<bullet_itm>
+		<heading>Freelance Writer</heading>
+		<body><![CDATA[We are seeking a freelance writer with an intimate knowledge of transfusion alternatives and blood management to participate in various editorial activities.]]></body>
+	</bullet_itm>
+	<bullet_itm>
+		<heading>Website Design, Development and Administration</heading>
+		<body><![CDATA[We are seeking freelance professional expertise in any aspect of website design, development or administration.]]></body>
+	</bullet_itm>
+	<bullet_itm>
+		<heading>Volunteers make this resource possible</heading>
+		<body><![CDATA[If you appreciate the service this website is providing and may be interested in participating in some way, please <a href="http://www.noblood.org/sendemail/" target="_blank"><strong>Contact Us</strong></a>. See also <a href="http://wiki.noblood.org/index.php/Get_Involved" target="_blank"><b>Get Involved</b></a>. <strong>Thank you!</strong>]]></body>
+	</bullet_itm>
+</Item>
+
+<!-- Sponsors sponsor-->
+<Item class="Zine_Item" name="Sponsors" view="sponsor">
+	<itm_title>OUR SPONSORS</itm_title>
+	<intro><![CDATA[
+	<strong>We appreciate the growing <a href="http://www.noblood.org/our_sponsors/" target="_blank">list of companies and individuals</a> who advertise at noblood.org.</strong> Please support our sponsors. Get acquainted with companies that are advancing bloodless healthcare. <strong>Why not click to visit one today!</strong> Be sure to tell them you found them at noblood.org.
+	]]></intro>
+	<heading>Our latest healthcare sponsor</heading>
+	<url>http://www.nationwidechildrens.org/</url>
+	<itm_name>Nationwide Children's Hospital</itm_name>
+	<itm_location>Columbus, OH</itm_location>
+	<thumb>
+		<src>http://www.noblood.org/pixels/grids/u93.png</src>
+		<height>50</height>
+		<width>130</width>
+	</thumb>
+	<body><![CDATA[Vince Olshove, CCP, CCT, Director of the Cardiovascular Perfusion Department, Manager of the Cardiac Catheterization &amp; Interventional Suites, and Manager of the Cardiothoracic Operating Room at The Heart Center at Nationwide Children's Hospital. Vince is a Clinical Instructor for the Circulation Technology Division of the School of Allied Health Medicine at The Ohio State University. Vince's clinical interests include miniaturization of neonatal cardiopulmonary bypass circuits, bloodless bypass techniques, hybrid cardiopulmonary bypass systems, and electronic data acquisition and perfusion records.]]></body>
+</Item>
+
+<!-- Coffee teaser-->
+<Item class="Zine_Item" name="Coffee" view="teaser">
+	<itm_title>PLEASE HELP: Can you spare a cup of coffee?</itm_title>
+	<url>http://www.noblood.org/donate</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/donate.jpg</src>
+		<thumb_title>Can You Spare A Cup Of Coffee?</thumb_title>
+		<height>99</height>
+		<width>80</width>
+	</thumb>
+	<teaser><![CDATA[Providing this online resource for the benefit of the tens of thousands that visit noblood.org each month is a<strong> very substantial undertaking</strong>, both in terms of time and of expense. And yet there is <strong>SO MUCH MORE</strong> that can be accomplished.
+Monthly, annual or one-time donations provide an important contribution toward covering ongoing operating expenses. If you appreciate the hard work going on here at NoBlood and would like to help us to continue to grow and improve, <strong>please take a couple of minutes now</strong> to help us share in defraying the growing expenses necessary to make this site possible. <a href="http://www.noblood.org/donate" target="_blank"><strong>Your assistance is genuinely needed and is greatly appreciated*</strong></a>.]]></teaser>
+</Item>
+
+<!-- Corp corp-->
+<Item class="Zine_Item" name="Corp" view="corp">
+	<body><![CDATA[NoBlood, a California non-profit corporation, is registered as a charitable organization with the State of California and may lawfully solicit donations under California law. NoBlood has been granted official tax exempt status (section 501(c)3 of the Internal Revenue Code) from the United States Internal Revenue Service. You may deduct donations from your federally-taxable income. Please contact a tax professional for the details of deducting such a donation. Our tax ID# is: 33-0858519.Copy of 501(c)3 status letter ]]></body>
+
+	<url><![CDATA[<a href="http://noblood.org/wiki/images/b/b2/BHI501c3p1.gif" class="extiw" title="n:wiki/images/b/b2/BHI501c3p1.gif">page 1</a> and <a href="http://noblood.org/wiki/images/5/52/BHI501c3p2.gif" class="extiw" title="n:wiki/images/5/52/BHI501c3p2.gif">page 2</a>.</font>]]></url>
+
+	<url_txt><![CDATA[page 1: [http://noblood.org/wiki/images/b/b2/BHI501c3p1.gif]<br />
+page 2: [http://noblood.org/wiki/images/5/52/BHI501c3p2.gif]]]>.</url_txt>
+</Item>
+
+</Zine_Items>
+</document>

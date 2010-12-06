@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="zointstags">
+	<navgroup phrase="zointstags_zoints_tags" displayorder="14">
+		<navoption displayorder="10">
+			<phrase>zointstags_options</phrase>
+			<link><![CDATA[options.php?do=options&dogroup=zointstags]]></link>
+		</navoption>
+		<navoption displayorder="20">
+			<phrase>zointstags_manager</phrase>
+			<link><![CDATA[zointstags.php]]></link>
+		</navoption>
+	</navgroup>
+</navgroups>

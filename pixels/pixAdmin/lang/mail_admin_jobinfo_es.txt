@@ -1,0 +1,11 @@
+<Subject: %[DOMAINNAME]% - Admininfo: Automatic job >
+
+Hello,
+
+on your site %[DOMAINNAME]% the following job was started automatically:
+
+%[JOBINFO]%
+
+
+------------------------------------------------------------
+Million Pixel Script

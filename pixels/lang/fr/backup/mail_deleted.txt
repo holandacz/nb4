@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Votre lien a été supprimé >
+
+Bonjour,
+
+Vous avez enregistré votre site (%[URL]%) sur
+%[DOMAINNAME]%.
+Vos Pixels ont expiré et ont été supprimés.
+
+%[VISITORS]% visiteurs ont cliqués sur votre image et ont visité votre site web.
+
+Si vous le souhaitez, vous pouvez réactiver un lien depuis notre site.
+
+Merci,
+L'équipe de %[DOMAINNAME]%
+
+%[DOMAIN]%

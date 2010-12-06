@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Admininfo >
+
+Olá,
+
+no seu site %[DOMAINNAME]% foram linkados os seguintes pixels:
+
+Grelha: %[GRID]%
+
+Domínio:     %[URL]%
+Título:      %[TITLE]%
+eMail:       %[EMAIL]%
+Blocos:      %[BLOCKS]%
+Quantidade:  %[B]%
+Idioma:      %[LANGUAGE]%
+Userid:      %[USERID]%
+
+Estado:     %[STATUS]%
+
+para a área de administrador:
+%[ADMINDIR]%

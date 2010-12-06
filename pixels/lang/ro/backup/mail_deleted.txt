@@ -1,0 +1,14 @@
+<Subject: %[DOMAINNAME]% - Link-ul dumneavoastra a fost sters >
+
+Va multumim pentru pentru inregistrarea site-ului dvs (%[URL]%) pe
+%[DOMAINNAME]%.
+Pixelii dumneavoastra au expirat si au fost stersi.
+
+%[VISITORS]% vizitatori au accesat baner-ul pt a vitita site-ul.
+
+Daca doriti , puteti cumpara iar pixeli.
+
+Va multumim,
+ %[DOMAINNAME]% Echipa
+
+%[DOMAIN]%

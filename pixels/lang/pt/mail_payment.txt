@@ -1,0 +1,24 @@
+<Subject: %[DOMAINNAME]% - Payed Link >
+
+Olá,
+
+Obrigado por registar os seu website (%[URL]%)
+no %[DOMAINNAME]%
+
+O seu link será activado assim que receber-mos %[B]%
+na nossa conta.
+
+No caso de depois de ter efectuado o seu pedido, não ter pago através
+dos botões de pagamento, ainda o pode fazer dentro de %[DELETE_DAYS]% dias:
+
+%[PAYLINK]%
+
+Se nenhum pagamento for efectuado depois destes dois dias,
+os seu premium pixels reservados, serão removidos.
+
+
+Desejamos-lhe muitos hits e gostariamos que nos
+recomendasse aos seus amigos!
+
+Obrigado por usar %[DOMAINNAME]%!
+%[DOMAIN]%

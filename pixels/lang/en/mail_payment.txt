@@ -1,0 +1,24 @@
+<Subject: %[DOMAINNAME]% - Paid Link >
+
+Hello,
+
+Thank you for registering your website (%[URL]%)
+at %[DOMAINNAME]%
+
+Your link will be activated as soon as we receive
+a payment notice for %[B]%.
+
+In case, you have placed an order, and you haven't yet paid for pixels,
+you will still able to do this within a %[DELETE_DAYS]% days period.
+To return to your personal payment page, click on this link:
+
+%[PAYLINK]%
+
+If no payment is made after this period,
+your reserved pixels will be removed.
+
+We wish you many hits and we would like you
+to recommend us to your friends!
+
+Thank you for using %[DOMAINNAME]%!
+%[DOMAIN]%

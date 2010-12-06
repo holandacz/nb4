@@ -1,0 +1,1 @@
+url.rewrite-once = ( "^/((urllist|sitemap).*\.(xml|txt)(\.gz)?)" => "/forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1" )

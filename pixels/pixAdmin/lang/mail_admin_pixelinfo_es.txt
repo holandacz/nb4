@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Admininfo >
+
+Hola,
+
+en su sitio %[DOMAINNAME]% fueron vinculados los siguientes píxeles:
+
+Cuadrícula: %[GRID]%
+
+Dominio:    %[URL]%
+Título:     %[TITLE]%
+eMail:      %[EMAIL]%
+Bloques:    %[BLOCKS]%
+Monto:      %[B]%
+Idioma:     %[LANGUAGE]%
+IdUsuario:  %[USERID]%
+
+Estado:    %[STATUS]%
+
+Para área administración:
+%[DOMAIN]%/control

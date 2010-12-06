@@ -1,0 +1,47 @@
+--- ./plugin.php.old	2008-09-20 22:42:02.000000000 +0100
++++ ./plugin.php	2008-09-20 22:56:08.000000000 +0100
+@@ -18,7 +18,7 @@ define('CVS_REVISION', '$RCSfile$ - $Rev
+ define('FORCE_HOOKS', true);
+ 
+ // #################### PRE-CACHE TEMPLATES AND DATA ######################
+-$phrasegroups = array('plugins');
++$phrasegroups = array('plugins','style');
+ $specialtemplates = array();
+ 
+ // ########################## REQUIRE BACK-END ############################
+@@ -320,6 +320,7 @@ if ($_POST['do'] == 'update')
+ 		'active'         => TYPE_BOOL,
+ 		'product'        => TYPE_STR,
+ 		'executionorder' => TYPE_UINT,
++                'return'         => TYPE_STR,
+ 	));
+ 
+ 	if (!$vbulletin->GPC['hookname'] OR !$vbulletin->GPC['title'] OR !$vbulletin->GPC['phpcode'])
+@@ -360,9 +361,17 @@ if ($_POST['do'] == 'update')
+ 
+ 	// update the datastore
+ 	vBulletinHook::build_datastore($db);
++        if($vbulletin->GPC['return'])
++        {
++                $goto = "plugin.php?do=edit&pluginid=" .$vbulletin->GPC['pluginid'];
++        }
++        else
++        {
++                $goto = "plugin.php";
++        }
+ 
+ 	// stuff to handle the redirect
+-	define('CP_REDIRECT', 'plugin.php');
++	define('CP_REDIRECT', $goto);
+ 	print_stop_message('saved_plugin_successfully');
+ }
+ 
+@@ -479,7 +488,7 @@ if ($_REQUEST['do'] == 'edit' OR $_REQUE
+ 		print_description_row(construct_phrase($vbphrase['plugin_inactive_due_to_product_disabled'], $products["$plugin[product]"]));
+ 	}
+ 	print_yes_no_row("$vbphrase[plugin_is_active] <dfn>$vbphrase[plugin_active_desc]</dfn>", 'active', $plugin['active']);
+-	print_submit_row($vbphrase['save'], $vbphrase['reset']);
++	print_submit_row($vbphrase['save'], $vbphrase['reset'],2, '', "<input type=\"submit\" class=\"button\" tabindex=\"1\" name=\"return\" value=\"$vbphrase[save_and_reload]\" accesskey=\"e\" />");
+ 
+ 	if ($plugin['phpcode'] != '')
+ 	{

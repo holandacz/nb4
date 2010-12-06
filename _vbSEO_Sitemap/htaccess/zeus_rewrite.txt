@@ -1,0 +1,5 @@
+match URL into $ with ^/forums/((urllist|sitemap).*\.(xml|txt)(\.gz)?)$
+if matched then 
+set URL = /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1
+goto END
+endif

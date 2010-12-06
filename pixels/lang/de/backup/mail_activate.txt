@@ -1,0 +1,28 @@
+<Subject: %[DOMAINNAME]% - Aktivierungslink >
+
+Hallo,
+
+Sie haben bei %[DOMAINNAME]%
+kostenlos Ihre Webseite (%[URL]%) eingetragen.
+
+Um diesen Eintrag endgültig zu aktivieren, klicken Sie bitte
+innerhalb der nächsten %[DELETE_DAYS]% Tage auf den folgenden Link:
+
+%[ALINK]%
+
+Anschließend wird Ihr Eintrag bei uns freigeschaltet.
+
+Sollten Sie Ihren Eintrag nicht freischalten, wird der
+Platz automatisch wieder freigegeben.
+
+Sie können Ihren Eintrag auch jederzeit wieder löschen.
+Klicken Sie dazu einfach auf den folgenden Link:
+%[KLINK]%
+
+Wir wünschen Ihnen viele Besucher und würden uns freuen,
+wenn Sie uns weiterempfehlen.
+
+Vielen Dank und viele Grüße,
+Ihr Team von %[DOMAINNAME]%
+
+%[DOMAIN]%

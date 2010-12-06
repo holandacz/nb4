@@ -1,0 +1,18 @@
+<Subject: %[DOMAINNAME]% - Admininfo: Scelta casuale >
+
+Salve,
+
+Sul suo sito %[DOMAINNAME]% il lavoro %[JOBNAME]% è cominciato
+e i seguenti campi sono stati scelti a caso:
+
+Spazio %[FIELD]% sulla griglia %[GRIDID]%.
+
+Posizione x/y:  %[POS_X]% / %[POS_Y]%
+Questo spazio appartiene all'utente:
+
+ID utente: %[USERID]%
+Url   : %[URL]%
+eMail : %[EMAIL]%
+
+------------------------------------------------------------
+Admin Million Pixel Script

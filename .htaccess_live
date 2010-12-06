@@ -1,0 +1,57 @@
+RewriteEngine on
+ErrorDocument 404 /404.php
+
+
+RewriteRule ^pixels/healthcare pixels/index.php?pa=2
+RewriteRule ^pixels/corporate pixels/index.php?pa=3
+RewriteRule ^pixels/people pixels/index.php?pa=4
+RewriteRule ^pixels/test pixels/index.php?pa=5
+
+#photoplog - fix missing trailing /
+#RewriteRule ^gallery$ gallery/index.php [L]
+#RewriteRule ^gallery/(.*)$ gallery/$1 [L]
+
+
+RewriteCond %{REQUEST_URI} /wiki/
+RewriteRule wiki/(.*) http://wiki.noblood.org/$1 [L,R=301]
+
+RewriteRule ^bloodless-healthcare-medical-centers-directory.html {HTTP_HOST}/bloodless-medicine-surgery-hospital-directory [R=301,L]
+RewriteRule ^bloodless-medicine-surgery-hospitals-directory(.*)$ hospitalsDirectory.php$1
+RewriteRule ^bloodless-medicine-surgery-hospital-directory(.*)$ hospitalsDirectory.php$1
+RewriteRule ^map[s]*(.*)$ map.php$1
+RewriteRule ^bloodless-medicine-surgery-map(.*)$ map.php$1
+#RewriteRule ^bloodless-medicine-surgery-hospitals(.*)$ hospitals.php$1
+RewriteRule ^bloodless-medicine-surgery-hospitals(.*)$ hospitalsDirectory.php$1
+#RewriteRule ^hospitals$ hospitals.php
+
+
+RewriteRule ^/wiki/api.php?(.*)$ /wiki/w/api.php?$1 [L,QSA]
+
+RewriteCond %{HTTP_HOST} !^www\.noblood\.org
+RewriteRule (.*) http://www.noblood.org/$1 [R=301,L]
+RewriteRule ^tags/(.*)/([0-9]+)/$ tags/$1-page$2.html [L]
+RewriteRule ^tags/(.*)/$ tags/$1.html [L]
+
+
+
+# RewriteCond %{REQUEST_URI}/maps!/$
+# RewriteRule (.*) maps/ [R,L]
+
+
+
+RewriteRule ^forum/(.*) http://www.noblood.org/$1 [L,R=301]
+#RewriteRule ^forum/(.*) http://cnn.com
+
+RewriteRule ^((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]
+
+RewriteCond %{QUERY_STRING} !vbseourl=
+RewriteCond %{REQUEST_URI} !(admincp/|modcp/|chat|cron)
+RewriteRule ^(.*\.php(/.*)?)$ vbseo.php?vbseourl=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !\.(jpg|gif)$
+RewriteRule ^(archive/.*)$ vbseo.php?vbseourl=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !^(admincp|modcp|clientscript|cpstyles|images|pixels)/
+RewriteRule ^(.+)$ vbseo.php?vbseourl=$1 [L,QSA]

@@ -1,0 +1,135 @@
+MILLION PIXEL SCRIPT VERSIYON 3 Için Yükleme Bilgileri
+*******************************************************************
+
+Million Pixel Script! i satýn aldýðýnýz için teþekkür ederiz..
+Million Pixel scriptini sitenize veya sunucunuza kurmak için lütfen bu belgeyi dikkatlice
+okuyunuz..
+
+Soru,öneri ve karþýlaþtýðýnýz hatalar için:
+http://millionhelp.texmedia.de
+
+
+Kusursuz Bir Yükleme için Gereksinimler:
+----------------------------------------------------------------------------
+
+  > GD library kurulu olan bir PHP 4.3 (standart olarak yüklüdür)
+  > MySQL Veritabaný
+
+
+Million Pixel Script yükleme aþamalarý:
+--------------------------------------------------------
+
+1. UNZIP:
+   "MPScript3PRO.zip" dosyasýný istediðiniz bir klasöre çýkarýn.
+
+2. VERITABANI:
+   MYSQL altýnda PHPmyadmin veya hostinginizin saðladýðý düzeni kullanarak yeni bir
+veritabaný yaratýn(örn. milliondata)..
+
+3. UPLOAD:
+   "public_html" klasörü içerisindeki tüm dosyalarý sitenize upload edin.
+   ("public_html" klasörü yerine sadece içeriðini)
+
+4. DOSYA IZINLERI:
+   Eðer UNIX sistem kullanýyorsanýz bazý dosyalarýnýzýn izinlerini deðiþtirmeiniz gerekmektedir...
+   Bu izinleri ("chmod 777" olarak bilinen þekilde) FTP programýnýzý kullanarak deðiþtirebilirsiniz.
+   Aþaðýdaki dosyalar izinleri deðiþmesi gerekenlerdir (Ayrýntýlý bilgi için FTP Programýnýzýn Yardým dosyasýna bkz).
+   Bu dosyalarýn tümüne gerekli izinleri eksiksiz olarak vermeniz gerekmektedir:
+
+    KLASÖRLER:      - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/de    (Almanca'yý Silmek Istiyorsanýz)
+                    - lang/en    (Ingilizceyi Silmek Istiyorsanýz)
+                    - lang/..
+                    - mydir
+
+
+    DOSYALAR        - grids/    -> eðer kullanacaksanýz içindeki tüm dosyalarý
+                    - lang/de/  -> eðer kullanacaksanýz içindeki tüm dosyalarý
+                    - lang/en/  -> eðer kullanacaksanýz içindeki tüm dosyalarý
+                    - lang/../
+
+5. MYSQL:
+   Siteye girmeniz halinde direk kurulum sayfasýna yönlendirileceksiniz.
+   Aþaðýdaki kýsýmlarý eksiksiz olarak doldurun:
+
+        MYSQL Kullanýcý adý      --> Veritabanýna Baðlanacaðýnýz Kullanýcý adý
+        MYSQL Þifre              --> Veritabanýna Baðlanacaðýnýz Þifre
+        MYSQL Veritabaný         --> Yarattýðýnýz veritabaný (örn 'milliondata' olarak belirlemiþtik)
+        MYSQL Sunucu             --> Sunucu (Genellikle 'localhost' veya 'mysql')
+
+   Eðer bilgileri doðru olarak girdiyseniz gerekli tablolar 2). adýmda belirlediðiniz veritabanýna eklenecektir
+   Eðer konu hakkýnda bilginiz yoksa veya MYSQL ile ilgili bir sorun çýkýyorsa lütfen saðlayýcýnýza baþvurun.
+
+6. DOSYALARIN SÝLÝNMESÝ:
+   Eðer veritabaný ve kurulum baþarýlý olarak tamamlandýysa "install" klasörünü güvenliðiniz açýsýndan sunucunuzdan
+   kaldýrabilirsiniz.
+
+
+KONTROL ve HATALAR:
+--------------------------------------------
+Alanýnýzý ve pixellerinizi http://www.siteadresiniz.com adresinden kontrol edebilirsiniz
+
+-> Eðer sayfa görüntülenmiyorsa, http://www.siteadresiniz.com/index.php adresini alternatif olarak deneyebilirsiniz
+   Eðer bu yöntem baþarýlý bir þekilde sonuçlandýysa sunucunuzu alan adýnýz çaðrýldýðýnda 'index.php' dosyasýný çaðýrmaya
+   ayarlayýn.. ".htaccess" (nokta htaccess) dosyasýný aþaðýdaki þekilde yaratarak veya düzenleyerek bunu yapabilirsiniz..
+
+   DirectoryIndex index.php
+
+   Dosya içeriðini düzenledikten ve kaydettikten sonra siteniz otomatik olarak index.php sayfasýna yönelecektir..
+   Bu iþlemi yaptýktan sonra index.htm veya ana sayfanýz geçerliliðini yitireceði için arzu ettiðiniz taktirde bu dosyalarý
+   silebilirsiniz..
+
+
+Sistem Kontrolü.
+
+--> siteye girerek birkaç pixeli doldurmayý deneyin.. Eðer hata ile karþýlaþýyorsanýz daha önce belirtilen dosya izinlerinin
+    (chmod to 777) olmasýna özen gösterin. Kontrol etmek için 4). adýmý tekrar inceleyin.
+
+    Lütfen kýsa olacaðý için tüm  sitedeki dosyalarýn izinlerini 777 yani yazýlabilir olarak deðiþtirmeyi düþünmeyin..
+    Bu tür bir davranýþ güvenlik ve script iþleyiþi açýsýndan siteye zarar verebilir...
+
+
+Mail Göndermede (Tavsiye ve Yardým) Karþýlaþýlan Problemler?
+
+--> Bu sitenizin "from" yani gönderen kýsmýndan sadece yönetici adresini onaylamasýndan dolayý olabilir.
+    Öyle olmasý halinde mail adresini scriptin ayarlar bölümünden girerek yönetici adresi olarak ayarlamayý unutmayýn..
+
+    Bu iþlemi yaptýktan sonra düzenlemeniz gereken iki dosya olacaktýr
+    (Düzenlemeleri notepad ile yapabilirsiniz)
+
+    Düzenleme yapacaðýnýz dosyalar:
+
+    feedback.php
+    recommend.php
+
+    33. Satýrdaki # iþaretini satýrdan siliyoruz..
+    yani
+
+    ( #$from = $CONFIG['email_feedback'];) YERÝNE :
+
+    $from = $CONFIG['email_feedback']; OLUYOR
+
+
+
+    Tüm dosyalarý kaydedin ve tekrar deneyin.
+    Bu probleminizi çözecektir.
+
+
+
+SIK SORULAN SORULAR:
+---------------------------
+Þu anda bu tür sorularý bir araya toplamak için bir proje yapmaktayýz. Bunun için biraz zaman gerekse de
+http://www.texmedia.de/help/million adresinden genel olarak sorulan sorulara ve cevaplarýna ulaþabilirsiniz
+
+Lütfen göndereceðiniz maillerden önce bu siteyi de gözden geçirmeyi unutmayýn
+
+
+ADMIN-PANELI:
+-----------
+Tüm iþlemleri ve modifikasyon-ayarlarý yapabileceðiniz admin paneline ,
+http://www.siteadresiniz.com/control/index.php varsayýlan þifre olan "admin" (týrnaksýz) ile ulaþabilirsiniz.
+BAÞKA BÝR ÝÞLEM YAPMADAN ÖNCE BU ÞÝFREYÝ DEÐÝÞTÝRMENÝZ ÖNERÝLÝR.
+ADMÝN PANELÝNDEN 'AYARLAR' bölümüne girerek bu iþlemi gerçekleþtirebilirsiniz.

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<navgroups product="photoplog" master="true">
+	<navgroup phrase="photoplog_photoplog_pro" permissions="canadminforums" hr="true" displayorder="11">
+		<navoption displayorder="10">
+			<phrase>photoplog_general_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog1</link>
+		</navoption>
+		<navoption displayorder="20">
+			<phrase>photoplog_css_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog2</link>
+		</navoption>
+		<navoption displayorder="30">
+			<phrase>photoplog_thumb_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog3</link>
+		</navoption>
+		<navoption displayorder="40">
+			<phrase>photoplog_image_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog4</link>
+		</navoption>
+		<navoption displayorder="50">
+			<phrase>photoplog_display_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog5</link>
+		</navoption>
+		<navoption displayorder="60">
+			<phrase>photoplog_feed_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog6</link>
+		</navoption>
+		<navoption displayorder="70">
+			<phrase>photoplog_exif_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog7</link>
+		</navoption>
+		<navoption displayorder="80">
+			<phrase>photoplog_highslide_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog8</link>
+		</navoption>
+		<navoption displayorder="90">
+			<phrase>photoplog_misc_settings</phrase>
+			<link>options.php?do=options&amp;dogroup=photoplog9</link>
+		</navoption>
+		<navoption displayorder="100">
+			<phrase>photoplog_edit_templates</phrase>
+			<link>template.php?do=modify&amp;searchstring=photoplog</link>
+		</navoption>
+		<navoption displayorder="110">
+			<phrase>photoplog_change_phrases</phrase>
+			<link>phrase.php?do=modify&amp;page=1&amp;perpage=15</link>
+		</navoption>
+		<navoption displayorder="120">
+			<phrase>photoplog_category_manager</phrase>
+			<link>photoplog_category.php?do=modify</link>
+		</navoption>
+		<navoption displayorder="130">
+			<phrase>photoplog_add_new_category</phrase>
+			<link>photoplog_category.php?do=add</link>
+		</navoption>
+		<navoption displayorder="140">
+			<phrase>photoplog_category_permissions</phrase>
+			<link>photoplog_permission.php?do=modify</link>
+		</navoption>
+		<navoption displayorder="150">
+			<phrase>photoplog_usergroup_manager</phrase>
+			<link>usergroup.php?do=modify</link>
+		</navoption>
+		<navoption displayorder="160">
+			<phrase>photoplog_moderate_files</phrase>
+			<link>photoplog_file.php?do=moderate</link>
+		</navoption>
+		<navoption displayorder="170">
+			<phrase>photoplog_moderate_comments</phrase>
+			<link>photoplog_comment.php?do=moderate</link>
+		</navoption>
+		<navoption displayorder="180">
+			<phrase>photoplog_moderate_categories</phrase>
+			<link>photoplog_category.php?do=moderate</link>
+		</navoption>
+		<navoption displayorder="190">
+			<phrase>photoplog_custom_fields</phrase>
+			<link>photoplog_field.php?do=view</link>
+		</navoption>
+		<navoption displayorder="200">
+			<phrase>photoplog_mass_move_delete</phrase>
+			<link>photoplog_massmove.php?do=view</link>
+		</navoption>
+		<navoption displayorder="210">
+			<phrase>photoplog_maintenance</phrase>
+			<link>photoplog_maintain.php?do=update</link>
+		</navoption>
+	</navgroup>
+</navgroups>

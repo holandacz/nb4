@@ -1,0 +1,16 @@
+<Onderwerp: %[DOMAINNAME]% - Uw link is verwijderd >
+
+Hallo,
+
+U heeft uw website(%[URL]%)geregistreerd op
+%[DOMAINNAME]%.
+Uw pixels zijn verlopen en zijn nu verwijderd.
+
+%[VISITORS]% bezoekers klikten op uw afbeelding om uw pagina te bezoeken.
+
+Als u wil kan u uw site weer aanmelden.
+
+Dank u,
+Het %[DOMAINNAME]% Team
+
+%[DOMAIN]%

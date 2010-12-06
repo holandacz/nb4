@@ -1,0 +1,11 @@
+<Subject: %[DOMAINNAME]% tavsiye >
+
+Merhaba,
+
+%[EMAIL]% adresine sahip arkadaþýnýz %[DOMAIN]% adresinin ilginizi çekebileceðini düþünüyor ve incelemenizi istiyor..
+
+Bu site sayesinde web sayfanýza link verebilecek ve en verimli þekilde ziyaretçi kazanacaksýnýz...
+
+-----------------------------------------------------
+Bu mail %[EMAIL]%  adresine sahip kullanýcýnýn talebi üzerine gönderilmiþtir.
+%[DOMAIN]%

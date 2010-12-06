@@ -1,0 +1,17 @@
+[ISAPI_Rewrite]
+
+# When hosting multiple sites on the same server, it is
+# recommended to  limit the rewrite rules to the domain(s)
+# where vBSEO is installed. Enable (remove '#' at the beginning
+# to activate) the following rule and replace 'yourdomain.com'
+# with your actual installation domain name.
+#RewriteCond Host: (?:www\.)?yourdomain.com
+RewriteRule ^/forums/((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]
+
+#RewriteCond Host: (?:www\.)?yourdomain.com
+RewriteCond URL ^/forums/(?!avatars|attachments|iconimages).*
+RewriteRule ^([^\?]*\.(?:gif|swf.*|jpg|png|css|xml|js|htm|txt|zip)(?:\?(.*))?)$ $1 [I,L]
+
+#RewriteCond Host: (?:www\.)?yourdomain.com
+RewriteCond URL ^/forums/(?!admincp/|modcp/|clientscript/|cpstyles/|images/|search\.php).*
+RewriteRule ^/forums/(.+?)(?:\?(.*))?$ /forums/vbseo.php [L]

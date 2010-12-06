@@ -1,0 +1,167 @@
+body
+{
+	background: #FFFFFF;
+	color: #000000;
+	font: 10pt verdana;
+	margin: 0px;
+	padding: 0px;
+}
+a:link, body_alink
+{
+	color: #22229C;
+}
+a:visited, body_avisited
+{
+	color: #22229C;
+}
+a:hover, a:active, body_ahover
+{
+	color: #FF4400;
+}
+.header
+{
+	background-color: #336699;
+	color: #FFFFFF;
+	size:2;
+	font-weight: bold;
+	align:center;
+}
+.titlebg, .titlebg a, .titlebg a:link, .titlebg a:visited
+{
+	background-color: #336699;
+	color: #FFFFFF;
+	text-decoration: none;
+	size:1;
+}
+.oldtitlebg, .oldtitlebg a, .oldtitlebg a:link, .oldtitlebg a:visited
+{
+	background-color: #336699;
+	color: #FFFFFF;
+	size:1;
+}
+.newtitlebg, .newtitlebg a, .newtitlebg a:link, .newtitlebg a:visited
+{
+	background-color: #336699;
+	color: #FFFFFF;
+	font-weight: bold;
+	size:1;
+}
+.separator, .separator a, .separator a:link, .separator a:visited
+{
+	background-color: #EEEEEE;
+	color: #000000;
+	size:1;
+}
+.windowbg
+{
+	background-color: #E2ECF5;
+	color: #000000;
+	size:1;
+}
+.oldwindowbg
+{
+	background-color: #E2ECF5;
+	color: #000000;
+	size:1;
+}
+.newwindowbg
+{
+	background-color: #E2ECF5;
+	font-weight: bold;
+	color: #000000;
+	size:1;
+}
+.windowbg2, .thread, .thread_hot
+{
+	background-color: #CBDDED;
+	color: #000000;
+	size:1;
+}
+.Unreadwindowbg2, a:link.newwindowbg2, a:visited.newwindowbg2
+{
+	background-color: #CBDDED;
+	font-weight: bold;
+	color: #000000;
+	size:1;
+}
+.Oldwindowbg2
+{
+	background-color: #CBDDED;
+	color: #000000;
+        font-weight: bold;
+	size:1;
+}
+.new, a:link.new, a:visited.new
+{
+	font-weight: bold;
+	color: #000000;
+	size:1;
+}
+.thread_hot_new, a:link.thread_hot_new, a:visited.thread_hot_new
+{
+        font-weight: bold;
+	background-color: #CBDDED;
+	color: #000000;
+	size:1;
+}
+.thread_dot_hot_new, a:link.thread_dot_hot_new, a:visited.thread_dot_hot_new
+{
+        font-weight: bold;
+	background-color: #CBDDED;
+	color: #000000;
+	size:1;
+}
+.thread_dot_hot, a:link.thread_dot_hot, a:visited.thread_dot_hot
+{
+ 	background-color: #CBDDED;
+	color: #000000;
+	size:1;
+}
+.thread_new, a:link.thread_new, a:visited.thread_new
+{
+	font-weight: bold;
+	background-color: #CBDDED;
+	color: #000000;
+	size:1;
+}
+.old, a:link.old, a:visited.old
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	size:1;
+}
+.navbar, a:link.navbar, a:visited.navbar
+{
+	background-color: #6699cc;
+	color: #ffffff;
+	size:1;
+}
+.footer, a:link.footer, a:visited.footer
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+	size:1;
+}
+.updated
+{
+	color: #ff0000;
+	size:1;
+}
+.quote
+{
+	background-color: #99BBDD;
+	color: #000000;
+	size:1;
+}
+.sticky
+{
+	background-color: #FFFF99;
+	color: #000000;
+	size:1;
+}
+.announce
+{
+	background-color: #FFCC66;
+	color: #000000;
+	size:1;
+}

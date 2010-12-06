@@ -1,0 +1,20 @@
+<Subject: %[DOMAINNAME]% - Admininfo >
+
+Buna Ziua,
+
+in situl tau %[DOMAINNAME]% sunt conlegati urmatori pixels:
+
+Grid: %[GRID]%
+
+Dominiu:   %[URL]%
+Titlu:     %[TITLE]%
+eMail:     %[EMAIL]%
+Blocuri:   %[BLOCKS]%
+Pret:      %[B]%
+Limba:     %[LANGUAGE]%
+Userid:    %[USERID]%
+
+Statul:    %[STATUS]%
+
+In area administrator:
+%[ADMINDIR]%

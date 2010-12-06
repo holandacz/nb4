@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:NoBlood, Inc.
+N:NoBlood, Inc.;;;;
+PROFILE:VCARD
+ADR:;;3727 Christine Street;San Diego;CA;92117;USA
+TEL;TYPE=WORK:(858) 866-9311
+EMAIL;TYPE=WORK:info@noblood.org
+ORG:NoBlood, Inc.
+URL:http://www.noblood.org
+END:VCARD

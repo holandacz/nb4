@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Your link was removed >
+
+Olá,
+
+Registou o seu Website (%[URL]%) no
+%[DOMAINNAME]%.
+Os seus pixels expiraram e foram removidos.
+
+%[VISITORS]% visitantes clicaram na sua imagem para visitar a sua webpage.
+
+Se desejar pode ligar-se a nós novamente, e reservar um pixel para a sua página.
+
+Obrigado,
+A equipa de %[DOMAINNAME]%
+
+%[DOMAIN]%

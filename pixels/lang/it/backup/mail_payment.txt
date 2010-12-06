@@ -1,0 +1,26 @@
+<Subject: %[DOMAINNAME]% - Payed Link >
+
+Salve,
+
+Grazie per aver registrato il suo sito(%[URL]%)
+su %[DOMAINNAME]%
+
+Il suo link sarà attivato non appena riceveremo %[B]%
+nel nostro conto.
+
+Nel caso in cui avesse fatto l'ordine ma non avesse ancora
+provveduto al pagamento può provvedere a questo nei prossimi
+%[DELETE_DAYS]% giorni
+
+
+%[PAYLINK]%
+
+Se non sarà effettuato il pagamento in %[DELETE_DAYS]% giorni,
+i suoi pixels saranno rimossi.
+
+
+Le auguriamo molti contatti e la invitiamo
+a raccomandarci agli amici!
+
+Grazie per aver scelto%[DOMAINNAME]%!
+%[DOMAIN]%

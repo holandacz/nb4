@@ -1,0 +1,13 @@
+<Subject: %[DOMAINNAME]% - Account information >
+
+Hello,
+
+You are able to edit your entry on %[DOMAINNAME]%
+by entering the following account informations:
+
+User ID: %[USERID]%
+Password: %[LOGINCODE]%
+
+
+Your Team %[DOMAINNAME]%
+%[DOMAIN]%

@@ -1,0 +1,13 @@
+<Onderwerp: %[DOMAINNAME]% - Account informatie >
+
+Hallo,
+
+U heeft de mogelijkheid om uw pixel gegevens te wijzigen op %[DOMAINNAME]%
+wanneer u de volgende account details gebruikt:
+
+Gebruikersnaam: %[USERID]%
+Wachtwoord: %[LOGINCODE]%
+
+
+Uw Team %[DOMAINNAME]%
+%[DOMAIN]%

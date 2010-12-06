@@ -1,0 +1,172 @@
+
+    Million Pixel Script (R)
+    Copyright (C) 2005-2006 by texmedia.de
+    Million Pixel Script ist eingetragene Marke der Firma texmedia.
+
+    Dieses Programm ist keine Freeware, zum Betrieb auf einer Domain benötigen
+    Sie eine offizielle Lizenz, die Sie beim Hersteller, texmedia.de, erwerben können.
+    Die Original-Software oder die angepasste/veränderte Software und
+    Teile derer dürfen nicht weitergegeben oder verkauft oder wiederverkauft
+    werden. Dieses Programm wird ohne ohne Funktionsgarantie für die im Umfeld
+    verwendete Hardware oder Software verkauft.
+
+    Für Updates, Informationen und Support
+    besuchen Sie bitte
+    http://www.texmedia.de
+
+*******************************************************************
+
+INSTALLATIONSANLEITUNG FÜR DAS MILLION PIXEL SCRIPT (R) VERSION 3
+
+Vielen Dank für den Kauf des Million Pixel Script (R)!
+Bitte lesen Sie die Installationsanleitung sorgfältig durch um eine
+reibungslose Installation des Scriptes auf Ihrem Server/Webspace durchzuführen.
+
+
+Voraussetzungen für eine erfolgreiche Installation des Million Pixel Script:
+----------------------------------------------------------------------------
+
+- Eine Domain mit einem Webhosting das folgendes anbietet:
+  > PHP 4.3 oder höher mit einer installierten GD library (normalerweise standard)
+  > MySQL Datenbank
+  > min. 20 MB Webspace
+
+
+Installationsanleitung
+--------------------------------------------------------
+
+1. ENTPACKEN:
+   Entpacken Sie die Datei "MPScript3PRO.zip" und speichern Sie die Dateien auf Ihrem Computer.
+
+2. DATENBANK:
+   Erstellen Sie eine MYSQL-Datenbank (z.B. mit dem Namen "milliondata") auf Ihrem Webserver, entweder mit
+   PHPMyAdmin oder der entsprechenden Datenbank-Management-Software Ihres Hosting-Providers. Sie finden
+   den Datenbank Menüpunkt in Ihrem Kontrollbereich Ihres Webservers meistens unter dem Namen "MYSQL" oder
+   "Datenbanken".
+   Erstellen Sie nach der Datenbank auch einen Mysql-User und geben Sie diesem Berechtigung für die zuvor
+   erstellte Datenbank.
+
+3. DATEI-UPLOAD:
+   Laden Sie alle Dateien UND Verzeichnisse AUS dem entpackten Script Verzeichnis "public_html" AUF IHREN Webserver
+   in die Web-Ebene. Die Web-Ebene auf Ihrem Server ist meistens ebenso ein Verzeichnis namens "public_html" oder
+   auch "html" oder "web".
+
+4. SCHREIBRECHTE:
+   Wenn Sie einen Unix-Server benutzen, müssen Sie einigen Dateien und Verzeichnissen des Scripts Schreibrechte
+   gewähren, damit das Script die Berechtigung hat, diese Dateien ändern zu dürfen.
+   Sie können diese Schreibrechte (die in Unix-Sprache "chmod 777" genannt werden)
+   mit Ihrem FTP-Programm setzen, mit dem Sie Ihre Script-Dateien auf den Server geladen haben.
+
+   Wählen Sie einfach die unten aufgeführten Dateien und Verzeichnisse aus und setzen Sie deren Attribute auf 777
+   (Bitte suchen Sie in Ihrem FTP-Programm, wo Sie diese Option finden!).
+   Es ist wirklich wichtig, allen folgenden Dateien und Verzeichnissen Schreibrechte zu gewähren:
+
+    VERZEICHNISSE:  - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/de    (nur wenn Sie Deutsch als Sprache anbieten möchten)
+                    - lang/en    (nur wenn sie Englisch als Sprache anbieten möchten)
+                    - lang/...   (ebenso weitere Sprachen falls gewünscht)
+                    - mydir
+
+
+    DATEIEN:        - grids/...     -> ALLE Dateien in dem Verzeichnis "grids"
+                    - lang/de/  -> alle Dateien in diesem Verzeichnis, wenn Sie Deutsch als Sprache anbieten möchten
+                    - lang/en/  -> alle Dateien in diesem Verzeichnis, wenn sie Englisch als Sprache anbieten möchten
+                    - lan/.../  -> (ebenso weitere Sprachen falls gewünscht)
+
+5. MYSQL:
+   Starten Sie nun Ihre Webseite, und Sie werden automatisch zum MYSQL-Installations-Prozess weitergeleitet.
+   Geben Sie die folgenden notwendigen Daten ein:
+
+        MYSQL Benutzername  --> Benutzername Ihrer MYSQL-Server-Verbindung
+        MYSQL Passwort      --> Passwort Ihrer MYSQL-Server-Verbindung
+        MYSQL Datenbankname --> Name der von Ihnen für das Script erstellten Datenbank (z.B. 'milliondata')
+        MYSQL Hostingname   --> Hostname des MYSQL-Server (standardmäßig 'localhost' oder 'mysql')
+
+   Wenn Sie die korrekten Daten eingegeben haben, werden die notwendigen Tabellen in Ihrer Datenbank erstellt.
+   Sollten Sie die beim MYSQL-Installations-Prozess verlangten Daten nicht kennen, fragen Sie bitte bei Ihrem Provider nach.
+
+6. LÖSCHEN DES ORDNERS INSTALL:
+   Wenn der MYSQL-Installations-Prozess erfolgreich war ist Ihre Seite fertig installiert.
+   Bitte löschen Sie nun noch den Ordner "install" von Ihrem Server!
+
+
+Fertig.
+
+
+
+
+CHECK UND TROUBLESHOOTING:
+--------------------------------------------
+Schauen Sie nach ob Ihre Pixelseite funktioniert. Tippen Sie in Ihren Internetbrowser: http://www.ihredomain.de
+(ersetzen Sie "ihredomain.de" durch Ihre Webadresse).
+
+-> Wenn Ihre Seite nicht angezeigt wird, versuchen Sie es unter http://www.ihredomain.de/index.php
+   (ersetzen Sie "ihredomain.de" durch Ihre Webadresse).
+   Sollte das helfen, müssen Sie Ihren Webserver so konfigurieren, dass er automatisch die Datei 'index.php'
+   aufruft, wenn Ihre Domain angewählt wird. Dazu brauchen Sie nur eine simple Textdatei mit dem
+   Namen ".htaccess" (Punkt htaccess) zu erstellen, die folgenden Inhalt hat:
+
+   DirectoryIndex index.php
+
+   Speichern Sie die Datei in das Hauptverzeichnis Ihres Scripts auf Ihren Server. Diese Datei sagt dem Server,
+   dass er zuerst die Datei "index.php" aufruft.
+
+   Normalerweise ist das jedoch Standard und vielleicht müssen Sie einfach die evtl noch vorhandene "index.htm" oder "index.html" Datei
+   im Hauptverzeichnis Ihres Webservers löschen, da solche Dateien zuerst aufgerufen werden.
+
+
+Checken Sie Ihr System, indem Sie ein paar Pixel verlinken.
+
+--> Sollten Sie ein Zugriffsverbot angezeigt bekommen (Zugriff nicht erlaubt), checken Sie erneut ob Sie alle Schreibrechte
+    (chmod to 777) korrekt gesetzt haben. Schauen Sie dazu bitte unter Punkt 4 nach, ob Sie wirklich bei allen aufgeführten
+    Dateien UND Ordnern die Schreibrechte gesetzt haben. Geben Sie bitte NICHT allen Dateien und Ordnern des kompletten
+    Script-Pakets Schreibrechte auf Ihrem Server, da dies ein Sicherheitsrisiko bedeuten könnte, und daraufhin manche Server eine
+    Fehlermeldung ausgeben. Bitte NUR die aufgeführten Dateien UND Ordner mit Schreibrechten versehen!
+
+
+Probleme beim Verschicken von E-Mails über das Feedback- oder Weiterempfehlen-Formular?
+
+--> Eventuell ist Ihr Server sehr restriktiv und versendet keine Nachrichten mit einer anderen Absender-Adresse
+    als Ihrer Webmaster-Adresse Ihres Servers / Ihrer Domain. Sollte dies so sein, schreiben Sie bitte im Administrations-Bereich
+    Ihres Scripts (Konfiguration) in die Felder 'eMail Webmaster' und 'eMail Kontaktformular' Ihre Webmaster-Adresse Ihrer Domain (webmaster@ihredomain.de)
+
+    Danach editieren Sie bitte die folgenden zwei Dateien des Scripts mit einem einfachen Texteditor
+
+    feedback.php
+    recommend.php
+
+    (z.B. mit dem Programm Notepad -> Zum Editieren öffnen Sie bitte die Dateien aus dem Programm Notepad heraus,
+    und öffnen Sie die Dateien NICHT mit einem Doppelklick!):
+
+    Löschen Sie jeweils in Zeile 33 das Rautezeichen # am Anfang.
+    Die Zeile lautet nun
+
+    $from = $CONFIG['email_feedback'];
+
+    (anstatt #$from = $CONFIG['email_feedback'];)
+
+    Speichern Sie die Dateien und ersetzen Sie sie auf Ihrem Server.
+    Dies sollte Ihr Problem beim Verschicken von E-Mails über das Feedback- oder Weiterempfehlen-Formular beheben!
+
+
+FAQs:
+-----
+Wir erweitern ständig unsere Knowledge Base für das Script.
+Sie finden dort die FAQs mit den häufigsten Fragen und Antworten:
+http://www.texmedia.de/help/million
+
+Bitte schauen Sie dort zuerst nach, bevor Sie Ihre Frage an unseren E-Mail Support richten,
+da aufgrund der täglichen Anfragen die Beantwortung einige Zeit dauern wird. Vielen Dank.
+
+
+ADMINISTRATIONSBEREICH:
+-----------------------
+Den Zugang zum Administrationsbereich, in dem Sie Einträge aktivieren oder löschen und das gesamte System
+modifizieren können, finden Sie unter http://www.ihredomain.de/control/index.php
+Das standardmäßig voreingestellte Passwort lautet "admin" (ohne Anführungszeichen).
+
+WIR EMPFEHLEN AUSDRUECKLICH DAS PASSWORT ZU AENDERN BEVOR SIE FORTFAHREN.
+DIES KOENNEN SIE IM ADMINISTRATIONSBEREICH UNTER DEM PUNKT 'KONFIGURATION' VORNEHMEN.

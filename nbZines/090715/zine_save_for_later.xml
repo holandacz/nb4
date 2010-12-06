@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>
+
+<!-- Tags teaser-->
+<Item class="Zine_Item" name="Tags" view="teaser">
+	<itm_title>Topic Tags Project</itm_title>
+	<url>http://www.noblood.org/project.php?issueid=1</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/tags.jpg</src>
+		<thumb_title>All New &quot;About NoBlood&quot;</thumb_title>
+		<height>94</height>
+		<width>80</width>
+	</thumb>
+	<teaser><![CDATA[
+<strong>One of our site development projects</strong> involves the tagging of articles and discussions as they relate to key bloodless healthcare conditions and treatments. For example, when you click on <a href="http://www.noblood.org/tags/Anemia.html"><strong>Anemia</strong></a> in the <strong>Conditions List</strong> on the front page, a list of over 130 articles and discussions is found. How accurate and complete is this list? NoBlood contains thousands of articles and discussions. One should be able to click on any of these topic 'tags' and immediately go to all the relevant articles and discussions regarding that subject. However, at the moment, it is a bit "hit and miss" and needs some intelligent filtering to make sure only relevant articles are included. At the moment we have one volunteer working at this, but we could do with a few more helping hands. <strong>Please visit this <a href="http://www.noblood.org/project.php?issueid=1">Project Task</a> to learn more about how you can perhaps &#8220;adopt&#8221; a topic tag of interest to you or <a href="http://www.noblood.org/sendemail/" target="_blank"><strong>Contact Us</strong></a></strong>.
+	]]></teaser>
+</Item>
+
+<!-- Graphics teaser-->
+<Item class="Zine_Item" name="Tags" view="teaser">
+	<itm_title>Call for Images and Graphics</itm_title>
+	<url>http://www.noblood.org/gallery</url>
+	<thumb>
+		<src>http://www.noblood.org/nbZines/081212/imgs/RedCell.jpg</src>
+		<thumb_title>All New &quot;About NoBlood&quot;</thumb_title>
+		<height>80</height>
+		<width>81</width>
+	</thumb>
+	<teaser><![CDATA[
+<strong>We have a new feature called the Image Gallery. </strong>The Image Gallery designed to provide a convenient location to share images and graphics that relate to transfusion alternatives and blood management. Please dig through the &#8220;bowels&#8221; of your hard drives for any images that may be instructional and/or educational that can be added to this Image Gallery. View the <a href="http://www.noblood.org/gallery/most-viewed.htm">most popular images</a> thus far. <strong>Why not try <a href="http://www.noblood.org/upload.html">submitting one</a> now? It is fast, easy and fun.</strong>
+	]]></teaser>
+</Item>
+
+</Zine_Items>
+</document>

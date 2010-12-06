@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Your link was removed >
+
+Hola,
+
+Usted ha registrado su sitio web (%[URL]%) en
+%[DOMAINNAME]%.
+Sus pixeles han caducado y han sido eliminados.
+
+%[VISITORS]% visitantes cliquearon su imagen visitando su página web.
+
+Si lo desea puede pixelar su página otra vez.
+
+Gracias,
+El Equipo %[DOMAINNAME]% 
+
+%[DOMAIN]%

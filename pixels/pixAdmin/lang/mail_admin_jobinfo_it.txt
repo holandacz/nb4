@@ -1,0 +1,11 @@
+<Subject: %[DOMAINNAME]% - Admininfo: lavoro automatico >
+
+Salve,
+
+Sul tuo sito %[DOMAINNAME]% il seguente lavoro è cominciato automaticamente:
+
+%[JOBINFO]%
+
+
+------------------------------------------------------------
+Million Pixel Script

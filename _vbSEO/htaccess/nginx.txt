@@ -1,0 +1,13 @@
+location /forums/ {
+
+rewrite ^/forums/((urllist|sitemap_).*\.(xml|txt)(\.gz)?)$ /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 break;
+
+if ($request_filename ~ "\.php$" ) {
+rewrite ^/forums/(.*)$ /forums/vbseo.php break;
+}
+
+if (!-e $request_filename) {
+rewrite ^/forums/(.*)$ /forums/vbseo.php break;
+}
+
+}

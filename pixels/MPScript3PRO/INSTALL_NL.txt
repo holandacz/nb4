@@ -1,0 +1,118 @@
+INSTALLATIE INSTRUCTIES VOOR HET PHP PIXEL SCRIPT VERSIE 3
+**********************************************************
+
+Wij danken u voor de aanschaf van Million Pixel Script (R)!
+Lees a.u.b. deze instructies goed voor een succesvolle installatie van uw net aangeschafte PHP Pixel Script op uw webserver/webruimte.
+
+Voor vragen, Bug reparatie’s en updates ga naar :
+http://millionhelp.texmedia.de
+
+
+Benodigdheden voor een succesvolle installatie van het Million Pixel Script (R):
+------------------------------------------------------------------------
+
+- Een domein met een webhost die het volgende verzorgen:
+  > PHP 4.3 of hoger met een geinstallerde GD bibliotheek (meestal standaard)
+  > MySQL
+
+
+Installatie procedure voor het Million Pixel Script (R):
+------------------------------------------------
+
+1. UNZIP:
+   Unzip "MPScript3PRO.zip" en sla de bestanden op naar uw lokale computer.
+
+2. DATABASE:
+   Maak een MYSQL-database aan(met bijvoorbeeld : milliondata als naam) op uw webserver, dit kan via de database management software zoals PHPMyAdmin of via uw hosting managemant account (zoek naar het menu item ‘mysql’ of ‘database’).
+
+3. UPLOAD:
+   Upload alle bestanden EN mappen VAN de map “public_html” NAAR uw webserver.
+   (Copieer niet de map “public_html” zelf, alleen de inhoud ervan!)
+
+4. SCHRIJF TOESTEMMINGEN:
+   Als u gebruik maakt van een Unix server is het nodig om schrijf toestemming te geven aan sommige bestanden en mappen van het script, dit moet zodat het script zelf veranderingen kan opslaan en schrijven. U kunt deze toestemmingen veranderen (Welke u “CMOD 777” toestemming geeft! In Unix taal) met uw ftp client software waarmee u uw script heeft geupload. Gewoon de map en bestanden selecteren, en dan op CMOD 777 zetten. (zoek even in uw ftp client software waar u dit kan vinden)
+
+Het is écht nodig om de volgende bestanden en mappen schrijfrechten te geven:
+
+    MAPPEN :        - control/mailtemp
+                    - grids
+                    - incs
+                    - lang
+                    - lang/de (alleen als u duits wilt gebruiken als taal)
+                    - lang/en (alleen als u engels wilt gebruiken als taal)
+                    - lang/nl (alleen als u nederlands wilt gebruiken als taal)
+                    - lang/..
+                    - mydir
+
+
+  BESTANDEN:        - grids/    -> alle bestanden hier in deze Map.
+                    - lang/de/  -> alle bestanden hier in deze Map, als u duits wilt gebruiken als taal.
+                    - lang/en/  -> alle bestanden hier in deze Map, als u engels wilt gebruiken als taal.
+                    - lang/nl/  -> alle bestanden hier in deze Map, als u nederlands wilt gebruiken als taal.
+
+5. MYSQL:
+   Start uw website nu en u wordt automatisch doorgestuurd naar de MYSQL – Installatie procedure.
+   Typ de vereiste data in, welke zullen zijn:
+
+        MYSQL username      --> Gebruikersnaam van uw mysql-server connectie
+        MYSQL password      --> Wachtwoord van uw mysql-server connectie
+        MYSQL database name --> Naam van uw voor het script gecreeërde database.(Bijvoorbeeld 'milliondata')
+        MYSQL hosting name  --> Hostnaam van de mysql-server (normaal 'localhost' of 'mysql')
+
+   Als u de juiste data invult, dan zullen  de tabellen worden gemaakt in de database (die u al in stap 2 had gemaakt). Als u niet weet welke MYSQL dat in te vullen, vraag dan uw provider om verdere hulp.
+
+6. VERWIJDEREN VAN DE INSTALLATIE FOLDER:
+   Als het MYSQL-installatie process klaar is en succesvol, dan is uw site klaar. Nu hoeft u alleen voor de veiligheid de map install verwijderen van uw server! Zodat er geen data verloren kan gaan door een eventuele herinstallatie.
+
+
+KAAR!
+
+
+CONTROLE EN PROBLEEM OPLOSSING:
+-------------------------------
+Zit u uw pixel site werkende nu? Op www.uwdomeinnaam.nl? zo ja dan is alles goed verlopen!
+
+Zo niet, probeer dan www.uwdomeinnaam.nl/index.php
+Als dit helpt, dan moet u uw webserver configureren, zodat deze eerst index.php oproept wanneer uw domeinnaam wordt verzocht. U kunt dit doen door simpelweg een tekstbestand te maken met de naam “.htaccess” (dus punt htaccess) en met de volgende regel erin :
+
+DirectoryIndex index.php
+
+   Sla dit bestand op in de hoofdmap van uw script op uw webserver. Dit bestand verteld de browser om het bestand “index.php” als eerste op te vragen.
+
+  Maar normal is dit standard en hoeft u meestal het bestand “index.html” te verwijderen of te hernoemen naar “index.html_bak”. Omdat de index.html er ook staat zal deze standaard als eerste worden opgeroepen.
+
+Controleer uw pixel systeem door wat pixels te uploaden.
+
+--> Als u een permission error/toestemmings fout melding krijgt, dan zal u de bovenstaande SCHRIJF TOESTEMMINGEN moeten nalopen. En zo controleren of de juiste toestemmingen aan de juiste mappen en bestanden zijn toegekend. (CMOD “777” is de toestemming)dit is erg BELANGRIJK!
+
+
+Problemen met het verzenden van mail via feeback of Vertel een Vriend formulier?
+
+--> Misschien is uw server erg strict en zal daarom geen berichten UIT verzenden naar andere VAN adressen dan die van het webmaster adres van uw server of domein. Als dit zo is, zet dan in de velden “emai webmaster” en “email contact formulier” in het controle paneel van uw script (CONFIG) uw webmaster email adres van uw domeinnaam (webmaster@uwdomeinnaam.nl).
+
+Hierna, verander de twee volgende bestanden van dit script met een simpele tekst editor of tekst verwerker (notepad)
+
+    feedback.php
+    recommend.php
+
+    en verwijder in regel 3 het karakter # (hekje) uit het begin van de regel, zodat er staat.
+
+    $from = $CONFIG['email_feedback'];
+
+    (in plaats van #$from = $CONFIG['email_feedback'];)
+
+    Sla de bestanden op en schrijf deze over de bestaande op uw webserver. Dit zou het email probleem moeten oplossen.
+
+VAAK GESTELDE VRAGEN:
+---------------------
+We zijn momenteel een vraagbaak aan het bouwen voor het script. Daar dit nogal wat tijd in neemt, zult u voorlopig de FAQ’s vragen en antwoorden kunnen vinden op:
+http://millionhelp.texmedia.de
+
+Ga voor vragen altijd eerst naar deze site voordat u contact opneemt met onze support via email, welke langer op zich zullen laten wachten door de vele verzoeken. Alvast onze dank.
+
+ADMINISTRATOR-GEDEELTE:
+-----------------------
+Om de administrator afdeling van uw script te kunnen bereiken, om date toe te voegen of te verwijderen. Zult u moeten gaan naar http://www.yourdomain.com/control/index.php met het standaard wachtwoord “admin” zonder de comma’s uiteraard.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!HET IS STERK AAN TE BEVELEN OM DIT WACHTWOORD TE VERANDEREN VOOR U ANDERE STAPPEN ONDERNEEMT! U KUNT U WACHTWOORD AANPASSEN DOOR IN HET ADMINISTRATOR!!! !!!GEDEELTE OP DE “CONFIG” TAB TE KLIKKEN.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+  Million Pixel Script (R)
+
+  (c) 2006 texmedia.de - Alle Rechte vorbehalten.
+-------------------------------------------------------------------------------
+Lizenz für Million Pixel Script (R) auf einer Domain.
+
+Wenn Sie diese Software nicht direkt über www.texmedia.de
+erhalten haben, setzen Sie eine illegale Software ein.
+
+Die Urheber- und Vertriebsrechte dieser Software liegen bei
+Markus Scherner
+Kahlenberg 5
+D-38444 Wolfsburg
+Germany
+http://www.texmedia.de
+
+
+Lizenzbedingungen:
+
+-------------------------------------------------------------------------------
+
+1. Durch den Kauf und/oder Einsatz der Software erklären Sie sich mit
+   diesen Lizenzabkommen einverstanden.
+
+2. Diese Lizenz erlaubt es Ihnen, das Million Pixel Script (R) auf einem Server und
+   einer Website zu benutzen. Für jede installierte Instanz dieses
+   Programms benötigen Sie jeweils eine erworbene Lizenz.
+
+3. Die Original-Software oder die angepasste/veränderte Software und
+   Teile derer dürfen nicht weitergegeben oder verkauft oder wiederverkauft
+   werden. Sie können alle Files frei nach Ihrem eigenen Wunsch für den
+   eigenen Gebrauch vollständig editieren und Ihrem Design anpassen.
+
+4. Alle Copyright-Hinweise und der Link auf texmedia.de in den Dateien selbst
+   und im Fußbereich der Webseite dürfen nicht entfernt oder unsichtbar gemacht werden.
+   Das Copyright und der Link auf texmedia.de im Fußbereich jeder Seite darf nur
+   entfernt werden, wenn eine spezielle Non-Copyright Version von texmedia erworben wurde.
+   Logo, Design, Banner und Texte dürfen selbstverständlich den eigenen
+   Wünschen angepasst werden.
+
+5. Dieses Lizenzabkommen beruht auf der aktuellen internationalen Gesetzeslage.
+
+6. Bei einem Verstoß gegen diesen Lizenzvertrag kann die erworbene Lizenz
+   jederzeit zurückgezogen und für nichtig erklärt werden, es werden keinerlei
+   geleisteten Zahlungen für erworbene Lizenzen erstattet.
+
+7. Das PHP Pixel Script und die dazugehörenden Dateien werden ohne Funktionsgarantie
+   für die im Umfeld verwendete Hardware oder Software verkauft.
+
+8. Der Hersteller ist in keiner Form für Inhalte oder Verfasser verantwortlich,
+   die durch diese Software erstellt wurden oder angezeigt werden.
+
+9. Das Risiko der Benutzung des PHP Pixel Script obliegt dem Lizenznehmer,
+   jegliche Erstattungen im Rechtsfall erstrecken sich maximal auf den Kaufpreis
+   der Lizenz - ein Antrag auf Erstattung muß maximal 30 Tage nach Erhalt der
+   Lizenz vorliegen.
+
+-------------------------------------------------------------------------------
+Stand: 2006

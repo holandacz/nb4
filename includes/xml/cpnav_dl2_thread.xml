@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="dl2_thread">
+	<navgroup text="Downloads - Create Threads" hr="true">
+		<navoption>
+			<text>Settings</text>
+			<link><![CDATA[options.php?do=options&amp;dogroup=downloadsii_createthread]]></link>
+		</navoption>
+		<navoption>
+			<text>Set Global Forum</text>
+			<link>download2newthreadadmin.php?do=settings</link>
+		</navoption>
+		<navoption>
+			<text>Set Categories</text>
+			<link>download2newthreadadmin.php?do=category</link>
+		</navoption>
+	</navgroup>
+</navgroups>

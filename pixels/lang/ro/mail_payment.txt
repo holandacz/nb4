@@ -1,0 +1,24 @@
+<Subject: %[DOMAINNAME]% - Linck de plata >
+
+Buna ziua,
+
+Va multumim pentru pentru inregistrarea site-ului dvs (%[URL]%)
+at %[DOMAINNAME]%
+
+Link-ul va fi activat indata ce suma de  %[B]%
+ va intra in cont.
+
+In cazul in care nu platiti, cand faceti comanda, aveti %[DELETE_DAYS]% zile la dispozitie
+pentru a efectua plata:
+
+%[PAYLINK]%
+
+Daca plata nu s-a facut dupa aceste %[DELETE_DAYS]% zile,
+pixeli rezervati vor fi stersi.
+
+
+Va dorim o afacere cat mai prospera si va rugam sa ne recomandati
+cunostiintelor dvs.!
+
+Va multumim ca ati accesat %[DOMAINNAME]%!
+%[DOMAIN]%

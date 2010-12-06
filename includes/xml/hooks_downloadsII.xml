@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hooks>
+
+	<hooktype type="DownloadsII">
+		<hook>dl_pre_upload</hook>
+		<hook>dl_post_upload_add</hook>
+		<hook>dl_post_upload_edit</hook>
+		<hook>dl_pre_download</hook>
+		<hook>dl_post_download</hook>
+	</hooktype>
+
+</hooks>

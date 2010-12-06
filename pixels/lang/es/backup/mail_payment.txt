@@ -1,0 +1,25 @@
+<Subject: %[DOMAINNAME]% - Payed Link >
+
+Hola,
+
+Gracias por registrar su sitio web (%[URL]%)
+en %[DOMAINNAME]%
+
+Su enlace será activado en cuanto recibamos %[B]%
+en nuestra cuenta.
+
+En caso que después de haber enviado la orden usted no haya pagado
+a través de los botones de pago, usted puede realizar el pago en el término de
+los próximos %[DELETE_DAYS]% días:
+
+%[PAYLINK]%
+
+Si no se ha efectuado ningún pago después de estos %[DELETE_DAYS]% días,
+sus pixeles premium reservados serán eliminados.
+
+
+Le deseamos mucho éxito y nos gustaría que nos
+recomendara a sus amigos!
+
+Gracias por utilizar %[DOMAINNAME]%!
+%[DOMAIN]%

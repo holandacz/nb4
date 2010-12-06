@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<navgroups product="vbulletin">
+
+	<navgroup text="Server Info">
+
+		<navoption displayorder="10">
+			<text>Server Time</text>
+			<link>server_info.php?show=time</link>
+		</navoption>
+
+		<navoption displayorder="20">
+			<text>Uptime</text>
+			<link>server_info.php?show=uptime</link>
+		</navoption>
+
+		<navoption displayorder="30">
+			<text>Server Load</text>
+			<link>server_info.php?show=serverload</link>
+		</navoption>
+
+		<navoption displayorder="40">
+			<text>Memory Usage</text>
+			<link>server_info.php?show=memoryusage</link>
+		</navoption>
+
+		<navoption displayorder="50">
+			<text>Free Disk Space</text>
+			<link>server_info.php?show=freediskspace</link>
+		</navoption>
+
+		<navoption displayorder="60">
+			<text>PHP Info</text>
+			<link>server_info.php?do=phpinfo</link>
+		</navoption>
+
+		<navoption displayorder="70">
+			<text>MySQL Stats</text>
+			<link>server_info.php?show=mysqlstats</link>
+		</navoption>
+
+		<navoption displayorder="80">
+			<text>MySQL Status</text>
+			<link>server_info.php?show=mysqlstatus</link>
+		</navoption>
+
+		<navoption displayorder="90">
+			<text>MySQL Vars</text>
+			<link>server_info.php?show=mysqlvars</link>
+		</navoption>
+
+		<navoption displayorder="100">
+			<text>All</text>
+			<link>server_info.php</link>
+		</navoption>
+
+	</navgroup>
+
+</navgroups>

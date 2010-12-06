@@ -1,0 +1,11 @@
+<Subject: Du hast gewonnen bei %[DOMAINNAME]%>
+
+Hallo,
+
+Du hast Glück und der Zufall traf Deine Pixelfläche
+bei %[DOMAIN]%.
+
+Herzlichen Glückwunsch!
+
+-----------------------------------------------------
+%[DOMAIN]%

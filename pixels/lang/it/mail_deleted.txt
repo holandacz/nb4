@@ -1,0 +1,15 @@
+<Subject: %[DOMAINNAME]% - Il suo link è stato rimosso>
+
+Salve,
+
+Lei a registrato il suo sito(%[URL]%) su
+%[DOMAINNAME]%.
+I suoi pixel sono scaduti e sono stati cancellati adesso.
+
+%[VISITORS]% visitatori hanno cliccato la sua immagine e visitato il suo sito.
+
+Se desidera puo inserire altri pixel e pubblicizzare il suo sito.
+
+Grazie,
+La squadra di %[DOMAINNAME]% 
+%[DOMAIN]%

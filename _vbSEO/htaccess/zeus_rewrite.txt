@@ -1,0 +1,37 @@
+match URL into $ with ^/forums/((urllist|sitemap).*\.(xml|txt)(\.gz)?)$
+if matched then 
+set URL = /forums/vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1
+goto END
+endif
+
+match URL into % with ^/forums/(admincp|modcp|clientscript|cpstyles|images)/
+if matched then goto END
+
+match URL into % with ^(.+)\?(.*)$
+if not matched then 
+match URL into % with ^(.+)$
+endif
+
+map path into SCRATCH:path from %1
+
+look for dir at %{SCRATCH:path}
+if exists then goto DIR_EXISTS
+
+
+look for file at %{SCRATCH:path}
+if exists then
+
+match URL into $ with ^/forums/(.+\.php)
+if matched then 
+set URL = /forums/vbseo.php
+endif
+
+else
+
+match URL into $ with ^/forums/([^\?]+)
+set URL = /forums/vbseo.php
+goto END
+
+endif
+
+DIR_EXISTS:

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hooks>
+
+	<hooktype type="photoplog_global">
+
+		<hook>photoplog_global_start</hook>
+		<hook>photoplog_global_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_albums">
+
+		<hook>photoplog_albums_start</hook>
+		<hook>photoplog_albums_complete</hook>
+		<hook>photoplog_albums_viewbit</hook>
+		<hook>photoplog_albums_bit</hook>
+		<hook>photoplog_albums_viewlist</hook>
+		<hook>photoplog_albums_list</hook>
+		<hook>photoplog_albums_form</hook>
+		<hook>photoplog_albums_expungeform</hook>
+		<hook>photoplog_albums_select</hook>
+		<hook>photoplog_albums_autocreate</hook>
+		<hook>photoplog_albums_doalbum_start</hook>
+		<hook>photoplog_albums_doalbum_complete</hook>
+		<hook>photoplog_albums_dodelete_start</hook>
+		<hook>photoplog_albums_dodelete_complete</hook>
+		<hook>photoplog_albums_doinsert_start</hook>
+		<hook>photoplog_albums_doinsert_complete</hook>
+		<hook>photoplog_albums_remove_start</hook>
+		<hook>photoplog_albums_remove_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_authenticate">
+
+		<hook>photoplog_authenticate_start</hook>
+		<hook>photoplog_authenticate_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_categories">
+
+		<hook>photoplog_categories_start</hook>
+		<hook>photoplog_categories_complete</hook>
+		<hook>photoplog_categories_form</hook>
+		<hook>photoplog_categories_do_start</hook>
+		<hook>photoplog_categories_do_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_comment">
+
+		<hook>photoplog_comment_start</hook>
+		<hook>photoplog_comment_complete</hook>
+		<hook>photoplog_comment_form</hook>
+		<hook>photoplog_comment_removeform</hook>
+		<hook>photoplog_comment_docomment_start</hook>
+		<hook>photoplog_comment_docomment_add</hook>
+		<hook>photoplog_comment_docomment_edit</hook>
+		<hook>photoplog_comment_docomment_complete</hook>
+		<hook>photoplog_comment_dodelete_start</hook>
+		<hook>photoplog_comment_dodelete_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_delete">
+
+		<hook>photoplog_delete_start</hook>
+		<hook>photoplog_delete_complete</hook>
+		<hook>photoplog_delete_form</hook>
+		<hook>photoplog_delete_dodelete_start</hook>
+		<hook>photoplog_delete_dodelete_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_edit">
+
+		<hook>photoplog_edit_start</hook>
+		<hook>photoplog_edit_complete</hook>
+		<hook>photoplog_edit_fields</hook>
+		<hook>photoplog_edit_selectcategory</hook>
+		<hook>photoplog_edit_sqlreplace</hook>
+		<hook>photoplog_edit_form</hook>
+		<hook>photoplog_edit_doedit_start</hook>
+		<hook>photoplog_edit_doedit_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_feed">
+
+		<hook>photoplog_feed_start</hook>
+		<hook>photoplog_feed_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_file">
+
+		<hook>photoplog_file_start</hook>
+		<hook>photoplog_file_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_functions">
+
+		<hook>photoplog_functions_indexbounce</hook>
+		<hook>photoplog_functions_filelink</hook>
+		<hook>photoplog_functions_outputpage</hook>
+		<hook>photoplog_functions_striptext</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_index">
+
+		<hook>photoplog_index_start</hook>
+		<hook>photoplog_index_complete</hook>
+		<hook>photoplog_index_filmframe</hook>
+		<hook>photoplog_index_filmstrip</hook>
+		<hook>photoplog_index_filmsql</hook>
+		<hook>photoplog_index_ratebit</hook>
+		<hook>photoplog_index_ratelist</hook>
+		<hook>photoplog_index_quickreplyform</hook>
+		<hook>photoplog_index_blockbit</hook>
+		<hook>photoplog_index_blocklist</hook>
+		<hook>photoplog_index_filebit</hook>
+		<hook>photoplog_index_filelist</hook>
+		<hook>photoplog_index_viewfile</hook>
+		<hook>photoplog_index_sortsql</hook>
+		<hook>photoplog_index_sorttitle</hook>
+		<hook>photoplog_index_setthumbs</hook>
+		<hook>photoplog_index_userinfo</hook>
+		<hook>photoplog_index_ratesarray</hook>
+		<hook>photoplog_index_userbit</hook>
+		<hook>photoplog_index_userlist</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_listing">
+
+		<hook>photoplog_listing_start</hook>
+		<hook>photoplog_listing_complete</hook>
+		<hook>photoplog_listing_catbit</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_report">
+
+		<hook>photoplog_report_start</hook>
+		<hook>photoplog_report_complete</hook>
+		<hook>photoplog_report_form</hook>
+		<hook>photoplog_report_doreport_start</hook>
+		<hook>photoplog_report_doreport_complete</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_search">
+
+		<hook>photoplog_search_start</hook>
+		<hook>photoplog_search_complete</hook>
+		<hook>photoplog_search_blockbit</hook>
+		<hook>photoplog_search_blocklist</hook>
+		<hook>photoplog_search_filebit</hook>
+		<hook>photoplog_search_filelist</hook>
+		<hook>photoplog_search_form</hook>
+		<hook>photoplog_search_sortsql</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_selector">
+
+		<hook>photoplog_selector_start</hook>
+		<hook>photoplog_selector_complete</hook>
+		<hook>photoplog_selector_bit</hook>
+		<hook>photoplog_selector_list</hook>
+		<hook>photoplog_selector_sql</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_settings">
+
+		<hook>photoplog_settings_subnavbar</hook>
+		<hook>photoplog_settings_letterbarbit</hook>
+		<hook>photoplog_settings_letterbar</hook>
+		<hook>photoplog_settings_statbar</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_slideshow">
+
+		<hook>photoplog_slideshow_start</hook>
+		<hook>photoplog_slideshow_complete</hook>
+		<hook>photoplog_slideshow_form</hook>
+		<hook>photoplog_slideshow_page</hook>
+		<hook>photoplog_slideshow_sortsql</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_thumbnails">
+
+		<hook>photoplog_thumbnails_start</hook>
+		<hook>photoplog_thumbnails_complete</hook>
+		<hook>photoplog_thumbnails_minithumbpics</hook>
+		<hook>photoplog_thumbnails_minithumbnails</hook>
+		<hook>photoplog_thumbnails_thumbpics</hook>
+		<hook>photoplog_thumbnails_thumbnails</hook>
+		<hook>photoplog_thumbnails_searchinfo</hook>
+		<hook>photoplog_thumbnails_sortsql_random</hook>
+		<hook>photoplog_thumbnails_sortsql_new</hook>
+
+	</hooktype>
+	<hooktype type="photoplog_upload">
+
+		<hook>photoplog_upload_start</hook>
+		<hook>photoplog_upload_complete</hook>
+		<hook>photoplog_upload_fields</hook>
+		<hook>photoplog_upload_selectcategory</hook>
+		<hook>photoplog_upload_sqlinsert</hook>
+		<hook>photoplog_upload_form</hook>
+		<hook>photoplog_upload_ftpimportform</hook>
+		<hook>photoplog_upload_doupload_start</hook>
+		<hook>photoplog_upload_doupload_complete</hook>
+
+	</hooktype>
+
+</hooks>

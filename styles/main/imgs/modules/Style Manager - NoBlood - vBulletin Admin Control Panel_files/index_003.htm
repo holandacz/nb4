@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+	<title>Style Manager - NoBlood - vBulletin Admin Control Panel</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="index_data/controlpanel.css">
+	<style type="text/css">
+		.page { background-color:white; color:black; }
+		.time { color:silver; }
+	</style>
+	<script type="text/javascript">
+	<!--
+	var SESSIONHASH = "";
+	var IMGDIR_MISC = "../cpstyles/vBulletin_3_Default";
+	var CLEARGIFURL = "./clear.gif";
+	function set_cp_title()
+	{
+		if (typeof(parent.document) != 'undefined' && typeof(parent.document) != 'unknown' && typeof(parent.document.title) == 'string')
+		{
+			parent.document.title = (document.title != '' ? document.title : 'vBulletin');
+		}
+	}
+	//-->
+	</script>
+	<script type="text/javascript" src="index_data/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="index_data/connection-min.js"></script>
+	<script type="text/javascript" src="index_data/vbulletin_global.js"></script>
+
+</head><body linkifytime="5" linkified="0" linkifying="false" style="margin: 0px;" onload="set_cp_title();">
+<div class="pagetitle">Style Manager</div>
+<div style="margin: 10px;">
+<!-- END CONTROL PANEL HEADER -->
+
+<script type="text/javascript" src="index_data_003/vbulletin_templatemgr.js"></script>
+<!-- form started:8 queries executed -->
+<form action="template.php?do=updatetemplate" method="post" name="cpform" id="cpform">
+<input name="do" value="updatetemplate" type="hidden">
+<input name="adminhash" value="f3e9b7b1ffec1bcedb42cab2adb42f8a" type="hidden">
+<input name="securitytoken" value="1221671234-e83599317d2ea92f8af04bd53e90fdb33406ecee" type="hidden">
+<br>
+<table class="tborder" id="cpform_table" width="90%" align="center" border="0" cellpadding="4" cellspacing="0">
+<tbody><tr>
+	<td class="tcat" colspan="2" align="center">
+		<div style="float: right;"><a class="helplink" href="#" onclick="js_open_help('template', 'edit', ''); return false;">Help <img src="index_data_003/cp_help.gif" alt="" title="Click for help on these options" style="vertical-align: middle;" border="0"></a></div>
+		<b>Template: <span class="normal">header (id: 1848)</span></b>
+	</td>
+</tr>
+<tr valign="top">
+	<td class="alt1">Product</td>
+	<td class="alt1">vBulletin</td>
+</tr>
+<tr valign="top">
+	<td class="alt2">Style</td>
+	<td class="alt2"><a href="http://nobloodtest.org/admincp/template.php?do=modify&amp;expandset=8&amp;group=&amp;templateid=1848&amp;searchstring=" title="Edit Templates"><b>seo1.0</b></a></td>
+</tr>
+<tr valign="top">
+	<td class="alt1">Title<dfn> <a href="http://nobloodtest.org/admincp/template.php?do=history&amp;dostyleid=8&amp;title=header" target="_blank">[View History]</a> </dfn></td>
+	<td class="alt1"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td><div id="ctrl_title"><input class="bginput" name="title" id="it_title_1" value="header" size="35" dir="ltr" tabindex="1" type="text"></div></td><td style="padding-left: 4px;" align="right"><a class="helplink" href="#" onclick="js_open_help('template', 'edit', 'title'); return false;"><img src="index_data_003/cp_help.gif" alt="" title="Click for help on this option" border="0"></a> </td></tr></tbody></table></td>
+</tr>
+<tr valign="top">
+	<td class="alt2">Template
+			<br><br>
+			<span class="smallfont"> <a href="http://nobloodtest.org/admincp/template.php?do=view&amp;title=header" target="_blank">[Show Default]</a> <br><br><!--Wrap Text<input type="checkbox" unselectable="on" onclick="set_wordwrap('ta_template', this.checked);" accesskey="w" checked="checked" />-->
+			</span><p><input unselectable="on" value="Large Edit Box" class="button" style="font-weight: normal;" onclick="window.open('textarea.php?dir=ltr&amp;name=template','textpopup','resizable=yes,scrollbars=yes,width=' + (screen.width - (screen.width/10)) + ',height=600');" type="button"></p></td>
+	<td class="alt2"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="top"><td><div id="ctrl_template"><textarea name="template" id="ta_template_2" class="code" rows="22" cols="75" style="width: 100%;" wrap="virtual" dir="ltr" tabindex="1">&lt;div
+id="centering_area"&gt;
+&lt;div id="page_area"&gt;
+&lt;div id="bannerAd_top"&gt; &lt;a href="pixels/healthcare"&gt;
+&lt;img src="pixels/mydir/invite.png" border="0" alt="Click here to see
+who are advancing transfusion alternatives and blood management."
+/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- bullseye background --&gt;
+&lt;!-- header --&gt;
+&lt;div class="header"&gt;
+&lt;!-- logo --&gt;
+&lt;a name="top"&gt;&lt;/a&gt;
+&lt;a href="$vboptions[forumhome].php$session[sessionurl_q]"&gt;&lt;img
+id="logo_image" src="$stylevar[titleimage]" border="0"
+alt="$vboptions[bbtitle]" /&gt;&lt;/a&gt;
+&lt;h1 id="logo_h1"&gt;&lt;a
+href="$vboptions[forumhome].php$session[sessionurl_q]"&gt;NoBlood&lt;/a&gt;&lt;/h1&gt;
+&lt;p
+id="logo_tagline"&gt;&lt;a
+href="$vboptions[forumhome].php$session[sessionurl_q]"&gt;Transfusion
+alternatives. Blood management.&lt;/a&gt;&lt;/p&gt;
+&lt;!-- /logo --&gt;
+&lt;!--VBSEO_RR_1--&gt;
+$_phpinclude_output</textarea><div class="smallfont"><a href="#" onclick="return resize_textarea(1, 'ta_template_2')">Increase Size</a> <a href="#" onclick="return resize_textarea(-1, 'ta_template_2')">Decrease Size</a></div></div></td><td style="padding-left: 4px;" align="right"><a class="helplink" href="#" onclick="js_open_help('template', 'edit', 'template'); return false;"><img src="index_data_003/cp_help.gif" alt="" title="Click for help on this option" border="0"></a> </td></tr></tbody></table></td>
+</tr>
+<script type="text/javascript">
+<!--
+	function js_open_phrase_ref(languageid,fieldname)
+	{
+		var qs = '';
+		if (languageid != 0) qs += '&languageid=' + languageid;
+		if (fieldname != '') qs += '&fieldname=' + fieldname;
+		window.open('phrase.php?do=quickref' + qs, 'quickref', 'width=700,height=202,resizable=yes');
+	}
+// -->
+</script>
+<script type="text/javascript" src="index_data_003/vbulletin_templatemgr.js"></script><script type="text/javascript">
+<!--
+	var textarea_id = "ta_template_2";
+	var vbphrase = { 'not_found' : "Not Found" };
+// -->
+</script>
+<tr valign="top">
+	<td class="alt1">Search in Template</td>
+	<td class="alt1">
+	<input class="bginput" name="string" accesskey="t" value="" size="20" onchange="n=0;" tabindex="1" type="text">
+	<input class="button" style="font-weight: normal;" value=" Find " accesskey="f" onclick="findInPage(document.cpform.string.value);" tabindex="1" type="button">
+	&nbsp;<input class="button" style="font-weight: normal;" value=" Copy " accesskey="c" onclick="HighlightAll();" tabindex="1" type="button">
+	&nbsp;
+	<input class="button" style="font-weight: normal;" value="View QuickRef" accesskey="v" onclick="js_open_phrase_ref(0, 0);" tabindex="1" type="button">
+	</td>
+</tr>
+<tr valign="top">
+	<td class="alt2">Save in Template History?</td>
+	<td class="alt2"><label for="savehistory"><input name="savehistory" id="savehistory" value="1" tabindex="1" type="checkbox">Yes</label><br><span class="smallfont">Comment</span> <input name="histcomment" value="" tabindex="1" class="bginput" size="50" type="text"></td>
+</tr>
+<tr>
+	<td class="tfoot" colspan="2" align="center">	<input id="submit0" class="button" tabindex="1" value="  Save  " accesskey="s" type="submit">
+	<input class="button" tabindex="1" name="return" value="Save and Reload" accesskey="e" type="submit">
+	<input id="reset0" class="button" tabindex="1" value=" Reset  " accesskey="r" type="reset">
+</td>
+</tr>
+</tbody></table>
+<input name="templateid" value="1848" type="hidden">
+<input name="group" value="" type="hidden">
+<input name="searchstring" value="" type="hidden">
+<input name="dostyleid" value="8" type="hidden">
+<input name="expandset" value="8" type="hidden">
+<input name="oldtitle" value="header" type="hidden">
+<input name="lastedit" value="1220851058" type="hidden">
+<input name="product" value="vbulletin" type="hidden">
+</form>
+<!-- form ended: 9 queries executed -->
+
+	<script type="text/javascript">
+	<!--
+	var initial_crc32 = crc32(YAHOO.util.Dom.get(textarea_id).value);
+	var confirmUnload = true;
+	YAHOO.util.Event.addListener('cpform', 'submit', function(e) { confirmUnload = false; });
+	YAHOO.util.Event.addListener(window, 'beforeunload', function(e) {
+		if (initial_crc32 != crc32(YAHOO.util.Dom.get(textarea_id).value) && confirmUnload) {
+			e.returnValue = 'There is unsaved data on the page and it may be lost.';
+		}
+	});
+	//-->
+	</script>
+	
+
+<!-- START CONTROL PANEL FOOTER -->
+<p align="center"><a href="http://www.vbulletin.com/" target="_blank" class="copyright">vBulletin® v3.7.3, Copyright ©2000-2008, Jelsoft Enterprises Ltd.</a></p>
+</div>
+</body></html>

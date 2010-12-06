@@ -1,0 +1,9 @@
+<Subject: Hai vinto su %[DOMAINNAME]%>
+
+Salve,
+
+Congratulazioni, lei ha vinto su %[DOMAINNAME]%,
+i suoi pixels sono stati selezionati!
+
+-----------------------------------------------------
+%[DOMAIN]%

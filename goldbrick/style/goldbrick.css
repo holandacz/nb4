@@ -1,0 +1,222 @@
+.media {
+background:transparent;
+color:#FFF;
+font-size:22px;
+font-weight:700;
+margin:25px;
+padding:0;
+text-align:center;
+text-decoration:none;
+}
+
+.mediabox {
+background:transparent;
+border:0 solid #ddd;
+font-weight:700;
+margin:auto;
+padding:10px;
+text-align:center;
+}
+
+.anym {
+background:transparent;
+padding:2px;
+}
+
+.anymattach {
+background:transparent;
+padding:2px;
+width: 400px;
+}
+
+.anym h1 {
+background:transparent;
+font:5px;
+}
+
+.anym img, .anymattach img {
+background:#fff;
+border:1px solid #aaa;
+color:inherit;
+float:left;
+margin:10px 10px 10px 5px;
+padding:2px;
+vertical-align:top;
+width:130px;
+}
+
+.anymclear {
+background:transparent;
+clear:both;
+}
+
+div.form-container form p { margin: 0; }
+div.form-container form p.note { margin-left: 170px; font-size: 90%; color: #333; }
+div.form-container form fieldset { margin: 10px 0; padding: 10px; border: #DDD 1px solid; }
+div.form-container form legend { font-weight: bold; color: #666; }
+div.form-container form fieldset div { padding: 0.25em 0; }
+div.form-container label, 
+div.form-container span.label { margin-right: 10px; padding: 5px 10px 0 0; width: 90px; display: block; float: left; text-align: left; position: relative; }
+div.form-container label.error, 
+div.form-container span.error { color: #C00; }
+div.form-container label em, 
+div.form-container span.label em { position: absolute; right: 0; font-size: 120%; font-style: normal; color: #C00; }
+div.form-container select.gbox,
+div.form-container input.gbox { margin: 0 0 5px 0; }
+div.form-container input:focus,
+div.form-container input.error:focus, 
+div.form-container textarea:focus {	background-color: #FFC; border-color: #FC6; }
+div.form-container div.controlset label, 
+div.form-container div.controlset input { display: inline; float: none; }
+div.form-container div.controlset div { margin-left: 170px; }
+div.form-container div.buttonrow { margin-left: 180px; }
+
+.vidleft {
+float:left;
+width:50%;
+}
+
+.vidright {
+float:right;
+width:40%;
+}
+
+.vids {
+background:#444;
+padding:5px;
+}
+
+.imgwrap {
+float:left;
+}
+
+.imgwrap img {
+background:#fff;
+border:1px solid #aaa;
+color:inherit;
+float:left;
+margin:5px 10px 0 5px;
+padding:2px;
+vertical-align:top;
+width:125px;
+}
+
+.contentwrap {
+padding:5px 0 0 5px;
+}
+
+.contentwrap h1 {
+font:18px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+text-decoration:none;
+}
+
+.contentwrap a {
+font:18px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+text-decoration:none;
+}
+
+.contentwrap p {
+padding:4px;
+}
+
+.vidsClear {
+clear:both;
+}
+
+.videopage {
+margin:auto;
+width:725px;
+}
+
+.videowrap {
+float:left;
+width:425px;
+}
+
+.viduser {
+float:left;
+height:400px;
+padding:5px 0 0 5px;
+width:290px;
+}
+
+.vidh1 {
+font:18px bold "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.topicv {
+height:18px;
+position:relative;
+}
+
+.countbg {
+color:#000;
+font-weight:700;
+position:relative;
+text-align:center;
+top:-5px;
+}
+
+/*Highslide CSS*/
+.highslide-html {
+background-color:#FFF;
+}
+
+.highslide-html-blur {
+border:2px solid gray;
+}
+
+.highslide-html-content {
+display:none;
+position:absolute;
+}
+
+.highslide-display-block {
+display:block;
+}
+
+.highslide-display-none {
+display:none;
+}
+
+.control {
+color:#999;
+display:block;
+float:right;
+font-size:9pt;
+font-weight:700;
+margin:0 5px;
+text-decoration:none;
+text-transform:uppercase;
+}
+
+.control:hover {
+color:#000 !important;
+}
+
+.highslide-move {
+cursor:move;
+}
+
+.tag_cloud {
+padding:3px;
+text-decoration:none;
+}
+
+.tag_cloud:link {
+color:#81d601;
+}
+
+.tag_cloud:visited {
+color:#019c05;
+}
+
+.tag_cloud:hover {
+background:#69da03;
+color:#fff;
+}
+
+.tag_cloud:active {
+background:#ACFC65;
+color:#fff;
+}

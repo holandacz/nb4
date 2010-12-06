@@ -1,0 +1,268 @@
+.home_main{
+	width: 972px;
+	background: #ffffff;
+	clear:both;
+	margin:0px 0px 0px 0px;
+}
+
+#home_main_left_two {
+	display:inline;
+	float:left;
+	margin-left:170px;
+	overflow:hidden;
+	width:494px;
+}
+#home_middle_box_filler_top{
+	background:transparent url(../imgs/layout/shared/filler_mainContentArea_top.gif) no-repeat scroll 0 0;
+	clear:both;
+	float:left;
+	font-size:1%;
+	height:3px;
+	width:494px;
+}
+
+#navColumn_area {
+	float:left;
+	margin-left:-664px;
+	overflow:hidden;
+	padding-left:4px;
+	width:162px;
+}
+
+#home_middle {
+	background-color:#FFFFFF;
+}
+
+#home_middle_box {
+}
+
+.home_features{
+	width: 972px;
+	height: 279px;
+	background: #a6c06d;
+	clear:both;
+	margin:0px 0px 0px 0px;
+}
+.home_features_top{
+	background: url(../imgs/home/featureBkgShadow.gif) no-repeat;
+	height: 3px;
+	font-size: 1%;
+	width: 972px;
+}
+
+.home_features_bottom{
+	background: url(../imgs/home/featureBkgShadow.gif) no-repeat 0px -3px;
+	height: 6px;
+	float: left;
+	width: 972px;
+	font-size: 1%;
+	clear: both;
+}
+
+#home_featured {
+	position: relative;
+	float: left;
+	background:#ffffff;
+	width: 415px;
+	height:269px;
+	overflow:hidden;
+	padding: 2px 0px 0px 4px;
+	margin: 2px 4px 0px 4px;
+}
+
+#home_featured_box {
+	padding: 4px;
+}
+
+#home_featured p.title {
+	font-size:16px;
+}
+#home_featured p.source {
+	font-size:14px;
+}
+
+#home_featured p.teaser {
+	font-size:12px;
+}
+
+
+#home_featured p.more {
+	font-size:11px;
+}
+
+
+.home_conditions {
+	width:118px;
+	height:240px;
+	float:left;
+}
+
+.home_conditions_top {
+	height:33px;
+	background:url(../imgs/home/home_feature_header.png);
+}
+
+.home_conditions_top h3 {
+	margin:0px;
+	padding:9px 0px 0px 8px;
+	font-size:110%;
+	color:#576f21;
+	font-style:italic;
+}
+
+.home_conditions_box {
+	border-left:1px solid #7a9149;
+	background:#f4f8e9;
+	height:240px;
+	width:116px;
+	overflow: auto;
+	/*scrollbar-arrow-color:#fff;
+	scrollbar-darkshadow-color:#e37d0e;
+	scrollbar-base-color: #fda42c;*/
+}
+
+.home_conditions_box ul {
+	margin:0px;
+	padding:0px;
+	width: 90px;
+	list-style:none;
+}
+
+.home_conditions_box li {
+	border-top:1px solid #ddd9c0;
+	margin-left:5px;
+	padding:2px 1px;
+	font-size:75%;
+}
+
+.home_conditions_box li.first {
+	border:none;
+}
+
+.home_conditions_bot {
+	height:25px;
+	padding:5px 0px 0px 18px;
+	/*background:url(../imgs/home/hp_sc_top_bot.jpg) 0px 29px;*/
+}
+/*-------------------- */
+.home_treatments {
+	margin-left:2px;
+	width:118px;
+	height:240px;
+	float:left;
+}
+
+.home_treatments_top {
+	height:33px;
+	background:url(../imgs/home/home_feature_header.png) top left;
+}
+
+.home_treatments_top h3 {
+	margin:0px;
+	padding:9px 0px 0px 8px;
+	font-size:110%;
+	color:#576f21;
+	font-style:italic;
+}
+
+.home_treatments_box {
+	border-left:1px solid #7a9149;
+	background:#f4f8e9;
+	height:240px;
+	width:116px;
+	overflow: auto;
+}
+
+.home_treatments_box ul {
+	margin:0px;
+	padding:0px;
+	width: 95px;
+	list-style:none;
+}
+
+.home_treatments_box li {
+	border-top:1px solid #ddd9c0;
+	margin-left:5px;
+	padding:2px 1px;
+	font-size:75%;
+}
+
+.home_treatments_box li.first {
+	border:none;
+}
+
+.home_treatments_bot {
+	height:25px;
+	padding:5px 0px 0px 18px;
+}
+
+/*-------------------- */
+
+
+#home_community {
+	margin-left:2px;
+	width:300px;
+	height:240px;
+	float:left;
+}
+
+.home_community_top {
+	height:33px;
+	background:url(../imgs/home/home_feature_community_header.png) top left;
+}
+
+.home_community_top h3 {
+	margin:0px;
+	padding:9px 0px 0px 8px;
+	font-size:110%;
+	color:#576f21;
+	font-style:italic;
+}
+
+.home_community_box {
+	border-left:1px solid #7a9149;
+	background:#f4f8e9;
+	height:240px;
+	width:298px;
+	overflow: auto;
+}
+
+.home_community_box ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.home_community_box li {
+
+list-style-type: none;
+list-style-image: none;
+list-style-position: outside;
+background-color: transparent;
+background-image: url(../imgs/layout/shared/star.gif);
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 0px 1px;
+padding-top: 2px;
+padding-right: 1px;
+padding-bottom: 0;
+padding-left: 18px;
+
+	border-top:1px solid #ddd9c0;
+	margin-left:5px;
+	font-size:85%;
+}
+
+.home_community_box li.first {
+	border:none;
+}
+
+#home_community a.title {
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.home_community_bot {
+	height:25px;
+	padding:5px 0px 0px 18px;
+}

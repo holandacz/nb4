@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<bitfields product="photoplog">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="photoplogpermissions">
+				<bitfield name="photoplogcanviewfiles" group="photoplog_permissions" phrase="photoplog_can_view_files" install="1,2,3,4,5,6,7">1</bitfield>
+				<bitfield name="photoplogcanuploadfiles" group="photoplog_permissions" phrase="photoplog_can_upload_files" install="2,5,6,7">2</bitfield>
+				<bitfield name="photoplogcaneditownfiles" group="photoplog_permissions" phrase="photoplog_can_edit_own_files" install="2,5,6,7">4</bitfield>
+				<bitfield name="photoplogcandeleteownfiles" group="photoplog_permissions" phrase="photoplog_can_delete_own_files" install="6">8</bitfield>
+				<bitfield name="photoplogcaneditotherfiles" group="photoplog_permissions" phrase="photoplog_can_edit_other_files" install="6">16</bitfield>
+				<bitfield name="photoplogcandeleteotherfiles" group="photoplog_permissions" phrase="photoplog_can_delete_other_files" install="6">32</bitfield>
+				<bitfield name="photoplogcanviewcomments" group="photoplog_permissions" phrase="photoplog_can_view_comments" install="1,2,3,4,5,6,7">64</bitfield>
+				<bitfield name="photoplogcancommentonfiles" group="photoplog_permissions" phrase="photoplog_can_comment_on_files" install="2,5,6,7">128</bitfield>
+				<bitfield name="photoplogcaneditowncomments" group="photoplog_permissions" phrase="photoplog_can_edit_own_comments" install="2,5,6,7">256</bitfield>
+				<bitfield name="photoplogcandeleteowncomments" group="photoplog_permissions" phrase="photoplog_can_delete_own_comments" install="6">512</bitfield>
+				<bitfield name="photoplogcaneditothercomments" group="photoplog_permissions" phrase="photoplog_can_edit_other_comments" install="6">1024</bitfield>
+				<bitfield name="photoplogcandeleteothercomments" group="photoplog_permissions" phrase="photoplog_can_delete_other_comments" install="6">2048</bitfield>
+				<bitfield intperm="true" name="photoplogmaxfilesize" group="photoplog_permissions" phrase="photoplog_max_file_size">512000</bitfield>
+				<bitfield intperm="true" name="photoplogmaxfilelimit" group="photoplog_permissions" phrase="photoplog_max_file_limit">100</bitfield>
+				<bitfield name="photoplogcanusesearchfeature" group="photoplog_permissions" phrase="photoplog_can_use_search_feature" install="1,2,3,4,5,6,7">4096</bitfield>
+				<bitfield name="photoplogcanuploadunmoderatedfiles" group="photoplog_permissions" phrase="photoplog_can_upload_unmoderated_files" install="2,5,6,7">8192</bitfield>
+				<bitfield name="photoplogcanpostunmoderatedcomments" group="photoplog_permissions" phrase="photoplog_can_post_unmoderated_comments" install="2,5,6,7">16384</bitfield>
+				<bitfield name="photoplogcanuseslideshowfeature" group="photoplog_permissions" phrase="photoplog_can_use_slideshow_feature" install="1,2,3,4,5,6,7">32768</bitfield>
+				<bitfield name="photoplogcanuploadasdifferentuser" group="photoplog_permissions" phrase="photoplog_can_upload_as_different_user" install="6">65536</bitfield>
+				<bitfield name="photoplogcanusealbumfeature" group="photoplog_permissions" phrase="photoplog_can_use_album_feature" install="2,5,6,7">131072</bitfield>
+				<bitfield name="photoplogcansuggestcategories" group="photoplog_permissions" phrase="photoplog_can_suggest_categories" install="2,5,6,7">262144</bitfield>
+				<bitfield name="photoplogcanuseftpimport" group="photoplog_permissions" phrase="photoplog_can_use_ftp_import" install="6">524288</bitfield>
+				<bitfield name="photoplogcancreateunmoderatedcategories" group="photoplog_permissions" phrase="photoplog_can_create_unmoderated_categories" install="2,5,6,7">1048576</bitfield>
+			</group>
+		</group>
+		<group name="nocache">
+			<group name="photoplogexifinfo">
+				<bitfield name="photoplog_file_name">1</bitfield>
+				<bitfield name="photoplog_file_size">2</bitfield>
+				<bitfield name="photoplog_file_date">4</bitfield>
+				<bitfield name="photoplog_camera_make">8</bitfield>
+				<bitfield name="photoplog_camera_model">16</bitfield>
+				<bitfield name="photoplog_date_time">32</bitfield>
+				<bitfield name="photoplog_resolution">64</bitfield>
+				<bitfield name="photoplog_orientation">128</bitfield>
+				<bitfield name="photoplog_color_bw">256</bitfield>
+				<bitfield name="photoplog_flash_used">512</bitfield>
+				<bitfield name="photoplog_focal_length">1024</bitfield>
+				<bitfield name="photoplog_digital_zoom">2048</bitfield>
+				<bitfield name="photoplog_ccd_width">4096</bitfield>
+				<bitfield name="photoplog_exposure_time">8192</bitfield>
+				<bitfield name="photoplog_aperture">16384</bitfield>
+				<bitfield name="photoplog_focus_dist">32768</bitfield>
+				<bitfield name="photoplog_iso_equiv">65536</bitfield>
+				<bitfield name="photoplog_exposure_bias">131072</bitfield>
+				<bitfield name="photoplog_whitebalance">262144</bitfield>
+				<bitfield name="photoplog_light_source">524288</bitfield>
+				<bitfield name="photoplog_metering_mode">1048576</bitfield>
+				<bitfield name="photoplog_exposure">2097152</bitfield>
+				<bitfield name="photoplog_exposure_mode">4194304</bitfield>
+				<bitfield name="photoplog_jpeg_process">8388608</bitfield>
+				<bitfield name="photoplog_gps_latitude">16777216</bitfield>
+				<bitfield name="photoplog_gps_longitude">33554432</bitfield>
+				<bitfield name="photoplog_gps_altitude">67108864</bitfield>
+				<bitfield name="photoplog_comment">134217728</bitfield>
+			</group>
+		</group>
+	<ignoregroups>
+	</ignoregroups>
+	</bitfielddefs>
+</bitfields>

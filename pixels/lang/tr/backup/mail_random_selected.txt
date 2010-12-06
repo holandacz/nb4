@@ -1,0 +1,10 @@
+<Subject: %[DOMAINNAME]% kazanan seçildiniz>
+
+Merhaba,
+
+Tebrikler...
+ %[DOMAINNAME]%, adresinde kazanan sitenizin pixelleri oldu....
+
+
+-----------------------------------------------------
+%[DOMAIN]%

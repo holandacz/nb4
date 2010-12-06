@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugins>
+	<plugin active="1" executionorder="5" product="vbulletin">
+		<title>Memberlist -- Custom Profile Field Sorting</title>
+		<hookname>memberlist_query_userscount</hookname>
+		<phpcode><![CDATA[$sortfield = $vbulletin->input->clean_gpc('r', 'sortfield', TYPE_STR);
+
+switch ($sortfield)
+{
+	case 'username':
+		$sqlsort = 'user.username';
+		break;
+	case 'joindate':
+		$sqlsort = 'user.joindate';
+		break;
+	case 'posts':
+		$sqlsort = 'user.posts';
+		break;
+	case 'lastvisit':
+		$sqlsort = 'lastvisittime';
+		break;
+	case 'reputation':
+		$sqlsort = iif($show['reputationcol'], 'reputationscore', 'user.username');
+		$secondarysortsql = ', user.username';
+		break;
+	case 'urlname':
+		$sqlsort = 'userfield.fieldX';
+		break;
+	default:
+		$sqlsort = 'user.username';
+		$sortfield = 'username';
+}]]></phpcode>
+	</plugin>
+</plugins>

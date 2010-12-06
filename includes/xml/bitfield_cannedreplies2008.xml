@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bitfields product="cannedreplies2008">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="cannedreplies">
+				<bitfield name="canusecr" group="canned_group_permissions" phrase="can_use_cr">1</bitfield>
+				<bitfield intperm="true" name="maxcr" group="canned_group_permissions" phrase="max_cr">2</bitfield>
+			</group>
+		</group>
+	</bitfielddefs>
+	<ignoregroups>
+        <group name="canned_group_permissions" ignoregroups="1" />
+	</ignoregroups>
+</bitfields>

@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+  Million Pixel Script (R)
+
+  (c) 2006 texmedia.de - All rights reserved.
+-------------------------------------------------------------------------------
+  License for PHP Pixel Script for a single licence
+  License for PHP Pixel Script for an uncopyrighted version
+-------------------------------------------------------------------------------------------
+
+* texmedia.de Retains full ownership and copyright of the software.
+  (you can demonstate on your own purchased uncopyrighted script, on your
+  main page, although most files are editable, you are not permitted
+  to infringe any copy rights!.
+
+* This license grants permission for the Client to use the software on the
+  domain specified Only.
+
+* This license grants permission for the Client to modify the source code for
+  the purpose of customisation & integration with his website.
+
+* The Client will not sell, license or distribute the software, either in its
+  entirety or modified form to a third party, or use in any other products,
+  unless agreed under different terms by texmedia.de.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+  PURPOSE AND NONINFRINGEMENT.
+
+  IN NO EVENT SHALL TEXMEDIA.DE BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  Contact:
+  texmedia.de
+  Markus Scherner
+  Kahlenberg 5
+  D-38444 Wolfsburg
+  Germany
+  http://www.texmedia.de
+
+
+  The script is under the copyright of texmedia.de. Your customisations are
+  owned by you, however the original code remains under the copyright of
+  texmedia.de, and cannot be redistributed/and or sold.
+

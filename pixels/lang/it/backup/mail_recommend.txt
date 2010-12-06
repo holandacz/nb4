@@ -1,0 +1,13 @@
+<Subject: hai mai visto %[DOMAINNAME]%? >
+
+ciao,
+
+%[EMAIL]% ti invito a dare un ochhiata a:
+
+%[DOMAIN]%
+
+Qui sarai in grado di far conoscere 
+il Tuo sito a migliaia di visitatori
+-----------------------------------------------------
+Questo avviso e stato spedito da %[EMAIL]% .
+%[DOMAIN]%

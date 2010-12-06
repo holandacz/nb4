@@ -1,0 +1,23 @@
+<Subject: %[DOMAINNAME]% - Site Aktivasyonu >
+
+Merhaba,
+
+ (%[URL]%) sitesini baþarýyla
+%[DOMAINNAME]% sayfasýna eklediniz ve pixelleriniz sizin için ayrýldý!
+
+Sitenizi aktive etmek için lütfen asaðýdaki linke önümüzdeki iki gün içinde týklayýn:
+
+%[ALINK]%
+
+%[DOMAINNAME]% üzerinde ayýrdýðýnýz pixeller linke týkladýktan sonra aktif hale getirilecektir.
+
+Aktivasyonun gerçekleþmemesi halinde rezervasyonunuz silinecektir.
+
+Giriþinizi silmek isterseniz:
+%[KLINK]%
+
+Bol ziyaretçili günler diler, tavsiyelerinizin bizim için çok önemli olduðunu bilmenizi isteriz...
+
+Bizi tercih ettiðiniz için teþekkürler!
+%[DOMAINNAME]% Takýmý
+%[DOMAIN]%

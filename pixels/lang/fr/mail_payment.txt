@@ -1,0 +1,25 @@
+<Subject: %[DOMAINNAME]% - Lien pour le paiement >
+
+Bonjour,
+
+Merci d'avoir enregistré votre site web (%[URL]%)
+sur %[DOMAINNAME]%
+
+Votre lien sera activé dès que nous recevrons %[B]%
+sur notre compte.
+
+Dans le cas où vous n'avez pas payé pendant le processus de réservation en ligne,
+vous pouvez toujours le faire en utilisant le lien suivant
+dans les %[DELETE_DAYS]% jours à venir :
+
+%[PAYLINK]%
+
+Si aucun paiment ne nous est parvenu d'ici à 2 jours,
+votre réservation de Pixels Premium sera supprimée.
+
+
+Nous vous souhaitons de nombreuses visites sur votre site
+et espérons que vous nous recommenderez à vos amis !
+
+Merci d'avoir utilisé %[DOMAINNAME]% !
+%[DOMAIN]%

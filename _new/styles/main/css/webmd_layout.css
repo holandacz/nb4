@@ -1,0 +1,230 @@
+		/*  =PAGE CONTAINER DIVS
+-------------------------------------------------------  */
+#centering_area {
+	text-align: center;
+	width: 100%;
+}
+#page_area {
+	width: 988px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+* html #page_area {
+	width: 978px;
+}
+
+/* Background Styles for all 3 columns */
+#contentBackground_fmt {
+	clear: both;
+	background: url(../../consumer_assets/site_images/layout/shared/main_bg.png) repeat-y;
+}
+* html #contentBackground_fmt {
+	height:1%;
+}
+
+/*  =LEFT COLUMN STYLES
+------------------------------------------------------- */
+#navColumn_area {
+	float: left;
+	width: 162px;
+	padding-left: 4px;
+	margin-left:-664px;
+	overflow: hidden;
+}
+#navColumnFiller_top_fmt {
+	float: left;
+	width: 162px;
+	height: 3px;
+	font-size: 1%;
+	background:  url(../../consumer_assets/site_images/layout/shared/filler_navColumn_top.gif) no-repeat;
+}
+* html #navColumnFiller_top_fmt {
+	float: none;
+	margin-top: 0px;
+}
+#navColumn_ctr {
+	background-color: #ffffff;
+}
+
+/*  =MIDDLE/RIGHT COLUMN CONTAINER
+------------------------------------------------------- */
+#mainContent_ThirdCol_area {
+	width: 810px;
+	float: right;
+}
+* html #mainContent_ThirdCol_area {
+	width: 810px;
+	height: 1%;
+}
+#mainContent_ThirdCol_ctr {
+	background-color: #ffffff;
+}
+
+/*  =MAIN CONTENT COLUMN STYLES
+------------------------------------------------------- */
+#mainContentContainer_area {
+	width: 988px;
+	padding-bottom: 4px;
+}
+#mainContent_area {
+	width: 494px;
+	float: left;
+	margin-left:170px;
+	display:inline;
+	overflow: hidden;
+}
+#mainContent_ctr {
+	background-color: #ffffff;
+}
+#mainBottom_fmt {
+	clear:both;
+	width: 976px;
+	font-size: 1%;
+}
+#middleContent_ctr {
+	background-color: #FFFFFF;
+}
+/* fix for IE display issue */
+* html #middleContent_fmt {
+	height: 1%;
+}
+#mainContentSectionFiller_Top_fmt {
+	clear: both;
+	float: left;
+	width: 494px;
+	height: 3px;
+	background: url(../../consumer_assets/site_images/layout/shared/filler_mainContentArea_top.gif) no-repeat;
+	font-size: 1%;
+}
+.pageShadow_left_fmt {
+	padding-left: 4px;
+	background: url(../../consumer_assets/site_images/layout/shared/shadow_page_left.gif) left repeat-y;
+}
+.pageShadow_right_fmt {
+	padding-right: 4px;
+	background: url(../../consumer_assets/site_images/layout/shared/shadow_page_right.gif) right repeat-y;
+}
+.bottomBackground_fmt {
+	background-color: #FFFFFF;
+}
+.bottomBGCorners_fmt {
+	background: #FFFFFF url(../../consumer_assets/site_images/layout/shared/bottombg_corner_lower_right.gif) bottom right no-repeat;
+	font-size: 1%;
+}
+
+/*  =THIRD COLUMN STYLES
+------------------------------------------------------- */
+
+#thirdCol_area {
+	width: 312px;
+	float: left;
+	margin-left: 4px;
+	overflow: hidden;
+}
+#thirdCol_ctr {
+	background-color: #ffffff;
+}
+#thirdColFiller_top_fmt {
+	width: 308px;
+	height: 3px;
+	background: url(../../consumer_assets/site_images/layout/shared/filler_ThirdCol_top.gif) no-repeat;
+	font-size: 1%;
+}
+
+/*  =FOOTER DIVS & STYLES
+------------------------------------------------------- */
+#footer_rdr {
+	width: 988px;
+	padding-bottom: 15px;
+}
+.topFTCorners_fmt {
+	background: #FFFFFF url('../../consumer_assets/site_images/layout/shared/footerbg_corner_upper_right.gif') bottom right no-repeat;
+	font-size: 1%;
+}
+.bottomFTCorners_fmt {
+	background: #FFFFFF url('../../consumer_assets/site_images/layout/shared/bottombg_corner_lower_right.gif') bottom right no-repeat;
+	font-size:1%;
+}
+#footer_rdr #FTShadow_left_fmt {
+	padding-left: 4px;
+	background: url('../../consumer_assets/site_images/layout/shared/shadow_page_left.gif') left repeat-y;
+}
+#footer_rdr #FTShadow_right_fmt {
+	padding-right: 4px;
+	background: url('../../consumer_assets/site_images/layout/shared/shadow_page_right.gif') right repeat-y;
+}
+#footer_rdr #FTBackground_fmt {
+	background-color: #FFFFFF;
+}
+
+#footer_rdr #bottomShadow_fmt {
+	height: 4px;
+	background: url('../../consumer_assets/site_images/layout/shared/footerbg_shadow.gif') repeat-x;
+	margin: 0px 3px 0px -2px;
+	font-size: 1%;
+}
+
+
+/* GENERAL STYLES
+-----------------------------------------------*/
+.contentDivider_fmt {
+	float: left;
+	height: 4px;
+	background: url(../../consumer_assets/site_images/layout/shared/divider_content.gif) repeat-x;
+	width: 988px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 1%;
+}
+.moduleSpacer_rdr {
+	height: 4px;
+	background: #ffffff url(../../consumer_assets/site_images/layout/shared/spacer.gif) repeat;
+	font-size: 1%;
+	clear: both;
+}
+.notch_rdr {
+	width: 312px;
+	height: 8px;
+	background: #ffffff url(../../consumer_assets/site_images/layout/shared/right_notch.gif) right no-repeat;
+	font-size: 1%;
+}
+
+/* Below styles are needed to make the center pane look right
+-----------------------------------------------*/
+.composite.twoCol_fmt {
+position:relative;
+width: 494px;
+}
+
+/*--- composite container styles ---*/
+.composite.twoCol_fmt .left_ctr {
+float: left;
+width: 243px;
+}
+
+.composite.twoCol_fmt .right_ctr {
+float: left;
+width: 250px;
+}
+
+.composite.twoCol_fmt .mainContentSectionFooter_fmt {
+display: none;
+}
+
+/* automatically clears floats */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

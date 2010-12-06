@@ -1,0 +1,14 @@
+<Subject: Connaissez-vous %[DOMAINNAME]%? >
+
+Bonjour,
+
+%[EMAIL]% vous recommande d'aller jeter un coup d'oeil à :
+
+%[DOMAIN]%
+
+Vous pourrez y placer un lien vers votre site web
+et gagner de nouveaux visiteurs.
+
+-----------------------------------------------------
+Cette recommendation vous est envoyé par %[EMAIL]% .
+%[DOMAIN]%

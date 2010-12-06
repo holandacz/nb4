@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bitfields product="vbgooglemapme">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="vbgmepermissions">
+				<bitfield name="canviewvbgme" group="googlemapme_permissions" phrase="can_view_vbgme">1</bitfield>
+				<bitfield name="canaddvbgme" group="googlemapme_permissions" phrase="can_add_vbgme">2</bitfield>
+				<bitfield name="caneditvbgme" group="googlemapme_permissions" phrase="can_edit_vbgme">4</bitfield>
+				<bitfield name="candeletevbgme" group="googlemapme_permissions" phrase="can_delete_vbgme">8</bitfield>
+				<bitfield name="caneditownvbgme" group="googlemapme_permissions" phrase="can_edit_ownvbgme">16</bitfield>
+
+			</group>
+		</group>
+		<group name="misc">
+			<group name="vbgmeadminperms">
+				<bitfield name="canadminvbgooglemapme">1</bitfield>
+			</group>
+		</group>
+	</bitfielddefs>
+</bitfields>
+

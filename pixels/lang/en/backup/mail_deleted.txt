@@ -1,0 +1,16 @@
+<Subject: %[DOMAINNAME]% - Your link was removed >
+
+Hello,
+
+You have registered your Website (%[URL]%) at
+%[DOMAINNAME]%.
+Your pixels have been expired and removed.
+
+%[VISITORS]% visitors clicked on your image to visit your webpage/site.
+
+If you want you can pixel your page once again.
+
+Thank You!
+The %[DOMAINNAME]% Team
+
+%[DOMAIN]%

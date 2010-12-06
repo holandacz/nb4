@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>vBSEO 3.2.0 Readme File</title>
+<style type="text/css">
+
+body {
+	margin: 0px;
+	background-color: #EFEFEF;
+}
+.header {
+	background-color: #465786;
+	border-bottom: #FFFFFF 1px solid;
+	padding-top:8px;
+	padding-left:20px;
+	padding-bottom:26px;
+}
+.tagline {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	top:36px;
+	left:20px;
+}
+.header_nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	height: 23px;
+	padding-left: 10px;
+}
+.header_nav a:link, .header_nav a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+.header_nav a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: underline;
+}
+.left_side_nav {
+	background-color: #EFEFEF;
+	vertical-align: top;
+	padding-top: 0px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.main_container {
+	background-color: #E0E0E0;
+	vertical-align: top;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.content_background {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #FFFFFF;
+	background-repeat: repeat;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	padding: 15px;
+}
+.notices {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	background-color: #FFFFCC;
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	padding: 6px;
+	border: 1px solid #CC0000;
+}
+.codes {
+	font-family: "Courier New", Courier, monospace;
+	border:1px dashed gray;
+	font-size: 11px;
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	padding: 6px;
+}
+.important {
+	color: #FF0000;
+	font-weight: bold;
+}
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 20px;
+}
+h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #6E7A9A;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+} 
+.menutitle {
+	cursor:pointer;
+	margin-bottom: 2px;
+	background-color:#E0E0E0;
+	color:#OOOOOO;
+	width:100%;
+	padding:4px;
+	text-align:left;
+	font-weight:normal;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.menutitle a:link, .menutitle a:visited {
+	color:#000000;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.menutitle a:hover {
+	color:#999999;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle {
+	cursor:pointer;
+	margin-bottom: 2px;
+	background-color: #CCCCCC;
+	color:#FFFFFF;
+	width:100%;
+	padding:4px;
+	text-align:left;
+	font-weight:normal;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle a:link, .submenutitle a:visited {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle a:hover {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:underline;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenu {
+	margin-bottom: 0.5em;
+}
+.nav_divider {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #A9A9A9;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.style1 {color: #FF0000}
+</style>
+ 
+<script type="text/javascript">
+function getel(eid)
+{
+	return document.all ? document.all[eid] : document.getElementById(eid)
+}
+function switchpage(divid)
+{
+	getel('contentarea').innerHTML = getel(divid).innerHTML
+	return false
+}
+function switchmenu(menuid)
+{
+	getel(menuid).style.display = getel(menuid).style.display ? '' : 'none'
+}
+</script>
+</head>
+
+<body onload="switchpage('copyrights')">
+<h1 class="header">vBSEO 3.2.0 Readme File</h1>
+<p class="tagline">vBSEO Installation and upgrade instructions</p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td width="18%" class="header_nav">&nbsp;</td>
+		<td width="82%" align="right" class="header_nav">
+			<a href="http://www.vbseo.com" target="_blank"><strong>vBSEO Home</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/tickets/" target="_blank"><strong>Support Ticket System</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/downloads/" target="_blank"><strong>Downloads</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/aff/" target="_blank"><strong>Affiliate Program</strong></a>&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="18%" class="left_side_nav">
+		<div id="masterdiv">
+			
+			
+			
+			
+			<div class="menutitle">
+			<a href="#copy" onclick="return switchpage('copyrights')">
+			Copyrights, Credits, and<br />
+		  <strong>Important Information</strong></a>			</div>
+		
+
+
+			<div class="menutitle">
+			<a href="#vb35i" onclick="return switchpage('vb35installation')">
+			vBulletin 3.5.x &amp; 3.6.x &amp; 3.7.x<br />
+			<strong>Installation Instructions</strong></a>			</div>
+		
+
+
+
+			<div class="menutitle">
+			<a href="#vb35u" onclick="return switchpage('vb35upgrade')">
+			vBulletin 3.5.x &amp; 3.6.x &amp; 3.7.x<br />
+			<strong>Upgrade Instructions</strong></a>			</div>
+			
+
+
+
+			<div class="menutitle">
+			<a href="#vb3i" onclick="return switchpage('vb3installation')">
+			vBulletin 3.0.x<br />
+			<strong>Installation Instructions</strong></a>			</div>
+			
+
+
+
+			<div class="menutitle" >
+			<a href="#vb3u" onclick="return switchpage('vb3upgrade')">
+			vBulletin 3.0.x<br />
+			<strong>Upgrade Instructions</strong></a>			</div>
+			
+
+
+
+			<div class="menutitle" onclick="switchmenu('sub1')">
+			<a href="#others" onclick="return switchpage('otherservers')">
+			Installing vBSEO under<br />
+			<strong>Other Servers</strong></a>			</div>
+			<div class="submenu" id="sub1">
+				<div class="submenutitle">
+				<a href="#others" onclick="return switchpage('iiswebserver')">IIS Web Server</a><br />
+				<a href="#others" onclick="return switchpage('lighttpdwebserver')">Lighttpd Web Server</a><br />
+				<a href="#others" onclick="return switchpage('zueswebserver')">Zeus Web Server</a><br />
+				<a href="#others" onclick="return switchpage('litespeedwebserver')">Litespeed Web Server</a>				</div>
+			</div>
+			
+
+
+			<div class="menutitle" >
+			<a href="#vbseositemaps" onclick="return switchpage('vbseositemaps')">
+			vBSEO Google Sitemaps<br />
+			<strong>FREE Plugin</strong></a>			</div>
+
+			<div class="menutitle" >
+			<a href="#vbseositemaps" onclick="return switchpage('vbseorenewals')">
+			vBSEO License<br/><strong> Renew $35</strong><br /></a>			</div>
+			
+			
+			
+			
+			
+		</div>		</td>
+		<td width="80%" class="main_container"><div class="content_background" id="contentarea"></div></td>
+		<td width="6px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="18%" class="header_nav">&nbsp;</td>
+		<td width="82%" class="header_nav"><em>Thank-you for choosing vBSEO, the definitive SEO enhancement for vBulletin powered forums!</em></td>
+	</tr>
+</table>
+<a name="copy"></a>
+<div class="content_background" id="copyrights">
+	
+<div class="notices"><strong>Note:</strong> If you encounter issues during the installation, please verify all the points in the <strong><a href="./troubleshooting.txt">troubleshooting</a></strong> file before posting a support request. Thank-you.</div>
+	<br />
+
+	
+	<h2>Copyrights/Important Info</h2>
+	<h3>Copyright Statement</h3>
+	vBSEO 3.2.0 is &copy; 2005-2008 Crawlability, Inc.<br />
+	<br />
+	<h3>License Agreement</h3>
+	<a href="http://www.crawlability.com/vbseo/license/">http://www.crawlability.com/vbseo/license/</a><br /><br />
+	
+	<h3>Read (and follow) these points as described in the license agreement:</h3>
+	<ol>
+		<li>You ARE NOT allowed to install the script in a domain other than the 'licensed' domain.</li>
+		<li>You ARE NOT allowed to REMOVE or MODIFY the copyright code within pages enhanced by vBSEO unless you purchase our <a href='http://www.vbseo.com/branding-removal-option.html'>Branding Removal Option</a></b>.</li>
+		<li>You ARE NOT allowed to REMOVE or MODIFY the copyright text within the .php files themselves.</li>
+		<li>You ARE NOT allowed to DISTRIBUTE the contents of any of the included files.</li>
+		<li>You ARE NOT allowed to COPY ANY PARTS of the code and/or use it for distribution.</li>
+	</ol>
+	Thank-you for your cooperation.
+</div>
+<a name="vb35i"></a>
+<div class="content_background" id="vb35installation">
+	<h2>vBulletin 3.5.x &amp; 3.6.x &amp; 3.7.x Installation Instructions</h2>
+	<div class="notices"><strong>Note:</strong> For non-technical users, we now provide a <b><a href='http://www.vbseo.com/en/installation-service.html'>vBSEO Installation Service</a></b>.</div>	
+	<br />
+	<h3>A. Upload ALL the files in the 'upload' folder to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided in your 'upload' folder.</div>
+	<br />
+	<br />
+	<h3>B. License your vBSEO instance:</h3>
+	<ol>
+	  <li>CHMOD 666 the 'vB-root/includes/config_vbseo.php' file.</li>
+	  <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+	  <li>Define a password for your vBSEO Control Panel by entering it twice in the fields provided, you will be redirected to the settings page. </li>
+	  <li>Copy/Paste your current key: <span class="important">32_digit_key_in_red </span>into the license key field provided:
+	    <ol>
+	          <li>Please make sure that your forums URL in vBulletin AdminCP option is specified correctly.</li>
+            <li>If all settings are specified correctly and your license key does not still turn green (after saving settings), please <a href='http://www.vbseo.com/tickets/'>open a support ticket</a>.</li>
+        </ol>
+      </li>
+  </ol>
+	<h3>C. Upload the vBSEO .htaccess file (located in the 'htaccess' folder) to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> In some operating systems, the .htaccess file is not visible. If this is your case, find the htaccess.txt file in the same folder, (1) upload it to your forum root folder and (2) rename it to <em>.htaccess</em>.</div>
+	<br />
+	<h3>D. Go to your ADMIN CP &gt; 'Plugin System' &gt; 'Manage Products' &gt; Click on [Add/Import Product]</h3>
+	<ol>
+		<li>Browse to the 'docs' folder of the installation package and open 'crawlability_vbseo.xml', Click 'Import'.</li>
+	</ol>
+	<h3>E. Optional Step - Define a custom position for your copyright statement:</h3>
+	Enter the following code in your footer template:<br /><br />
+	<div class="codes">&lt;!--VBSEO_COPYRIGHT--&gt;</div><br />
+	<h3>F. Configure vBSEO:</h3>
+	<div class="notices"><strong>Note:</strong> The vBSEO default settings are optimal for most forums, do not change settings you are not familiarized with.</div>
+	<ol>
+		<li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+	    <li>Login using the password you defined in step B. </li>
+	    <li>Configure vBSEO settings as desired.</li>
+      <li>For security purposes CHMOD 644 your 'config_vbseo.php' file after configuring vBSEO.</li>
+  </ol>
+</div>
+<a name="vb35u"></a>
+
+
+
+
+
+
+
+
+
+
+<div class="content_background" id="vb35upgrade">
+	
+	<div class="notices"><strong>Note:</strong> For non-technical users, we now provide a <b><a href='http://www.vbseo.com/en/upgrade-service/'>vBSEO Ugrade Service</a></b>.</div>	
+	<br />	
+
+<h2>vBulletin 3.5.x &amp; 3.6.x &amp; 3.7.x Upgrade Instructions</h2>
+	<h3>A. Visit your vBSEO CP (forums/vbseocp.php) and backup your current settings:</h3>
+	<ol>
+		<li>Click on the 'XML' link for vbseo_all.xml and save a backup of your setup file.</li>
+    </ol>
+	<h3>B. Upload (and replace) ALL files included in the 'upload' folder to your <em>forum root</em> folder </h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided in your 'upload' folder.</div>
+<br />
+	<h3>C. Go to your ADMIN CP &gt; 'Plugin System' &gt; 'Manage Products'</h3>
+	<ol>
+		<li>Click on [Add/Import Product]</li>
+		<li>Browse to the 'docs' folder of the installation package, open 'crawlability_vbseo.xml', <span class="important">set 'Allow Overwrite' to 'Yes'</span> then click 'Import'.</li>
+  </ol>
+	<h3>D. License your vBSEO instance and restore your current settings:</h3>
+	<ol>
+      <li>CHMOD 666 the 'vB-root/includes/config_vbseo.php' file.</li>
+	  <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+	  <li>Define a password for your vBSEO Control Panel by entering it twice in the fields provided, you will be redirected to the settings page. </li>
+	  <li>Copy/Paste your current key: <span class="important">32_digit_key_in_red </span>into the license key field provided:
+	        <ol>
+	          <li>Please make sure that your forums URL in vBulletin AdminCP option is specified correctly.</li>
+            <li>If all settings are specified correctly and your license key does still not turn green (after saving settings), please <a href='http://www.vbseo.com/tickets/'>open a support ticket</a>.</li>
+        </ol>
+      </li>
+      <li>Click on the 'Browse' button within the '<strong>Upload a Settings (.xml) File</strong>' box.</li>
+      <li>Upload your previously saved <em>vbseo_all.xml</em> settings file.</li>
+      <li>For security purposes CHMOD 644 your 'config_vbseo.php' file after completing the steps above.</li>
+  </ol>
+</div>
+<a name="vb3i"></a>
+<div class="content_background" id="vb3installation">
+	<h2>vBulletin 3.0.x Installation Instructions</h2>
+	<div class="notices"><strong>Note:</strong> For non-technical users, we now provide a <b><a href='http://www.vbseo.com/en/installation-service.html'>vBSEO Installation Service</a></b>.</div>	
+	<br />	
+	<h3>A. Upload ALL the files in the 'upload' folder to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided in your 'upload' folder.</div>
+	<br />
+    <h3>B. License your vBSEO instance:</h3>
+    <ol>
+      <li>CHMOD 666 the 'vB-root/includes/config_vbseo.php' file.</li>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+      <li>Define a password for your vBSEO Control Panel by entering it twice in the fields provided, you will be redirected to the settings page. </li>
+      <li>Copy/Paste your current key: <span class="important">32_digit_key_in_red </span>into the license key field provided:
+            <ol>
+	          <li>Please make sure that your forums URL in vBulletin AdminCP option is specified correctly.</li>
+            <li>If all settings are specified correctly and your license key does still not turn green (after saving settings), please <a href='http://www.vbseo.com/tickets/'>open a support ticket</a>.</li>
+        </ol>
+      </li>
+  </ol>
+    </ol>
+    <h3>C. Upload the vBSEO .htaccess file (located in the 'htaccess' folder) to your <em>forum root</em> folder.</h3>
+    <div class="notices"><strong>Note:</strong> In some operating systems, the .htaccess file is not visible. If this is your case, find the htaccess.txt file in the same folder, (1) upload it to your forum root folder and (2) rename it to <em>.htaccess</em>.</div>
+    <br />
+    <h3>D. In vB-root/includes/functions.php:</h3>
+    Find this code:<br />
+    <br />
+    <div class="codes">if ($vboptions['gzipoutput'] AND !headers_sent())</div>
+    <br />
+Add JUST BEFORE it:<br />
+<br />
+<div class="codes">if(@include_once('functions_vbseo.php')) <br />
+  $output = make_crawlable($output);</div>
+<br />
+<h3>E. Optional Step - Define a custom position for your copyright statement:</h3>
+    Enter the following code in your footer template:<br />
+    <br />
+    <div class="codes">&lt;!--VBSEO_COPYRIGHT--&gt;</div>
+    <br />
+    <h3>F. Configure vBSEO:</h3>
+    <div class="notices"><strong>Note:</strong> The vBSEO default settings are optimal for most forums, do not change settings you are not familiarized with.</div>
+    <ol>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+      <li>Login using the password you defined in step B. </li>
+      <li>Configure vBSEO settings as desired.</li>
+      <li>For security purposes CHMOD 644 your 'config_vbseo.php' file after configuring vBSEO.</li>
+  </ol>
+</div>
+<a name="vb3u"></a>
+<div class="content_background" id="vb3upgrade">
+	<h2>vBulletin 3.0.x Upgrade Instructions</h2>
+	<h3>A. Visit your vBSEO CP (forums/vbseocp.php) and backup your current settings:</h3>
+	<ol>
+      <li>Click on the 'XML' link for vbseo_all.xml and save a backup of your setup file.</li>
+  </ol>
+	<h3>B. Upload (and replace) ALL files included in the 'upload' folder to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided in your 'upload' folder.</div>
+	<br />
+	<h3>C. License your vBSEO instance and restore your current settings:</h3>
+    <ol>
+      <li>CHMOD 666 the 'vB-root/includes/config_vbseo.php' file.</li>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseocp.php.</li>
+      <li>Define a password for your vBSEO Control Panel by entering it twice in the fields provided, you will be redirected to the settings page. </li>
+      <li>Copy/Paste your current key: <span class="important">32_digit_key_in_red </span>into the license key field provided:
+           <ol>
+	          <li>Please make sure that your forums URL in vBulletin AdminCP option is specified correctly.</li>
+            <li>If all settings are specified correctly and your license key does still not turn green (after saving settings), please <a href='http://www.vbseo.com/tickets/'>open a support ticket</a>.</li>
+        </ol>
+      </li>
+  </ol>
+      <li>Click on the 'Browse' button within the '<strong>Upload a Settings (.xml) File</strong>' box.</li>
+      <li>Upload your previously saved <em>vbseo_all.xml</em> settings file.</li>
+      <li>For security purposes CHMOD 644 your 'config_vbseo.php' file after completing the steps above.</li>
+  </ol>
+</div>
+<a name="others"></a>
+<div class="content_background" id="otherservers">
+	<h2>Installing vBSEO under Other Servers</h2>
+	vBSEO supports various other web servers like IIS, Lighttpd, Zeus &amp; Litespeed<br />
+	<br />
+	<div class="notices"><strong>Note:</strong> Often, the installation procedure for these servers types requires assistance from our support team. Please submit a support ticket if you have any questions.</div>
+		<ul>
+			<li><a href="#others" onclick="return switchpage('iiswebserver')">IIS Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('lighttpdwebserver')">Lighttpd Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('zueswebserver')">Zeus Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('litespeedwebserver')">Litespeed Web Server</a></li>
+		</ul>
+</div>
+<div class="content_background" id="iiswebserver">
+	<h2>IIS Web Server</h2>
+	<h3>In step C of the installation process defined:</h3>
+	
+<br/>
+<u>ISAPI_Rewrite 3.x</u>:<br/>
+
+
+<ul>
+		<li>Open ISAPI Rewrite manager software and input rewrite rules from isapi_rewrite.txt file (Note: replace "/forums/" with your vBulletin folder name).</li>
+	</ul>
+
+<br/>
+<u>ISAPI_Rewrite 2.x:</u>:<br/>
+
+
+<ul>
+		<li>Open/edit your httpd.ini file (ISAPI_Rewrite module configuration) and input rewrite rules from isapi_rewrite2.txt file (replace "/forums/" with your vBulletin folder name).</li>
+	</ul>
+
+
+</div>
+<div class="content_background" id="lighttpdwebserver">
+	<h2>Lighttpd Web Server</h2>
+	<h3>In step C of the installation process defined:</h3>
+	<ul>
+		<li>Instead of uploading the .htaccess file, open your Lighttpd Control Panel and enter the rules defined in the lighttpd_rewrite.txt file included within the 'htaccess' folder of the installation package (replace &quot;/forums/&quot; with your vBulletin folder name).</li>
+	</ul>
+</div>
+<div class="content_background" id="zueswebserver">
+	<h2>Zeus Web Server</h2>
+	<h3>In step C of the installation process defined:</h3>
+	<ul>
+		<li>Instead of uploading the .htaccess file, open your Zeus Control Panel and enter the rules defined in the zeus_rewrite.txt file included within the 'htaccess' folder of the installation package (replace &quot;/forums/&quot; with your vBulletin folder name).</li>
+	</ul>
+</div>
+
+<div class="content_background" id="litespeedwebserver">
+	<h2>Litespeed Web Server</h2>
+	<h3>Should work exactly like Apache webserver (use .htaccess file included in the 'htaccess' folder of the installation package).</h3>
+</div>
+
+
+<div class="content_background" id="vbseositemaps">
+	<h2>vBSEO Google Sitemaps</h2>
+	
+	<div class="notices"><strong>Note:</strong> The <b>vBSEO Google Sitemap</b> plugin is a free plugin provided by Crawlability Inc. It is not included with vBSEO and must be <b>installed separately.</b></div>
+    <br />
+	
+	Providing Google and Yahoo sitemaps is an essential step towards improving your forums. The "vBSEO Google/Yahoo Sitemap Generator" plugin provides a solution that allows your forum to be indexed faster, more completely, more effectively, and with less bandwidth consumption.
+	<br />
+	<br />
+	
+	<h3>How to Download and Install the vBSEO Google Sitemaps Plugin</h3>
+	
+	The vBSEO Google Sitemaps plugin is a separate download and installation. For further instructions, please visit the offical release thread:
+	<br />
+	<b><a href='http://www.vbseo.com/f5/vbseo-sitemap-generator-2-2-released-24778/'>vBSEO Google Sitemaps Plugin</a></b>
+	<br/><br />
+
+
+	<div class="notices"><strong>Note:</strong> The current version of the sitemap plugin is 2.2 and is a <u>REQUIRED</u> update for all vBSEO 3.2.0 users.</div>
+    <br />
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content_background" id="vbseorenewals">
+	<h2>Renew Your vBSEO License</h2>
+	
+	<div class="notices"><strong>Note:</strong> Your <b>vBSEO License Renewal</b> is only $35 for 1-year access to all vBSEO upgrades and the Priority Support Ticketing System.</b></div>
+
+
+
+    <br />
+	
+Check your license list on the <strong><a href='http://www.vbseo.com/downloads/'>download page</a></strong> to determine your license status. If <strong>Expired</strong> you will need to renew at a cost of $35 to get access to new vBSEO upgrades and the priority support ticketing system.
+<br/>
+<br/>
+To renew, simply click the <strong>Renew</strong> link next to your license and follow the checkout procedure to complete your order.
+	<br />
+	<br />
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="Javascript" type="text/javascript">
+<!--
+switchmenu('sub1')
+switchmenu('copyrights')
+switchmenu('vb35installation')
+switchmenu('vb35upgrade')
+switchmenu('vb3installation')
+switchmenu('vb3upgrade')
+switchmenu('otherservers')
+switchmenu('iiswebserver')
+switchmenu('lighttpdwebserver')
+switchmenu('zueswebserver')
+switchmenu('litespeedwebserver')
+switchmenu('vbseositemaps')
+//-->
+switchmenu('vbseorenewals')
+</script>
+</body>
+</html>

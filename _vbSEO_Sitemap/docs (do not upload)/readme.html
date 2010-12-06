@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>vBSEO Google/Yahoo Sitemap Generator v.2.2 Readme File</title>
+<style type="text/css">
+
+body {
+	margin: 0px;
+	background-color: #EFEFEF;
+}
+.header {
+	background-color: #465786;
+	border-bottom: #FFFFFF 1px solid;
+	padding-top:8px;
+	padding-left:20px;
+	padding-bottom:26px;
+}
+.tagline {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	top:38px;
+	left:20px;
+}
+.header_nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	height: 23px;
+	padding-left: 10px;
+}
+.header_nav a:link, .header_nav a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+.header_nav a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: underline;
+}
+.left_side_nav {
+	background-color: #EFEFEF;
+	vertical-align: top;
+	padding-top: 0px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.main_container {
+	background-color: #E0E0E0;
+	vertical-align: top;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.content_background {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	background-repeat: repeat;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	padding: 15px;
+}
+.notices {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFCC;
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: left;
+	vertical-align: top;
+	padding: 6px;
+	border: 1px solid #CC0000;
+}
+.codes {
+	font-family: "Courier New", Courier, monospace;
+	border:1px dashed gray;
+	font-size: 11px;
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	padding: 6px;
+	background-color:#FFFFFF
+}
+.important {
+	color: #FF0000;
+	font-weight: bold;
+}
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 20px;
+}
+h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #6E7A9A;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	margin-top: 0px;
+	margin-bottom: 15px;
+} 
+.menutitle {
+	cursor:pointer;
+	margin-bottom: 2px;
+	background-color:#E0E0E0;
+	color:#OOOOOO;
+	width:100%;
+	padding:4px;
+	text-align:left;
+	font-weight:normal;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.menutitle a:link, .menutitle a:visited {
+	color:#000000;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.menutitle a:hover {
+	color:#999999;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle {
+	cursor:pointer;
+	margin-bottom: 2px;
+	background-color: #CCCCCC;
+	color:#FFFFFF;
+	width:100%;
+	padding:4px;
+	text-align:left;
+	font-weight:normal;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle a:link, .submenutitle a:visited {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenutitle a:hover {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:underline;
+	font-size:9px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.submenu {
+	margin-bottom: 0.5em;
+}
+.nav_divider {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #A9A9A9;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.style1 {color: #FF0000}
+</style>
+ 
+<script type="text/javascript">
+function getel(eid)
+{
+	return document.all ? document.all[eid] : document.getElementById(eid)
+}
+function switchpage(divid)
+{
+	getel('contentarea').innerHTML = getel(divid).innerHTML
+	return false
+}
+function switchmenu(menuid)
+{
+	getel(menuid).style.display = getel(menuid).style.display ? '' : 'none'
+}
+</script>
+</head>
+
+<body onload="switchpage('copyrights')">
+<h1 class="header">vBSEO Google/Yahoo Sitemap Generator v.2.2</h1>
+<p class="tagline">vBSEO Google/Yahoo Sitemap Generator installation and upgrade instructions</p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td width="18%" class="header_nav">&nbsp;</td>
+		<td width="82%" align="right" class="header_nav">
+			<a href="http://www.vbseo.com" target="_blank"><strong>vBSEO Home</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/tickets/" target="_blank"><strong>Support Ticket System</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/downloads/" target="_blank"><strong>Downloads</strong></a><span class="nav_divider">|</span><a href="http://www.vbseo.com/aff/" target="_blank"><strong>Affiliate Program</strong></a>&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="18%" class="left_side_nav">
+		<div id="masterdiv">
+			
+			<div class="menutitle">
+			<a href="#copy" onclick="return switchpage('copyrights')">
+			Copyrights, Credits, and<br />
+		  <strong>Important Information</strong></a>			</div>
+		
+			<div class="menutitle">
+			<a href="#vb35i" onclick="return switchpage('vb35installation')">
+			vBulletin 3.5.x, 3.6.x &amp; 3.7.x<br />
+			<strong>Installation Instructions</strong></a>			</div>
+		
+			<div class="menutitle">
+			<a href="#vb35u" onclick="return switchpage('vb35upgrade')">vBulletin 3.5.x, 3.6.x &amp; 3.7.x<br />
+			<strong>Upgrade Instructions</strong></a>			</div>
+			
+		  <div class="menutitle">
+			<a href="#vb3i" onclick="return switchpage('vb3installation')">
+			vBulletin 3.0.x<br />
+			<strong>Installation Instructions</strong></a>			</div>
+			
+			<div class="menutitle" >
+			<a href="#vb3u" onclick="return switchpage('vb3upgrade')">
+			vBulletin 3.0.x<br />
+			<strong>Upgrade Instructions</strong></a>			</div>
+			
+			<div class="menutitle" onclick="switchmenu('sub1')">
+			<a href="#others" onclick="return switchpage('otherservers')">
+			Installing vBSEO Sitemap<br />
+			<strong>Under Other Servers</strong></a>			</div>
+			<div class="submenu" id="sub1">
+				<div class="submenutitle">
+				<a href="#others" onclick="return switchpage('iiswebserver')">IIS Web Server</a><br />
+				<a href="#others" onclick="return switchpage('lighttpdwebserver')">Lighttpd Web Server</a><br />
+				<a href="#others" onclick="return switchpage('zueswebserver')">Zeus Web Server</a><br />
+				<a href="#others" onclick="return switchpage('litespeedwebserver')">Litespeed Web Server</a>				</div>
+			</div>
+		</div>		</td>
+		<td width="80%" class="main_container"><div class="content_background" id="contentarea"></div></td>
+		<td width="6px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="18%" class="header_nav">&nbsp;</td>
+		<td width="82%" class="header_nav"><em>Thank-you for using the vBSEO Google/Yahoo Sitemap Generator, we hope you enjoy it!</em></td>
+	</tr>
+</table>
+<a name="copy"></a>
+<div class="content_background" id="copyrights">
+	<div class="notices"><strong>Note:</strong> If you encounter issues during the installation, please search the vBSEO Google/Yahoo Sitemap release thread(s) @ <a href="http://www.vbulletin.org" target="_blank">vBulletin.org</a> or <a href="http://www.vbhackers.com" target="_blank">vBHackers.com</a> before posting a support request. Thank-you.</div>
+	<br />
+	<h2>Copyrights, Credits, and other important information</h2>
+	<h3>Copyright Statement</h3>
+	vBSEO Google/Yahoo Sitemap Generator v2.2 is &copy; 2005-2008 Crawlability, Inc.<br />
+	<br />
+	<h3>Credits</h3>
+	Juan Carlos Muriente<br />
+	Nico Vrouwe<br />
+	Oleg Ignatiuk<br />
+	Joe Ward<br />
+	Michael Brandon<br />
+	vBSEO Community Members @ vBSEO.com<br /><br />
+	<h3>License Agreement (for vBSEO Google/Yahoo Sitemap Generator v.2.2)</h3>
+	<ol>
+		<li>You are free to download and install this plugin on any vBulletin forum for which you hold a valid vB license.</li>
+		<li>You ARE NOT allowed to REMOVE or MODIFY the copyright text within the .php files themselves.</li>
+		<li>You ARE NOT allowed to DISTRIBUTE the contents of any of the included files.</li>
+		<li>You ARE NOT allowed to COPY ANY PARTS of the code and/or use it for distribution.</li>
+	</ol>
+Thanks for your cooperation.</div>
+<a name="vb35i"></a>
+<div class="content_background" id="vb35installation">
+	<h2>vBulletin 3.5.x, 3.6.x &amp; 3.7.x Installation Instructions</h2>
+	<h3>A. Upload ALL the files and folders within the 'upload' folder to your <em>forum root</em> folder.</h3>
+	<ol>
+	  <li>CHMOD 777 the 'forum-root/vbseo_sitemap/data/' folder</li>
+  </ol>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided within your 'upload' folder.</div>
+	<br />
+	<h3>B. Enable rewriting via .htaccess (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step):</h3>
+	<ol>
+	  <li>Upload the vBSEO Google/Yahoo Sitemap .htaccess file (located in the 'htaccess' folder) to your <em>forum root</em>.</li>
+  </ol>
+		<div class="notices"><strong>Note:</strong> In some operating systems, the .htaccess file is not visible. If this is your case, find the htaccess.txt file in the same folder, (1) upload it to your forum root folder and (2) rename it to <em>.htaccess</em>.</div>
+		<br />
+		<br />
+		<div class="notices"><strong>Note:</strong> If you already have an .htaccess file in your forum root, DO NOT upload the vBSEO Google/Yahoo Sitemap .htaccess file as it will replace the contents of this file. Instead, enter the following code in your 'forum-root/.htaccess' file at the bottom:<br />
+		  <br />
+		<br />
+		<div class="codes">RewriteEngine On<br />
+		RewriteRule ^((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]</div>
+  </div>
+	<br />
+	<h3>C. Go to your ADMIN CP &gt; 'Plugin System' &gt; 'Manage Products' &gt; Click on [Add/Import Product]</h3>
+	<ol>
+		<li>Browse to the 'docs' folder of the installation package and open 'vbseo_sitemap.xml', Click 'Import'.</li>
+    </ol>
+	<h3>D. Configure the vBSEO Google/Yahoo Sitemaps:</h3>
+	<div class="notices"><strong>Note:</strong> The vBSEO Google/Yahoo Sitemap default settings are optimal for most forums, do not change settings you are not familiarized with.</div>
+	<ol>
+		<li>Go to your ADMIN CP &gt; vBulletin Options &gt; vBSEO Google/Yahoo Sitemap Generator.</li>
+      <li>Edit your settings as desired.</li>
+      <li><span class="style1"><strong>Important:</strong></span> Enter your vBSEO Sitemap Interface Access Password (this will prevent unauthorized access to your automated reports).</li>
+  </ol>
+    <h3>E.  Define a Scheduled Task for the vBSEO Google/Yahoo Sitemaps:</h3>
+	<div class="notices"><strong>Note:</strong> This is a required step for vBulletin 3.5.x series. If using vBulletin 3.6.x or 3.7.x, vBSEO will automatically create a scheduled task at 2AM without having to go through the steps below.</div>
+    <ol>
+      <li>Go to your ADMIN CP &gt; Scheduled Tasks &gt; Add New Scheduled Task</li>
+      <li>Edit new task options:
+        <ol>
+          <li>Title: vBSEO - Create Google/Yahoo Sitemap</li>
+          <li>Filename: ./vbseo_sitemap/vbseo_sitemap.php</li>
+          <li>Set task schedule according to your forums activity. For instance, to generate a daily sitemap at 2AM set:
+            <ul>
+                  <li>Day of the Week: *</li>
+              <li>Day of the Month: * </li>
+              <li>Hour: 2 (or any other)</li>
+              <li>Minute: 0 - -</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <h3>      F. Access your vBSEO Google / Yahoo Sitemap Reports:</h3>
+    <ol>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseo_sitemap/.</li>
+      <li>Enter your vBSEO Sitemap Interface Access Password as defined in step D.</li>
+    </ol>
+</div>
+<a name="vb35u"></a>
+<div class="content_background" id="vb35upgrade">
+	<h2>vBulletin 3.5.x, 3.6.x &amp; 3.7.x Upgrade Instructions</h2>
+	<h3>A. Upload (and replace) ALL the files and folders within in the 'upload' folder to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided within your 'upload' folder.</div>
+    <br />
+	<h3>B. Go to your ADMIN CP &gt; 'Plugin System' &gt; 'Manage Products'</h3>
+	<ol>
+		<li>Click on [Add/Import Product]</li>
+		<li>Browse to the 'docs' folder of the installation package and open 'vbseo_sitemap.xml', <span class="important">set 'Allow Overwrite' to 'Yes'</span> then click 'Import'.</li>
+  </ol>
+    <h3>F. Access your vBSEO Google / Yahoo Sitemap Reports:</h3>
+    <ol>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseo_sitemap/.</li>
+      <li>Enter your vBSEO Sitemap Interface Access Password as defined in your sitemap settings via the vB admincp.</li>
+    </ol>
+</div>
+<a name="vb3i"></a>
+<div class="content_background" id="vb3installation">
+	<h2>vBulletin 3.0.x Installation Instructions</h2>
+	<h3>A. Upload ALL the files and folders within the 'upload' folder to your <em>forum root</em> folder</h3>
+	<ol>
+      <li>CHMOD 777 the 'forum-root/vbseo_sitemap/data/' folder</li>
+  </ol>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided within your 'upload' folder.</div>
+	<br />
+	<h3>B. Enable rewriting via .htaccess (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step):</h3>
+	<ol>
+	  <li>Upload the vBSEO Google/Yahoo Sitemap .htaccess file (located in the 'htaccess' folder) to your <em>forum root</em>.</li>
+  </ol>
+		<div class="notices"><strong>Note:</strong> In some operating systems, the .htaccess file is not visible. If this is your case, find the htaccess.txt file in the same folder, (1) upload it to your forum root folder and (2) rename it to <em>.htaccess</em>.</div>
+		<br />
+		<br />
+		<div class="notices"><strong>Note:</strong> If you already have an .htaccess file in your forum root, DO NOT upload the vBSEO Google/Yahoo Sitemap .htaccess file as it will replace the contents of this file. Instead, enter the following code in your 'forum-root/.htaccess' file at the bottom:
+		  <br />
+		  <br />
+		<br />
+		<div class="codes">RewriteEngine On<br />
+		RewriteRule ^((urllist|sitemap).*\.(xml|txt)(\.gz)?)$ vbseo_sitemap/vbseo_getsitemap.php?sitemap=$1 [L]</div>
+		</div>
+	<br />
+    <h3>C. Configure the vBSEO Google/Yahoo Sitemaps:</h3>
+    <div class="notices"><strong>Note:</strong> The vBSEO Google/Yahoo Sitemap default settings are optimal for most forums, do not change settings you are not familiarized with.</div>
+    <ol>
+      <li>Open the  vbseo_sitemap/vbseo_sm_config30x.php file using a text editor.</li>
+      <li>Edit your settings as desired.</li>
+      <li><span class="style1"><strong>Important:</strong></span> Enter your vBSEO Sitemap Interface Access Password (this will prevent unauthorized access to your automated reports).
+        <ol>
+          <li>Find the following setting: 'vBSEO Sitemap Interface Access Password'.</li>
+          <li>Enter your preferred password.  </li>
+        </ol>
+      </li>
+    </ol>
+    <h3>D.  Define a Scheduled Task for the vBSEO Google/Yahoo Sitemaps:</h3>
+    <ol>
+      <li>Go to your ADMIN CP &gt; Scheduled Tasks &gt; Add New Scheduled Task</li>
+      <li>Edit new task options:
+        <ol>
+            <li>Title: vBSEO - Create Google/Yahoo Sitemap</li>
+          <li>Filename: ./vbseo_sitemap/vbseo_sitemap.php</li>
+          <li>Set task schedule according to your forums activity. For instance, to generate a daily sitemap at 2AM set:
+            <ul>
+                  <li>Day of the Week: *</li>
+              <li>Day of the Month: * </li>
+              <li>Hour: 2 (or any other)</li>
+              <li>Minute: 0 - -</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <h3>      E. Access your vBSEO Google / Yahoo Sitemap Reports:</h3>
+    <ol>
+      <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseo_sitemap/</li>
+      <li>Enter your vBSEO Sitemap Interface Access Password as defined in your vbseo_sm_config30x.php file</li>
+  </ol>
+</div>
+<a name="vb3u"></a>
+<div class="content_background" id="vb3upgrade">
+	<h2>vBulletin 3.0.x Upgrade Instructions</h2>
+	<h3>A. Upload (and replace) ALL the files and folders included in the 'upload' folder <span class="style1">EXCEPT vbseo_sm_config30x.php</span> to your <em>forum root</em> folder.</h3>
+	<div class="notices"><strong>Note:</strong> Ensure all files are uploaded with the same folder structure provided within your 'upload' folder.</div>
+	<h3><br />
+    B. Access your vBSEO Google / Yahoo Sitemap Reports:</h3>
+	<ol>
+	  <li>Using your browser, visit: http://www.yoursite.com/vB-root/vbseo_sitemap/</li>
+	  <li>Enter your vBSEO Sitemap Interface Access Password as defined in your vbseo_sm_config30x.php file</li>
+  </ol>
+</div>
+<a name="others"></a>
+<div class="content_background" id="otherservers">
+	<h2>Installing the vBSEO Google/Yahoo Sitemaps under Other Servers</h2>
+	vBSEO supports various other web servers like IIS, Lighttpd, Zeus &amp; Litespeed<br />
+	<br />
+	<div class="notices"><strong>Note:</strong> Often, the installation procedure for these servers types requires assistance from our support team. Please submit a support ticket (if you are a vBSEO customer) or visit the <a href="http://www.vbseo.com/forums/#vbseo-google-yahoo-sitemap" target="_blank">vBSEO Google/Yahoo Sitemaps Forums</a> if you have any questions.</div>
+		<ul>
+			<li><a href="#others" onclick="return switchpage('iiswebserver')">IIS Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('lighttpdwebserver')">Lighttpd Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('zueswebserver')">Zeus Web Server</a></li>
+			<li><a href="#others" onclick="return switchpage('litespeedwebserver')">Litespeed Web Server</a></li>
+		</ul>
+</div>
+<div class="content_background" id="iiswebserver">
+	<h2>IIS Web Server</h2>
+	<h3>In step B of the installation process defined (&quot;Enable rewriting via .htaccess&quot;):</h3>
+	<ul>
+		<li>Instead of uploading the .htaccess file, open/edit your httpd.ini file (ISAPI_Rewrite module configuration) and enter the rules defined in the isapi_rewrite.txt file included within the 'htaccess' folder of the installation package (replace &quot;/forums/&quot; with your vBulletin folder name). (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step since the sitemap rules for IIS Web Server are already included with your vBSEO installation)</li>
+	</ul>
+</div>
+<div class="content_background" id="lighttpdwebserver">
+	<h2>Lighttpd Web Server</h2>
+	<h3>In step B of the installation process defined (&quot;Enable rewriting via .htaccess&quot;):</h3>
+	<ul>
+		<li>Instead of uploading the .htaccess file, open your Lighttpd Control Panel and enter the rules defined in the lighttpd_rewrite.txt file included within the 'htaccess' folder of the installation package (replace &quot;/forums/&quot; with your vBulletin folder name). (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step since the sitemap rules for Lighttpd Web Server are already included with your vBSEO installation)</li>
+	</ul>
+</div>
+<div class="content_background" id="zueswebserver">
+	<h2>Zeus Web Server</h2>
+	<h3>In step B of the installation process defined (&quot;Enable rewriting via .htaccess&quot;):</h3>
+	<ul>
+		<li>Instead of uploading the .htaccess file, open your Zeus Control Panel and enter the rules defined in the zeus_rewrite.txt file included within the 'htaccess' folder of the installation package (replace &quot;/forums/&quot; with your vBulletin folder name). (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step since the sitemap rules for Zeus Web Server are already included with your vBSEO installation)</li>
+	</ul>
+</div>
+<div class="content_background" id="litespeedwebserver">
+	<h2>Litespeed Web Server</h2>
+	<h3>Should work exactly like Apache webserver (use .htaccess file included in the 'htaccess' folder of the installation package). (<a href="http://www.vbseo.com" target="_blank">vBSEO</a> Users skip this step since the sitemap rules are already included with your vBSEO installation .htaccess file)</h3>
+</div>
+<script language="Javascript" type="text/javascript">
+<!--
+switchmenu('sub1')
+switchmenu('copyrights')
+switchmenu('vb35installation')
+switchmenu('vb35upgrade')
+switchmenu('vb3installation')
+switchmenu('vb3upgrade')
+switchmenu('otherservers')
+switchmenu('iiswebserver')
+switchmenu('lighttpdwebserver')
+switchmenu('zueswebserver')
+switchmenu('litespeedwebserver')
+//-->
+</script>
+</body>
+</html>
